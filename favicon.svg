@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background: Navy rounded square -->
+  <rect width="512" height="512" rx="96" fill="#1E3A5F"/>
+
+  <!-- Inner glow circle -->
+  <circle cx="256" cy="240" r="160" fill="#2A4D7A" opacity="0.5"/>
+
+  <!-- Trophy cup body -->
+  <path d="M176 160 h160 l-20 140 a60 60 0 0 1-120 0 Z" fill="#C9A96E"/>
+
+  <!-- Trophy shine -->
+  <path d="M200 170 h40 l-10 120 a30 30 0 0 1-40 0 Z" fill="#DBBF8A" opacity="0.4"/>
+
+  <!-- Trophy handles -->
+  <path d="M176 180 Q120 180 120 230 Q120 270 160 280" fill="none" stroke="#C9A96E" stroke-width="16" stroke-linecap="round"/>
+  <path d="M336 180 Q392 180 392 230 Q392 270 352 280" fill="none" stroke="#C9A96E" stroke-width="16" stroke-linecap="round"/>
+
+  <!-- Trophy stem -->
+  <rect x="232" y="300" width="48" height="40" rx="4" fill="#C9A96E"/>
+
+  <!-- Trophy base -->
+  <rect x="196" y="340" width="120" height="24" rx="8" fill="#C9A96E"/>
+  <rect x="208" y="364" width="96" height="16" rx="6" fill="#A8874D"/>
+
+  <!-- Star on trophy -->
+  <polygon points="256,188 268,218 300,218 274,236 284,268 256,250 228,268 238,236 212,218 244,218" fill="#1E3A5F"/>
+
+  <!-- "CN" text at bottom -->
+  <text x="256" y="440" text-anchor="middle" font-family="Arial,sans-serif" font-size="56" font-weight="900" fill="#C9A96E" letter-spacing="6">CN</text>
+</svg>
