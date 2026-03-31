@@ -61,8 +61,9 @@ img { max-width: 100%; display: block; }
 }
 .nav.open { display: flex; }
 .nav a {
-  display: block; padding: 12px 20px; color: rgba(255,255,255,.8);
-  font-size: .95rem; transition: .15s; border-bottom: 1px solid rgba(255,255,255,.06);
+  display: block; padding: 14px 20px; color: rgba(255,255,255,.8);
+  font-size: 1rem; transition: .15s; border-bottom: 1px solid rgba(255,255,255,.06);
+  min-height: 44px;
 }
 .nav a:hover, .nav a.active {
   color: var(--gold); background: rgba(201,169,110,.08);
@@ -175,7 +176,7 @@ img { max-width: 100%; display: block; }
 
 /* ===== CONTENT TEXT ===== */
 .content p {
-  color: #444; font-size: .95rem; line-height: 1.85; margin-bottom: 16px;
+  color: #444; font-size: 1rem; line-height: 1.8; margin-bottom: 16px;
 }
 .content p:last-child { margin-bottom: 0; }
 .section-navy .content p { color: rgba(255,255,255,.8); }
@@ -190,7 +191,7 @@ img { max-width: 100%; display: block; }
 .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,.08); border-color: var(--gold); }
 .card-icon { font-size: 2rem; margin-bottom: 12px; }
 .card h3 { color: var(--navy-dark); font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
-.card p { color: var(--gray-600); line-height: 1.7; font-size: .9rem; }
+.card p { color: var(--gray-600); line-height: 1.7; font-size: 1rem; }
 .card-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
 @media (min-width: 600px) {
   .card-grid { grid-template-columns: 1fr 1fr; }
@@ -204,7 +205,7 @@ img { max-width: 100%; display: block; }
 }
 .ncard:hover { border-color: var(--gold); background: rgba(255,255,255,.1); }
 .ncard h3 { color: var(--white); font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
-.ncard p { color: rgba(255,255,255,.7); line-height: 1.7; font-size: .9rem; }
+.ncard p { color: rgba(255,255,255,.7); line-height: 1.7; font-size: 1rem; }
 
 /* ===== STEPS ===== */
 .step-list { display: flex; flex-direction: column; gap: 0; }
@@ -219,7 +220,7 @@ img { max-width: 100%; display: block; }
   display: flex; align-items: center; justify-content: center; margin-top: 2px;
 }
 .step h3 { color: var(--navy-dark); font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
-.step p { color: var(--gray-600); line-height: 1.7; font-size: .9rem; }
+.step p { color: var(--gray-600); line-height: 1.7; font-size: 1rem; }
 
 /* ===== REVIEW ===== */
 .review {
@@ -231,7 +232,7 @@ img { max-width: 100%; display: block; }
 .review-name { color: var(--navy-dark); font-weight: 700; font-size: .95rem; }
 .review-meta { color: var(--gray-500); font-size: .8rem; }
 .review-stars { color: var(--gold); font-size: .85rem; letter-spacing: 1px; }
-.review p { color: var(--gray-600); line-height: 1.7; font-size: .9rem; }
+.review p { color: var(--gray-600); line-height: 1.7; font-size: 1rem; }
 
 /* ===== FAQ ===== */
 .faq { border-bottom: 1px solid var(--gray-200); }
@@ -239,13 +240,14 @@ img { max-width: 100%; display: block; }
 .faq-q {
   width: 100%; display: flex; justify-content: space-between; align-items: center;
   padding: 18px 0; background: none; border: none; text-align: left;
-  color: var(--navy-dark); font-weight: 700; font-size: .95rem; gap: 12px;
+  color: var(--navy-dark); font-weight: 700; font-size: 1rem; gap: 12px;
+  min-height: 44px;
 }
 .faq-q span { color: var(--gold); font-size: 1.3rem; flex-shrink: 0; transition: .2s; }
 .faq.open .faq-q span { transform: rotate(45deg); }
 .faq-a {
   display: none; padding: 0 0 18px; color: var(--gray-600);
-  line-height: 1.7; font-size: .9rem;
+  line-height: 1.7; font-size: 1rem;
 }
 .faq.open .faq-a { display: block; }
 
@@ -264,7 +266,7 @@ img { max-width: 100%; display: block; }
 .contact-icon { font-size: 2.5rem; margin-bottom: 10px; }
 .contact-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
 .contact-card .number { font-size: 1.5rem; font-weight: 800; margin-bottom: 10px; }
-.contact-card p { line-height: 1.6; font-size: .85rem; }
+.contact-card p { line-height: 1.7; font-size: 1rem; }
 .contact-card-gold h3, .contact-card-gold .number { color: var(--gold); }
 .contact-card-gold p { color: rgba(255,255,255,.7); }
 .contact-card-kakao h3 { color: #3C1E1E; }
@@ -292,7 +294,7 @@ img { max-width: 100%; display: block; }
 .footer a { color: var(--gold); }
 .footer a:hover { text-decoration: underline; }
 
-/* ===== PHONE BAR (Green, Center, 400px) ===== */
+/* ===== PHONE BAR — 모바일: 하단 고정 / PC: 우하단 플로팅 ===== */
 .phone-bar {
   position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
   z-index: 200; width: 100%; max-width: 400px;
@@ -300,9 +302,17 @@ img { max-width: 100%; display: block; }
   text-align: center; padding: 16px 20px; border-radius: 16px 16px 0 0;
   box-shadow: 0 -4px 20px rgba(37,211,102,.3);
   display: flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 52px;
 }
 .phone-bar:hover { background: var(--green-dark); }
 .phone-bar .phone-icon { font-size: 1.2rem; }
+@media (min-width: 769px) {
+  .phone-bar {
+    left: auto; right: 24px; bottom: 24px; transform: none;
+    width: auto; max-width: none; border-radius: 12px;
+    padding: 14px 28px; box-shadow: 0 4px 24px rgba(37,211,102,.35);
+  }
+}
 
 /* ===== DIVIDER ===== */
 .divider { height: 8px; background: var(--gray-100); }
