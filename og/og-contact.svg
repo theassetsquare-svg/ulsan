@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0D1F33"/>
+      <stop offset="50%" stop-color="#1E3A5F"/>
+      <stop offset="100%" stop-color="#2A4D7A"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="rgba(201,169,110,0.25)"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#bg)"/>
+  <rect width="1200" height="1200" fill="url(#glow)"/>
+  <text x="600" y="250" text-anchor="middle" font-family="sans-serif" font-size="36" fill="#C9A96E" letter-spacing="6" font-weight="600">CONTACT</text>
+  <text x="600" y="520" text-anchor="middle" font-family="sans-serif" font-size="220" fill="#FFFFFF" font-weight="900">춘자</text>
+  <text x="600" y="660" text-anchor="middle" font-family="sans-serif" font-size="60" fill="#C9A96E" font-weight="800">울산챔피언나이트</text>
+  <text x="600" y="740" text-anchor="middle" font-family="sans-serif" font-size="36" fill="rgba(255,255,255,0.6)" font-weight="600">전화 한 통이면 끝이에요</text>
+  <rect x="420" y="880" width="360" height="70" rx="35" fill="#25D366"/>
+  <text x="600" y="926" text-anchor="middle" font-family="sans-serif" font-size="32" fill="#FFFFFF" font-weight="800">📞 010-5653-0069</text>
+</svg>
