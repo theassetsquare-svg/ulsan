@@ -52,7 +52,8 @@ img { max-width: 100%; display: block; }
 }
 .menu-btn {
   display: block; background: none; border: none;
-  color: var(--gold); font-size: 1.5rem; padding: 4px;
+  color: var(--gold); font-size: 1.5rem; padding: 10px;
+  min-width: 44px; min-height: 44px;
 }
 .nav {
   display: none; flex-direction: column; position: absolute;
