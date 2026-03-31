@@ -39,7 +39,7 @@
     return id;
   }
   function safeTimeout(fn, ms) {
-    var id = safeTimeout(fn, ms);
+    var id = setTimeout(fn, ms);
     _timeouts.push(id);
     return id;
   }
