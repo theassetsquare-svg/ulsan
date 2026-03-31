@@ -28,6 +28,44 @@
   'use strict';
 
   // ============================================================
+  // 타이머 관리 — cleanup용 ID 추적
+  // ============================================================
+  var _intervals = [];
+  var _timeouts = [];
+
+  function safeInterval(fn, ms) {
+    var id = setInterval(fn, ms);
+    _intervals.push(id);
+    return id;
+  }
+  function safeTimeout(fn, ms) {
+    var id = safeTimeout(fn, ms);
+    _timeouts.push(id);
+    return id;
+  }
+  function cleanupAll() {
+    for (var i = 0; i < _intervals.length; i++) clearInterval(_intervals[i]);
+    for (var j = 0; j < _timeouts.length; j++) clearTimeout(_timeouts[j]);
+    _intervals = [];
+    _timeouts = [];
+  }
+  window.addEventListener('beforeunload', cleanupAll);
+
+  // ★ 글로벌 에러 핸들러: JS 에러 발생 시 숨겨진 콘텐츠 강제 표시
+  window.addEventListener('error', function() {
+    var hidden = document.querySelectorAll('[style*="opacity: 0"], [style*="opacity:0"]');
+    for (var i = 0; i < hidden.length; i++) {
+      hidden[i].style.opacity = '1';
+      hidden[i].style.transform = 'none';
+    }
+  });
+
+  // 안전 실행 래퍼
+  function safe(fn) {
+    try { fn(); } catch(e) { console.warn('[engage]', e); }
+  }
+
+  // ============================================================
   // 유틸리티
   // ============================================================
   var STORAGE_PREFIX = 'cn_';
@@ -80,6 +118,15 @@
     }
   }
 
+  // ★ 안전장치: 3초 후 숨겨진 요소 강제 표시 (빈 화면 방지)
+  function forceShowAll() {
+    for (var i = 0; i < revealEls.length; i++) {
+      revealEls[i].style.opacity = '1';
+      revealEls[i].style.transform = 'translateY(0)';
+    }
+    revealEls = [];
+  }
+
   // ============================================================
   // [2] 읽기 진행률 바 (Completion Drive — 넷플릭스)
   // ============================================================
@@ -110,7 +157,7 @@
       // 100% 도달 보상
       if (p > 98 && !window._completeShown) {
         window._completeShown = true;
-        setTimeout(function() {
+        safeTimeout(function() {
           showSpecialToast('🏆 이 페이지를 완독하셨습니다!', '당신은 진정한 울산 밤 문화 탐험가입니다');
           markPageVisited();
           checkCollectionComplete();
@@ -158,10 +205,10 @@
     }
 
     document.body.appendChild(t);
-    setTimeout(function() { t.style.opacity = '1'; t.style.transform = 'translateX(-50%) translateY(0)'; }, 50);
-    setTimeout(function() {
+    safeTimeout(function() { t.style.opacity = '1'; t.style.transform = 'translateX(-50%) translateY(0)'; }, 50);
+    safeTimeout(function() {
       t.style.opacity = '0'; t.style.transform = 'translateX(-50%) translateY(20px)';
-      setTimeout(function() { t.remove(); toastShowing = false; processToastQueue(); }, 400);
+      safeTimeout(function() { t.remove(); toastShowing = false; processToastQueue(); }, 400);
     }, item.duration);
   }
 
@@ -194,13 +241,13 @@
   function startSocialProof() {
     function next() {
       var delay = 12000 + Math.random() * 20000; // 12~32초 랜덤
-      setTimeout(function() {
+      safeTimeout(function() {
         var msg = socialProofs[Math.floor(Math.random() * socialProofs.length)];
         showToast(formatProof(msg));
         next();
       }, delay);
     }
-    setTimeout(function() {
+    safeTimeout(function() {
       showToast(formatProof(socialProofs[Math.floor(Math.random() * socialProofs.length)]));
       next();
     }, 6000 + Math.random() * 5000);
@@ -295,7 +342,7 @@
 
         cdWrap.style.display = 'block';
 
-        countdownInterval = setInterval(function() {
+        countdownInterval = safeInterval(function() {
           countdownSec--;
           if (cdSec) cdSec.textContent = countdownSec;
           if (cdBar) cdBar.style.width = (countdownSec / 15 * 100) + '%';
@@ -342,12 +389,12 @@
       { at: 300, msg: '5분 달성! 진정한 챔피언입니다 👑' },
       { at: 420, msg: '7분! 당신은 울산의 밤을 정복하고 있습니다 🌙' },
       { at: 600, msg: '10분 달성! 레전드 탐험가 등급 해금 🏆' },
-      { at: 900, msg: '15분! VIP 등급 — 당신은 특별합니다 💎' },
+      { at: 900, msg: '15분! VIP 등급 — 이 정도면 진짜 대단해요 💎' },
       { at: 1200, msg: '20분! 마스터 등급 — 울산 밤의 전설이 되었습니다 👑💎' },
     ];
     var rewardIdx = 0;
 
-    setInterval(function() {
+    safeInterval(function() {
       sec++;
       totalAccum++;
 
@@ -426,18 +473,18 @@
       el.style.cssText = 'position:fixed;bottom:80px;left:16px;right:16px;max-width:380px;margin:0 auto;background:linear-gradient(135deg,rgba(30,58,95,.95),rgba(19,40,67,.95));color:#C9A96E;padding:16px 20px;border-radius:12px;font-size:13px;line-height:1.6;font-style:italic;z-index:250;opacity:0;transform:translateY(10px);transition:all .5s ease;border:1px solid rgba(201,169,110,.2);box-shadow:0 8px 32px rgba(0,0,0,.3);';
       el.textContent = q;
       document.body.appendChild(el);
-      setTimeout(function() { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; }, 50);
-      setTimeout(function() {
+      safeTimeout(function() { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; }, 50);
+      safeTimeout(function() {
         el.style.opacity = '0'; el.style.transform = 'translateY(10px)';
-        setTimeout(function() { el.remove(); }, 500);
+        safeTimeout(function() { el.remove(); }, 500);
       }, 5000);
     }
 
     function scheduleQuote() {
       var delay = 25000 + Math.random() * 20000;
-      setTimeout(function() { showQuote(); scheduleQuote(); }, delay);
+      safeTimeout(function() { showQuote(); scheduleQuote(); }, delay);
     }
-    setTimeout(scheduleQuote, 18000);
+    safeTimeout(scheduleQuote, 18000);
   }
 
   // ============================================================
@@ -451,7 +498,7 @@
     el.innerHTML = '<span style="display:inline-block;width:6px;height:6px;background:#25D366;border-radius:50%;animation:pulse 2s infinite;"></span> <span id="vc-num">' + count + '</span>명이 보고 있습니다';
     document.body.appendChild(el);
 
-    setInterval(function() {
+    safeInterval(function() {
       count += Math.random() > 0.5 ? 1 : -1;
       if (count < 2) count = 3;
       if (count > 18) count = 14;
@@ -460,7 +507,7 @@
         num.style.transition = 'transform .3s';
         num.style.transform = 'scale(1.3)';
         num.textContent = count;
-        setTimeout(function() { num.style.transform = 'scale(1)'; }, 300);
+        safeTimeout(function() { num.style.transform = 'scale(1)'; }, 300);
       }
     }, 6000 + Math.random() * 10000);
   }
@@ -512,7 +559,7 @@
 
       // 미방문 페이지 호기심 유발
       if (count < 8) {
-        setTimeout(function() {
+        safeTimeout(function() {
           var unvisited = [];
           for (var j = 0; j < pageOrder.length; j++) {
             var pid = pageOrder[j].url === '/' ? 'home' : pageOrder[j].url.replace(/^\//, '').replace('.html', '');
@@ -563,7 +610,7 @@
     document.body.appendChild(overlay);
     document.body.appendChild(panel);
 
-    setTimeout(function() {
+    safeTimeout(function() {
       var closeBtn = document.getElementById('close-collection');
       if (closeBtn) closeBtn.addEventListener('click', function() { panel.remove(); overlay.remove(); });
     }, 100);
@@ -573,7 +620,7 @@
     var count = getVisitedCount();
     if (count === 8 && !load('collection_complete', false)) {
       store('collection_complete', true);
-      setTimeout(function() {
+      safeTimeout(function() {
         showSpecialToast('🎊 전체 페이지 컬렉션 완성!', '울산챔피언나이트의 모든 이야기를 탐험하셨습니다. 당신은 진정한 마스터!');
       }, 2000);
     }
@@ -590,7 +637,7 @@
     if (lastDay === today) {
       // 이미 오늘 방문
       if (streak >= 2) {
-        setTimeout(function() {
+        safeTimeout(function() {
           showToast('🔥 ' + streak + '일 연속 방문 중! 꾸준한 탐험가시네요', 4000);
         }, 12000);
       }
@@ -610,7 +657,7 @@
       store('streak_count', streak);
 
       if (streak >= 2) {
-        setTimeout(function() {
+        safeTimeout(function() {
           showSpecialToast('🔥 ' + streak + '일 연속 방문!', streak >= 5 ? '전설적인 충성도! VIP 대우가 기다립니다' : '꾸준한 관심 감사합니다!');
         }, 5000);
       }
@@ -640,13 +687,13 @@
         msg = '전설의 ' + visitCount + '번째 방문! 진정한 챔피언 🏆';
       }
 
-      setTimeout(function() {
+      safeTimeout(function() {
         showToast(msg, 4000);
       }, 3000);
 
       // 총 체류시간 알려주기
       if (totalAccum > 120) {
-        setTimeout(function() {
+        safeTimeout(function() {
           showToast('총 체류시간 ' + Math.floor(totalAccum / 60) + '분! 울산 밤 문화 전문가 레벨 📊', 4000);
         }, 15000);
       }
@@ -658,17 +705,17 @@
   // ============================================================
   function initTimeLock() {
     // 2분 후 비밀 메시지 해금
-    setTimeout(function() {
+    safeTimeout(function() {
       showSpecialToast('🔓 비밀 메시지 해금!', '2분 이상 체류하신 분만 보는 정보: 춘자에게 "홈페이지 봤어요"라고 말하면 특별 서비스!');
     }, 120000);
 
     // 5분 후 추가 해금
-    setTimeout(function() {
+    safeTimeout(function() {
       showSpecialToast('🎁 히든 보상 해금!', '5분 체류 달성! 방문 시 "챔피언 탐험가"라고 말씀하시면 웰컴 드링크 서비스');
     }, 300000);
 
     // 10분 후 최종 해금
-    setTimeout(function() {
+    safeTimeout(function() {
       showSpecialToast('👑 VIP 등급 달성!', '10분 체류! 전화 예약 시 "VIP 탐험가"라고 말씀해주세요. 최상의 자리를 준비해드립니다');
     }, 600000);
   }
@@ -717,7 +764,7 @@
     if (!pageTeasers) return;
 
     // 40초 후 호기심 갭 카드 표시
-    setTimeout(function() {
+    safeTimeout(function() {
       var pick = pageTeasers[Math.floor(Math.random() * pageTeasers.length)];
       var targetPage = null;
       for (var i = 0; i < pageOrder.length; i++) {
@@ -735,15 +782,15 @@
       card.addEventListener('click', function() { window.location.href = targetPage.url; });
 
       document.body.appendChild(card);
-      setTimeout(function() { card.style.opacity = '1'; card.style.transform = 'translateY(0)'; }, 50);
-      setTimeout(function() {
+      safeTimeout(function() { card.style.opacity = '1'; card.style.transform = 'translateY(0)'; }, 50);
+      safeTimeout(function() {
         card.style.opacity = '0'; card.style.transform = 'translateY(15px)';
-        setTimeout(function() { card.remove(); }, 500);
+        safeTimeout(function() { card.remove(); }, 500);
       }, 7000);
     }, 40000);
 
     // 90초 후 두 번째 호기심 갭
-    setTimeout(function() {
+    safeTimeout(function() {
       var pick2 = pageTeasers[pageTeasers.length > 1 ? 1 : 0];
       var tp2 = null;
       for (var k = 0; k < pageOrder.length; k++) {
@@ -773,7 +820,7 @@
     var flash = document.createElement('div');
     flash.style.cssText = 'position:fixed;inset:0;background:radial-gradient(circle,rgba(201,169,110,.15),transparent);z-index:280;pointer-events:none;animation:jackpotFlash .8s ease-out forwards;';
     document.body.appendChild(flash);
-    setTimeout(function() { flash.remove(); }, 1000);
+    safeTimeout(function() { flash.remove(); }, 1000);
 
     showSpecialToast(pick.title, pick.sub);
   }
@@ -787,10 +834,10 @@
     banner.textContent = '🔥 3분 이상 체류 중! 당신은 울산 밤 문화의 진정한 탐험가입니다';
     document.body.appendChild(banner);
 
-    setTimeout(function() { banner.style.transform = 'translateY(0)'; }, 100);
-    setTimeout(function() {
+    safeTimeout(function() { banner.style.transform = 'translateY(0)'; }, 100);
+    safeTimeout(function() {
       banner.style.transform = 'translateY(-100%)';
-      setTimeout(function() { banner.remove(); }, 500);
+      safeTimeout(function() { banner.remove(); }, 500);
     }, 5000);
   }
 
@@ -802,7 +849,7 @@
     document.addEventListener('click', function(e) {
       if (throttle) return;
       throttle = true;
-      setTimeout(function() { throttle = false; }, 300);
+      safeTimeout(function() { throttle = false; }, 300);
 
       // 클릭 시 작은 파티클 효과
       for (var i = 0; i < 5; i++) {
@@ -814,10 +861,10 @@
         document.body.appendChild(p);
 
         (function(particle, a, d) {
-          setTimeout(function() {
+          safeTimeout(function() {
             particle.style.transform = 'translate(' + Math.cos(a) * d + 'px,' + Math.sin(a) * d + 'px) scale(0)';
             particle.style.opacity = '0';
-            setTimeout(function() { particle.remove(); }, 600);
+            safeTimeout(function() { particle.remove(); }, 600);
           }, 10);
         })(p, angle, dist);
       }
@@ -868,7 +915,7 @@
     var hasTriggeredIdle = false;
 
     // 아이들 감지: 멈춰있으면 리딩 중으로 판단, 넛지 제공
-    setInterval(function() {
+    safeInterval(function() {
       var currentScroll = window.scrollY;
       if (Math.abs(currentScroll - lastScroll) < 5) {
         idleTime++;
@@ -901,18 +948,18 @@
     ];
 
     // 60초 후 첫 FOMO 메시지
-    setTimeout(function() {
+    safeTimeout(function() {
       showToast(fomoMessages[Math.floor(Math.random() * fomoMessages.length)], 4500);
     }, 60000);
 
     // 이후 90~150초 간격
     function scheduleFOMO() {
-      setTimeout(function() {
+      safeTimeout(function() {
         showToast(fomoMessages[Math.floor(Math.random() * fomoMessages.length)], 4500);
         scheduleFOMO();
       }, 90000 + Math.random() * 60000);
     }
-    setTimeout(scheduleFOMO, 120000);
+    safeTimeout(scheduleFOMO, 120000);
   }
 
   // ============================================================
@@ -959,7 +1006,7 @@
           if (bamkey) bamkey.parentNode.insertBefore(card, bamkey);
         }
 
-        setTimeout(function() { card.style.opacity = '1'; card.style.transform = 'translateY(0)'; }, 100);
+        safeTimeout(function() { card.style.opacity = '1'; card.style.transform = 'translateY(0)'; }, 100);
       }
     }, { passive: true });
   }
@@ -973,7 +1020,7 @@
     if (count < 1) return;
 
     // 20초 후 오늘의 추천 표시
-    setTimeout(function() {
+    safeTimeout(function() {
       var unvisitedPages = [];
       for (var i = 0; i < pageOrder.length; i++) {
         var pid = pageOrder[i].url === '/' ? 'home' : pageOrder[i].url.replace(/^\//, '').replace('.html', '');
@@ -991,10 +1038,10 @@
       banner.addEventListener('click', function() { window.location.href = pick.url; });
 
       document.body.appendChild(banner);
-      setTimeout(function() { banner.style.opacity = '1'; banner.style.transform = 'translateX(-50%) translateY(0)'; }, 50);
-      setTimeout(function() {
+      safeTimeout(function() { banner.style.opacity = '1'; banner.style.transform = 'translateX(-50%) translateY(0)'; }, 50);
+      safeTimeout(function() {
         banner.style.opacity = '0';
-        setTimeout(function() { banner.remove(); }, 500);
+        safeTimeout(function() { banner.remove(); }, 500);
       }, 6000);
     }, 20000);
   }
@@ -1031,42 +1078,46 @@
   // 초기화
   // ============================================================
   document.addEventListener('DOMContentLoaded', function() {
-    injectCSS();
+    safe(injectCSS);
 
-    // 핵심 UI
-    initReveal();
-    initProgressBar();
-    initAutoNext();
-    initTimer();
-    initViewerCount();
+    // 핵심 UI — reveal이 실패해도 콘텐츠는 보여야 함
+    safe(initReveal);
+    safe(initProgressBar);
+    safe(initAutoNext);
+    safe(initTimer);
+    safe(initViewerCount);
 
     // 소셜프루프 & 인용문
-    startSocialProof();
-    initFloatingQuote();
+    safe(startSocialProof);
+    safe(initFloatingQuote);
 
     // 컬렉션 & 스트릭
-    initCollection();
-    initStreak();
-    initReturnVisitor();
+    safe(initCollection);
+    safe(initStreak);
+    safe(initReturnVisitor);
 
     // 심리학 트리거
-    initTimeLock();
-    initCuriosityGap();
-    initFOMO();
-    initProgressiveReveal();
-    initDailyPick();
+    safe(initTimeLock);
+    safe(initCuriosityGap);
+    safe(initFOMO);
+    safe(initProgressiveReveal);
+    safe(initDailyPick);
 
     // 이탈 방지 & 인터랙션
-    initExitIntent();
-    initMicroInteractions();
-    initScrollEngagement();
+    safe(initExitIntent);
+    safe(initMicroInteractions);
+    safe(initScrollEngagement);
 
     // 스크롤 이벤트
-    checkReveal();
+    safe(checkReveal);
     window.addEventListener('scroll', function() {
-      checkReveal();
-      checkDepthRewards();
+      safe(checkReveal);
+      safe(checkDepthRewards);
     }, { passive: true });
+
+    // ★★★ 빈 화면 방지 안전장치 ★★★
+    // 3초 후 아직 숨겨진 요소가 있으면 강제 표시
+    safeTimeout(forceShowAll, 3000);
   });
 
 })();
