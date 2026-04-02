@@ -381,3 +381,169 @@ img { max-width: 100%; display: block; }
   line-height: 1.5; margin-bottom: 8px;
 }
 .review-highlight .author { color: var(--navy); font-size: .85rem; }
+
+/* ===== SOCIAL PROOF BANNER ===== */
+.social-proof {
+  background: var(--gray-100); border-radius: 8px;
+  padding: 10px 16px; text-align: center; margin: 16px auto;
+  max-width: 720px; font-size: .85rem; color: var(--gray-600);
+}
+.social-proof strong { color: var(--navy-dark); font-weight: 700; }
+
+/* ===== COUNTDOWN ===== */
+.countdown-bar {
+  background: linear-gradient(135deg, #D32F2F, #B71C1C);
+  color: #FFFFFF; text-align: center; padding: 12px 16px;
+  font-size: .9rem; font-weight: 700; letter-spacing: -.01em;
+  border-radius: 10px; margin: 16px auto; max-width: 720px;
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+.countdown-bar .num { font-size: 1.3rem; color: #FFD54F; }
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 rgba(211,47,47,0); }
+  50% { box-shadow: 0 0 16px rgba(211,47,47,.4); }
+}
+
+/* ===== GALLERY SWIPE ===== */
+.gallery {
+  overflow-x: auto; scroll-snap-type: x mandatory;
+  display: flex; gap: 12px; padding: 0 16px 16px;
+  -webkit-overflow-scrolling: touch; scrollbar-width: none;
+  margin: 24px -16px;
+}
+.gallery::-webkit-scrollbar { display: none; }
+.gallery-card {
+  scroll-snap-align: center; flex: 0 0 85%; min-width: 280px;
+  border-radius: 12px; overflow: hidden; position: relative;
+}
+.gallery-card .g-pair {
+  display: grid; grid-template-columns: 1fr 1fr; height: 200px;
+}
+.gallery-card .g-half {
+  position: relative; display: flex; align-items: center;
+  justify-content: center; flex-direction: column; padding: 16px;
+}
+.gallery-card .g-half.g-day {
+  background: linear-gradient(135deg, #E8E8EA, #F4F4F5);
+}
+.gallery-card .g-half.g-night {
+  background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+}
+.gallery-card .g-half .g-icon { font-size: 2.5rem; margin-bottom: 6px; }
+.gallery-card .g-half .g-label {
+  font-size: .7rem; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; margin-bottom: 4px;
+}
+.gallery-card .g-day .g-label { color: var(--gray-500); }
+.gallery-card .g-night .g-label { color: var(--gold); }
+.gallery-card .g-half .g-text {
+  font-size: .85rem; line-height: 1.4; text-align: center;
+}
+.gallery-card .g-day .g-text { color: #222; }
+.gallery-card .g-night .g-text { color: #FFFFFF; text-shadow: 0 1px 4px rgba(0,0,0,.5); }
+.gallery-dots {
+  display: flex; justify-content: center; gap: 6px; margin-top: 8px;
+}
+.gallery-dots span {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--gray-200); transition: .3s;
+}
+.gallery-dots span.active { background: var(--gold); width: 20px; border-radius: 4px; }
+
+/* ===== MINI QUIZ ===== */
+.quiz {
+  background: linear-gradient(135deg, var(--navy-deep), var(--navy));
+  border-radius: 16px; padding: 28px 20px; margin: 32px 0;
+  color: #FFFFFF;
+}
+.quiz-title {
+  font-size: 1.15rem; font-weight: 800; text-align: center;
+  margin-bottom: 4px; color: var(--gold);
+}
+.quiz-sub {
+  font-size: .85rem; text-align: center; color: rgba(255,255,255,.6);
+  margin-bottom: 24px;
+}
+.quiz-step { display: none; }
+.quiz-step.active { display: block; }
+.quiz-q {
+  font-size: 1rem; font-weight: 700; margin-bottom: 16px;
+  text-align: center; line-height: 1.5;
+}
+.quiz-opts { display: flex; flex-direction: column; gap: 10px; }
+.quiz-opt {
+  background: rgba(255,255,255,.08); border: 1.5px solid rgba(255,255,255,.15);
+  border-radius: 10px; padding: 14px 16px; font-size: .95rem;
+  color: rgba(255,255,255,.9); cursor: pointer; transition: .2s;
+  text-align: left; min-height: 44px; display: flex; align-items: center;
+}
+.quiz-opt:hover, .quiz-opt:active {
+  border-color: var(--gold); background: rgba(201,169,110,.12);
+}
+.quiz-progress {
+  display: flex; gap: 6px; justify-content: center; margin-bottom: 20px;
+}
+.quiz-progress span {
+  width: 32px; height: 4px; border-radius: 2px; background: rgba(255,255,255,.15);
+}
+.quiz-progress span.done { background: var(--gold); }
+.quiz-result {
+  display: none; text-align: center; padding: 8px 0;
+}
+.quiz-result.show { display: block; }
+.quiz-result .result-type {
+  font-size: 1.4rem; font-weight: 800; color: var(--gold);
+  margin-bottom: 8px;
+}
+.quiz-result .result-desc {
+  color: rgba(255,255,255,.8); font-size: .95rem; line-height: 1.6;
+  margin-bottom: 16px;
+}
+.quiz-result .btn { width: 100%; }
+
+/* ===== EXIT INTENT TOAST ===== */
+.exit-toast {
+  position: fixed; top: -100px; left: 50%; transform: translateX(-50%);
+  z-index: 300; width: calc(100% - 32px); max-width: 400px;
+  background: var(--navy-deep); border: 1.5px solid var(--gold);
+  border-radius: 12px; padding: 16px 20px; text-align: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,.4); transition: top .4s ease;
+}
+.exit-toast.show { top: 16px; }
+.exit-toast .exit-msg {
+  color: #FFFFFF; font-size: .95rem; font-weight: 700;
+  line-height: 1.5; margin-bottom: 12px;
+}
+.exit-toast .exit-msg em { color: var(--gold); font-style: normal; }
+.exit-toast .exit-btns { display: flex; gap: 8px; }
+.exit-toast .exit-btns a, .exit-toast .exit-btns button {
+  flex: 1; padding: 12px; border-radius: 8px; font-size: .85rem;
+  font-weight: 700; text-align: center; min-height: 44px;
+  display: flex; align-items: center; justify-content: center;
+}
+.exit-toast .btn-exit-cta {
+  background: var(--gold); color: var(--navy-deep); border: none;
+}
+.exit-toast .btn-exit-close {
+  background: none; border: 1px solid rgba(255,255,255,.2);
+  color: rgba(255,255,255,.5); cursor: pointer;
+}
+
+/* ===== BOTTOM CTA (놀쿨 보라색) ===== */
+.bottom-cta {
+  display: block; margin: 24px auto; max-width: 720px;
+  background: linear-gradient(135deg, #7C3AED, #5B21B6);
+  border-radius: 14px; padding: 20px 24px; text-align: center;
+  transition: .2s; box-shadow: 0 4px 20px rgba(124,58,237,.3);
+}
+.bottom-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(124,58,237,.4); }
+.bottom-cta .cta-label {
+  color: rgba(255,255,255,.7); font-size: .8rem; margin-bottom: 4px;
+}
+.bottom-cta .cta-main {
+  color: #FFFFFF; font-size: 1.2rem; font-weight: 800;
+  letter-spacing: -.01em;
+}
+.bottom-cta .cta-arrow {
+  color: rgba(255,255,255,.8); font-size: 1.1rem; margin-top: 4px;
+}
