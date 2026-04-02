@@ -15,6 +15,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // 80% scroll secret reveal
+  var secrets = document.querySelectorAll('.scroll-secret');
+  if (secrets.length) {
+    var revealed = false;
+    window.addEventListener('scroll', function() {
+      if (revealed) return;
+      var scrollPct = (window.scrollY + window.innerHeight) / document.body.scrollHeight;
+      if (scrollPct >= 0.8) {
+        revealed = true;
+        secrets.forEach(function(el) {
+          el.style.opacity = '1';
+          el.style.maxHeight = '600px';
+          el.style.marginTop = '24px';
+        });
+      }
+    });
+  }
+
   // FAQ accordion
   document.querySelectorAll('.faq-q').forEach(function(q) {
     q.addEventListener('click', function() {
