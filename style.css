@@ -111,7 +111,7 @@ img { max-width: 100%; display: block; }
 .btn {
   display: inline-flex; align-items: center; justify-content: center;
   padding: 14px 28px; border-radius: 8px; font-weight: 700; font-size: .95rem;
-  transition: .2s; gap: 6px;
+  transition: .2s; gap: 6px; min-height: 44px;
 }
 .btn:hover { transform: translateY(-1px); }
 .btn-gold { background: var(--gold); color: var(--navy-dark); }
