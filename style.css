@@ -529,6 +529,36 @@ img { max-width: 100%; display: block; }
   color: rgba(255,255,255,.5); cursor: pointer;
 }
 
+/* ===== PULL QUOTE ===== */
+.pull-quote {
+  font-size: clamp(1.3rem, 4.5vw, 1.5rem); font-style: italic; font-weight: 700;
+  color: var(--navy-dark); line-height: 1.5; text-align: center;
+  padding: 28px 20px; margin: 32px 0; position: relative;
+  border-top: 2px solid var(--gold); border-bottom: 2px solid var(--gold);
+}
+.pull-quote::before { content: '\201C'; font-size: 3rem; color: var(--gold); position: absolute; top: 8px; left: 12px; line-height: 1; }
+.section-navy .pull-quote { color: rgba(255,255,255,.9); }
+
+/* ===== MID CTA (놀쿨 보라색 100% 버튼) ===== */
+.mid-cta {
+  display: flex; align-items: center; justify-content: center;
+  width: 100%; max-width: 720px; margin: 32px auto;
+  background: linear-gradient(135deg, #7C3AED, #5B21B6);
+  color: #FFFFFF; font-size: 1.1rem; font-weight: 800;
+  padding: 0 24px; height: 56px; border-radius: 14px;
+  text-align: center; transition: .2s;
+  box-shadow: 0 4px 20px rgba(124,58,237,.3);
+  min-height: 56px;
+}
+.mid-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(124,58,237,.4); }
+
+/* ===== HOOK SENTENCE ===== */
+.hook-sentence {
+  font-size: clamp(1.1rem, 4vw, 1.25rem); font-weight: 800;
+  color: var(--navy-dark); line-height: 1.5; margin-bottom: 20px;
+  padding: 16px 0; border-bottom: 1px solid var(--gray-200);
+}
+
 /* ===== BOTTOM CTA (놀쿨 보라색) ===== */
 .bottom-cta {
   display: block; margin: 24px auto; max-width: 720px;
