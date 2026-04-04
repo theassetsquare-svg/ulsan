@@ -1,5 +1,5 @@
 // Mobile menu toggle
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() { try {
   var btn = document.querySelector('.menu-btn');
   var nav = document.querySelector('.nav');
   if (btn && nav) {
@@ -158,4 +158,4 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   }
-});
+} catch(e) { console.warn('[script]', e); } });
