@@ -22,7 +22,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: -apple-system, 'Pretendard', 'Noto Sans KR', system-ui, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
   font-size: 16px;
   background: var(--white);
   color: #111;
@@ -166,9 +166,9 @@ img { max-width: 100%; display: block; }
 .section-navy .section-title { color: var(--white); }
 .section-title em { font-style: normal; color: var(--gold); }
 .section-sub {
-  color: var(--gray-500); font-size: .95rem; margin-bottom: 28px; line-height: 1.6;
+  color: var(--gray-600); font-size: .95rem; margin-bottom: 28px; line-height: 1.6;
 }
-.section-navy .section-sub { color: rgba(255,255,255,.6); }
+.section-navy .section-sub { color: rgba(255,255,255,.75); }
 .section-label {
   display: inline-block; color: var(--gold-dark); font-size: .75rem;
   font-weight: 700; letter-spacing: .15em; text-transform: uppercase;
@@ -232,7 +232,7 @@ img { max-width: 100%; display: block; }
 }
 .review-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
 .review-name { color: var(--navy-dark); font-weight: 700; font-size: .95rem; }
-.review-meta { color: var(--gray-500); font-size: .8rem; }
+.review-meta { color: var(--gray-600); font-size: .8rem; }
 .review-stars { color: var(--gold); font-size: .85rem; letter-spacing: 1px; }
 .review p { color: #222; line-height: 1.7; font-size: 1rem; }
 
@@ -285,14 +285,14 @@ img { max-width: 100%; display: block; }
 .bamkey-link:hover { border-color: var(--gold); }
 .bamkey-link .label { color: var(--gold); font-size: .8rem; font-weight: 600; margin-bottom: 6px; }
 .bamkey-link .main { color: var(--white); font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
-.bamkey-link .sub { color: rgba(255,255,255,.5); font-size: .8rem; }
+.bamkey-link .sub { color: rgba(255,255,255,.7); font-size: .8rem; }
 .bamkey-link .arrow { color: var(--gold); font-size: 1.2rem; margin-top: 8px; }
 
 /* ===== FOOTER ===== */
 .footer {
   background: var(--navy-deep); padding: 32px 16px; text-align: center;
 }
-.footer p { color: rgba(255,255,255,.4); font-size: .8rem; margin-bottom: 6px; }
+.footer p { color: rgba(255,255,255,.65); font-size: .8rem; margin-bottom: 6px; }
 .footer a { color: var(--gold); }
 .footer a:hover { text-decoration: underline; }
 
@@ -366,7 +366,7 @@ img { max-width: 100%; display: block; }
   font-size: .75rem; font-weight: 700; letter-spacing: .1em;
   text-transform: uppercase; margin-bottom: 8px;
 }
-.comparison .col-before .col-label { color: var(--gray-500); }
+.comparison .col-before .col-label { color: var(--gray-600); }
 .comparison .col-after .col-label { color: var(--gold); }
 .comparison .col-before p { color: #222; font-size: .9rem; line-height: 1.6; }
 .comparison .col-after p { color: #FFFFFF; font-size: .9rem; line-height: 1.6; }
@@ -434,7 +434,7 @@ img { max-width: 100%; display: block; }
   font-size: .7rem; font-weight: 700; letter-spacing: .08em;
   text-transform: uppercase; margin-bottom: 4px;
 }
-.gallery-card .g-day .g-label { color: var(--gray-500); }
+.gallery-card .g-day .g-label { color: var(--gray-600); }
 .gallery-card .g-night .g-label { color: var(--gold); }
 .gallery-card .g-half .g-text {
   font-size: .85rem; line-height: 1.4; text-align: center;
@@ -461,7 +461,7 @@ img { max-width: 100%; display: block; }
   margin-bottom: 4px; color: var(--gold);
 }
 .quiz-sub {
-  font-size: .85rem; text-align: center; color: rgba(255,255,255,.6);
+  font-size: .85rem; text-align: center; color: rgba(255,255,255,.75);
   margin-bottom: 24px;
 }
 .quiz-step { display: none; }
@@ -526,7 +526,7 @@ img { max-width: 100%; display: block; }
 }
 .exit-toast .btn-exit-close {
   background: none; border: 1px solid rgba(255,255,255,.2);
-  color: rgba(255,255,255,.5); cursor: pointer;
+  color: rgba(255,255,255,.7); cursor: pointer;
 }
 
 /* ===== PULL QUOTE ===== */

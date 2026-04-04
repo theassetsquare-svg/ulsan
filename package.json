@@ -16,5 +16,12 @@
     "url": "https://github.com/theassetsquare-svg/ulsan/issues"
   },
   "homepage": "https://github.com/theassetsquare-svg/ulsan#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "sharp": "^0.34.5"
+  },
+  "dependencies": {
+    "@fontsource/noto-sans-kr": "^5.2.9",
+    "canvas": "^3.2.3"
+  }
 }
