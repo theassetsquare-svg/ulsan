@@ -36,24 +36,11 @@ Do NOT ask. Just fix.
 - title: Primary keyword + hook. Under 60 chars
 - meta: 150 chars. H1+H2 keyword 3+ times
 - Schema JSON-LD NightClub. og:image 1:1 + nickname big
-- robots.txt Allow ALL bots! NO Disallow! sitemap.xml list ALL pages! llms.txt for AI search! Core Web Vitals
+- robots.txt Allow ALL bots! NO Disallow! sitemap.xml list ALL pages! llms.txt for AI search! + llms.txt. Core Web Vitals
 - E-E-A-T: real experience. Canonical URL. NEVER duplicate title/content across domains!. og:image 1200x1200 (1:1) every page!
 
 - NEVER use shared content pools! Write UNIQUE 1000+ chars per venue! Takes time = OK! SEO = #1 priority!
 - Time does not matter! Write UNIQUE 1000+ chars per venue! SEO > speed!
-## ★★★ SEO CHECKLIST (per page) ★★★
-대표키워드: [여기에 키워드 적기]
-예) 울산나이트 / 일산요정 / 부산물나이트 / 일산룸
-
-- [Title] 대표키워드 + hook. Under 60 chars
-- [Meta] 150 chars. [H1] once. [H2] 3+ with keyword
-- [First 100 chars] Keyword must appear
-- [Density] 1.5-2.5% (1000c=5-7x, 2000c=8-12x)
-- [Schema] JSON-LD NightClub. [og:image] real photo + nickname
-- [Internal link] 놀쿨 메인사이트 링크: https://ilsanroom.pages.dev/ 이 주소만! ilsanroom.pages.dev 쓰지 마!
-- [Content] 80% 정보 (분위기/예약/가격/비교) + 20% "놀쿨에서 더 보기"
-- If not 1.5-2.5% = DON'T move to next task!
-
 ## NEVER
 - NEVER use fake phone numbers! NEVER use placeholder data! Only REAL advertiser phone numbers! No number = leave empty!
 - Auto page transition. Next.js. Change URLs
