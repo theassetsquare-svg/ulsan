@@ -108,14 +108,17 @@
   }
   function checkReveal() {
     var wh = window.innerHeight;
-    for (var i = revealEls.length - 1; i >= 0; i--) {
+    var remaining = [];
+    for (var i = 0; i < revealEls.length; i++) {
       var rect = revealEls[i].getBoundingClientRect();
       if (rect.top < wh * 0.88) {
         revealEls[i].style.opacity = '1';
         revealEls[i].style.transform = 'translateY(0)';
-        revealEls.splice(i, 1);
+      } else {
+        remaining.push(revealEls[i]);
       }
     }
+    revealEls = remaining;
   }
 
   // ★ 안전장치: 3초 후 숨겨진 요소 강제 표시 (빈 화면 방지)
@@ -163,7 +166,7 @@
           checkCollectionComplete();
         }, 500);
       }
-    });
+    }, { passive: true });
   }
 
   // ============================================================
@@ -308,10 +311,6 @@
             '<span class="npb-hook">' + next.hook + '</span>' +
           '</div>' +
         '</div>' +
-        '<div id="auto-countdown" style="margin-top:10px;display:none;">' +
-          '<div style="background:rgba(201,169,110,.2);border-radius:4px;height:4px;overflow:hidden;"><div id="cd-bar" style="height:100%;background:#C9A96E;width:100%;transition:width 1s linear;"></div></div>' +
-          '<div id="cd-text" style="color:rgba(255,255,255,.5);font-size:11px;margin-top:4px;">자동 이동까지 <span id="cd-sec">15</span>초</div>' +
-        '</div>' +
       '</a>' +
       '<a href="' + prev.url + '" class="npb-card npb-prev">' +
         '<span style="font-size:1.2rem;margin-right:8px;">' + prev.emoji + '</span>' +
@@ -324,47 +323,7 @@
     var bamkey = document.querySelector('.bamkey-link');
     if (bamkey) bamkey.parentNode.insertBefore(box, bamkey);
 
-    // 넷플릭스 자동 카운트다운 — 페이지 끝에 도달 시
-    var countdownStarted = false;
-    var countdownSec = 15;
-    var countdownInterval = null;
-
-    window.addEventListener('scroll', function() {
-      var scrollH = document.documentElement.scrollHeight - window.innerHeight;
-      var p = scrollH > 0 ? (window.scrollY / scrollH) * 100 : 0;
-
-      if (p > 92 && !countdownStarted) {
-        countdownStarted = true;
-        var cdWrap = document.getElementById('auto-countdown');
-        var cdBar = document.getElementById('cd-bar');
-        var cdSec = document.getElementById('cd-sec');
-        if (!cdWrap) return;
-
-        cdWrap.style.display = 'block';
-
-        countdownInterval = safeInterval(function() {
-          countdownSec--;
-          if (cdSec) cdSec.textContent = countdownSec;
-          if (cdBar) cdBar.style.width = (countdownSec / 15 * 100) + '%';
-
-          if (countdownSec <= 0) {
-            clearInterval(countdownInterval);
-            window.location.href = next.url;
-          }
-        }, 1000);
-      }
-
-      // 스크롤 올리면 카운트다운 취소
-      if (p < 85 && countdownStarted) {
-        countdownStarted = false;
-        countdownSec = 15;
-        clearInterval(countdownInterval);
-        var cdWrap2 = document.getElementById('auto-countdown');
-        if (cdWrap2) cdWrap2.style.display = 'none';
-        var cdBar2 = document.getElementById('cd-bar');
-        if (cdBar2) cdBar2.style.width = '100%';
-      }
-    }, { passive: true });
+    // 자동 페이지 전환 제거 (사용자 의도 없는 이동 금지)
   }
 
   // ============================================================
@@ -498,7 +457,7 @@
     el.innerHTML = '<span style="display:inline-block;width:6px;height:6px;background:#25D366;border-radius:50%;animation:pulse 2s infinite;"></span> <span id="vc-num">' + count + '</span>명이 보고 있습니다';
     document.body.appendChild(el);
 
-    safeInterval(function() {
+    function updateViewerCount() {
       count += Math.random() > 0.5 ? 1 : -1;
       if (count < 2) count = 3;
       if (count > 18) count = 14;
@@ -509,7 +468,9 @@
         num.textContent = count;
         safeTimeout(function() { num.style.transform = 'scale(1)'; }, 300);
       }
-    }, 6000 + Math.random() * 10000);
+      safeTimeout(updateViewerCount, 6000 + Math.random() * 10000);
+    }
+    safeTimeout(updateViewerCount, 6000 + Math.random() * 10000);
   }
 
   // ============================================================
@@ -542,7 +503,7 @@
       var pageIds = ['home','story','atmosphere','first-visit','access','review','faq','contact'];
       for (var i = 0; i < pageIds.length; i++) {
         var isVisited = visited[pageIds[i]];
-        dots += '<span style="width:8px;height:8px;border-radius:50;background:' +
+        dots += '<span style="width:8px;height:8px;border-radius:50%;background:' +
           (isVisited ? '#C9A96E' : 'rgba(255,255,255,.2)') +
           ';display:inline-block;border-radius:50%;"></span>';
       }

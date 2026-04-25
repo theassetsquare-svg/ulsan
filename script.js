@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() { try {
           el.style.marginTop = '24px';
         });
       }
-    });
+    }, { passive: true });
   }
 
   // FAQ accordion
@@ -38,7 +38,8 @@ document.addEventListener('DOMContentLoaded', function() { try {
     q.addEventListener('click', function() {
       var faq = q.parentElement;
       faq.classList.toggle('open');
-      q.querySelector('span').textContent = faq.classList.contains('open') ? '−' : '+';
+      var icon = q.querySelector('span');
+      if (icon) icon.textContent = faq.classList.contains('open') ? '−' : '+';
     });
   });
 
@@ -75,12 +76,14 @@ document.addEventListener('DOMContentLoaded', function() { try {
   var dots = document.querySelectorAll('.gallery-dots span');
   if (gallery && dots.length) {
     gallery.addEventListener('scroll', function() {
-      var cardW = gallery.querySelector('.gallery-card').offsetWidth + 12;
+      var card = gallery.querySelector('.gallery-card');
+      if (!card) return;
+      var cardW = card.offsetWidth + 12;
       var idx = Math.round(gallery.scrollLeft / cardW);
       dots.forEach(function(d, i) {
         d.classList.toggle('active', i === idx);
       });
-    });
+    }, { passive: true });
   }
 
   // === MINI QUIZ ===
@@ -129,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() { try {
   // === EXIT INTENT ===
   var exitToast = document.querySelector('.exit-toast');
   if (exitToast) {
-    var exitShown = false;
+    var exitShown = !!sessionStorage.getItem('exit_shown');
     var lastY = window.scrollY;
     var upCount = 0;
 
@@ -147,9 +150,7 @@ document.addEventListener('DOMContentLoaded', function() { try {
         upCount = 0;
       }
       lastY = y;
-    });
-
-    if (sessionStorage.getItem('exit_shown')) exitShown = true;
+    }, { passive: true });
 
     var closeBtn = exitToast.querySelector('.btn-exit-close');
     if (closeBtn) {
