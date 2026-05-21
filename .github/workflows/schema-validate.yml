@@ -1,0 +1,65 @@
+name: Schema Validate (JSON-LD + 영구 룰)
+
+on:
+  schedule:
+    - cron: '0 4 * * *'  # KST 13:00
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+      - 'scripts/inject-schema.js'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate JSON-LD blocks + 영구 룰
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const files = ['index.html','story.html','atmosphere.html','first-visit.html','access.html','review.html','faq.html','contact.html'];
+          const REQUIRED_TYPES = ['WebSite','NightClub','LocalBusiness','Article','BreadcrumbList'];
+          const BAN_WORDS = ['밤문화','유흥','2차로'];
+          const BAN_SCHEMA = ['AggregateRating','aggregateRating'];
+          let failed = 0;
+          for (const f of files) {
+            const html = fs.readFileSync(f, 'utf8');
+            const blocks = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m => m[1]);
+            if (blocks.length === 0) { console.error(`[FAIL] ${f}: no JSON-LD`); failed++; continue; }
+            let allTypes = [];
+            for (const b of blocks) {
+              try {
+                const j = JSON.parse(b);
+                const graph = j['@graph'] || [j];
+                for (const g of graph) {
+                  if (g['@type']) allTypes.push(g['@type']);
+                }
+              } catch (e) {
+                console.error(`[FAIL] ${f}: JSON parse error -`, e.message);
+                failed++;
+              }
+            }
+            const missing = REQUIRED_TYPES.filter(t => !allTypes.includes(t));
+            if (missing.length) { console.error(`[FAIL] ${f}: missing types`, missing); failed++; }
+            for (const w of BAN_WORDS) {
+              if (html.includes(w)) { console.error(`[FAIL] ${f}: contains banned word "${w}"`); failed++; }
+            }
+            for (const s of BAN_SCHEMA) {
+              if (html.includes(s)) { console.error(`[FAIL] ${f}: contains banned schema "${s}"`); failed++; }
+            }
+            console.log(`[${failed ? 'CHK' : 'OK'}] ${f}: types=${allTypes.length}`);
+          }
+          if (failed) { console.error(`\nTotal failures: ${failed}`); process.exit(1); }
+          console.log('\nAll 8 pages OK.');
+          NODE

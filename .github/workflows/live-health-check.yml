@@ -1,0 +1,76 @@
+name: Live Health Check (6h)
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # every 6 hours
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check 8 pages + /legal/ + critical assets
+        run: |
+          set -e
+          URLS=(
+            "https://ulsan.pages.dev/"
+            "https://ulsan.pages.dev/story.html"
+            "https://ulsan.pages.dev/atmosphere.html"
+            "https://ulsan.pages.dev/first-visit.html"
+            "https://ulsan.pages.dev/access.html"
+            "https://ulsan.pages.dev/review.html"
+            "https://ulsan.pages.dev/faq.html"
+            "https://ulsan.pages.dev/contact.html"
+            "https://ulsan.pages.dev/legal/"
+            "https://ulsan.pages.dev/sitemap.xml"
+            "https://ulsan.pages.dev/robots.txt"
+            "https://ulsan.pages.dev/llms.txt"
+            "https://ulsan.pages.dev/site.webmanifest"
+            "https://ulsan.pages.dev/sw.js"
+            "https://ulsan.pages.dev/icon-192.png"
+            "https://ulsan.pages.dev/icon-512.png"
+            "https://ulsan.pages.dev/og/og-thumb.png"
+          )
+          FAIL=0
+          for U in "${URLS[@]}"; do
+            CODE=$(curl -sL -o /dev/null -w "%{http_code}" "$U")
+            if [ "$CODE" != "200" ]; then
+              echo "[FAIL] $U → $CODE"
+              FAIL=$((FAIL+1))
+            else
+              echo "[OK]   $U → 200"
+            fi
+          done
+
+      - name: Live content guard — banned words must be 0
+        run: |
+          BANNED=("밤문화" "유흥" "2차로" "AggregateRating")
+          FAIL=0
+          for U in "https://ulsan.pages.dev/" \
+                   "https://ulsan.pages.dev/story.html" \
+                   "https://ulsan.pages.dev/atmosphere.html" \
+                   "https://ulsan.pages.dev/first-visit.html" \
+                   "https://ulsan.pages.dev/access.html" \
+                   "https://ulsan.pages.dev/review.html" \
+                   "https://ulsan.pages.dev/faq.html" \
+                   "https://ulsan.pages.dev/contact.html"; do
+            BODY=$(curl -sL "$U")
+            for W in "${BANNED[@]}"; do
+              COUNT=$(echo "$BODY" | grep -c "$W" || true)
+              if [ "$COUNT" != "0" ]; then
+                echo "[FAIL] $U contains '$W' x$COUNT"
+                FAIL=$((FAIL+1))
+              fi
+            done
+          done
+          if [ "$FAIL" != "0" ]; then
+            echo "Total content-guard failures: $FAIL"
+            exit 1
+          fi
+          echo "All live pages clean."

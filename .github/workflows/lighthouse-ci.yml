@@ -1,0 +1,73 @@
+name: Lighthouse CI (8 pages, mobile + desktop)
+
+on:
+  schedule:
+    - cron: '30 3 * * *'  # KST 12:30
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+      - 'style.css'
+      - 'script.js'
+      - 'engage.js'
+      - 'sw.js'
+      - 'site.webmanifest'
+
+permissions:
+  contents: read
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        page:
+          - { name: home,         url: 'https://ulsan.pages.dev/' }
+          - { name: story,        url: 'https://ulsan.pages.dev/story.html' }
+          - { name: atmosphere,   url: 'https://ulsan.pages.dev/atmosphere.html' }
+          - { name: first-visit,  url: 'https://ulsan.pages.dev/first-visit.html' }
+          - { name: access,       url: 'https://ulsan.pages.dev/access.html' }
+          - { name: review,       url: 'https://ulsan.pages.dev/review.html' }
+          - { name: faq,          url: 'https://ulsan.pages.dev/faq.html' }
+          - { name: contact,      url: 'https://ulsan.pages.dev/contact.html' }
+        form:
+          - mobile
+          - desktop
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Lighthouse
+        run: npm i -g lighthouse@latest
+
+      - name: Run Lighthouse
+        run: |
+          mkdir -p reports
+          OUT=reports/${{ matrix.page.name }}-${{ matrix.form }}.json
+          lighthouse "${{ matrix.page.url }}" \
+            --quiet \
+            --chrome-flags="--headless=new --no-sandbox --disable-dev-shm-usage" \
+            --output=json \
+            --output-path="$OUT" \
+            --preset=${{ matrix.form == 'desktop' && 'desktop' || '' }} \
+            --only-categories=performance,accessibility,best-practices,seo,pwa
+          echo "=== ${{ matrix.page.name }} (${{ matrix.form }}) ==="
+          node -e "
+            const r = require('./$OUT');
+            const c = r.categories;
+            const fmt = (k) => (c[k] ? Math.round(c[k].score*100) : '-');
+            console.log('perf:', fmt('performance'), 'a11y:', fmt('accessibility'), 'bp:', fmt('best-practices'), 'seo:', fmt('seo'), 'pwa:', fmt('pwa'));
+          "
+
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-${{ matrix.page.name }}-${{ matrix.form }}
+          path: reports/${{ matrix.page.name }}-${{ matrix.form }}.json
+          retention-days: 14

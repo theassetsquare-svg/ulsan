@@ -1,0 +1,25 @@
+{
+  "name": "울산챔피언나이트",
+  "short_name": "챔피언나이트",
+  "description": "울산 No.1 나이트라이프 — 삼산동 대형 합법 나이트클럽",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1E3A5F",
+  "theme_color": "#1E3A5F",
+  "lang": "ko-KR",
+  "dir": "ltr",
+  "categories": ["entertainment", "lifestyle", "music"],
+  "icons": [
+    {"src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ],
+  "shortcuts": [
+    {"name": "춘자 전화", "short_name": "전화", "url": "tel:010-5653-0069", "icons": [{"src": "/icon-192.png", "sizes": "192x192"}]},
+    {"name": "카카오톡 문의", "short_name": "카톡", "url": "https://open.kakao.com/o/sBesta12", "icons": [{"src": "/icon-192.png", "sizes": "192x192"}]},
+    {"name": "첫 방문 가이드", "short_name": "첫방문", "url": "/first-visit.html", "icons": [{"src": "/icon-192.png", "sizes": "192x192"}]},
+    {"name": "오시는길", "short_name": "오시는길", "url": "/access.html", "icons": [{"src": "/icon-192.png", "sizes": "192x192"}]}
+  ]
+}

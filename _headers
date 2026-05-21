@@ -1,0 +1,50 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+/
+  Link: </og/og-thumb.png>; rel=preload; as=image; fetchpriority=high
+  Link: </style.css>; rel=preload; as=style
+  Cache-Control: public, max-age=60, s-maxage=300
+
+/*.html
+  Cache-Control: public, max-age=60, s-maxage=300
+
+/og/*
+  Cache-Control: public, max-age=2592000, immutable
+
+/icon-*.png
+  Cache-Control: public, max-age=2592000, immutable
+
+/favicon*
+  Cache-Control: public, max-age=2592000
+
+/style.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/script.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/engage.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/sw.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+/site.webmanifest
+  Cache-Control: public, max-age=86400
+  Content-Type: application/manifest+json; charset=utf-8
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+  Content-Type: application/xml; charset=utf-8
+
+/robots.txt
+  Cache-Control: public, max-age=3600
+
+/llms.txt
+  Cache-Control: public, max-age=3600
+  Content-Type: text/plain; charset=utf-8
