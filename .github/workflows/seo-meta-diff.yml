@@ -1,0 +1,105 @@
+name: SEO Meta Diff (duplicate title/description detection, 24h)
+
+on:
+  schedule:
+    - cron: '30 5 * * *'  # KST 14:30 (UTC 05:30)
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  diff:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Detect duplicate titles/descriptions across pages
+        id: detect
+        run: |
+          node <<'NODE' | tee meta-report.txt
+          const fs = require('fs');
+          const files = ['index.html','story.html','atmosphere.html','first-visit.html','access.html','review.html','faq.html','contact.html'];
+
+          function pick(html, re){
+            const m = html.match(re);
+            return m ? m[1].trim() : '';
+          }
+
+          const titles = new Map();
+          const descs = new Map();
+          const ogTitles = new Map();
+          const ogDescs = new Map();
+          const headlines = new Map();
+          const issues = [];
+
+          console.log('# SEO Meta Diff Report\n');
+          console.log('| Page | Title | Description |');
+          console.log('|---|---|---|');
+          for (const f of files){
+            const html = fs.readFileSync(f,'utf8');
+            const t = pick(html, /<title>([^<]+)<\/title>/);
+            const d = pick(html, /<meta\s+name="description"\s+content="([^"]+)"/);
+            const ot = pick(html, /<meta\s+property="og:title"\s+content="([^"]+)"/);
+            const od = pick(html, /<meta\s+property="og:description"\s+content="([^"]+)"/);
+            const h = pick(html, /"headline":\s*"([^"]+)"/);
+
+            const tk = (titles.get(t)||[]).concat(f); titles.set(t, tk);
+            const dk = (descs.get(d)||[]).concat(f); descs.set(d, dk);
+            const otk = (ogTitles.get(ot)||[]).concat(f); ogTitles.set(ot, otk);
+            const odk = (ogDescs.get(od)||[]).concat(f); ogDescs.set(od, odk);
+            const hk = (headlines.get(h)||[]).concat(f); headlines.set(h, hk);
+
+            const tlen = t.length, dlen = d.length;
+            const flag = (tlen > 70 ? '⚠️title>70' : '') + (dlen > 160 ? ' ⚠️desc>160' : '');
+            console.log(`| ${f} | ${t.length}자: ${t} | ${d.length}자 |`);
+
+            if (tlen > 70) issues.push(`${f}: title ${tlen}자 > 70자 권장 한도 초과`);
+            if (dlen > 160) issues.push(`${f}: description ${dlen}자 > 160자 권장 한도 초과`);
+            if (!t.includes('울산챔피언나이트')) issues.push(`${f}: title에 primary keyword '울산챔피언나이트' 누락`);
+          }
+
+          for (const [k, v] of titles) if (v.length > 1) issues.push(`DUPLICATE title across ${v.join(', ')}: "${k}"`);
+          for (const [k, v] of descs) if (v.length > 1) issues.push(`DUPLICATE description across ${v.join(', ')}: "${k}"`);
+          for (const [k, v] of ogTitles) if (v.length > 1) issues.push(`DUPLICATE og:title across ${v.join(', ')}: "${k}"`);
+          for (const [k, v] of ogDescs) if (v.length > 1) issues.push(`DUPLICATE og:description across ${v.join(', ')}: "${k}"`);
+          for (const [k, v] of headlines) if (v.length > 1 && k) issues.push(`DUPLICATE Article headline across ${v.join(', ')}: "${k}"`);
+
+          if (issues.length){
+            fs.writeFileSync('issues.txt', issues.join('\n'));
+            console.error('\n⚠️ ISSUES:\n' + issues.join('\n'));
+            process.exitCode = 1;
+          } else {
+            console.log('\n✅ All 8 pages have UNIQUE title/description/og/headline. No duplicates.');
+          }
+          NODE
+
+      - name: Open issue on duplicate detection
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TITLE="📑 SEO meta duplicate/length warning $(TZ='Asia/Seoul' date +%F)"
+          BODY=$(cat <<MD
+          # SEO Meta Diff Report
+          $(cat meta-report.txt)
+
+          ## Issues
+          \`\`\`
+          $(cat issues.txt 2>/dev/null || echo 'none')
+          \`\`\`
+
+          Rule: every page must have a UNIQUE title / meta description / og:title / og:description / Article headline. Title ≤ 60–70 chars, description ≤ 150–160 chars. Per CLAUDE.md & Google Search guidelines.
+          MD
+          )
+          gh issue create --title "$TITLE" --body "$BODY" --label "seo,automation" || true

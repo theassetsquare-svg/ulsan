@@ -1,0 +1,88 @@
+name: Keyword Density Monitor (24h)
+
+on:
+  schedule:
+    - cron: '0 5 * * *'  # KST 14:00 (UTC 05:00)
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  density:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Measure keyword density (1.5%~2.5% rule per CLAUDE.md)
+        id: measure
+        run: |
+          node <<'NODE' | tee density-report.txt
+          const fs = require('fs');
+          const files = ['index.html','story.html','atmosphere.html','first-visit.html','access.html','review.html','faq.html','contact.html'];
+          const PRIMARY = '울산챔피언나이트';
+          const SECONDARY = '울산나이트';
+          const MIN = 1.5, MAX = 2.5;
+
+          function visibleText(html){
+            let s = html.replace(/<script[\s\S]*?<\/script>/g,'').replace(/<style[\s\S]*?<\/style>/g,'');
+            s = s.replace(/<head[\s\S]*?<\/head>/g,'');
+            s = s.replace(/<[^>]+>/g,' ');
+            s = s.replace(/&nbsp;/g,' ').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>');
+            s = s.replace(/\s+/g,' ').trim();
+            return s;
+          }
+
+          let warn = [];
+          console.log('| Page | Body chars | Primary | Density% | Secondary | Status |');
+          console.log('|---|---:|---:|---:|---:|---|');
+          for (const f of files){
+            const html = fs.readFileSync(f,'utf8');
+            const txt = visibleText(html);
+            const len = txt.length;
+            const p = (txt.match(new RegExp(PRIMARY,'g'))||[]).length;
+            const s = (txt.match(new RegExp(SECONDARY,'g'))||[]).length;
+            const d = +(p * PRIMARY.length / len * 100).toFixed(2);
+            let status = '✅ OK';
+            if (d > MAX) { status = '⚠️ OVER ' + MAX + '%'; warn.push(`${f}: ${d}% > ${MAX}% (stuffing risk)`); }
+            else if (d < MIN) { status = '⚠️ UNDER ' + MIN + '%'; warn.push(`${f}: ${d}% < ${MIN}% (under-optimized)`); }
+            if (s === 0) { warn.push(`${f}: SECONDARY '${SECONDARY}' missing from body (0 occurrences)`); }
+            console.log(`| ${f} | ${len} | ${p} | ${d}% | ${s} | ${status} |`);
+          }
+          if (warn.length){
+            fs.writeFileSync('warn.txt', warn.join('\n'));
+            console.error('\n⚠️ WARNINGS:\n' + warn.join('\n'));
+            process.exitCode = 1;
+          }
+          NODE
+
+      - name: Open issue on warning
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TITLE="🔍 Keyword density warning $(TZ='Asia/Seoul' date +%F)"
+          BODY=$(cat <<MD
+          # Keyword Density Report
+          $(cat density-report.txt)
+
+          ## Warnings
+          \`\`\`
+          $(cat warn.txt 2>/dev/null || echo 'none')
+          \`\`\`
+
+          - Primary keyword target: 1.5% ~ 2.5% (per CLAUDE.md)
+          - Secondary keyword 울산나이트 must appear at least once per page
+          MD
+          )
+          gh issue create --title "$TITLE" --body "$BODY" --label "seo,automation" || true
