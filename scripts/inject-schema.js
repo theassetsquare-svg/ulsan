@@ -15,7 +15,7 @@ const pages = [
   { file: 'access.html',      slug: 'access.html',       name: '오시는길',  title: '울산챔피언나이트 오시는길 — 삼산동 위치·주차·교통편' },
   { file: 'review.html',      slug: 'review.html',       name: '후기',      title: '울산챔피언나이트 후기 — 단골들이 직접 말하는 솔직한 이야기' },
   { file: 'faq.html',         slug: 'faq.html',          name: 'FAQ',       title: '울산챔피언나이트 자주 묻는 질문 — 13가지 답변' },
-  { file: 'contact.html',     slug: 'contact.html',      name: '연락처',    title: '울산챔피언나이트 예약·문의 — 춘자 ' }
+  { file: 'contact.html',     slug: 'contact.html',      name: '연락처',    title: '울산챔피언나이트 예약·문의 — 춘자 010-5653-0069' }
 ];
 
 function buildGraph(p) {
