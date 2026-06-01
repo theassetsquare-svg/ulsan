@@ -99,7 +99,7 @@ function generateOG(page) {
 
   ctx.fillStyle = '#C9A96E';
   ctx.font = '900 38px NotoKR';
-  ctx.fillText('📞 010-5653-0069', W / 2, 960);
+  ctx.fillText('📞 ', W / 2, 960);
 
   // === Bottom gold bar ===
   const bottomGrad = ctx.createLinearGradient(0, 0, W, 0);
