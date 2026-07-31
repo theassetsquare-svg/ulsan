@@ -5,7 +5,7 @@ const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
 const TODAY = '2026-05-21T00:00:00+09:00';
-const BASE = 'https://ulsan.pages.dev';
+const BASE = 'https://ulsana.pages.dev';
 
 const pages = [
   { file: 'index.html',       slug: '',                  name: '홈',        title: '울산챔피언나이트 — 한 번 갔다가 단골 된 사람들의 비밀' },

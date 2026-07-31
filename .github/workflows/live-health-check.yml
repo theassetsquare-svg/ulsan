@@ -19,23 +19,23 @@ jobs:
         run: |
           set -e
           URLS=(
-            "https://ulsan.pages.dev/"
-            "https://ulsan.pages.dev/story.html"
-            "https://ulsan.pages.dev/atmosphere.html"
-            "https://ulsan.pages.dev/first-visit.html"
-            "https://ulsan.pages.dev/access.html"
-            "https://ulsan.pages.dev/review.html"
-            "https://ulsan.pages.dev/faq.html"
-            "https://ulsan.pages.dev/contact.html"
-            "https://ulsan.pages.dev/legal/"
-            "https://ulsan.pages.dev/sitemap.xml"
-            "https://ulsan.pages.dev/robots.txt"
-            "https://ulsan.pages.dev/llms.txt"
-            "https://ulsan.pages.dev/site.webmanifest"
-            "https://ulsan.pages.dev/sw.js"
-            "https://ulsan.pages.dev/icon-192.png"
-            "https://ulsan.pages.dev/icon-512.png"
-            "https://ulsan.pages.dev/og/og-thumb.png"
+            "https://ulsana.pages.dev/"
+            "https://ulsana.pages.dev/story.html"
+            "https://ulsana.pages.dev/atmosphere.html"
+            "https://ulsana.pages.dev/first-visit.html"
+            "https://ulsana.pages.dev/access.html"
+            "https://ulsana.pages.dev/review.html"
+            "https://ulsana.pages.dev/faq.html"
+            "https://ulsana.pages.dev/contact.html"
+            "https://ulsana.pages.dev/legal/"
+            "https://ulsana.pages.dev/sitemap.xml"
+            "https://ulsana.pages.dev/robots.txt"
+            "https://ulsana.pages.dev/llms.txt"
+            "https://ulsana.pages.dev/site.webmanifest"
+            "https://ulsana.pages.dev/sw.js"
+            "https://ulsana.pages.dev/icon-192.png"
+            "https://ulsana.pages.dev/icon-512.png"
+            "https://ulsana.pages.dev/og/og-thumb.png"
           )
           FAIL=0
           for U in "${URLS[@]}"; do
@@ -52,14 +52,14 @@ jobs:
         run: |
           BANNED=("밤문화" "유흥" "2차로" "AggregateRating")
           FAIL=0
-          for U in "https://ulsan.pages.dev/" \
-                   "https://ulsan.pages.dev/story.html" \
-                   "https://ulsan.pages.dev/atmosphere.html" \
-                   "https://ulsan.pages.dev/first-visit.html" \
-                   "https://ulsan.pages.dev/access.html" \
-                   "https://ulsan.pages.dev/review.html" \
-                   "https://ulsan.pages.dev/faq.html" \
-                   "https://ulsan.pages.dev/contact.html"; do
+          for U in "https://ulsana.pages.dev/" \
+                   "https://ulsana.pages.dev/story.html" \
+                   "https://ulsana.pages.dev/atmosphere.html" \
+                   "https://ulsana.pages.dev/first-visit.html" \
+                   "https://ulsana.pages.dev/access.html" \
+                   "https://ulsana.pages.dev/review.html" \
+                   "https://ulsana.pages.dev/faq.html" \
+                   "https://ulsana.pages.dev/contact.html"; do
             BODY=$(curl -sL "$U")
             for W in "${BANNED[@]}"; do
               COUNT=$(echo "$BODY" | grep -c "$W" || true)
