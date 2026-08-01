@@ -1,11 +1,11 @@
-// 울산챔피언나이트 Service Worker - v1.2026-05-21
-const CACHE_VERSION = 'ulsan-v1-20260521';
+// 울산챔피언나이트 Service Worker - v2.2026-08-01
+const CACHE_VERSION = 'ulsan-v2-20260801';
 const CORE_ASSETS = [
   '/',
   '/style.css',
   '/script.js',
   '/engage.js',
-  '/og/og-thumb.png',
+  '/og/thumb-home.png',
   '/favicon.svg',
   '/favicon-192.png',
   '/site.webmanifest'

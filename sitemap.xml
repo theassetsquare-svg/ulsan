@@ -7,7 +7,7 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://ulsana.pages.dev/og/og-thumb.png</image:loc>
+      <image:loc>https://ulsana.pages.dev/og/thumb-home.png</image:loc>
       <image:caption>울산챔피언나이트</image:caption>
       <image:title>울산챔피언나이트 — 삼산동 대형 합법 나이트클럽</image:title>
     </image:image>
@@ -18,7 +18,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://ulsana.pages.dev/og/og-story.png</image:loc>
+      <image:loc>https://ulsana.pages.dev/og/thumb-story.png</image:loc>
       <image:caption>울산챔피언나이트 이야기</image:caption>
     </image:image>
   </url>
@@ -28,7 +28,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://ulsana.pages.dev/og/og-atmosphere.png</image:loc>
+      <image:loc>https://ulsana.pages.dev/og/thumb-atmosphere.png</image:loc>
       <image:caption>울산챔피언나이트 분위기</image:caption>
     </image:image>
   </url>
@@ -38,7 +38,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://ulsana.pages.dev/og/og-first-visit.png</image:loc>
+      <image:loc>https://ulsana.pages.dev/og/thumb-first-visit.png</image:loc>
       <image:caption>울산챔피언나이트 첫 방문 가이드</image:caption>
     </image:image>
   </url>
@@ -48,7 +48,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://ulsana.pages.dev/og/og-access.png</image:loc>
+      <image:loc>https://ulsana.pages.dev/og/thumb-access.png</image:loc>
       <image:caption>울산챔피언나이트 오시는길</image:caption>
     </image:image>
   </url>
@@ -58,7 +58,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://ulsana.pages.dev/og/og-review.png</image:loc>
+      <image:loc>https://ulsana.pages.dev/og/thumb-review.png</image:loc>
       <image:caption>울산챔피언나이트 후기</image:caption>
     </image:image>
   </url>
@@ -68,7 +68,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://ulsana.pages.dev/og/og-faq.png</image:loc>
+      <image:loc>https://ulsana.pages.dev/og/thumb-faq.png</image:loc>
       <image:caption>울산챔피언나이트 자주 묻는 질문</image:caption>
     </image:image>
   </url>
@@ -78,7 +78,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://ulsana.pages.dev/og/og-contact.png</image:loc>
+      <image:loc>https://ulsana.pages.dev/og/thumb-contact.png</image:loc>
       <image:caption>울산챔피언나이트 예약·문의</image:caption>
     </image:image>
   </url>
@@ -87,5 +87,9 @@
     <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+    <image:image>
+      <image:loc>https://ulsana.pages.dev/og/thumb-legal.png</image:loc>
+      <image:caption>울산챔피언나이트 19세 이상 합법 운영</image:caption>
+    </image:image>
   </url>
 </urlset>

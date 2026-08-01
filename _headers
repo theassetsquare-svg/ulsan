@@ -6,7 +6,7 @@
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 
 /
-  Link: </og/og-thumb.png>; rel=preload; as=image; fetchpriority=high
+  Link: </og/thumb-home.png>; rel=preload; as=image; fetchpriority=high
   Link: </style.css>; rel=preload; as=style
   Cache-Control: public, max-age=60, s-maxage=300
 

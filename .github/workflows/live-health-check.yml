@@ -35,7 +35,7 @@ jobs:
             "https://ulsana.pages.dev/sw.js"
             "https://ulsana.pages.dev/icon-192.png"
             "https://ulsana.pages.dev/icon-512.png"
-            "https://ulsana.pages.dev/og/og-thumb.png"
+            "https://ulsana.pages.dev/og/thumb-home.png"
           )
           FAIL=0
           for U in "${URLS[@]}"; do

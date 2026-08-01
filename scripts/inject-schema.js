@@ -7,6 +7,11 @@ const ROOT = path.resolve(__dirname, '..');
 const TODAY = '2026-05-21T00:00:00+09:00';
 const BASE = 'https://ulsana.pages.dev';
 
+// 페이지별 1:1 검색 썸네일 (scripts/generate-og-thumbs.js 가 생성)
+const THUMB_KEYS = ['home','access','atmosphere','contact','faq','first-visit','review','story','legal'];
+const ALL_THUMBS = THUMB_KEYS.map((k) => `${BASE}/og/thumb-${k}.png`);
+const thumbUrl = (k) => `${BASE}/og/thumb-${k}.png`;
+
 const pages = [
   { file: 'index.html',       slug: '',                  name: '홈',        title: '울산챔피언나이트 — 한 번 갔다가 단골 된 사람들의 비밀' },
   { file: 'story.html',       slug: 'story.html',        name: '이야기',    title: '울산챔피언나이트 이야기 — 어떻게 이 도시 밤의 중심이 되었나' },
@@ -20,6 +25,9 @@ const pages = [
 
 function buildGraph(p) {
   const pageUrl = `${BASE}/${p.slug}`;
+  // 이 페이지 전용 썸네일. 사업장 노드는 전체 목록(자기 것 먼저), 문서 노드는 자기 것만.
+  const self = thumbUrl(p.slug ? p.slug.replace(/\.html$/, '') : 'home');
+  const entityImages = [self, ...ALL_THUMBS.filter((u) => u !== self)];
   const breadcrumb = [
     { '@type': 'ListItem', position: 1, name: '홈', item: `${BASE}/` }
   ];
@@ -43,7 +51,7 @@ function buildGraph(p) {
         name: '울산챔피언나이트',
         url: `${BASE}/`,
         telephone: '+82-10-5653-0069',
-        logo: `${BASE}/og/og-thumb.png`
+        logo: self
       },
       {
         '@type': 'NightClub',
@@ -51,7 +59,7 @@ function buildGraph(p) {
         name: '울산챔피언나이트',
         url: `${BASE}/`,
         telephone: '+82-10-5653-0069',
-        image: `${BASE}/og/og-thumb.png`,
+        image: entityImages,
         description: '삼산동 대형 합법 나이트클럽. 풀스케일 사운드·조명·댄스플로어·VIP 라운지.',
         address: {
           '@type': 'PostalAddress',
@@ -77,7 +85,7 @@ function buildGraph(p) {
         name: '울산챔피언나이트',
         telephone: '+82-10-5653-0069',
         url: `${BASE}/`,
-        image: `${BASE}/og/og-thumb.png`,
+        image: entityImages,
         address: {
           '@type': 'PostalAddress',
           addressLocality: '울산광역시 남구 삼산동',
@@ -96,7 +104,7 @@ function buildGraph(p) {
         dateModified: TODAY,
         author: { '@type': 'Person', name: '춘자' },
         publisher: { '@id': `${BASE}/#org` },
-        image: `${BASE}/og/og-thumb.png`,
+        image: [self],
         inLanguage: 'ko-KR'
       },
       {
