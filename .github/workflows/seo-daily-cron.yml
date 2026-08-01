@@ -51,13 +51,13 @@ jobs:
             "keyLocation": "https://ulsana.pages.dev/${INDEXNOW_KEY}.txt",
             "urlList": [
               "https://ulsana.pages.dev/",
-              "https://ulsana.pages.dev/story.html",
-              "https://ulsana.pages.dev/atmosphere.html",
-              "https://ulsana.pages.dev/first-visit.html",
-              "https://ulsana.pages.dev/access.html",
-              "https://ulsana.pages.dev/review.html",
-              "https://ulsana.pages.dev/faq.html",
-              "https://ulsana.pages.dev/contact.html",
+              "https://ulsana.pages.dev/story",
+              "https://ulsana.pages.dev/atmosphere",
+              "https://ulsana.pages.dev/first-visit",
+              "https://ulsana.pages.dev/access",
+              "https://ulsana.pages.dev/review",
+              "https://ulsana.pages.dev/faq",
+              "https://ulsana.pages.dev/contact",
               "https://ulsana.pages.dev/legal/"
             ]
           }

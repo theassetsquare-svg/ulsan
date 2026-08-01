@@ -14,13 +14,13 @@ const thumbUrl = (k) => `${BASE}/og/thumb-${k}.png`;
 
 const pages = [
   { file: 'index.html',       slug: '',                  name: '홈',        title: '울산챔피언나이트 — 한 번 갔다가 단골 된 사람들의 비밀' },
-  { file: 'story.html',       slug: 'story.html',        name: '이야기',    title: '울산챔피언나이트 이야기 — 어떻게 이 도시 밤의 중심이 되었나' },
-  { file: 'atmosphere.html',  slug: 'atmosphere.html',   name: '분위기',    title: '울산챔피언나이트 분위기 — 사운드·조명·댄스플로어 직접 보기' },
-  { file: 'first-visit.html', slug: 'first-visit.html',  name: '첫방문',    title: '울산챔피언나이트 첫 방문 가이드 — 처음 가는 사람을 위한 완벽 정리' },
-  { file: 'access.html',      slug: 'access.html',       name: '오시는길',  title: '울산챔피언나이트 오시는길 — 삼산동 위치·주차·교통편' },
-  { file: 'review.html',      slug: 'review.html',       name: '후기',      title: '울산챔피언나이트 후기 — 단골들이 직접 말하는 솔직한 이야기' },
-  { file: 'faq.html',         slug: 'faq.html',          name: 'FAQ',       title: '울산챔피언나이트 자주 묻는 질문 — 13가지 답변' },
-  { file: 'contact.html',     slug: 'contact.html',      name: '연락처',    title: '울산챔피언나이트 예약·문의 — 춘자 010-5653-0069' }
+  { file: 'story.html',       slug: 'story',        name: '이야기',    title: '울산챔피언나이트 이야기 — 어떻게 이 도시 밤의 중심이 되었나' },
+  { file: 'atmosphere.html',  slug: 'atmosphere',   name: '분위기',    title: '울산챔피언나이트 분위기 — 사운드·조명·댄스플로어 직접 보기' },
+  { file: 'first-visit.html', slug: 'first-visit',  name: '첫방문',    title: '울산챔피언나이트 첫 방문 가이드 — 처음 가는 사람을 위한 완벽 정리' },
+  { file: 'access.html',      slug: 'access',       name: '오시는길',  title: '울산챔피언나이트 오시는길 — 삼산동 위치·주차·교통편' },
+  { file: 'review.html',      slug: 'review',       name: '후기',      title: '울산챔피언나이트 후기 — 단골들이 직접 말하는 솔직한 이야기' },
+  { file: 'faq.html',         slug: 'faq',          name: 'FAQ',       title: '울산챔피언나이트 자주 묻는 질문 — 13가지 답변' },
+  { file: 'contact.html',     slug: 'contact',      name: '연락처',    title: '울산챔피언나이트 예약·문의 — 춘자 010-5653-0069' }
 ];
 
 function buildGraph(p) {

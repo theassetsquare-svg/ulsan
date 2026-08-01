@@ -23,13 +23,13 @@
 
 ## 주요 페이지 (8개 + /legal/)
 - 홈: https://ulsana.pages.dev/
-- 이야기: https://ulsana.pages.dev/story.html
-- 분위기: https://ulsana.pages.dev/atmosphere.html
-- 첫 방문: https://ulsana.pages.dev/first-visit.html
-- 오시는길: https://ulsana.pages.dev/access.html
-- 후기: https://ulsana.pages.dev/review.html
-- FAQ: https://ulsana.pages.dev/faq.html
-- 연락처: https://ulsana.pages.dev/contact.html
+- 이야기: https://ulsana.pages.dev/story
+- 분위기: https://ulsana.pages.dev/atmosphere
+- 첫 방문: https://ulsana.pages.dev/first-visit
+- 오시는길: https://ulsana.pages.dev/access
+- 후기: https://ulsana.pages.dev/review
+- FAQ: https://ulsana.pages.dev/faq
+- 연락처: https://ulsana.pages.dev/contact
 - 합법 운영 정책: https://ulsana.pages.dev/legal/
 
 ## 자주 묻는 질문 (13개)

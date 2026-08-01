@@ -25,13 +25,13 @@ jobs:
       matrix:
         page:
           - { name: home,         url: 'https://ulsana.pages.dev/' }
-          - { name: story,        url: 'https://ulsana.pages.dev/story.html' }
-          - { name: atmosphere,   url: 'https://ulsana.pages.dev/atmosphere.html' }
-          - { name: first-visit,  url: 'https://ulsana.pages.dev/first-visit.html' }
-          - { name: access,       url: 'https://ulsana.pages.dev/access.html' }
-          - { name: review,       url: 'https://ulsana.pages.dev/review.html' }
-          - { name: faq,          url: 'https://ulsana.pages.dev/faq.html' }
-          - { name: contact,      url: 'https://ulsana.pages.dev/contact.html' }
+          - { name: story,        url: 'https://ulsana.pages.dev/story' }
+          - { name: atmosphere,   url: 'https://ulsana.pages.dev/atmosphere' }
+          - { name: first-visit,  url: 'https://ulsana.pages.dev/first-visit' }
+          - { name: access,       url: 'https://ulsana.pages.dev/access' }
+          - { name: review,       url: 'https://ulsana.pages.dev/review' }
+          - { name: faq,          url: 'https://ulsana.pages.dev/faq' }
+          - { name: contact,      url: 'https://ulsana.pages.dev/contact' }
         form:
           - mobile
           - desktop

@@ -20,13 +20,13 @@ jobs:
           set -e
           URLS=(
             "https://ulsana.pages.dev/"
-            "https://ulsana.pages.dev/story.html"
-            "https://ulsana.pages.dev/atmosphere.html"
-            "https://ulsana.pages.dev/first-visit.html"
-            "https://ulsana.pages.dev/access.html"
-            "https://ulsana.pages.dev/review.html"
-            "https://ulsana.pages.dev/faq.html"
-            "https://ulsana.pages.dev/contact.html"
+            "https://ulsana.pages.dev/story"
+            "https://ulsana.pages.dev/atmosphere"
+            "https://ulsana.pages.dev/first-visit"
+            "https://ulsana.pages.dev/access"
+            "https://ulsana.pages.dev/review"
+            "https://ulsana.pages.dev/faq"
+            "https://ulsana.pages.dev/contact"
             "https://ulsana.pages.dev/legal/"
             "https://ulsana.pages.dev/sitemap.xml"
             "https://ulsana.pages.dev/robots.txt"
@@ -53,13 +53,13 @@ jobs:
           BANNED=("밤문화" "유흥" "2차로" "AggregateRating")
           FAIL=0
           for U in "https://ulsana.pages.dev/" \
-                   "https://ulsana.pages.dev/story.html" \
-                   "https://ulsana.pages.dev/atmosphere.html" \
-                   "https://ulsana.pages.dev/first-visit.html" \
-                   "https://ulsana.pages.dev/access.html" \
-                   "https://ulsana.pages.dev/review.html" \
-                   "https://ulsana.pages.dev/faq.html" \
-                   "https://ulsana.pages.dev/contact.html"; do
+                   "https://ulsana.pages.dev/story" \
+                   "https://ulsana.pages.dev/atmosphere" \
+                   "https://ulsana.pages.dev/first-visit" \
+                   "https://ulsana.pages.dev/access" \
+                   "https://ulsana.pages.dev/review" \
+                   "https://ulsana.pages.dev/faq" \
+                   "https://ulsana.pages.dev/contact"; do
             BODY=$(curl -sL "$U")
             for W in "${BANNED[@]}"; do
               COUNT=$(echo "$BODY" | grep -c "$W" || true)
