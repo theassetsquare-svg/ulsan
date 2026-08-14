@@ -24,14 +24,14 @@ jobs:
       fail-fast: false
       matrix:
         page:
-          - { name: home,         url: 'https://ulsana.pages.dev/' }
-          - { name: story,        url: 'https://ulsana.pages.dev/story' }
-          - { name: atmosphere,   url: 'https://ulsana.pages.dev/atmosphere' }
-          - { name: first-visit,  url: 'https://ulsana.pages.dev/first-visit' }
-          - { name: access,       url: 'https://ulsana.pages.dev/access' }
-          - { name: review,       url: 'https://ulsana.pages.dev/review' }
-          - { name: faq,          url: 'https://ulsana.pages.dev/faq' }
-          - { name: contact,      url: 'https://ulsana.pages.dev/contact' }
+          - { name: home,         url: 'https://ulsand.pages.dev/' }
+          - { name: story,        url: 'https://ulsand.pages.dev/story' }
+          - { name: atmosphere,   url: 'https://ulsand.pages.dev/atmosphere' }
+          - { name: first-visit,  url: 'https://ulsand.pages.dev/first-visit' }
+          - { name: access,       url: 'https://ulsand.pages.dev/access' }
+          - { name: review,       url: 'https://ulsand.pages.dev/review' }
+          - { name: faq,          url: 'https://ulsand.pages.dev/faq' }
+          - { name: contact,      url: 'https://ulsand.pages.dev/contact' }
         form:
           - mobile
           - desktop

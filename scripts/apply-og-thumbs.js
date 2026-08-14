@@ -12,7 +12,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const ORIGIN = 'https://ulsana.pages.dev';
+const ORIGIN = 'https://ulsand.pages.dev';
 const OLD = `${ORIGIN}/og/og-thumb.png`;
 
 // og:image:alt — 페이지마다 전부 다르게. 타 랜딩의 "업소명 닉네임 번호" 패턴과도 다르게 쓴다.

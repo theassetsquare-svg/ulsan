@@ -40,4 +40,4 @@ Allow: /
 User-agent: Kakaotalk-scrap
 Allow: /
 
-Sitemap: https://ulsana.pages.dev/sitemap.xml
+Sitemap: https://ulsand.pages.dev/sitemap.xml
