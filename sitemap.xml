@@ -92,4 +92,15 @@
       <image:caption>울산챔피언나이트 19세 이상 합법 운영</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://ulsand.pages.dev/bulgwang</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://ulsand.pages.dev/og/thumb-bulgwang.png</image:loc>
+      <image:caption>불광동호박나이트</image:caption>
+      <image:title>불광동호박나이트 — 은평구 불광동 나이트 예약 안내</image:title>
+    </image:image>
+  </url>
 </urlset>

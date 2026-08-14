@@ -58,7 +58,8 @@ jobs:
               "https://ulsand.pages.dev/review",
               "https://ulsand.pages.dev/faq",
               "https://ulsand.pages.dev/contact",
-              "https://ulsand.pages.dev/legal/"
+              "https://ulsand.pages.dev/legal/",
+              "https://ulsand.pages.dev/bulgwang"
             ]
           }
           JSON
