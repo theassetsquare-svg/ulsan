@@ -233,4 +233,10 @@
       <image:caption>일산샴푸나이트</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

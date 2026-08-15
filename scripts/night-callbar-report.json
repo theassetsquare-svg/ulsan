@@ -1,5 +1,5 @@
 {
-  "base": "http://127.0.0.1:8099",
+  "base": "https://ulsand.pages.dev",
   "rows": [
     {
       "slug": "bulgwang-hobak-night",
@@ -19,7 +19,7 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2144,
+      "adBottom": 2070,
       "barTop": 1016,
       "pass": true
     },
@@ -30,7 +30,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2561,
+      "adBottom": 2435,
       "barTop": 784,
       "pass": true
     },
@@ -41,7 +41,7 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2175,
+      "adBottom": 2099,
       "barTop": 1016,
       "pass": true
     },
@@ -52,7 +52,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2243,
+      "adBottom": 2356,
       "barTop": 784,
       "pass": true
     },
@@ -74,7 +74,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2374,
+      "adBottom": 2261,
       "barTop": 784,
       "pass": true
     },
@@ -173,7 +173,7 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 1901,
+      "adBottom": 1972,
       "barTop": 1016,
       "pass": true
     },
@@ -283,7 +283,7 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 1943,
+      "adBottom": 2012,
       "barTop": 1016,
       "pass": true
     }
