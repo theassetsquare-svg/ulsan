@@ -119,3 +119,20 @@
 - https://ulsand.pages.dev/night/ansan-hit-night/ — 안산히트나이트 — 경기 안산시 상록구 본오동 — 상록수로 34 지층, 상록수역 인근. 둘·넷·단체 인원별 좌석과 부킹 차이
 - https://ulsand.pages.dev/night/daejeon-seven-night/ — 대전세븐나이트 — 대전 중구 유천동 — 당디로 112 2~3층. 시간·인원·복장에서 나오는 실수와 대안
 - https://ulsand.pages.dev/night/ilsan-shampoo-night/ — 일산샴푸나이트 — 경기 고양시 일산동구 마두동 — 중앙로 1160 건물 8층, 마두역 앞. 웨이터 소통과 자리 확보를 단골 관점으로
+
+## 지역 키워드 안내 13곳 (2026-08-15 신설)
+업소 소개와 별개로, 지역 단위 밤 문화를 각각 다른 각도로 정리한 페이지입니다. 확인되지 않은 영업시간·요금·연령은 싣지 않았습니다.
+
+- https://ulsand.pages.dev/night/eunpyeong-night/ — 은평나이트 — 서울 은평구 — 시간 흐름형으로 정리한 지역 밤 문화 안내, 연결 업소 불광동호박나이트
+- https://ulsand.pages.dev/night/changwon-night/ — 창원나이트 — 경남 창원시 — 비교 설명형으로 정리한 지역 밤 문화 안내, 연결 업소 창원룰루랄라나이트 (연결 업소 출입 만 27세 이상)
+- https://ulsand.pages.dev/night/ulsan-night/ — 울산나이트 — 울산광역시 — 짧은 요약형으로 정리한 지역 밤 문화 안내, 연결 업소 울산챔피언나이트
+- https://ulsand.pages.dev/night/gangnam-night/ — 강남나이트 — 서울 강남구 — 인원별 공략형으로 정리한 지역 밤 문화 안내, 연결 업소 청담나이트
+- https://ulsand.pages.dev/night/daejeon-night/ — 대전나이트 — 대전광역시 — 실수 방지형으로 정리한 지역 밤 문화 안내, 연결 업소 대전원나이트 (연결 업소 출입 만 38세 이상)
+- https://ulsand.pages.dev/night/sillim-night/ — 신림나이트 — 서울 관악구 — 단골 관점형으로 정리한 지역 밤 문화 안내, 연결 업소 신림그랑프리나이트
+- https://ulsand.pages.dev/night/sangbong-night/ — 상봉동나이트 — 서울 중랑구 — 정면 소개형으로 정리한 지역 밤 문화 안내, 연결 업소 상봉동한국관나이트
+- https://ulsand.pages.dev/night/suyu-night/ — 수유나이트 — 서울 강북구 — 질문 던지기형으로 정리한 지역 밤 문화 안내, 연결 업소 수유샴푸나이트
+- https://ulsand.pages.dev/night/busan-night/ — 부산나이트 — 부산광역시 — 장면 묘사형으로 정리한 지역 밤 문화 안내, 연결 업소 부산아시아드나이트
+- https://ulsand.pages.dev/night/suwon-night/ — 수원나이트 — 경기 수원시 — 처음 가는 사람 시점으로 정리한 지역 밤 문화 안내, 연결 업소 수원찬스돔나이트
+- https://ulsand.pages.dev/night/ansan-night/ — 안산나이트 — 경기 안산시 — 이유 나열형으로 정리한 지역 밤 문화 안내, 연결 업소 안산히트나이트
+- https://ulsand.pages.dev/night/yucheon-night/ — 유천동나이트 — 대전 중구 유천동 — 오해 깨기형으로 정리한 지역 밤 문화 안내, 연결 업소 대전세븐나이트
+- https://ulsand.pages.dev/night/ilsan-night/ — 일산나이트 — 경기 고양시 일산 — 문답형으로 정리한 지역 밤 문화 안내, 연결 업소 일산샴푸나이트

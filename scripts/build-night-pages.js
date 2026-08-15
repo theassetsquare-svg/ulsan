@@ -342,8 +342,19 @@ ${callbar(v)}
 `;
 }
 
+/* 2차 지역 키워드 페이지 목록 — 메인/목록에서 1단계 직접 링크 (지시서 [12]) */
+const REGION_ORDER = [
+  'eunpyeong-night', 'changwon-night', 'ulsan-night', 'gangnam-night',
+  'daejeon-night', 'sillim-night', 'sangbong-night', 'suyu-night',
+  'busan-night', 'suwon-night', 'ansan-night', 'yucheon-night', 'ilsan-night'
+];
+const regionPages = REGION_ORDER.map((s) => require(path.join(__dirname, 'region', s + '.js')));
+
 function buildHub() {
   const p = { deep: '#1f2430', mid: '#39415a', soft: '#f3f4f8', line: '#d8dbe6', ink: '#232838' };
+  const regionItems = regionPages.map((r) =>
+    '      <a href="/night/' + r.slug + '/">' + esc(r.kw) + ' ' + esc(r.suffix) + ' — ' + esc(r.region) + '</a>'
+  ).join('\n');
   const items = venues.map((v) => {
     const loc = v.addr.street ? v.addr.street : (v.landmark + ' · ' + v.addr.locality);
     const tag = v.age ? ' · ' + v.age : '';
@@ -387,6 +398,10 @@ ${VERIFY}
       <section class="nt-aside">
         <h2 id="hub-list">지역별 업소 목록</h2>
 ${items}
+      </section>
+      <section class="nt-aside">
+        <h2 id="hub-region">지역 키워드로 보는 나이트 안내 13곳</h2>
+${regionItems}
       </section>
     </div></div>
   </article>
