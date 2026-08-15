@@ -2,7 +2,9 @@
 /**
  * /night/{slug}/ 13개 페이지 + /night/ 허브 생성기
  *
- * SITE_INDEX = 1 → 방식: 정면 소개형 / title: {업소명} 어떤 곳일까 ~ / 첫 문장: 업소를 한 줄로 규정
+ * SITE_INDEX = 1 → 페이지마다 각도가 다르다.
+ *   각도번호 = ((SITE_INDEX - 1) + (업소번호 - 1)) mod 13 + 1  →  업소번호 n = 각도 n
+ *   제목 접미어 = 그 각도 접미어 풀의 [업소번호]번째
  * 원고는 scripts/night/*.js 에 업소별로 따로 들어 있다. 이 파일은 조립만 한다.
  * 같은 slug 디렉터리를 그대로 덮어쓴다. -2 형태의 중복 URL을 만들지 않는다.
  */
@@ -161,6 +163,10 @@ body{background:#fff;color:#15161a;padding-bottom:calc(84px + env(safe-area-inse
 .nt-h2{font-size:clamp(1.14rem,4.3vw,1.4rem);font-weight:900;line-height:1.5;margin:30px 0 12px;padding-left:12px;border-left:5px solid var(--nt-mid);color:#15161a;}
 .nt-p{margin-bottom:12px;color:#26262c;line-height:1.8;}
 .nt-bridge{margin:0 0 6px;color:#4B5563;font-size:.93rem;}
+.nt-list{margin:0 0 14px;padding-left:2px;}
+.nt-list li{position:relative;padding:7px 0 7px 17px;color:#26262c;line-height:1.75;border-bottom:1px solid var(--nt-line);}
+.nt-list li:last-child{border-bottom:none;}
+.nt-list li::before{content:"";position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:2px;background:var(--nt-mid);}
 .nt-sum{background:var(--nt-soft);border:1px solid var(--nt-line);border-radius:12px;padding:16px 15px;margin:30px 0 8px;}
 .nt-sum .nt-h2{margin:0 0 10px;border-left:none;padding-left:0;font-size:1.05rem;color:var(--nt-ink);}
 .nt-sum li{padding:6px 0 6px 16px;position:relative;color:#26262c;line-height:1.75;}
@@ -194,6 +200,7 @@ body{background:#fff;color:#15161a;padding-bottom:calc(84px + env(safe-area-inse
   .nt-h2{color:#ffffff;}
   .nt-sum{background:#191922;border-color:var(--nt-mid);}
   .nt-sum .nt-h2,.nt-aside h2,.nt-aside a{color:#ffffff;}
+  .nt-list li{color:#ececf1;border-bottom-color:var(--nt-mid);}
   .nt-bridge{color:#c7c7d1;}
   .site-footer{background:#17171d;}
   .footer-note{color:#d4d4dd;}
@@ -209,9 +216,12 @@ function buildPage(v) {
 
   const sections = v.sections.map((s) => {
     const cls = s.geo ? 'nt-p nt-geo' : 'nt-p';
-    const ps = s.ps.map((t) => '        <p class="' + cls + '">' + t + '</p>').join('\n');
+    const P = (arr) => arr.map((t) => '        <p class="' + cls + '">' + t + '</p>').join('\n');
+    let body = P(s.ps);
+    if (s.ul) body += '\n        <ul class="nt-list">\n' + s.ul.map((t) => '          <li>' + esc(t) + '</li>').join('\n') + '\n        </ul>';
+    if (s.ps2) body += '\n' + P(s.ps2);
     const br = s.bridge ? '\n        <p class="nt-bridge">' + s.bridge + '</p>' : '';
-    return '      <section>\n        <h2 class="nt-h2">' + esc(s.h2) + '</h2>\n' + ps + br + '\n      </section>';
+    return '      <section>\n        <h2 class="nt-h2">' + esc(s.h2) + '</h2>\n' + body + br + '\n      </section>';
   }).join('\n\n');
 
   const table = rows.length ? (
@@ -405,11 +415,15 @@ function fingerprint() {
   return {
     siteIndex: SITE_INDEX,
     site: SITE,
-    angle: 'INDEX 1 정면 소개형 / title: {업소명} 어떤 곳일까 + 훅 / 첫 문장: 업소를 한 줄로 규정 / 본문 80% 업소·나이트 문화, 교통 1개 섹션',
+    angleRule: '각도번호 = ((SITE_INDEX-1) + (업소번호-1)) mod 13 + 1 · 접미어는 해당 각도 풀의 [업소번호]번째',
     generatedAt: TODAY,
-    pages: venues.map((v) => ({
+    pages: venues.map((v, i) => ({
+      venueNo: i + 1,
       slug: v.slug,
       url: SITE + '/night/' + v.slug + '/',
+      angleNo: v.angleNo,
+      angleName: v.angleName,
+      suffix: v.suffix,
       title: v.title,
       titleLength: v.title.length,
       h2: v.sections.map((s) => s.h2),

@@ -104,18 +104,18 @@
 
 ## 전국 나이트 업소 소개 (13곳, 2026-08-15 개정)
 목록 페이지: https://ulsand.pages.dev/night/
-각 페이지는 업소가 어떤 홀인지, 몇 시가 좋은지, 좌석과 부킹이 어떻게 돌아가는지를 다룹니다. 확인되지 않은 영업시간·요금·연령은 "확인 불가"로 명시합니다.
+13개 페이지는 각각 다른 각도로 씁니다. 확인되지 않은 영업시간·요금·연령은 페이지에서 항목째 빼고 "확인 불가"로 남깁니다.
 
-- https://ulsand.pages.dev/night/bulgwang-hobak-night/ — 불광동호박나이트 — 서울 은평구 불광동 — 불광역 앞 상가 지하. 동네 손님이 두꺼운 홀, 자리 잡는 시간대와 부킹 흐름 소개
-- https://ulsand.pages.dev/night/changwon-lululala-night/ — 창원룰루랄라나이트 — 경남 창원시 성산구 상남동 — 상남동 모아엔트몰 지하 3층. 만 27세 이상 입장, 요일별 온도차와 인원 안내 (출입 만 27세 이상)
-- https://ulsand.pages.dev/night/ulsan-champion-night/ — 울산챔피언나이트 — 울산 남구 삼산동 — 삼산동 한복판 대형 홀. 자리 고르는 요령과 밤 시간대별 흐름, 초행자 주의점
-- https://ulsand.pages.dev/night/cheongdam-night/ — 청담나이트 — 서울 강남구 청담동 — 영동대로 호텔 건물 지하 1층. 삼사십 대가 두꺼운 홀의 좌석과 차림 기준
-- https://ulsand.pages.dev/night/daejeon-one-night/ — 대전원나이트 — 대전 동구 용전동 — 용전동 복합터미널 인근. 만 38세 이상 전용, 선곡과 부킹 속도가 다른 홀 (출입 만 38세 이상)
-- https://ulsand.pages.dev/night/sillim-grandprix-night/ — 신림그랑프리나이트 — 서울 관악구 신림동 — 신림역 앞 쇼핑몰 고층. 저녁 6시부터 새벽까지 이어지는 긴 영업과 인원 구성
-- https://ulsand.pages.dev/night/sangbong-hangukgwan-night/ — 상봉동한국관나이트 — 서울 중랑구 상봉동 — 망우로 326 2층. 금·토 2부제 운영, 룸·부스·테이블 좌석과 도착 시각 안내
-- https://ulsand.pages.dev/night/suyu-shampoo-night/ — 수유샴푸나이트 — 서울 강북구 번동 — 도봉로 308 건물 지하. 저녁 7시 개점, 스피커 거리로 자리를 고르는 요령
-- https://ulsand.pages.dev/night/busan-asiad-night/ — 부산아시아드나이트 — 부산 동래구 온천동 — 온천장 온천 건물 지하 1~2층. 넓은 홀에서 자리 잡는 순서와 자정 이후 밀도
-- https://ulsand.pages.dev/night/suwon-chance-dome-night/ — 수원찬스돔나이트 — 경기 수원시 권선구 권선동 — 권선로 673 대로변. 무대를 크게 쓰는 홀의 자리 기준과 평일·주말 차이
-- https://ulsand.pages.dev/night/ansan-hit-night/ — 안산히트나이트 — 경기 안산시 상록구 본오동 — 본오동 상록수로 34 지층. 퇴근 뒤 곧장 들어오는 손님이 많은 오래된 홀
-- https://ulsand.pages.dev/night/daejeon-seven-night/ — 대전세븐나이트 — 대전 중구 유천동 — 유천동 당디로 112 2~3층. 층이 나뉜 홀의 동선과 도착 시각·인원 맞추기
-- https://ulsand.pages.dev/night/ilsan-shampoo-night/ — 일산샴푸나이트 — 경기 고양시 일산동구 마두동 — 마두역 앞 건물 8층. 저녁 6시 개점, 좌석 세 단계와 주말 자리 잡는 법
+- https://ulsand.pages.dev/night/bulgwang-hobak-night/ — 불광동호박나이트 — 서울 은평구 불광동 — 통일로 730 지하, 불광역과 같은 블록. 홀의 성격과 규모를 정면으로 소개
+- https://ulsand.pages.dev/night/changwon-lululala-night/ — 창원룰루랄라나이트 — 경남 창원시 성산구 상남동 — 상남동 모아엔트몰 지하 3층. 사람이 몰리는 이유를 질문으로 풀어냄 (출입 만 27세 이상)
+- https://ulsand.pages.dev/night/ulsan-champion-night/ — 울산챔피언나이트 — 울산 남구 삼산동 — 정동로 75, 삼산동 상업 구역. 조명·곡·무대가 밤새 바뀌는 장면을 묘사
+- https://ulsand.pages.dev/night/cheongdam-night/ — 청담나이트 — 서울 강남구 청담동 — 영동대로 737 호텔 건물 지하 1층. 첫 방문자가 흔히 하는 실수 중심 안내
+- https://ulsand.pages.dev/night/daejeon-one-night/ — 대전원나이트 — 대전 동구 용전동 — 대전복합터미널 인근. 다시 찾는 손님들이 꼽는 이유 네 가지 (출입 만 38세 이상)
+- https://ulsand.pages.dev/night/sillim-grandprix-night/ — 신림그랑프리나이트 — 서울 관악구 신림동 — 신림로 340, 신림역 앞 건물 고층. 옷차림·준비물에 대한 오해를 뒤집음
+- https://ulsand.pages.dev/night/sangbong-hangukgwan-night/ — 상봉동한국관나이트 — 서울 중랑구 상봉동 — 망우로 326 2층, 금·토 2부제. 예약·문의 절차를 문답 14개로 정리
+- https://ulsand.pages.dev/night/suyu-shampoo-night/ — 수유샴푸나이트 — 서울 강북구 번동 — 도봉로 308 건물 지하. 저녁 7시부터 새벽까지 시간대별 홀 밀집도 변화
+- https://ulsand.pages.dev/night/busan-asiad-night/ — 부산아시아드나이트 — 부산 동래구 온천동 — 온천장로107번길 32 지하 1~2층. 두 층 구조가 만드는 좌석·동선 차이 비교
+- https://ulsand.pages.dev/night/suwon-chance-dome-night/ — 수원찬스돔나이트 — 경기 수원시 권선구 권선동 — 권선로 673 대로변. 방문 전 체크리스트를 목록으로 요약
+- https://ulsand.pages.dev/night/ansan-hit-night/ — 안산히트나이트 — 경기 안산시 상록구 본오동 — 상록수로 34 지층, 상록수역 인근. 둘·넷·단체 인원별 좌석과 부킹 차이
+- https://ulsand.pages.dev/night/daejeon-seven-night/ — 대전세븐나이트 — 대전 중구 유천동 — 당디로 112 2~3층. 시간·인원·복장에서 나오는 실수와 대안
+- https://ulsand.pages.dev/night/ilsan-shampoo-night/ — 일산샴푸나이트 — 경기 고양시 일산동구 마두동 — 중앙로 1160 건물 8층, 마두역 앞. 웨이터 소통과 자리 확보를 단골 관점으로

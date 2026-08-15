@@ -1,5 +1,5 @@
 {
-  "base": "https://ulsand.pages.dev",
+  "base": "http://127.0.0.1:8099",
   "rows": [
     {
       "slug": "bulgwang-hobak-night",
@@ -8,7 +8,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2513,
+      "adBottom": 2342,
       "barTop": 784,
       "pass": true
     },
@@ -19,7 +19,7 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2070,
+      "adBottom": 2052,
       "barTop": 1016,
       "pass": true
     },
@@ -30,7 +30,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2435,
+      "adBottom": 2472,
       "barTop": 784,
       "pass": true
     },
@@ -41,12 +41,56 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2099,
+      "adBottom": 2010,
       "barTop": 1016,
       "pass": true
     },
     {
       "slug": "ulsan-champion-night",
+      "view": "mobile",
+      "top0": 784,
+      "top1": 784,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 2344,
+      "barTop": 784,
+      "pass": true
+    },
+    {
+      "slug": "ulsan-champion-night",
+      "view": "desktop",
+      "top0": 1016,
+      "top1": 1016,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 1806,
+      "barTop": 1016,
+      "pass": true
+    },
+    {
+      "slug": "cheongdam-night",
+      "view": "mobile",
+      "top0": 784,
+      "top1": 784,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 2353,
+      "barTop": 784,
+      "pass": true
+    },
+    {
+      "slug": "cheongdam-night",
+      "view": "desktop",
+      "top0": 1016,
+      "top1": 1016,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 1868,
+      "barTop": 1016,
+      "pass": true
+    },
+    {
+      "slug": "daejeon-one-night",
       "view": "mobile",
       "top0": 784,
       "top1": 784,
@@ -57,57 +101,13 @@
       "pass": true
     },
     {
-      "slug": "ulsan-champion-night",
-      "view": "desktop",
-      "top0": 1016,
-      "top1": 1016,
-      "diff": 0,
-      "overlap": false,
-      "adBottom": 1875,
-      "barTop": 1016,
-      "pass": true
-    },
-    {
-      "slug": "cheongdam-night",
-      "view": "mobile",
-      "top0": 784,
-      "top1": 784,
-      "diff": 0,
-      "overlap": false,
-      "adBottom": 2261,
-      "barTop": 784,
-      "pass": true
-    },
-    {
-      "slug": "cheongdam-night",
-      "view": "desktop",
-      "top0": 1016,
-      "top1": 1016,
-      "diff": 0,
-      "overlap": false,
-      "adBottom": 1923,
-      "barTop": 1016,
-      "pass": true
-    },
-    {
-      "slug": "daejeon-one-night",
-      "view": "mobile",
-      "top0": 784,
-      "top1": 784,
-      "diff": 0,
-      "overlap": false,
-      "adBottom": 2430,
-      "barTop": 784,
-      "pass": true
-    },
-    {
       "slug": "daejeon-one-night",
       "view": "desktop",
       "top0": 1016,
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 1931,
+      "adBottom": 1819,
       "barTop": 1016,
       "pass": true
     },
@@ -118,7 +118,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2442,
+      "adBottom": 2407,
       "barTop": 784,
       "pass": true
     },
@@ -129,7 +129,7 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 1980,
+      "adBottom": 1868,
       "barTop": 1016,
       "pass": true
     },
@@ -140,7 +140,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2509,
+      "adBottom": 3249,
       "barTop": 784,
       "pass": true
     },
@@ -151,7 +151,7 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 1943,
+      "adBottom": 2858,
       "barTop": 1016,
       "pass": true
     },
@@ -162,7 +162,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2456,
+      "adBottom": 2540,
       "barTop": 784,
       "pass": true
     },
@@ -173,7 +173,7 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 1972,
+      "adBottom": 2114,
       "barTop": 1016,
       "pass": true
     },
@@ -184,7 +184,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2512,
+      "adBottom": 2426,
       "barTop": 784,
       "pass": true
     },
@@ -206,7 +206,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2257,
+      "adBottom": 2380,
       "barTop": 784,
       "pass": true
     },
@@ -217,7 +217,7 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 1800,
+      "adBottom": 2252,
       "barTop": 1016,
       "pass": true
     },
@@ -228,7 +228,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2357,
+      "adBottom": 2130,
       "barTop": 784,
       "pass": true
     },
@@ -239,7 +239,7 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 1895,
+      "adBottom": 1840,
       "barTop": 1016,
       "pass": true
     },
@@ -250,7 +250,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2277,
+      "adBottom": 2089,
       "barTop": 784,
       "pass": true
     },
@@ -272,7 +272,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2474,
+      "adBottom": 2336,
       "barTop": 784,
       "pass": true
     },
@@ -283,7 +283,7 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2012,
+      "adBottom": 1915,
       "barTop": 1016,
       "pass": true
     }

@@ -62,7 +62,7 @@ const count = (hay, needle) => hay.split(needle).length - 1;
   const near = (a, b) => { const A = new Set(a.split(/\s+/)), B = new Set(b.split(/\s+/)); const i = [...A].filter((x) => B.has(x)).length; return i / new Set([...A, ...B]).size; };
   let mx = 0, pr = '';
   for (let i = 0; i < 13; i++) for (let k = i + 1; k < 13; k++) { const s = Math.max(near(t[i], t[k]), near(de[i], de[k])); if (s > mx) { mx = s; pr = venues[i].slug + '↔' + venues[k].slug; } }
-  add('G02', '완전중복 title ' + dupT + '/desc ' + dupD + ', 근사 최대 ' + (mx * 100).toFixed(1) + '% (' + pr + ')', dupT === 0 && dupD === 0 && mx < 0.8);
+  add('G02', '완전중복 title ' + dupT + '/desc ' + dupD + ', 근사 최대 ' + (mx * 100).toFixed(1) + '% (' + pr + ', 기준 20%)', dupT === 0 && dupD === 0 && mx < 0.20);
 })();
 
 /* G03 article h1 1개 + 시맨틱 7종 */
@@ -161,8 +161,20 @@ const faqLens = [];
   const allow = new Set(['sitemap.xml', 'robots.txt', 'llms.txt', 'index.html']);
   const modified = rows.filter((r) => r[0] !== 'A').map((r) => r[1]);
   const bad = modified.filter((f) => !allow.has(f));
-  const del = execSync('git -C ' + ROOT + ' diff -U0 ' + BASE + ' -- sitemap.xml robots.txt llms.txt index.html | grep -c "^-[^-]" || true', { encoding: 'utf8', shell: '/bin/bash' }).trim();
-  add('G13', 'BASE ' + BASE + ' 대비 기존 파일 수정 ' + modified.length + '개(' + modified.join(', ') + '), 허용 4종 외 ' + bad.length + '개, 삭제 줄 ' + del + ', 신규 추가 ' + rows.filter((r) => r[0] === 'A').length + '개', bad.length === 0 && del === '0');
+  // 삭제 판정: BASE 시점에 존재하던 줄이 현재 파일에도 그대로 남아 있는지 (append 이후 내 블록 수정은 삭제로 세지 않는다)
+  let lost = 0; const lostDetail = [];
+  ['sitemap.xml', 'robots.txt', 'llms.txt', 'index.html'].forEach((f) => {
+    const before = execSync('git -C ' + ROOT + ' show ' + BASE + ':' + f, { encoding: 'utf8' }).split('\n');
+    const now = fs.readFileSync(path.join(ROOT, f), 'utf8').split('\n');
+    const pool = new Map();
+    now.forEach((l) => pool.set(l, (pool.get(l) || 0) + 1));
+    before.forEach((l) => {
+      const c = pool.get(l) || 0;
+      if (c <= 0) { lost++; if (lostDetail.length < 5) lostDetail.push(f + ': ' + l.slice(0, 40)); }
+      else pool.set(l, c - 1);
+    });
+  });
+  add('G13', 'BASE ' + BASE + ' 대비 기존 파일 수정 ' + modified.length + '개(' + modified.join(', ') + '), 허용 4종 외 ' + bad.length + '개, BASE 시점 줄 소실 ' + lost + '건' + (lostDetail.length ? ' — ' + lostDetail.join(' / ') : '') + ', 신규 추가 ' + rows.filter((r) => r[0] === 'A').length + '개', bad.length === 0 && lost === 0);
 })();
 
 /* G14 */
@@ -192,16 +204,16 @@ const morph = {};
   add('G15', 'A 최소 ' + Math.min(...A) + '회 / B 최소 ' + Math.min(...B) + '회 / C 최소 ' + Math.min(...C) + '회 (기준 10/2/1) 위반 ' + bad + '건' + (d.length ? ' — ' + d.join(',') : ''), bad === 0);
 })();
 
-/* G16 title 0번째 + 30자 이내 */
+/* G16 title 0번째 + 25~30자 */
 (() => {
   let bad = 0; const d = [];
   venues.forEach((v) => {
     const t = titleOf(html[v.slug]);
     if (t.indexOf(v.name) !== 0) { bad++; d.push(v.slug + ' 시작 아님'); }
-    if (t.length > 30) { bad++; d.push(v.slug + ' ' + t.length + '자'); }
+    if (t.length < 25 || t.length > 30) { bad++; d.push(v.slug + ' ' + t.length + '자'); }
   });
   const lens = venues.map((v) => titleOf(html[v.slug]).length);
-  add('G16', 'title 업소명 0번째 시작 13/13, 길이 ' + Math.min(...lens) + '~' + Math.max(...lens) + '자 (기준 30 이내) 위반 ' + bad + '건' + (d.length ? ' — ' + d.join(',') : ''), bad === 0);
+  add('G16', 'title 업소명 0번째 시작 13/13, 길이 ' + Math.min(...lens) + '~' + Math.max(...lens) + '자 (기준 25~30) 위반 ' + bad + '건' + (d.length ? ' — ' + d.join(',') : ''), bad === 0);
 })();
 
 /* G17 첫 100자 A형 */
@@ -262,22 +274,91 @@ const ratios = {};
   add('G22', '업소당 검색 최소 ' + Math.min(...research.venues.map((v) => v.queries.length)) + '회(총 ' + totalQ + '회), 채택 필드 ' + adopted.length + '개 출처 기록 존재', low.length === 0 && adopted.length > 0);
 })();
 
-/* G23 SITE_INDEX 1 = 정면 소개형 */
+/* ── 각도 정의 (지시서 [3]) : 접미어 풀 13×13 ── */
+const ANGLE = [
+  null,
+  { name: '정면 소개형', pool: ['어떤 곳일까', '어떤 홀인가', '정체 정리', '실체 안내', '소개 정리', '개요 안내', '기본 정보', '첫 소개', '한 줄 소개', '성격 정리', '특징 소개', '윤곽 정리', '전반 안내'] },
+  { name: '질문 던지기형', pool: ['왜 사람이 몰릴까', '뭐가 다를까', '가볼 만할까', '실제로 어떨까', '분위기 어떨까', '자리 잡기 쉬울까', '몇 시가 좋을까', '첫 방문 괜찮을까', '어떤 사람들이 올까', '주말엔 붐빌까', '예약이 필요할까', '혼자 가도 될까', '다시 갈 만할까'] },
+  { name: '장면 묘사형', pool: ['밤 열두 시의 풍경', '문 열리는 시간', '홀이 차오르는 순간', '무대 앞 공기', '조명이 바뀌는 밤', '사람이 두꺼운 시간', '새벽으로 넘어갈 때', '첫 곡이 나올 때', '테이블이 다 차는 밤', '가장 뜨거운 한 시간', '소리가 커지는 순간', '자정 무렵 홀', '문 닫기 직전'] },
+  { name: '처음 가는 사람 시점', pool: ['처음이라면 이것부터', '초보가 알아야 할 것', '첫 방문 준비', '처음 가는 사람 안내', '초행길 체크', '첫날 이렇게', '처음이 어렵다면', '입문자용 정리', '첫 방문 전 확인', '초보를 위한 안내', '처음 가면 이렇다', '첫 경험 정리', '처음 가는 법'] },
+  { name: '이유 나열형', pool: ['가는 이유 셋', '찾는 이유 넷', '계속 오는 이유', '다시 찾는 까닭', '사람이 오는 이유', '선택받는 이유', '오래 버틴 이유', '자주 가는 이유', '추천하는 이유', '남는 이유', '붐비는 까닭', '소문난 이유', '몰리는 이유'] },
+  { name: '오해 깨기형', pool: ['이런 줄 알았다면', '오해부터 풀자', '생각과 다른 점', '선입견 정리', '잘못 알려진 것', '실제는 다르다', '착각하기 쉬운 것', '알고 보면 다르다', '겉과 속이 다른 곳', '흔한 오해 정리', '막상 가보면', '예상과 다른 점', '소문과 실제'] },
+  { name: '문답형', pool: ['궁금한 것 정리', '자주 묻는 질문', '질문 모음', '물어본 것들', '많이 묻는 것', '질문과 답', '궁금증 해결', '문의 정리', '자주 나온 질문', '물음 정리', '답변 모음', '질문 열다섯', '문답 정리'] },
+  { name: '시간 흐름형', pool: ['입장부터 끝까지', '하루 밤 흐름', '도착부터 귀가까지', '시간대별 정리', '밤의 순서', '저녁부터 새벽까지', '흐름 따라가기', '한 밤의 순서', '시간 순 안내', '처음부터 끝까지', '밤이 흐르는 법', '단계별 안내', '시간표 정리'] },
+  { name: '비교 설명형', pool: ['뭐가 다를까', '차이점 정리', '다른 점 셋', '특징 정리', '구별되는 점', '남다른 이유', '차별점 안내', '어떻게 다른가', '다른 곳과 비교', '이런 점이 다르다', '특색 정리', '개성 있는 점', '구분되는 지점'] },
+  { name: '짧은 요약형', pool: ['핵심만 정리', '한눈에 보기', '요점 정리', '빠른 안내', '간단 정리', '핵심 셋', '요약 안내', '짧게 정리', '필수 정보', '한 장 요약', '간추린 안내', '핵심 체크', '요점만'] },
+  { name: '인원별 공략형', pool: ['몇 명이 좋을까', '둘이서 가도 될까', '넷이 딱 좋은 이유', '단체 방문 안내', '인원별 정리', '일행 수 정하기', '몇 명이 적당할까', '인원 구성 안내', '팀 단위 안내', '소수 방문 안내', '다인원 안내', '인원별 자리', '함께 갈 사람 수'] },
+  { name: '실수 방지형', pool: ['이것만은 피하자', '흔한 실수 정리', '놓치기 쉬운 것', '실수 줄이는 법', '후회하는 지점', '조심할 것', '미리 알아둘 것', '실패하는 이유', '헛걸음 막는 법', '아쉬운 순간들', '준비 부족 신호', '피해야 할 것', '실수 목록'] },
+  { name: '단골 관점형', pool: ['자주 가는 사람 이야기', '단골이 아는 것', '여러 번 가보면', '익숙해지면 보이는 것', '두 번째 방문부터', '반복 방문 정리', '오래 다닌 시선', '익숙한 사람의 순서', '재방문 요령', '손에 익으면', '경험자 관점', '반복해서 알게 된 것', '다녀본 사람 기준'] }
+];
+const angleOf = (venueNo) => ((SITE_INDEX - 1) + (venueNo - 1)) % 13 + 1;
+
+/* G23 각도 계산 검증 — 공식대로인지 + 13개 전부 다른지 */
+const angleRows = [];
 (() => {
-  const bad = [];
-  venues.forEach((v) => {
+  const bad = []; const seen = new Set();
+  venues.forEach((v, i) => {
+    const no = i + 1;
+    const expected = angleOf(no);
+    const expSuffix = ANGLE[expected].pool[no - 1];
+    angleRows.push({ venueNo: no, slug: v.slug, name: v.name, angleNo: v.angleNo, angleName: v.angleName, suffix: v.suffix, title: v.title });
+    if (v.angleNo !== expected) bad.push(v.slug + ' 각도 ' + v.angleNo + '≠' + expected);
+    if (v.angleName !== ANGLE[expected].name) bad.push(v.slug + ' 각도명 불일치');
+    if (v.suffix !== expSuffix) bad.push(v.slug + ' 접미어 "' + v.suffix + '"≠"' + expSuffix + '"');
     const t = titleOf(html[v.slug]);
-    if (t.indexOf(v.name + ' 어떤 곳일까') !== 0) bad.push(v.slug + ' title 공식 불일치');
+    if (t.indexOf(v.name + ' ' + expSuffix) !== 0) bad.push(v.slug + ' title 접미어 위치');
     if (/(최고|1위|완벽|대박)/.test(t)) bad.push(v.slug + ' 과장어');
-    // 첫 문장이 업소를 한 줄로 규정하는가: 업소명으로 시작하고 "~입니다"로 닫히는가
-    const first = v.lead.split('.')[0] + '.';
-    if (first.indexOf(v.name) !== 0) bad.push(v.slug + ' 첫 문장 업소명 시작 아님');
-    if (!/(입니다|나이트클럽)/.test(first)) bad.push(v.slug + ' 첫 문장 규정형 아님');
     const d = metaOf(html[v.slug], 'description');
     if (d.length < 80 || d.length > 120) bad.push(v.slug + ' desc ' + d.length + '자');
     if (!d.slice(0, 15).includes(v.name)) bad.push(v.slug + ' desc 앞15자');
+    seen.add(v.angleNo);
   });
-  add('G23', 'SITE_INDEX ' + SITE_INDEX + ' 정면 소개형(title 공식·첫 문장 규정형·과장어 0·desc 80~120자) 위반 ' + bad.length + '건' + (bad.length ? ' — ' + bad.join(', ') : ''), bad.length === 0);
+  if (seen.size !== 13) bad.push('각도 고유 ' + seen.size + '/13');
+  add('G23', 'SITE_INDEX ' + SITE_INDEX + ' 각도 공식 검증 — 고유 각도 ' + seen.size + '/13, 접미어·title 위치·desc 80~120자 위반 ' + bad.length + '건' + (bad.length ? ' — ' + bad.join(', ') : ''), bad.length === 0);
+})();
+
+/* G27 title 접미어 13개 전부 상이 */
+(() => {
+  const sfx = venues.map((v) => v.suffix);
+  const dup = sfx.length - new Set(sfx).size;
+  add('G27', 'title 접미어 고유 ' + new Set(sfx).size + '/13, 중복 ' + dup + '건', dup === 0);
+})();
+
+/* G28 첫 문장 구조 13개 전부 상이 (업소명 토큰화 후 전문·머리·꼬리 모두 비교) */
+const firstSentences = [];
+(() => {
+  const norm = [], head = [], tail = [];
+  venues.forEach((v) => {
+    const m = v.lead.match(/^[\s\S]*?[.?!]/);
+    const first = (m ? m[0] : v.lead).trim();
+    firstSentences.push(first);
+    const n = first.split(v.name).join('○○');
+    norm.push(n); head.push(n.slice(0, 6)); tail.push(n.slice(-10));
+  });
+  const dN = norm.length - new Set(norm).size;
+  const dH = head.length - new Set(head).size;
+  const dT = tail.length - new Set(tail).size;
+  add('G28', '첫 문장 문형 — 전문 중복 ' + dN + ' / 머리 6자 중복 ' + dH + ' / 꼬리 10자 중복 ' + dT, dN === 0 && dH === 0 && dT === 0);
+})();
+
+/* G29 H2 첫 항목 13개 전부 상이 */
+(() => {
+  const h2s = venues.map((v) => v.sections[0].h2.split(v.name).join('○○'));
+  const dup = h2s.length - new Set(h2s).size;
+  add('G29', 'H2 첫 항목 고유 ' + new Set(h2s).size + '/13, 중복 ' + dup + '건', dup === 0);
+})();
+
+/* G30 AI 인용 블록 두 번째 문장 13개 전부 상이 */
+const answer2 = [];
+(() => {
+  venues.forEach((v) => {
+    const plain = v.answer.replace(/<[^>]+>/g, '');
+    const parts = plain.split(/(?<=\.)\s+/);
+    answer2.push((parts[1] || '').trim());
+  });
+  const empty = answer2.filter((s) => !s).length;
+  const dup = answer2.length - new Set(answer2).size;
+  add('G30', 'answer-box 두 번째 문장 고유 ' + new Set(answer2).size + '/13, 중복 ' + dup + '건, 누락 ' + empty + '건', dup === 0 && empty === 0);
 })();
 
 /* G25 첫 문단 금지어 */
@@ -317,7 +398,10 @@ lengths.forEach((l) => console.log('  ' + l.slug.padEnd(26) + l.ko + '자  A' + 
 console.log('\n=== 유사도 상위 3쌍 ===');
 sim.pairs.slice(0, 3).forEach((p) => console.log('  ' + (p.jac * 100).toFixed(2) + '%  ' + p.pair));
 
-fs.writeFileSync(path.join(__dirname, 'night-gate-report.json'), JSON.stringify({ results, lengths, morph, ratios, faq: { min: Math.min(...faqLens), max: Math.max(...faqLens) }, sim: { max: sim.max, avg: sim.avg, top3: sim.pairs.slice(0, 3) } }, null, 2));
+console.log('\n=== 각도 배정 ===');
+angleRows.forEach((r) => console.log('  ' + String(r.venueNo).padStart(2) + '  ' + r.name.padEnd(11) + ' 각도' + String(r.angleNo).padStart(2) + ' ' + r.angleName.padEnd(12) + ' 접미어: ' + r.suffix));
+
+fs.writeFileSync(path.join(__dirname, 'night-gate-report.json'), JSON.stringify({ results, angleRows, firstSentences, answer2, lengths, morph, ratios, faq: { min: Math.min(...faqLens), max: Math.max(...faqLens) }, sim: { max: sim.max, avg: sim.avg, top3: sim.pairs.slice(0, 3) } }, null, 2));
 const failed = results.filter((r) => !r.pass);
 console.log('\n' + (failed.length ? 'FAIL ' + failed.map((f) => f.id).join(',') : '정적 게이트 전부 PASS'));
 process.exit(failed.length ? 1 : 0);
