@@ -210,17 +210,22 @@ const morph = {};
   add('G17', '본문 첫 100자 내 업소명 A형 ' + ok + '/13', ok === 13);
 })();
 
-/* G18 업소 문단 비중 */
+/* G18 업소·문화 ≥80% / 지역·교통 ≤20% + 교통어 페이지당 3회 이하 */
 const ratios = {};
 (() => {
-  const GEO = /(역|노선|지하철|전철|버스|택시|도로|상권|도시|블록|막차|배차|귀가|신도시|터미널|국토)/;
+  const BAN = ['지하철', '환승', '막차', '택시'];
   const rows = venues.map((v) => {
-    const ps = [...html[v.slug].matchAll(/<p class="nt-p">([\s\S]*?)<\/p>/g)].map((m) => m[1].replace(/<[^>]+>/g, ''));
-    const ven = ps.filter((p) => p.includes(v.name) || p.includes(v.nameB) || !GEO.test(p)).length;
-    ratios[v.slug] = { ven, total: ps.length, r: ven / ps.length };
-    return ven / ps.length;
+    const src = html[v.slug];
+    const total = (src.match(/<p class="nt-p[ "]/g) || []).length;
+    const geo = (src.match(/<p class="nt-p nt-geo">/g) || []).length;
+    const t = mainText(src);
+    const ban = BAN.reduce((s, w) => s + count(t, w), 0);
+    ratios[v.slug] = { geo, total, ven: total - geo, r: geo / total, ban };
+    return { r: geo / total, ban };
   });
-  add('G18', '업소 문단 비중 최소 ' + (Math.min(...rows) * 100).toFixed(0) + '% / 평균 ' + (rows.reduce((a, b) => a + b) / 13 * 100).toFixed(0) + '% (기준 60%)', rows.every((r) => r >= 0.6));
+  const maxR = Math.max(...rows.map((r) => r.r));
+  const maxBan = Math.max(...rows.map((r) => r.ban));
+  add('G18', '지역·교통 문단 최대 ' + (maxR * 100).toFixed(1) + '% (업소·문화 최소 ' + ((1 - maxR) * 100).toFixed(1) + '%, 기준 80%) / 지하철·환승·막차·택시 페이지당 최대 ' + maxBan + '회 (기준 3회)', maxR <= 0.20 && maxBan <= 3);
 })();
 
 /* G19 H2 업소명 */
@@ -257,19 +262,43 @@ const ratios = {};
   add('G22', '업소당 검색 최소 ' + Math.min(...research.venues.map((v) => v.queries.length)) + '회(총 ' + totalQ + '회), 채택 필드 ' + adopted.length + '개 출처 기록 존재', low.length === 0 && adopted.length > 0);
 })();
 
-/* G23 SITE_INDEX 각도 */
+/* G23 SITE_INDEX 1 = 정면 소개형 */
 (() => {
   const bad = [];
   venues.forEach((v) => {
     const t = titleOf(html[v.slug]);
-    if (!/위치/.test(t)) bad.push(v.slug + ' title 위치어 없음');
-    if (!/(위치|어디|가는|찾)/.test(v.sections[0].h2)) bad.push(v.slug + ' 첫 H2 위치 아님');
-    if (/(최고|1위|완벽|추천)/.test(t)) bad.push(v.slug + ' 과장어');
+    if (t.indexOf(v.name + ' 어떤 곳일까') !== 0) bad.push(v.slug + ' title 공식 불일치');
+    if (/(최고|1위|완벽|대박)/.test(t)) bad.push(v.slug + ' 과장어');
+    // 첫 문장이 업소를 한 줄로 규정하는가: 업소명으로 시작하고 "~입니다"로 닫히는가
+    const first = v.lead.split('.')[0] + '.';
+    if (first.indexOf(v.name) !== 0) bad.push(v.slug + ' 첫 문장 업소명 시작 아님');
+    if (!/(입니다|나이트클럽)/.test(first)) bad.push(v.slug + ' 첫 문장 규정형 아님');
     const d = metaOf(html[v.slug], 'description');
     if (d.length < 80 || d.length > 120) bad.push(v.slug + ' desc ' + d.length + '자');
-    if (!d.slice(0, 15).includes(v.name.slice(0, 4))) bad.push(v.slug + ' desc 앞15자');
+    if (!d.slice(0, 15).includes(v.name)) bad.push(v.slug + ' desc 앞15자');
   });
-  add('G23', 'SITE_INDEX ' + SITE_INDEX + ' 각도(title 위치어·첫 H2 위치·과장어 0·desc 80~120자) 위반 ' + bad.length + '건' + (bad.length ? ' — ' + bad.join(', ') : ''), bad.length === 0);
+  add('G23', 'SITE_INDEX ' + SITE_INDEX + ' 정면 소개형(title 공식·첫 문장 규정형·과장어 0·desc 80~120자) 위반 ' + bad.length + '건' + (bad.length ? ' — ' + bad.join(', ') : ''), bad.length === 0);
+})();
+
+/* G25 첫 문단 금지어 */
+(() => {
+  const BAN = ['안녕하세요', '오늘은', '알아보겠습니다'];
+  let n = 0; const d = [];
+  venues.forEach((v) => {
+    const t = mainText(html[v.slug]);
+    BAN.forEach((w) => { const c = count(t, w); if (c) { n += c; d.push(v.slug + ':' + w); } });
+  });
+  add('G25', '본문 내 "안녕하세요/오늘은/알아보겠습니다" ' + n + '회' + (d.length ? ' — ' + d.join(',') : ''), n === 0);
+})();
+
+/* G26 섹션 연결 문장 */
+(() => {
+  let bad = 0; const d = [];
+  venues.forEach((v) => {
+    const bridges = (html[v.slug].match(/<p class="nt-bridge">/g) || []).length;
+    if (bridges !== v.sections.length) { bad++; d.push(v.slug + ' ' + bridges + '/' + v.sections.length); }
+  });
+  add('G26', '섹션 연결 문장 = H2 개수 위반 ' + bad + '건 (13페이지 × 섹션 ' + venues[0].sections.length + '개)' + (d.length ? ' — ' + d.join(',') : ''), bad === 0);
 })();
 
 /* G24 중복 URL */
@@ -284,7 +313,7 @@ const lengths = venues.map((v) => ({ slug: v.slug, ko: korean(mainText(html[v.sl
 console.log('\n=== 게이트 (정적) ===');
 results.forEach((r) => console.log((r.pass ? 'PASS' : 'FAIL') + '  ' + r.id + '  ' + r.metric));
 console.log('\n=== 분량 / 형태소 (A붙임 B띄움 C지역+업종) ===');
-lengths.forEach((l) => console.log('  ' + l.slug.padEnd(26) + l.ko + '자  A' + morph[l.slug].a + ' B' + morph[l.slug].b + ' C' + morph[l.slug].c + '  업소문단 ' + ratios[l.slug].ven + '/' + ratios[l.slug].total));
+lengths.forEach((l) => console.log('  ' + l.slug.padEnd(26) + l.ko + '자  A' + morph[l.slug].a + ' B' + morph[l.slug].b + ' C' + morph[l.slug].c + '  업소문단 ' + ratios[l.slug].ven + '/' + ratios[l.slug].total + '  교통어 ' + ratios[l.slug].ban));
 console.log('\n=== 유사도 상위 3쌍 ===');
 sim.pairs.slice(0, 3).forEach((p) => console.log('  ' + (p.jac * 100).toFixed(2) + '%  ' + p.pair));
 

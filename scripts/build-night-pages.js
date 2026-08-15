@@ -2,7 +2,7 @@
 /**
  * /night/{slug}/ 13개 페이지 + /night/ 허브 생성기
  *
- * SITE_INDEX = 1 → 각도: 위치·찾아가는 길 / 어투: 안내형 담백체 / H2 시작: 위치
+ * SITE_INDEX = 1 → 방식: 정면 소개형 / title: {업소명} 어떤 곳일까 ~ / 첫 문장: 업소를 한 줄로 규정
  * 원고는 scripts/night/*.js 에 업소별로 따로 들어 있다. 이 파일은 조립만 한다.
  * 같은 slug 디렉터리를 그대로 덮어쓴다. -2 형태의 중복 URL을 만들지 않는다.
  */
@@ -73,6 +73,8 @@ function factRows(v) {
   if (v.station) rows.push(['가까운 역', v.station]);
   if (v.hours) rows.push(['영업 안내', v.hours]);
   if (v.age) rows.push(['출입 연령', v.age]);
+  if (v.seats) rows.push(['좌석 구성', v.seats]);
+  if (v.parking) rows.push(['주차', v.parking]);
   if (v.contact) rows.push(['문의', v.contact.person + ' ' + v.contact.tel]);
   return rows;
 }
@@ -206,7 +208,8 @@ function buildPage(v) {
   const rows = factRows(v);
 
   const sections = v.sections.map((s) => {
-    const ps = s.ps.map((t) => '        <p class="nt-p">' + t + '</p>').join('\n');
+    const cls = s.geo ? 'nt-p nt-geo' : 'nt-p';
+    const ps = s.ps.map((t) => '        <p class="' + cls + '">' + t + '</p>').join('\n');
     const br = s.bridge ? '\n        <p class="nt-bridge">' + s.bridge + '</p>' : '';
     return '      <section>\n        <h2 class="nt-h2">' + esc(s.h2) + '</h2>\n' + ps + br + '\n      </section>';
   }).join('\n\n');
@@ -242,7 +245,7 @@ ${VERIFY}
 <meta property="og:type" content="article">
 <meta property="og:url" content="${url}">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:site_name" content="${BRAND} 나이트 위치 안내">
+<meta property="og:site_name" content="${BRAND} 나이트 소개">
 <meta property="og:image" content="${img}">
 <meta property="og:image:secure_url" content="${img}">
 <meta property="og:image:width" content="1200">
@@ -265,7 +268,7 @@ ${jsonld(v)}
 
 <header class="header nt-header">
   <div class="wrap">
-    <a href="/night/" class="logo">나이트 위치 안내</a>
+    <a href="/night/" class="logo">전국 나이트 소개</a>
     <nav class="nt-nav" aria-label="주요 메뉴">
       <a href="/">홈</a>
       <a href="/night/">목록</a>
@@ -307,7 +310,7 @@ ${v.summary.map((s) => '          <li>' + esc(s) + '</li>').join('\n')}
 
   <aside class="nt-aside" aria-labelledby="aside-title">
     <div class="wrap">
-      <h2 id="aside-title">가까운 지역 나이트 위치 안내</h2>
+      <h2 id="aside-title">같이 보면 좋은 나이트</h2>
 ${links}
     </div>
   </aside>
@@ -333,7 +336,8 @@ function buildHub() {
   const p = { deep: '#1f2430', mid: '#39415a', soft: '#f3f4f8', line: '#d8dbe6', ink: '#232838' };
   const items = venues.map((v) => {
     const loc = v.addr.street ? v.addr.street : (v.landmark + ' · ' + v.addr.locality);
-    return '      <a href="/night/' + v.slug + '/">' + esc(v.name) + ' — ' + esc(loc) + '</a>';
+    const tag = v.age ? ' · ' + v.age : '';
+    return '      <a href="/night/' + v.slug + '/">' + esc(v.name) + ' — ' + esc(loc) + esc(tag) + '</a>';
   }).join('\n');
   return `<!DOCTYPE html>
 <html lang="ko">
@@ -341,12 +345,12 @@ function buildHub() {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 ${VERIFY}
-<title>나이트 위치 안내 13곳 주소 목록</title>
-<meta name="description" content="지역별 나이트 13곳의 교차 확인된 주소와 가까운 역을 한 곳에 모았습니다. 각 페이지에서 진입 동선과 확인되지 않은 항목까지 확인할 수 있습니다.">
+<title>전국 나이트 13곳 어떤 곳인지 한눈에</title>
+<meta name="description" content="지역별 나이트 13곳이 각각 어떤 홀인지, 몇 시가 좋은지, 좌석은 어떻게 나뉘는지 한 줄로 모았습니다. 이름을 누르면 업소별 소개로 이어집니다.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="${SITE}/night/">
-<meta property="og:title" content="나이트 위치 안내 13곳 주소 목록">
-<meta property="og:description" content="지역별 나이트 13곳의 교차 확인된 주소와 가까운 역을 한 곳에 모았습니다.">
+<meta property="og:title" content="전국 나이트 13곳 어떤 곳인지 한눈에">
+<meta property="og:description" content="지역별 나이트 13곳이 각각 어떤 홀인지 한 줄로 모았습니다.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="${SITE}/night/">
 <meta property="og:locale" content="ko_KR">
@@ -359,26 +363,26 @@ ${VERIFY}
 <a href="#main" class="skip-to-main">본문 바로가기</a>
 <header class="header nt-header">
   <div class="wrap">
-    <a href="/night/" class="logo">나이트 위치 안내</a>
+    <a href="/night/" class="logo">전국 나이트 소개</a>
     <nav class="nt-nav" aria-label="주요 메뉴"><a href="/">홈</a></nav>
   </div>
 </header>
 <main id="main">
   <article>
     <header class="nt-hero"><div class="wrap">
-      <h1>나이트 위치 안내</h1>
-      <p class="nt-lead">지역별 13곳의 교차 확인된 주소와 가까운 역을 모았습니다.</p>
+      <h1>전국 나이트 13곳</h1>
+      <p class="nt-lead">각각 어떤 홀인지, 몇 시가 좋은지, 좌석은 어떻게 나뉘는지 업소별로 정리했습니다.</p>
     </div></header>
     <div class="nt-body"><div class="wrap">
       <section class="nt-aside">
-        <h2 id="hub-list">지역별 주소 목록</h2>
+        <h2 id="hub-list">지역별 업소 목록</h2>
 ${items}
       </section>
     </div></div>
   </article>
   <aside class="nt-aside" aria-label="안내"><div class="wrap">
-    <h2>이 목록의 기준</h2>
-    <p class="nt-p">독립 출처 두 곳 이상에서 일치한 주소만 실었습니다. 영업시간과 요금처럼 확인되지 않은 항목은 각 페이지에 확인 불가로 표시했습니다.</p>
+    <h2>이 목록을 쓰는 법</h2>
+    <p class="nt-p">업소명을 누르면 홀 분위기와 자리 잡는 요령, 부킹이 도는 방식까지 한 페이지에 정리해 두었습니다. 영업시간과 요금처럼 확인되지 않은 항목은 각 페이지에 확인 불가로 표시했습니다.</p>
   </div></aside>
 </main>
 <footer class="site-footer">
@@ -401,7 +405,7 @@ function fingerprint() {
   return {
     siteIndex: SITE_INDEX,
     site: SITE,
-    angle: '위치·찾아가는 길 중심 / 안내형 담백체 / H2 시작: 위치',
+    angle: 'INDEX 1 정면 소개형 / title: {업소명} 어떤 곳일까 + 훅 / 첫 문장: 업소를 한 줄로 규정 / 본문 80% 업소·나이트 문화, 교통 1개 섹션',
     generatedAt: TODAY,
     pages: venues.map((v) => ({
       slug: v.slug,

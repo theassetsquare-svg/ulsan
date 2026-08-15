@@ -7,7 +7,7 @@
     },
     {
       "id": "G02",
-      "metric": "완전중복 title 0/desc 0, 근사 최대 33.3% (bulgwang-hobak-night↔suwon-chance-dome-night)",
+      "metric": "완전중복 title 0/desc 0, 근사 최대 33.3% (changwon-lululala-night↔sangbong-hangukgwan-night)",
       "pass": true
     },
     {
@@ -17,7 +17,7 @@
     },
     {
       "id": "G04",
-      "metric": "78쌍 최대 8.48% / 평균 5.55% (하드 15%, 목표 10%)",
+      "metric": "78쌍 최대 9.40% / 평균 4.92% (하드 15%, 목표 10%)",
       "pass": true
     },
     {
@@ -37,7 +37,7 @@
     },
     {
       "id": "G09",
-      "metric": "JSON-LD 39블록 오류 0 / FAQ 답변 78개 범위(41~56자, 기준 40~90) 위반 0건",
+      "metric": "JSON-LD 39블록 오류 0 / FAQ 답변 78개 범위(41~58자, 기준 40~90) 위반 0건",
       "pass": true
     },
     {
@@ -47,7 +47,7 @@
     },
     {
       "id": "G13",
-      "metric": "BASE 9c1d67d 대비 기존 파일 수정 4개(index.html, llms.txt, robots.txt, sitemap.xml), 허용 4종 외 0개, 삭제 줄 0, 신규 추가 48개",
+      "metric": "BASE 9c1d67d 대비 기존 파일 수정 4개(index.html, llms.txt, robots.txt, sitemap.xml), 허용 4종 외 0개, 삭제 줄 0, 신규 추가 49개",
       "pass": true
     },
     {
@@ -57,12 +57,12 @@
     },
     {
       "id": "G15",
-      "metric": "A 최소 13회 / B 최소 2회 / C 최소 1회 (기준 10/2/1) 위반 0건",
+      "metric": "A 최소 12회 / B 최소 2회 / C 최소 1회 (기준 10/2/1) 위반 0건",
       "pass": true
     },
     {
       "id": "G16",
-      "metric": "title 업소명 0번째 시작 13/13, 길이 25~28자 (기준 30 이내) 위반 0건",
+      "metric": "title 업소명 0번째 시작 13/13, 길이 23~27자 (기준 30 이내) 위반 0건",
       "pass": true
     },
     {
@@ -72,12 +72,12 @@
     },
     {
       "id": "G18",
-      "metric": "업소 문단 비중 최소 65% / 평균 76% (기준 60%)",
+      "metric": "지역·교통 문단 최대 11.8% (업소·문화 최소 88.2%, 기준 80%) / 지하철·환승·막차·택시 페이지당 최대 0회 (기준 3회)",
       "pass": true
     },
     {
       "id": "G19",
-      "metric": "H2 내 업소명 최소 5개 / H2 총 6,6,6,6,6,6,6,6,6,6,6,6,6 (기준 4)",
+      "metric": "H2 내 업소명 최소 4개 / H2 총 6,6,6,6,6,6,6,6,6,6,6,6,6 (기준 4)",
       "pass": true
     },
     {
@@ -97,7 +97,17 @@
     },
     {
       "id": "G23",
-      "metric": "SITE_INDEX 1 각도(title 위치어·첫 H2 위치·과장어 0·desc 80~120자) 위반 0건",
+      "metric": "SITE_INDEX 1 정면 소개형(title 공식·첫 문장 규정형·과장어 0·desc 80~120자) 위반 0건",
+      "pass": true
+    },
+    {
+      "id": "G25",
+      "metric": "본문 내 \"안녕하세요/오늘은/알아보겠습니다\" 0회",
+      "pass": true
+    },
+    {
+      "id": "G26",
+      "metric": "섹션 연결 문장 = H2 개수 위반 0건 (13페이지 × 섹션 6개)",
       "pass": true
     },
     {
@@ -109,70 +119,70 @@
   "lengths": [
     {
       "slug": "bulgwang-hobak-night",
-      "ko": 1012
+      "ko": 1381
     },
     {
       "slug": "changwon-lululala-night",
-      "ko": 1050
+      "ko": 1375
     },
     {
       "slug": "ulsan-champion-night",
-      "ko": 1012
+      "ko": 1238
     },
     {
       "slug": "cheongdam-night",
-      "ko": 913
+      "ko": 1211
     },
     {
       "slug": "daejeon-one-night",
-      "ko": 990
+      "ko": 1269
     },
     {
       "slug": "sillim-grandprix-night",
-      "ko": 948
+      "ko": 1271
     },
     {
       "slug": "sangbong-hangukgwan-night",
-      "ko": 991
+      "ko": 1268
     },
     {
       "slug": "suyu-shampoo-night",
-      "ko": 951
+      "ko": 1278
     },
     {
       "slug": "busan-asiad-night",
-      "ko": 1013
+      "ko": 1302
     },
     {
       "slug": "suwon-chance-dome-night",
-      "ko": 974
+      "ko": 1175
     },
     {
       "slug": "ansan-hit-night",
-      "ko": 948
+      "ko": 1237
     },
     {
       "slug": "daejeon-seven-night",
-      "ko": 951
+      "ko": 1141
     },
     {
       "slug": "ilsan-shampoo-night",
-      "ko": 944
+      "ko": 1221
     }
   ],
   "morph": {
     "bulgwang-hobak-night": {
-      "a": 14,
+      "a": 13,
       "b": 2,
       "c": 1
     },
     "changwon-lululala-night": {
-      "a": 14,
+      "a": 12,
       "b": 2,
       "c": 1
     },
     "ulsan-champion-night": {
-      "a": 18,
+      "a": 12,
       "b": 2,
       "c": 1
     },
@@ -182,12 +192,12 @@
       "c": 1
     },
     "daejeon-one-night": {
-      "a": 14,
+      "a": 13,
       "b": 2,
       "c": 1
     },
     "sillim-grandprix-night": {
-      "a": 14,
+      "a": 12,
       "b": 2,
       "c": 1
     },
@@ -202,117 +212,143 @@
       "c": 1
     },
     "busan-asiad-night": {
-      "a": 13,
+      "a": 12,
       "b": 2,
       "c": 1
     },
     "suwon-chance-dome-night": {
-      "a": 14,
+      "a": 13,
       "b": 2,
       "c": 1
     },
     "ansan-hit-night": {
-      "a": 14,
+      "a": 13,
       "b": 2,
       "c": 1
     },
     "daejeon-seven-night": {
-      "a": 15,
+      "a": 12,
       "b": 2,
       "c": 1
     },
     "ilsan-shampoo-night": {
-      "a": 13,
+      "a": 14,
       "b": 2,
       "c": 1
     }
   },
   "ratios": {
     "bulgwang-hobak-night": {
+      "geo": 2,
+      "total": 17,
       "ven": 15,
-      "total": 18,
-      "r": 0.8333333333333334
+      "r": 0.11764705882352941,
+      "ban": 0
     },
     "changwon-lululala-night": {
-      "ven": 13,
+      "geo": 2,
       "total": 17,
-      "r": 0.7647058823529411
+      "ven": 15,
+      "r": 0.11764705882352941,
+      "ban": 0
     },
     "ulsan-champion-night": {
-      "ven": 11,
+      "geo": 2,
       "total": 17,
-      "r": 0.6470588235294118
+      "ven": 15,
+      "r": 0.11764705882352941,
+      "ban": 0
     },
     "cheongdam-night": {
-      "ven": 13,
+      "geo": 2,
       "total": 17,
-      "r": 0.7647058823529411
+      "ven": 15,
+      "r": 0.11764705882352941,
+      "ban": 0
     },
     "daejeon-one-night": {
-      "ven": 14,
-      "total": 18,
-      "r": 0.7777777777777778
+      "geo": 2,
+      "total": 17,
+      "ven": 15,
+      "r": 0.11764705882352941,
+      "ban": 0
     },
     "sillim-grandprix-night": {
-      "ven": 14,
-      "total": 18,
-      "r": 0.7777777777777778
+      "geo": 2,
+      "total": 17,
+      "ven": 15,
+      "r": 0.11764705882352941,
+      "ban": 0
     },
     "sangbong-hangukgwan-night": {
-      "ven": 14,
-      "total": 18,
-      "r": 0.7777777777777778
+      "geo": 2,
+      "total": 17,
+      "ven": 15,
+      "r": 0.11764705882352941,
+      "ban": 0
     },
     "suyu-shampoo-night": {
-      "ven": 14,
-      "total": 18,
-      "r": 0.7777777777777778
+      "geo": 2,
+      "total": 17,
+      "ven": 15,
+      "r": 0.11764705882352941,
+      "ban": 0
     },
     "busan-asiad-night": {
-      "ven": 14,
-      "total": 18,
-      "r": 0.7777777777777778
+      "geo": 2,
+      "total": 17,
+      "ven": 15,
+      "r": 0.11764705882352941,
+      "ban": 0
     },
     "suwon-chance-dome-night": {
-      "ven": 12,
-      "total": 18,
-      "r": 0.6666666666666666
+      "geo": 2,
+      "total": 17,
+      "ven": 15,
+      "r": 0.11764705882352941,
+      "ban": 0
     },
     "ansan-hit-night": {
+      "geo": 2,
+      "total": 17,
       "ven": 15,
-      "total": 18,
-      "r": 0.8333333333333334
+      "r": 0.11764705882352941,
+      "ban": 0
     },
     "daejeon-seven-night": {
-      "ven": 13,
-      "total": 18,
-      "r": 0.7222222222222222
+      "geo": 2,
+      "total": 17,
+      "ven": 15,
+      "r": 0.11764705882352941,
+      "ban": 0
     },
     "ilsan-shampoo-night": {
-      "ven": 14,
-      "total": 18,
-      "r": 0.7777777777777778
+      "geo": 2,
+      "total": 17,
+      "ven": 15,
+      "r": 0.11764705882352941,
+      "ban": 0
     }
   },
   "faq": {
     "min": 41,
-    "max": 56
+    "max": 58
   },
   "sim": {
-    "max": 0.08475734791524266,
-    "avg": 0.05548470735164346,
+    "max": 0.09399606299212598,
+    "avg": 0.04917596050315942,
     "top3": [
       {
-        "pair": "suwon-chance-dome-night ↔ ansan-hit-night",
-        "jac": 0.08475734791524266
+        "pair": "suyu-shampoo-night ↔ ilsan-shampoo-night",
+        "jac": 0.09399606299212598
       },
       {
-        "pair": "changwon-lululala-night ↔ daejeon-one-night",
-        "jac": 0.08403361344537816
+        "pair": "suwon-chance-dome-night ↔ daejeon-seven-night",
+        "jac": 0.08540540540540541
       },
       {
-        "pair": "bulgwang-hobak-night ↔ cheongdam-night",
-        "jac": 0.08395396073121192
+        "pair": "busan-asiad-night ↔ ansan-hit-night",
+        "jac": 0.0826044703595724
       }
     ]
   }
