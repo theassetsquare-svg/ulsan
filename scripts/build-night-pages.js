@@ -2,8 +2,9 @@
 /**
  * /night/{slug}/ 13개 페이지 + /night/ 허브 생성기
  *
- * SITE_INDEX = 1  → 각도: 위치·찾아가는 길 / 어투: 안내형 담백체 / H2 시작: 위치
+ * SITE_INDEX = 1 → 각도: 위치·찾아가는 길 / 어투: 안내형 담백체 / H2 시작: 위치
  * 원고는 scripts/night/*.js 에 업소별로 따로 들어 있다. 이 파일은 조립만 한다.
+ * 같은 slug 디렉터리를 그대로 덮어쓴다. -2 형태의 중복 URL을 만들지 않는다.
  */
 const fs = require('fs');
 const path = require('path');
@@ -11,6 +12,8 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const SITE = 'https://ulsand.pages.dev';
 const TODAY = '2026-08-15';
+const TODAY_KO = '2026년 8월 15일';
+const SITE_INDEX = 1;
 const BRAND = '놀쿨';
 
 const ORDER = [
@@ -33,7 +36,6 @@ const bySlug = Object.fromEntries(venues.map((v) => [v.slug, v]));
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const j = (o) => JSON.stringify(o, null, 2);
 
-/* hue → 배경/강조색. 13개 hue가 전부 달라 배경색도 전부 다르다. */
 function hsl2hex(h, s, l) {
   s /= 100; l /= 100;
   const c = (1 - Math.abs(2 * l - 1)) * s;
@@ -68,7 +70,7 @@ function factRows(v) {
   } else if (v.landmark) {
     rows.push(['위치', v.landmark + ' · ' + v.addr.locality]);
   }
-  if (v.station) rows.push(['가장 가까운 역', v.station]);
+  if (v.station) rows.push(['가까운 역', v.station]);
   if (v.hours) rows.push(['영업 안내', v.hours]);
   if (v.age) rows.push(['출입 연령', v.age]);
   if (v.contact) rows.push(['문의', v.contact.person + ' ' + v.contact.tel]);
@@ -100,6 +102,7 @@ function jsonld(v) {
     '@type': 'NightClub',
     '@id': url + '#nightclub',
     name: v.name,
+    alternateName: [v.nameB],
     url: url,
     image: [img],
     description: v.answer.replace(/<[^>]+>/g, ''),
@@ -115,8 +118,8 @@ function jsonld(v) {
     '@id': url + '#faq',
     mainEntity: v.sections.map((s) => ({
       '@type': 'Question',
-      name: s.h2,
-      acceptedAnswer: { '@type': 'Answer', text: s.ps.join(' ') }
+      name: s.faq.q,
+      acceptedAnswer: { '@type': 'Answer', text: s.faq.a }
     }))
   };
 
@@ -138,33 +141,34 @@ function pageCss(p) {
 :root{--nt-deep:${p.deep};--nt-mid:${p.mid};--nt-soft:${p.soft};--nt-line:${p.line};--nt-ink:${p.ink};}
 body{background:#fff;color:#15161a;padding-bottom:calc(84px + env(safe-area-inset-bottom,0px));}
 .nt-header{background:var(--nt-deep);}
+.nt-header .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;}
 .nt-header .logo{color:#fff;}
-.nt-header .nt-home{color:#fff;font-weight:700;font-size:.9rem;padding:10px;min-height:44px;display:flex;align-items:center;}
-.nt-hero{background:var(--nt-deep);color:#fff;padding:34px 0 30px;}
+.nt-nav a{color:#fff;font-weight:700;font-size:.9rem;padding:10px;min-height:44px;display:inline-flex;align-items:center;}
+.nt-hero{background:var(--nt-deep);color:#fff;padding:30px 0 26px;}
 .nt-hero .nt-badge{display:inline-block;background:#fff;color:var(--nt-ink);font-weight:800;font-size:.78rem;padding:6px 12px;border-radius:999px;margin-bottom:12px;}
 .nt-hero h1{font-size:clamp(1.5rem,5.6vw,2.05rem);font-weight:900;line-height:1.35;}
 .nt-hero .nt-lead{margin-top:12px;color:#fff;font-size:1rem;line-height:1.75;}
-.nt-body{padding:34px 0 8px;background:#fff;}
-.answer-box{border:2px solid var(--nt-line);background:var(--nt-soft);border-radius:12px;padding:18px 16px;margin:0 0 26px;}
-.answer-box p{font-size:1rem;line-height:1.8;color:#15161a;}
-.nt-facts{width:100%;border-collapse:collapse;margin:0 0 26px;font-size:.97rem;}
+.nt-body{padding:26px 0 8px;background:#fff;}
+.answer-box{border:2px solid var(--nt-line);background:var(--nt-soft);border-radius:12px;padding:16px 15px;margin:0 0 20px;}
+.answer-box p{font-size:1rem;line-height:1.75;color:#15161a;}
+.nt-facts{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:.97rem;}
 .nt-facts caption{text-align:left;font-weight:800;color:var(--nt-ink);padding-bottom:8px;}
 .nt-facts th,.nt-facts td{border:1px solid var(--nt-line);padding:11px 12px;text-align:left;vertical-align:top;color:#15161a;}
-.nt-facts th{background:var(--nt-soft);width:34%;font-weight:800;white-space:nowrap;}
+.nt-facts th{background:var(--nt-soft);width:32%;font-weight:800;white-space:nowrap;}
 .nt-scroll{overflow-x:auto;}
-.nt-h2{font-size:clamp(1.16rem,4.4vw,1.42rem);font-weight:900;line-height:1.5;margin:32px 0 12px;padding-left:12px;border-left:5px solid var(--nt-mid);color:#15161a;}
-.nt-p{margin-bottom:13px;color:#26262c;line-height:1.8;}
+.nt-h2{font-size:clamp(1.14rem,4.3vw,1.4rem);font-weight:900;line-height:1.5;margin:30px 0 12px;padding-left:12px;border-left:5px solid var(--nt-mid);color:#15161a;}
+.nt-p{margin-bottom:12px;color:#26262c;line-height:1.8;}
 .nt-bridge{margin:0 0 6px;color:#4B5563;font-size:.93rem;}
-.nt-sum{background:var(--nt-soft);border:1px solid var(--nt-line);border-radius:12px;padding:18px 16px;margin:32px 0 8px;}
-.nt-sum h2{font-size:1.05rem;font-weight:900;color:var(--nt-ink);margin-bottom:10px;}
+.nt-sum{background:var(--nt-soft);border:1px solid var(--nt-line);border-radius:12px;padding:16px 15px;margin:30px 0 8px;}
+.nt-sum .nt-h2{margin:0 0 10px;border-left:none;padding-left:0;font-size:1.05rem;color:var(--nt-ink);}
 .nt-sum li{padding:6px 0 6px 16px;position:relative;color:#26262c;line-height:1.75;}
 .nt-sum li::before{content:"";position:absolute;left:0;top:15px;width:7px;height:7px;border-radius:50%;background:var(--nt-mid);}
-.nt-links{margin:30px 0 6px;}
-.nt-links h2{font-size:1.05rem;font-weight:900;color:var(--nt-ink);margin-bottom:10px;}
-.nt-links a{display:block;padding:13px 12px;border:1px solid var(--nt-line);border-radius:10px;margin-bottom:9px;color:var(--nt-ink);font-weight:700;min-height:44px;}
+.nt-aside{margin:28px 0 6px;}
+.nt-aside h2{font-size:1.05rem;font-weight:900;color:var(--nt-ink);margin-bottom:10px;}
+.nt-aside a{display:block;padding:13px 12px;border:1px solid var(--nt-line);border-radius:10px;margin-bottom:9px;color:var(--nt-ink);font-weight:700;min-height:44px;}
 .site-footer{background:#f4f4f5;padding:8px 16px 26px;}
 .ad-inquiry{background:#ffd400;color:#111;font-weight:900;font-size:18px;padding:16px;text-align:center;border-radius:10px;margin:24px auto;max-width:720px;}
-.footer-note{max-width:720px;margin:0 auto;color:#3f3f46;font-size:.88rem;line-height:1.7;text-align:center;}
+.footer-note{max-width:720px;margin:0 auto 6px;color:#3f3f46;font-size:.88rem;line-height:1.7;text-align:center;}
 .callbar{
   position:fixed; left:0; right:0; bottom:0; z-index:99999;
   display:flex; align-items:center; justify-content:center; gap:12px;
@@ -187,7 +191,7 @@ body{background:#fff;color:#15161a;padding-bottom:calc(84px + env(safe-area-inse
   .nt-facts th{background:#191922;}
   .nt-h2{color:#ffffff;}
   .nt-sum{background:#191922;border-color:var(--nt-mid);}
-  .nt-sum h2,.nt-links h2,.nt-links a{color:#ffffff;}
+  .nt-sum .nt-h2,.nt-aside h2,.nt-aside a{color:#ffffff;}
   .nt-bridge{color:#c7c7d1;}
   .site-footer{background:#17171d;}
   .footer-note{color:#d4d4dd;}
@@ -202,9 +206,9 @@ function buildPage(v) {
   const rows = factRows(v);
 
   const sections = v.sections.map((s) => {
-    const ps = s.ps.map((t) => '      <p class="nt-p">' + t + '</p>').join('\n');
-    const br = s.bridge ? '\n      <p class="nt-bridge">' + s.bridge + '</p>' : '';
-    return '      <h2 class="nt-h2">' + esc(s.h2) + '</h2>\n' + ps + br;
+    const ps = s.ps.map((t) => '        <p class="nt-p">' + t + '</p>').join('\n');
+    const br = s.bridge ? '\n        <p class="nt-bridge">' + s.bridge + '</p>' : '';
+    return '      <section>\n        <h2 class="nt-h2">' + esc(s.h2) + '</h2>\n' + ps + br + '\n      </section>';
   }).join('\n\n');
 
   const table = rows.length ? (
@@ -216,7 +220,7 @@ function buildPage(v) {
   const links = v.links.map((l) => {
     const t = bySlug[l.slug];
     if (!t) throw new Error('링크 대상 없음: ' + l.slug);
-    return '        <a href="/night/' + t.slug + '/">' + esc(l.text) + '</a>';
+    return '      <a href="/night/' + t.slug + '/">' + esc(l.text) + '</a>';
   }).join('\n');
 
   return `<!DOCTYPE html>
@@ -238,7 +242,7 @@ ${VERIFY}
 <meta property="og:type" content="article">
 <meta property="og:url" content="${url}">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:site_name" content="${BRAND} 나이트 정보">
+<meta property="og:site_name" content="${BRAND} 나이트 위치 안내">
 <meta property="og:image" content="${img}">
 <meta property="og:image:secure_url" content="${img}">
 <meta property="og:image:width" content="1200">
@@ -262,44 +266,51 @@ ${jsonld(v)}
 <header class="header nt-header">
   <div class="wrap">
     <a href="/night/" class="logo">나이트 위치 안내</a>
-    <a href="/" class="nt-home">홈</a>
+    <nav class="nt-nav" aria-label="주요 메뉴">
+      <a href="/">홈</a>
+      <a href="/night/">목록</a>
+    </nav>
   </div>
 </header>
 
 <main id="main">
 
-<section class="nt-hero">
-  <div class="wrap">
-    <span class="nt-badge">${esc(v.heroBadge)}</span>
-    <h1>${esc(v.name)}</h1>
-    <p class="nt-lead">${esc(v.lead)}</p>
-  </div>
-</section>
+  <article>
+    <header class="nt-hero">
+      <div class="wrap">
+        <span class="nt-badge">${esc(v.heroBadge)}</span>
+        <h1>${esc(v.name)}</h1>
+        <p class="nt-lead">${esc(v.lead)}</p>
+      </div>
+    </header>
 
-<section class="nt-body">
-  <div class="wrap">
+    <div class="nt-body">
+      <div class="wrap">
 
-    <div class="answer-box">
-      <p>${v.answer}</p>
-    </div>
+      <div class="answer-box">
+        <p>${v.answer}</p>
+      </div>
 
 ${table}
 ${sections}
 
-    <div class="nt-sum">
-      <h2>${esc(v.name)} 핵심 3줄 요약</h2>
-      <ul>
-${v.summary.map((s) => '        <li>' + esc(s) + '</li>').join('\n')}
-      </ul>
+      <section class="nt-sum">
+        <h2 class="nt-h2">${esc(v.name)} 핵심 3줄 요약</h2>
+        <ul>
+${v.summary.map((s) => '          <li>' + esc(s) + '</li>').join('\n')}
+        </ul>
+      </section>
+
+      </div>
     </div>
+  </article>
 
-    <nav class="nt-links" aria-label="가까운 지역 안내">
-      <h2>같이 보면 좋은 위치 안내</h2>
+  <aside class="nt-aside" aria-labelledby="aside-title">
+    <div class="wrap">
+      <h2 id="aside-title">가까운 지역 나이트 위치 안내</h2>
 ${links}
-    </nav>
-
-  </div>
-</section>
+    </div>
+  </aside>
 
 </main>
 
@@ -308,6 +319,7 @@ ${links}
     광고·제휴 입점 문의 &nbsp;|&nbsp; 카카오톡 ID <strong>besta12</strong>
   </div>
   <p class="footer-note">본 페이지는 업소 정보 제공 페이지입니다. 출입 연령 및 이용 규정은 각 업소 방침을 따릅니다.</p>
+  <p class="footer-note">최종 수정 <time datetime="${TODAY}">${TODAY_KO}</time> · 공개된 웹 정보를 정리했으며 실제와 다를 수 있습니다.</p>
 </footer>
 
 ${callbar(v)}
@@ -321,7 +333,7 @@ function buildHub() {
   const p = { deep: '#1f2430', mid: '#39415a', soft: '#f3f4f8', line: '#d8dbe6', ink: '#232838' };
   const items = venues.map((v) => {
     const loc = v.addr.street ? v.addr.street : (v.landmark + ' · ' + v.addr.locality);
-    return '        <a href="/night/' + v.slug + '/">' + esc(v.name) + ' — ' + esc(loc) + '</a>';
+    return '      <a href="/night/' + v.slug + '/">' + esc(v.name) + ' — ' + esc(loc) + '</a>';
   }).join('\n');
   return `<!DOCTYPE html>
 <html lang="ko">
@@ -329,12 +341,12 @@ function buildHub() {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 ${VERIFY}
-<title>나이트 위치 안내 13곳 목록</title>
-<meta name="description" content="지역별 나이트 13곳의 확인된 주소와 가장 가까운 역을 한 곳에 모았습니다. 각 페이지에서 진입 동선과 확인되지 않은 항목까지 확인할 수 있습니다.">
+<title>나이트 위치 안내 13곳 주소 목록</title>
+<meta name="description" content="지역별 나이트 13곳의 교차 확인된 주소와 가까운 역을 한 곳에 모았습니다. 각 페이지에서 진입 동선과 확인되지 않은 항목까지 확인할 수 있습니다.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="${SITE}/night/">
-<meta property="og:title" content="나이트 위치 안내 13곳 목록">
-<meta property="og:description" content="지역별 나이트 13곳의 확인된 주소와 가장 가까운 역을 한 곳에 모았습니다.">
+<meta property="og:title" content="나이트 위치 안내 13곳 주소 목록">
+<meta property="og:description" content="지역별 나이트 13곳의 교차 확인된 주소와 가까운 역을 한 곳에 모았습니다.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="${SITE}/night/">
 <meta property="og:locale" content="ko_KR">
@@ -348,26 +360,33 @@ ${VERIFY}
 <header class="header nt-header">
   <div class="wrap">
     <a href="/night/" class="logo">나이트 위치 안내</a>
-    <a href="/" class="nt-home">홈</a>
+    <nav class="nt-nav" aria-label="주요 메뉴"><a href="/">홈</a></nav>
   </div>
 </header>
 <main id="main">
-<section class="nt-hero"><div class="wrap">
-  <h1>나이트 위치 안내</h1>
-  <p class="nt-lead">지역별 13곳의 확인된 주소와 가장 가까운 역을 모았습니다.</p>
-</div></section>
-<section class="nt-body"><div class="wrap">
-  <nav class="nt-links" aria-label="지역별 안내 목록">
-    <h2>지역별 목록</h2>
+  <article>
+    <header class="nt-hero"><div class="wrap">
+      <h1>나이트 위치 안내</h1>
+      <p class="nt-lead">지역별 13곳의 교차 확인된 주소와 가까운 역을 모았습니다.</p>
+    </div></header>
+    <div class="nt-body"><div class="wrap">
+      <section class="nt-aside">
+        <h2 id="hub-list">지역별 주소 목록</h2>
 ${items}
-  </nav>
-</div></section>
+      </section>
+    </div></div>
+  </article>
+  <aside class="nt-aside" aria-label="안내"><div class="wrap">
+    <h2>이 목록의 기준</h2>
+    <p class="nt-p">독립 출처 두 곳 이상에서 일치한 주소만 실었습니다. 영업시간과 요금처럼 확인되지 않은 항목은 각 페이지에 확인 불가로 표시했습니다.</p>
+  </div></aside>
 </main>
 <footer class="site-footer">
   <div class="ad-inquiry">
     광고·제휴 입점 문의 &nbsp;|&nbsp; 카카오톡 ID <strong>besta12</strong>
   </div>
   <p class="footer-note">본 페이지는 업소 정보 제공 페이지입니다. 출입 연령 및 이용 규정은 각 업소 방침을 따릅니다.</p>
+  <p class="footer-note">최종 수정 <time datetime="${TODAY}">${TODAY_KO}</time> · 공개된 웹 정보를 정리했으며 실제와 다를 수 있습니다.</p>
 </footer>
 <div class="callbar" role="complementary" aria-label="광고 제휴 문의">
   <span>광고·제휴 입점 문의 카톡 <b>besta12</b></span>
@@ -377,6 +396,24 @@ ${items}
 `;
 }
 
+function fingerprint() {
+  const strip = (s) => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+  return {
+    siteIndex: SITE_INDEX,
+    site: SITE,
+    angle: '위치·찾아가는 길 중심 / 안내형 담백체 / H2 시작: 위치',
+    generatedAt: TODAY,
+    pages: venues.map((v) => ({
+      slug: v.slug,
+      url: SITE + '/night/' + v.slug + '/',
+      title: v.title,
+      titleLength: v.title.length,
+      h2: v.sections.map((s) => s.h2),
+      first200: strip(v.lead + ' ' + v.answer + ' ' + v.sections[0].ps.join(' ')).slice(0, 200)
+    }))
+  };
+}
+
 function main() {
   venues.forEach((v) => {
     const dir = path.join(ROOT, 'night', v.slug);
@@ -384,8 +421,9 @@ function main() {
     fs.writeFileSync(path.join(dir, 'index.html'), buildPage(v));
   });
   fs.writeFileSync(path.join(ROOT, 'night', 'index.html'), buildHub());
-  console.log('OK  night/ 페이지 ' + venues.length + '개 + 허브 1개 생성');
+  fs.writeFileSync(path.join(ROOT, '.seo-fingerprint.json'), JSON.stringify(fingerprint(), null, 2) + '\n');
+  console.log('OK  night/ 페이지 ' + venues.length + '개 + 허브 1개 + .seo-fingerprint.json 생성');
 }
 main();
 
-module.exports = { ORDER, venues, SITE, TODAY, factRows };
+module.exports = { ORDER, venues, SITE, TODAY, SITE_INDEX, factRows };

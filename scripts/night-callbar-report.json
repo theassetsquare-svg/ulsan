@@ -8,7 +8,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2100,
+      "adBottom": 2217,
       "barTop": 784,
       "pass": true
     },
@@ -19,7 +19,7 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 1702,
+      "adBottom": 1842,
       "barTop": 1016,
       "pass": true
     },
@@ -30,7 +30,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2372,
+      "adBottom": 2271,
       "barTop": 784,
       "pass": true
     },
@@ -41,7 +41,7 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 1968,
+      "adBottom": 1933,
       "barTop": 1016,
       "pass": true
     },
@@ -52,7 +52,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2223,
+      "adBottom": 2141,
       "barTop": 784,
       "pass": true
     },
@@ -63,12 +63,144 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 1874,
+      "adBottom": 1784,
       "barTop": 1016,
       "pass": true
     },
     {
       "slug": "cheongdam-night",
+      "view": "mobile",
+      "top0": 784,
+      "top1": 784,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 2086,
+      "barTop": 784,
+      "pass": true
+    },
+    {
+      "slug": "cheongdam-night",
+      "view": "desktop",
+      "top0": 1016,
+      "top1": 1016,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 1803,
+      "barTop": 1016,
+      "pass": true
+    },
+    {
+      "slug": "daejeon-one-night",
+      "view": "mobile",
+      "top0": 784,
+      "top1": 784,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 2162,
+      "barTop": 784,
+      "pass": true
+    },
+    {
+      "slug": "daejeon-one-night",
+      "view": "desktop",
+      "top0": 1016,
+      "top1": 1016,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 1842,
+      "barTop": 1016,
+      "pass": true
+    },
+    {
+      "slug": "sillim-grandprix-night",
+      "view": "mobile",
+      "top0": 784,
+      "top1": 784,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 2184,
+      "barTop": 784,
+      "pass": true
+    },
+    {
+      "slug": "sillim-grandprix-night",
+      "view": "desktop",
+      "top0": 1016,
+      "top1": 1016,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 1795,
+      "barTop": 1016,
+      "pass": true
+    },
+    {
+      "slug": "sangbong-hangukgwan-night",
+      "view": "mobile",
+      "top0": 784,
+      "top1": 784,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 2237,
+      "barTop": 784,
+      "pass": true
+    },
+    {
+      "slug": "sangbong-hangukgwan-night",
+      "view": "desktop",
+      "top0": 1016,
+      "top1": 1016,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 1905,
+      "barTop": 1016,
+      "pass": true
+    },
+    {
+      "slug": "suyu-shampoo-night",
+      "view": "mobile",
+      "top0": 784,
+      "top1": 784,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 2187,
+      "barTop": 784,
+      "pass": true
+    },
+    {
+      "slug": "suyu-shampoo-night",
+      "view": "desktop",
+      "top0": 1016,
+      "top1": 1016,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 1795,
+      "barTop": 1016,
+      "pass": true
+    },
+    {
+      "slug": "busan-asiad-night",
+      "view": "mobile",
+      "top0": 784,
+      "top1": 784,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 2221,
+      "barTop": 784,
+      "pass": true
+    },
+    {
+      "slug": "busan-asiad-night",
+      "view": "desktop",
+      "top0": 1016,
+      "top1": 1016,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 1795,
+      "barTop": 1016,
+      "pass": true
+    },
+    {
+      "slug": "suwon-chance-dome-night",
       "view": "mobile",
       "top0": 784,
       "top1": 784,
@@ -79,145 +211,13 @@
       "pass": true
     },
     {
-      "slug": "cheongdam-night",
-      "view": "desktop",
-      "top0": 1016,
-      "top1": 1016,
-      "diff": 0,
-      "overlap": false,
-      "adBottom": 1866,
-      "barTop": 1016,
-      "pass": true
-    },
-    {
-      "slug": "daejeon-one-night",
-      "view": "mobile",
-      "top0": 784,
-      "top1": 784,
-      "diff": 0,
-      "overlap": false,
-      "adBottom": 2198,
-      "barTop": 784,
-      "pass": true
-    },
-    {
-      "slug": "daejeon-one-night",
-      "view": "desktop",
-      "top0": 1016,
-      "top1": 1016,
-      "diff": 0,
-      "overlap": false,
-      "adBottom": 1859,
-      "barTop": 1016,
-      "pass": true
-    },
-    {
-      "slug": "sillim-grandprix-night",
-      "view": "mobile",
-      "top0": 784,
-      "top1": 784,
-      "diff": 0,
-      "overlap": false,
-      "adBottom": 2215,
-      "barTop": 784,
-      "pass": true
-    },
-    {
-      "slug": "sillim-grandprix-night",
-      "view": "desktop",
-      "top0": 1016,
-      "top1": 1016,
-      "diff": 0,
-      "overlap": false,
-      "adBottom": 1859,
-      "barTop": 1016,
-      "pass": true
-    },
-    {
-      "slug": "sangbong-hangukgwan-night",
-      "view": "mobile",
-      "top0": 784,
-      "top1": 784,
-      "diff": 0,
-      "overlap": false,
-      "adBottom": 2300,
-      "barTop": 784,
-      "pass": true
-    },
-    {
-      "slug": "sangbong-hangukgwan-night",
-      "view": "desktop",
-      "top0": 1016,
-      "top1": 1016,
-      "diff": 0,
-      "overlap": false,
-      "adBottom": 1969,
-      "barTop": 1016,
-      "pass": true
-    },
-    {
-      "slug": "suyu-shampoo-night",
-      "view": "mobile",
-      "top0": 784,
-      "top1": 784,
-      "diff": 0,
-      "overlap": false,
-      "adBottom": 2133,
-      "barTop": 784,
-      "pass": true
-    },
-    {
-      "slug": "suyu-shampoo-night",
-      "view": "desktop",
-      "top0": 1016,
-      "top1": 1016,
-      "diff": 0,
-      "overlap": false,
-      "adBottom": 1859,
-      "barTop": 1016,
-      "pass": true
-    },
-    {
-      "slug": "busan-asiad-night",
-      "view": "mobile",
-      "top0": 784,
-      "top1": 784,
-      "diff": 0,
-      "overlap": false,
-      "adBottom": 2267,
-      "barTop": 784,
-      "pass": true
-    },
-    {
-      "slug": "busan-asiad-night",
-      "view": "desktop",
-      "top0": 1016,
-      "top1": 1016,
-      "diff": 0,
-      "overlap": false,
-      "adBottom": 1859,
-      "barTop": 1016,
-      "pass": true
-    },
-    {
-      "slug": "suwon-chance-dome-night",
-      "view": "mobile",
-      "top0": 784,
-      "top1": 784,
-      "diff": 0,
-      "overlap": false,
-      "adBottom": 2168,
-      "barTop": 784,
-      "pass": true
-    },
-    {
       "slug": "suwon-chance-dome-night",
       "view": "desktop",
       "top0": 1016,
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 1839,
+      "adBottom": 1795,
       "barTop": 1016,
       "pass": true
     },
@@ -228,7 +228,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2145,
+      "adBottom": 2080,
       "barTop": 784,
       "pass": true
     },
@@ -239,7 +239,7 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 1886,
+      "adBottom": 1795,
       "barTop": 1016,
       "pass": true
     },
@@ -250,7 +250,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2150,
+      "adBottom": 2035,
       "barTop": 784,
       "pass": true
     },
@@ -261,7 +261,7 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 1811,
+      "adBottom": 1795,
       "barTop": 1016,
       "pass": true
     },
@@ -272,7 +272,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2180,
+      "adBottom": 2115,
       "barTop": 784,
       "pass": true
     },
@@ -283,7 +283,7 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 1859,
+      "adBottom": 1795,
       "barTop": 1016,
       "pass": true
     }
