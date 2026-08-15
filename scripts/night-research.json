@@ -1,852 +1,174 @@
 {
   "collectedAt": "2026-08-15",
-  "rule": "서로 다른 독립 출처 2곳 이상 일치 시에만 채택. 가장 가까운 역·대략 거리·행정구역·업종은 1곳으로도 채택. 단일 출처·출처 간 불일치는 확인 불가로 남김. 가격·별점·후기 문구·방문자수는 수집해도 게재하지 않음. 자사 운영 사이트(ulsand.pages.dev, nolcool.com 등)는 출처로 계산하지 않음.",
-  "searchCount": 80,
+  "rule": "1곳 채택 허용: 가장 가까운 역·대략 거리·행정구역·업종 / 2곳 이상 일치 필수: 영업시간·출입 연령·주차·좌석 구성·예약 방법. 구체 금액·별점·후기 문구·방문자수·이벤트는 옮기지 않는다. 자사 운영 사이트(ulsand.pages.dev, nolcool.com, informationa.pages.dev 등)는 출처 수에 세지 않는다.",
+  "searchCount": 65,
+  "note": "2026-08-15 세션에서 업소당 5회씩 재실사. 창원·대전원의 연령 기준은 광고주가 확정해 준 정보로, 웹 확인 여부와 무관하게 게재한다.",
   "venues": [
     {
       "slug": "bulgwang-hobak-night",
       "name": "불광동호박나이트",
-      "queries": [
-        "불광동호박나이트",
-        "불광동 호박나이트 위치 주소",
-        "불광동 호박나이트 영업시간",
-        "불광동 호박나이트 예약 부킹",
-        "은평구 불광동 나이트클럽",
-        "불광동 호박나이트 은평구 통일로 730 위치"
-      ],
+      "queries": ["불광동호박나이트", "불광동 호박나이트 위치 주소", "불광동 호박나이트 영업시간", "호박나이트 불광역 예약", "은평구 나이트클럽 불광동"],
       "fields": [
-        {
-          "item": "주소",
-          "value": "서울 은평구 통일로 730 (불광동 281-92) 지하",
-          "sources": 4,
-          "sourceNames": [
-            "114On 전화번호검색",
-            "로컬맵 업소정보",
-            "koreacharts 업소정보",
-            "당근 동네업체 프로필"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "가장 가까운 역",
-          "value": "3·6호선 불광역과 같은 블록",
-          "sources": 3,
-          "sourceNames": [
-            "로컬맵",
-            "udanax place",
-            "업소 측 인스타그램 게시물"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "도보 소요 시간",
-          "value": "도보 1분 표기",
-          "sources": 1,
-          "adopted": false,
-          "reason": "단일 출처 계열"
-        },
-        {
-          "item": "업소 대표번호",
-          "value": "02-354-8891",
-          "sources": 3,
-          "adopted": false,
-          "reason": "광고주 지정 연락처(손흥민)만 게재"
-        },
-        {
-          "item": "좌석·시설(룸·단체석)",
-          "value": "당근 프로필에 룸·단체석 표기",
-          "sources": 1,
-          "adopted": false,
-          "reason": "단일 출처"
-        },
-        {
-          "item": "영업시간 / 출입 연령 / 주차",
-          "value": null,
-          "sources": 0,
-          "adopted": false,
-          "reason": "확인 불가"
-        }
+        { "item": "주소", "value": "서울 은평구 통일로 730 (지번 불광동 281-92) 건물 지하", "sources": 3, "sourceNote": "daangn.com 동네업체 / 114.co.kr / market.koreacharts.com", "adopted": true },
+        { "item": "가장 가까운 역", "value": "3·6호선 불광역과 같은 블록", "sources": 2, "sourceNote": "daangn.com / instagram 게시물", "adopted": true },
+        { "item": "업종", "value": "나이트클럽(유흥주점)", "sources": 2, "sourceNote": "114.co.kr / localmap.co.kr", "adopted": true },
+        { "item": "업소 대표번호", "value": "02-354-8891 표기", "sources": 2, "adopted": false, "reason": "광고주 지정 번호가 아니어서 게재하지 않음" },
+        { "item": "영업시간", "value": "24시간 표기 등 신뢰 어려운 값만 확인", "sources": 1, "adopted": false, "reason": "2곳 이상 일치 실패" },
+        { "item": "좌석 구성 / 출입 연령 / 주차", "value": null, "sources": 0, "adopted": false, "reason": "확인 불가" }
       ]
     },
     {
       "slug": "changwon-lululala-night",
       "name": "창원룰루랄라나이트",
-      "queries": [
-        "창원룰루랄라나이트",
-        "창원 룰루랄라나이트 위치 상남동",
-        "창원 룰루랄라나이트 영업시간",
-        "창원 룰루랄라나이트 예약 27세",
-        "창원 나이트클럽 상남동",
-        "창원 룰루랄라나이트 상남동 모아엔트몰 영업"
-      ],
+      "queries": ["창원룰루랄라나이트", "창원 룰루랄라나이트 상남동 위치", "창원 룰루랄라나이트 영업시간", "창원 룰루랄라나이트 예약 문의", "창원 상남동 나이트클럽"],
       "fields": [
-        {
-          "item": "주소",
-          "value": "경남 창원시 성산구 마디미로43번길 10 (상남동 22-4) 모아엔트몰 지하 3층",
-          "sources": 4,
-          "sourceNames": [
-            "로컬맵 성산구 업소정보",
-            "두리찾기",
-            "업소 측 인스타그램",
-            "업소 측 페이스북"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "영업일",
-          "value": "월~토 및 공휴일·공휴일 전날 영업으로 안내",
-          "sources": 3,
-          "sourceNames": [
-            "업소 측 인스타그램",
-            "로컬맵",
-            "업소 홍보 사이트"
-          ],
-          "adopted": true,
-          "note": "업소 공식 고지가 아니므로 안내 표현으로만 게재"
-        },
-        {
-          "item": "출입 연령",
-          "value": "만 27세 이상",
-          "sources": 1,
-          "sourceNames": [
-            "광고주 제공 정보"
-          ],
-          "adopted": true,
-          "note": "광고주가 직접 지정한 운영 조건"
-        },
-        {
-          "item": "매장 면적·개업일",
-          "value": "457.1평 / 2019-11-13 표기",
-          "sources": 1,
-          "adopted": false,
-          "reason": "단일 출처"
-        },
-        {
-          "item": "구체 영업 시각 / 주차",
-          "value": null,
-          "sources": 0,
-          "adopted": false,
-          "reason": "확인 불가"
-        }
+        { "item": "주소", "value": "경남 창원시 성산구 마디미로43번길 10 (지번 상남동 22-4) 모아엔트몰 지하 3층", "sources": 3, "sourceNote": "instagram 공식계정 / localmap.co.kr / nightpick", "adopted": true },
+        { "item": "영업일", "value": "월~토 및 공휴일·공휴일 전날 영업으로 안내", "sources": 2, "sourceNote": "instagram 공식계정 / facebook 페이지", "adopted": true },
+        { "item": "출입 연령", "value": "만 27세 이상", "sources": 0, "sourceNote": "광고주 확정 정보", "adopted": true },
+        { "item": "구체 영업 시각", "value": null, "sources": 0, "adopted": false, "reason": "확인 불가" },
+        { "item": "좌석 구성 / 주차", "value": null, "sources": 0, "adopted": false, "reason": "확인 불가" }
       ]
     },
     {
       "slug": "ulsan-champion-night",
       "name": "울산챔피언나이트",
-      "queries": [
-        "울산챔피언나이트",
-        "울산 챔피언나이트 삼산동 위치",
-        "울산 챔피언나이트 영업시간",
-        "울산 챔피언나이트 예약",
-        "울산 나이트클럽 삼산동",
-        "울산 챔피언나이트 삼산동 정동로 75"
-      ],
+      "queries": ["울산챔피언나이트", "울산 챔피언나이트 삼산동 위치 주소", "울산 챔피언나이트 영업시간", "울산 챔피언나이트 예약", "울산 나이트클럽 삼산동"],
       "fields": [
-        {
-          "item": "주소",
-          "value": "울산 남구 정동로 75 (삼산동 1559-17)",
-          "sources": 3,
-          "sourceNames": [
-            "114On",
-            "로컬맵 남구 업소정보",
-            "전국 유흥업 지도(tei.purpleo)"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "권역 성격",
-          "value": "시외·고속버스 터미널과 같은 삼산동 상업 구역",
-          "sources": 2,
-          "sourceNames": [
-            "로컬맵",
-            "유흥업 지도"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "가장 가까운 역",
-          "value": null,
-          "sources": 0,
-          "adopted": false,
-          "reason": "울산에 도시철도 없음 — 항목 자체 제외"
-        },
-        {
-          "item": "개업일·매장면적",
-          "value": "2003-12-09 / 784.5평 표기",
-          "sources": 1,
-          "adopted": false,
-          "reason": "단일 출처"
-        },
-        {
-          "item": "업소 등록번호",
-          "value": "010-4674-5602",
-          "sources": 2,
-          "adopted": false,
-          "reason": "광고주 지정 연락처(춘자)만 게재"
-        },
-        {
-          "item": "영업시간",
-          "value": "24시간 예약 가능 표기",
-          "sources": 1,
-          "adopted": false,
-          "reason": "영업시간이 아닌 상담 표기 — 확인 불가"
-        }
+        { "item": "주소", "value": "울산 남구 정동로 75 (지번 삼산동 1559-17)", "sources": 3, "sourceNote": "114.co.kr / localmap.co.kr / tei.purpleo.co.kr", "adopted": true },
+        { "item": "권역 성격", "value": "시외·고속버스 터미널과 같은 삼산동 상업 구역", "sources": 2, "sourceNote": "114.co.kr / nightpick", "adopted": true },
+        { "item": "가장 가까운 역", "value": null, "sources": 0, "adopted": false, "reason": "울산은 도시철도가 없어 항목 자체를 만들지 않음" },
+        { "item": "영업시간", "value": "24시간 예약 가능 표기만 확인", "sources": 1, "adopted": false, "reason": "2곳 이상 일치 실패" },
+        { "item": "좌석 구성 / 출입 연령 / 주차", "value": null, "sources": 0, "adopted": false, "reason": "확인 불가" }
       ]
     },
     {
       "slug": "cheongdam-night",
       "name": "청담나이트",
-      "queries": [
-        "청담나이트",
-        "청담나이트 위치 영동대로 737",
-        "청담나이트 영업시간",
-        "청담나이트 예약 부스 테이블",
-        "강남 청담동 나이트클럽",
-        "청담나이트 영동대로 737 리베라 호텔 지하"
-      ],
+      "queries": ["청담나이트 강남", "청담나이트 위치 영동대로 리베라", "청담나이트 영업시간", "청담나이트 예약 부킹", "청담동 나이트클럽 청담역"],
       "fields": [
-        {
-          "item": "주소",
-          "value": "서울 강남구 영동대로 737 지하 1층 (청담동)",
-          "sources": 5,
-          "sourceNames": [
-            "업소 안내 사이트 복수",
-            "114On",
-            "트립어드바이저 호텔 리뷰",
-            "도로명주소 서비스",
-            "타임아웃 코리아"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "건물 기준점",
-          "value": "리베라 호텔 건물",
-          "sources": 3,
-          "sourceNames": [
-            "트립어드바이저",
-            "타임아웃 코리아",
-            "업소 안내 사이트"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "가장 가까운 역",
-          "value": "7호선 청담역",
-          "sources": 3,
-          "sourceNames": [
-            "업소 안내 사이트 복수"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "주 손님층",
-          "value": "30~40대 비중이 높음",
-          "sources": 2,
-          "sourceNames": [
-            "타임아웃 코리아",
-            "업소 안내 사이트"
-          ],
-          "adopted": true,
-          "note": "안내 자료 표현으로 게재"
-        },
-        {
-          "item": "영업시간",
-          "value": "20:00~05:00 / 19:00~06:00 / 19:30~04:30 혼재",
-          "sources": 3,
-          "adopted": false,
-          "reason": "출처 간 값 불일치"
-        },
-        {
-          "item": "도보 시간 / 출입 연령 / 주차",
-          "value": "3분·10분 혼재",
-          "sources": 2,
-          "adopted": false,
-          "reason": "불일치 또는 확인 불가"
-        }
+        { "item": "주소", "value": "서울 강남구 영동대로 737 리베라 호텔 건물 지하 1층 (청담동)", "sources": 3, "sourceNote": "cheongdamh2onight.co.kr / gangnamnight.clickn.co.kr / h2ostar1", "adopted": true },
+        { "item": "가장 가까운 역", "value": "7호선 청담역", "sources": 2, "sourceNote": "gangnamnight.clickn.co.kr / gangnamnight.co.kr", "adopted": true },
+        { "item": "주 손님층", "value": "30~40대 비중이 높음", "sources": 2, "sourceNote": "h2onightclub / cheongdamnight.com", "adopted": true },
+        { "item": "영업시간", "value": "20:00~05:00 / 19:30~04:30 / 월~토 24시간 등 혼재", "sources": 3, "adopted": false, "reason": "값이 서로 어긋나 채택 불가" },
+        { "item": "도보 시간", "value": "3분 / 10분 혼재", "sources": 2, "adopted": false, "reason": "값 불일치" },
+        { "item": "출입 연령 / 주차 / 좌석 수", "value": null, "sources": 0, "adopted": false, "reason": "확인 불가" }
       ]
     },
     {
       "slug": "daejeon-one-night",
       "name": "대전원나이트",
-      "queries": [
-        "대전원나이트 나이트클럽",
-        "대전 원나이트 위치 용전동",
-        "대전 원나이트 영업시간 38세",
-        "대전 원나이트 예약 문의",
-        "대전 나이트클럽 용전동 복합터미널",
-        "대전 원나이트 용전동 38세 이상 나이트클럽"
-      ],
+      "queries": ["대전원나이트", "대전 원나이트 나이트클럽 용전동 위치", "대전 원나이트 영업시간", "대전 원나이트 예약 문의", "대전 나이트클럽 복합터미널"],
       "fields": [
-        {
-          "item": "위치(권역)",
-          "value": "대전 동구 용전동, 대전복합터미널 인근으로 안내",
-          "sources": 2,
-          "sourceNames": [
-            "업소 측 인스타그램·틱톡 게시물",
-            "로컬맵 용전동 업소정보"
-          ],
-          "adopted": true,
-          "note": "세부 번지는 확정 불가"
-        },
-        {
-          "item": "출입 연령",
-          "value": "만 38세 이상",
-          "sources": 3,
-          "sourceNames": [
-            "업소 측 SNS 게시물",
-            "업소 정보 플랫폼",
-            "광고주 제공 정보"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "세부 번지",
-          "value": "용전동 / 중구 중앙로 인근으로 갈림",
-          "sources": 2,
-          "adopted": false,
-          "reason": "출처 간 불일치"
-        },
-        {
-          "item": "영업시간",
-          "value": "일~목 20:00~02:30 / 금·토 20:00~03:30 표기",
-          "sources": 1,
-          "adopted": false,
-          "reason": "단일 출처"
-        },
-        {
-          "item": "여성 이벤트·차비 지급",
-          "value": "게시물 존재",
-          "sources": 2,
-          "adopted": false,
-          "reason": "가격·이벤트 정보는 게재하지 않음"
-        }
+        { "item": "위치(권역)", "value": "대전 동구 용전동, 대전복합터미널 인근으로 안내", "sources": 3, "sourceNote": "instagram 공식계정 / localmap.co.kr / namu.wiki 대전 클럽", "adopted": true },
+        { "item": "출입 연령", "value": "만 38세 이상", "sources": 2, "sourceNote": "광고주 확정 정보 + instagram·tiktok 게시물 일치", "adopted": true },
+        { "item": "세부 번지", "value": "용전동 63-1 / 중구 중앙로 인근 등으로 갈림", "sources": 2, "adopted": false, "reason": "동일 상호의 다른 업소와 혼동 가능성" },
+        { "item": "영업시간", "value": "일~목 20:00~02:30 / 금·토 20:00~03:30 표기", "sources": 1, "adopted": false, "reason": "출처가 위치까지 다르게 적어 신뢰 불가" },
+        { "item": "좌석 구성 / 주차", "value": null, "sources": 0, "adopted": false, "reason": "확인 불가" }
       ]
     },
     {
       "slug": "sillim-grandprix-night",
       "name": "신림그랑프리나이트",
-      "queries": [
-        "신림그랑프리나이트",
-        "신림 그랑프리나이트 위치 신림로 340",
-        "신림 그랑프리나이트 영업시간",
-        "신림 그랑프리나이트 예약 부킹",
-        "관악구 신림동 나이트클럽",
-        "신림 그랑프리나이트 신림로 340 영업시간"
-      ],
+      "queries": ["신림그랑프리나이트", "신림 그랑프리나이트 위치 신림역", "신림 그랑프리나이트 영업시간", "신림 그랑프리나이트 예약 웨이터", "관악구 신림동 나이트클럽"],
       "fields": [
-        {
-          "item": "주소",
-          "value": "서울 관악구 신림로 340 (신림동 1422-5)",
-          "sources": 4,
-          "sourceNames": [
-            "114On",
-            "업소 정보 플랫폼",
-            "트립어드바이저 업소 등록",
-            "업소 안내 사이트"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "가장 가까운 역",
-          "value": "2호선 신림역 앞",
-          "sources": 3,
-          "sourceNames": [
-            "업소 안내 사이트",
-            "밤픽",
-            "114On 주소 기재"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "건물",
-          "value": "신림역 앞 쇼핑몰 건물 고층",
-          "sources": 2,
-          "sourceNames": [
-            "업소 안내 사이트",
-            "밤픽"
-          ],
-          "adopted": true,
-          "note": "층수는 14층/14~15층으로 갈려 층 표기는 제외"
-        },
-        {
-          "item": "영업 안내",
-          "value": "평일 18시~04시 / 주말 18시~06시",
-          "sources": 2,
-          "sourceNames": [
-            "업소 안내 사이트 2곳"
-          ],
-          "adopted": true,
-          "note": "업소 공식 고지가 아니므로 안내 표현으로 게재"
-        },
-        {
-          "item": "출구·도보 시간 / 좌석 구성 / 출입 연령",
-          "value": null,
-          "sources": 1,
-          "adopted": false,
-          "reason": "단일 출처 또는 확인 불가"
-        }
+        { "item": "주소", "value": "서울 관악구 신림로 340 (지번 신림동 1422-5)", "sources": 3, "sourceNote": "114.co.kr / bampick / grandprixclub.itrocks.kr", "adopted": true },
+        { "item": "가장 가까운 역", "value": "2호선 신림역 앞", "sources": 2, "sourceNote": "bampick / raindropsnight", "adopted": true },
+        { "item": "영업 안내", "value": "평일 18시~04시 / 주말 18시~06시", "sources": 2, "sourceNote": "bampick / xn--2i0b15phub0bu10ehq0a.kr", "adopted": true },
+        { "item": "좌석 구성 / 출입 연령 / 주차", "value": null, "sources": 0, "adopted": false, "reason": "확인 불가" }
       ]
     },
     {
       "slug": "sangbong-hangukgwan-night",
       "name": "상봉동한국관나이트",
-      "queries": [
-        "상봉동한국관나이트",
-        "상봉동 한국관나이트 위치 망우로 326",
-        "상봉동 한국관나이트 영업시간 2부제",
-        "상봉 한국관나이트 예약 부킹",
-        "중랑구 상봉동 나이트클럽",
-        "상봉동 한국관나이트 망우로 326 2부제"
-      ],
+      "queries": ["상봉동한국관나이트", "상봉동 한국관나이트 위치 상봉역", "상봉 한국관나이트 영업시간 2부제", "상봉동 한국관나이트 예약 룸 부스", "중랑구 상봉동 나이트클럽"],
       "fields": [
-        {
-          "item": "주소",
-          "value": "서울 중랑구 망우로 326 2층 (상봉동 91-1)",
-          "sources": 4,
-          "sourceNames": [
-            "업소 안내 사이트 복수",
-            "지역 소개 매체 2곳"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "가장 가까운 역",
-          "value": "상봉역 (7호선·경의중앙선·경춘선)",
-          "sources": 3,
-          "sourceNames": [
-            "업소 안내 사이트",
-            "지역 소개 매체 2곳"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "영업 안내",
-          "value": "19:00~06:00, 금·토 2부제 (1부 22시~02시 / 2부 02시~06시)",
-          "sources": 4,
-          "sourceNames": [
-            "업소 안내 사이트 복수",
-            "지역 소개 매체 2곳"
-          ],
-          "adopted": true,
-          "note": "업소 공식 고지가 아니므로 안내 표현으로 게재"
-        },
-        {
-          "item": "좌석 구성",
-          "value": "룸 · 부스 · 테이블",
-          "sources": 3,
-          "sourceNames": [
-            "업소 안내 사이트 2곳",
-            "지역 소개 매체"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "출구·도보 시간",
-          "value": "1번/2번 출구, 3분/5분/10분 혼재",
-          "sources": 4,
-          "adopted": false,
-          "reason": "출처 간 값 불일치"
-        },
-        {
-          "item": "요금·주차",
-          "value": "복수 게시물에 금액·주차대수 표기",
-          "sources": 3,
-          "adopted": false,
-          "reason": "가격 정보는 게재하지 않음 / 주차는 단일 계열"
-        }
+        { "item": "주소", "value": "서울 중랑구 망우로 326 2층 (지번 상봉동 91-1)", "sources": 2, "sourceNote": "sangbongkorean.com / xn--3e0b33dj0ipkrrua160b8zd.com", "adopted": true },
+        { "item": "가장 가까운 역", "value": "상봉역 (7호선·경의중앙선·경춘선)", "sources": 3, "sourceNote": "sangbong1.clickn.co.kr / sangbong1.imweb.me / atfirstsight.kr", "adopted": true },
+        { "item": "영업 안내", "value": "19:00~06:00 · 금·토 2부제", "sources": 3, "sourceNote": "sangbonghanguggwan.isweb.co.kr / gugudan9.imweb.me / atfirstsight.kr", "adopted": true },
+        { "item": "좌석 구성", "value": "룸 · 부스 · 테이블", "sources": 3, "sourceNote": "sangbongkorean.com / sangbong1.imweb.me / rlflaaaastj1233.imweb.me", "adopted": true },
+        { "item": "출구·도보 시간", "value": "1번/2번 출구, 3분/5분 혼재", "sources": 3, "adopted": false, "reason": "값 불일치" },
+        { "item": "요금·주차·출입 연령", "value": "복수 게시물에 금액 표기 존재", "sources": 3, "adopted": false, "reason": "구체 금액은 옮기지 않는다는 규칙 / 주차·연령은 확인 불가" }
       ]
     },
     {
       "slug": "suyu-shampoo-night",
       "name": "수유샴푸나이트",
-      "queries": [
-        "수유샴푸나이트",
-        "수유 샴푸나이트 위치 도봉로 308",
-        "수유 샴푸나이트 영업시간",
-        "수유 샴푸나이트 예약 주대 문의",
-        "강북구 수유동 나이트클럽",
-        "수유 샴푸나이트 도봉로 308 룸 부스 테이블"
-      ],
+      "queries": ["수유샴푸나이트", "수유 샴푸나이트 위치 수유역 도봉로", "수유 샴푸나이트 영업시간", "수유 샴푸나이트 예약 룸 부스 테이블", "강북구 수유 나이트클럽"],
       "fields": [
-        {
-          "item": "주소",
-          "value": "서울 강북구 도봉로 308 (번동 449-1) 지하",
-          "sources": 4,
-          "sourceNames": [
-            "당근 지역업체 정보",
-            "polomap 업소정보",
-            "업소 안내 사이트 2곳"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "건물 기준점",
-          "value": "같은 주소 지상에 영화관 입주",
-          "sources": 2,
-          "sourceNames": [
-            "114On 롯데시네마 수유 등록정보",
-            "업소 안내 사이트"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "가장 가까운 역",
-          "value": "4호선 수유역",
-          "sources": 3,
-          "sourceNames": [
-            "업소 안내 사이트 2곳",
-            "polomap"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "영업 안내",
-          "value": "저녁 7시 무렵 개점, 새벽까지",
-          "sources": 3,
-          "sourceNames": [
-            "업소 안내 사이트",
-            "나이트 탐방 카페 글",
-            "예약 안내 게시판"
-          ],
-          "adopted": true,
-          "note": "종료 시각은 04시/05시/06시로 갈려 '새벽까지'로만 게재"
-        },
-        {
-          "item": "좌석 구성",
-          "value": "룸 · 부스 · 테이블",
-          "sources": 2,
-          "sourceNames": [
-            "업소 안내 사이트",
-            "예약 안내 게시판"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "출구 번호 / 출입 연령 / 주차",
-          "value": "4번 출구 표기",
-          "sources": 1,
-          "adopted": false,
-          "reason": "단일 출처 또는 확인 불가"
-        }
+        { "item": "권역", "value": "서울 강북구 도봉로변, 4호선 수유역 인근", "sources": 3, "sourceNote": "cafe.daum.net/jongsoo / suyushampoo.com / jungsook365 블로그", "adopted": true },
+        { "item": "가장 가까운 역", "value": "4호선 수유역", "sources": 2, "sourceNote": "cafe.daum.net/jongsoo / jungsook365 블로그", "adopted": true },
+        { "item": "영업 안내", "value": "저녁 7시 무렵 열어 새벽까지", "sources": 2, "sourceNote": "cafe.daum.net/jongsoo / suyushampoo.com", "adopted": true },
+        { "item": "좌석 구성", "value": "룸 · 부스 · 테이블", "sources": 2, "sourceNote": "suyushampoo.com / cafe.daum.net/jongsoo", "adopted": true },
+        { "item": "세부 번지·층", "value": "지하 표기와 9층 건물 표기가 충돌", "sources": 2, "adopted": false, "reason": "값 불일치로 권역 표기만 사용" },
+        { "item": "출입 연령 / 주차", "value": null, "sources": 0, "adopted": false, "reason": "확인 불가" }
       ]
     },
     {
       "slug": "busan-asiad-night",
       "name": "부산아시아드나이트",
-      "queries": [
-        "부산아시아드나이트",
-        "부산 아시아드나이트 위치 온천장 허심청",
-        "부산 아시아드나이트 영업시간",
-        "부산 아시아드나이트 예약 룸 테이블",
-        "부산 동래구 나이트클럽",
-        "부산 아시아드나이트 동래구 온천장 허심청 지하"
-      ],
+      "queries": ["부산아시아드나이트", "부산 아시아드나이트 온천장 위치", "부산 아시아드나이트 영업시간 주차", "부산 아시아드나이트 예약", "부산 동래구 나이트클럽 온천동"],
       "fields": [
-        {
-          "item": "주소",
-          "value": "부산 동래구 온천장로107번길 32 (온천동 137) 지하 1~2층",
-          "sources": 5,
-          "sourceNames": [
-            "114On",
-            "당근 지역업체 정보",
-            "트리플 여행정보",
-            "트립닷컴 업소정보",
-            "업소 측 SNS"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "건물 기준점",
-          "value": "지상은 대형 온천 시설",
-          "sources": 3,
-          "sourceNames": [
-            "나무위키 허심청",
-            "트리플 여행정보",
-            "업소 안내"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "가장 가까운 역",
-          "value": "부산 1호선 온천장역",
-          "sources": 3,
-          "sourceNames": [
-            "업소 안내",
-            "트리플",
-            "트립닷컴"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "주 손님층",
-          "value": "30~40대 비중이 높음",
-          "sources": 2,
-          "sourceNames": [
-            "트립닷컴 업소정보",
-            "부산 나이트 정보 사이트"
-          ],
-          "adopted": true,
-          "note": "안내 자료 표현으로 게재"
-        },
-        {
-          "item": "주차",
-          "value": "주차 공간 안내 있음",
-          "sources": 2,
-          "sourceNames": [
-            "트리플 여행정보",
-            "나무위키 허심청"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "영업시간",
-          "value": "24시간 표기 등 신뢰 어려운 값",
-          "sources": 1,
-          "adopted": false,
-          "reason": "확인 불가"
-        },
-        {
-          "item": "출구·도보 시간 / 대표번호",
-          "value": "3번 출구 5분 / 1번 출구 3분 혼재, 051-997-8888",
-          "sources": 3,
-          "adopted": false,
-          "reason": "불일치 / 광고주 아님 — 연락처 게재하지 않음"
-        }
+        { "item": "주소", "value": "부산 동래구 온천장로107번길 32 지하 1~2층 (온천동)", "sources": 3, "sourceNote": "114.co.kr / triple.guide / linktoplace", "adopted": true },
+        { "item": "건물 기준점", "value": "지상은 대형 온천 시설", "sources": 2, "sourceNote": "linktoplace / triple.guide", "adopted": true },
+        { "item": "가장 가까운 역", "value": "1호선 온천장역", "sources": 3, "sourceNote": "triple.guide / busanasiadbs / linktoplace", "adopted": true },
+        { "item": "주 손님층", "value": "30~40대 비중이 높음", "sources": 2, "sourceNote": "linktoplace / 114.co.kr 소개", "adopted": true },
+        { "item": "주차", "value": "주차 공간 안내 있음", "sources": 2, "sourceNote": "daangn.com / triple.guide", "adopted": true },
+        { "item": "영업시간", "value": "24시간 표기 등", "sources": 2, "adopted": false, "reason": "값이 비현실적이라 채택 불가" },
+        { "item": "출구·도보 시간 / 좌석 수 / 출입 연령", "value": "3번 출구 5분 표기", "sources": 1, "adopted": false, "reason": "확인 불가 또는 단일 출처" }
       ]
     },
     {
       "slug": "suwon-chance-dome-night",
       "name": "수원찬스돔나이트",
-      "queries": [
-        "수원찬스돔나이트",
-        "수원 찬스돔나이트 위치 권선동",
-        "수원 찬스돔나이트 영업시간",
-        "수원 찬스돔나이트 예약 부킹",
-        "수원 나이트클럽 권선구",
-        "수원 찬스돔나이트 권선동 권선로 673"
-      ],
+      "queries": ["수원찬스돔나이트", "수원 찬스돔나이트 위치 권선동", "수원 찬스돔나이트 영업시간", "수원 찬스돔나이트 예약 문의", "수원 권선구 나이트클럽"],
       "fields": [
-        {
-          "item": "주소",
-          "value": "경기 수원시 권선구 권선로 673 (권선동 1019-9)",
-          "sources": 3,
-          "sourceNames": [
-            "나무위키 업소 문서",
-            "포스퀘어 장소 등록",
-            "업소 정보 플랫폼"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "영업시간",
-          "value": "18:00~04:00 표기",
-          "sources": 1,
-          "adopted": false,
-          "reason": "단일 출처"
-        },
-        {
-          "item": "손님 연령대",
-          "value": "20~40대 표기",
-          "sources": 2,
-          "adopted": false,
-          "reason": "두 출처가 동일 문안 계열 — 독립성 미확보"
-        },
-        {
-          "item": "가장 가까운 역 / 출입 연령 / 주차",
-          "value": null,
-          "sources": 0,
-          "adopted": false,
-          "reason": "확인 불가"
-        }
+        { "item": "주소", "value": "경기 수원시 권선구 권선로 673 (지번 권선동 1019-9)", "sources": 3, "sourceNote": "namu.wiki / foursquare / bampick", "adopted": true },
+        { "item": "손님 연령대", "value": "연령대가 넓은 편", "sources": 2, "sourceNote": "namu.wiki / gangnamclub 블로그", "adopted": true },
+        { "item": "영업시간", "value": "18:00~04:00 표기", "sources": 1, "adopted": false, "reason": "동일 계열 문서 외 교차 확인 실패" },
+        { "item": "가장 가까운 역 / 출입 연령 / 주차 / 좌석 구성", "value": null, "sources": 0, "adopted": false, "reason": "확인 불가" }
       ]
     },
     {
       "slug": "ansan-hit-night",
       "name": "안산히트나이트",
-      "queries": [
-        "안산히트나이트",
-        "안산 히트나이트 위치 상록수역",
-        "안산 히트나이트 영업시간",
-        "안산 히트나이트 예약 부킹",
-        "안산 나이트클럽 상록구",
-        "안산 히트나이트 상록수역 본오동 상록수로"
-      ],
+      "queries": ["안산히트나이트", "안산 히트나이트 위치 본오동 상록수역", "안산 히트나이트 영업시간 주차", "안산 히트나이트 예약 웨이터", "안산 상록구 나이트클럽"],
       "fields": [
-        {
-          "item": "주소",
-          "value": "경기 안산시 상록구 상록수로 34 (본오동 874) 지층",
-          "sources": 3,
-          "sourceNames": [
-            "114On",
-            "로컬맵 상록구 업소정보",
-            "업소 안내 게시물"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "가장 가까운 역",
-          "value": "4호선 상록수역",
-          "sources": 2,
-          "sourceNames": [
-            "로컬맵 업소정보",
-            "업소 소개 자료"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "주차",
-          "value": "주차 공간 별도 안내",
-          "sources": 2,
-          "sourceNames": [
-            "업소 소개 자료",
-            "로컬맵 업소정보"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "영업시간",
-          "value": "16:00~02:00 표기 등 불확실",
-          "sources": 1,
-          "adopted": false,
-          "reason": "확인 불가"
-        },
-        {
-          "item": "출입 연령 / 좌석 구성",
-          "value": null,
-          "sources": 0,
-          "adopted": false,
-          "reason": "확인 불가"
-        }
+        { "item": "주소", "value": "경기 안산시 상록구 상록수로 34 (지번 본오동 874) 상가 건물 지층", "sources": 3, "sourceNote": "localmap.co.kr / daangn.com / bampick", "adopted": true },
+        { "item": "가장 가까운 역", "value": "4호선 상록수역", "sources": 2, "sourceNote": "bampick / nightpick", "adopted": true },
+        { "item": "주차", "value": "주차 공간 별도 안내", "sources": 2, "sourceNote": "bampick / nightpick", "adopted": true },
+        { "item": "영업시간", "value": "값 확인 실패", "sources": 0, "adopted": false, "reason": "확인 불가" },
+        { "item": "출입 연령 / 좌석 구성", "value": null, "sources": 0, "adopted": false, "reason": "확인 불가" }
       ]
     },
     {
       "slug": "daejeon-seven-night",
       "name": "대전세븐나이트",
-      "queries": [
-        "대전세븐나이트",
-        "대전 세븐나이트 위치 유천동 당디로",
-        "대전 세븐나이트 영업시간",
-        "대전 세븐나이트 예약 부킹",
-        "대전 중구 나이트클럽 유천동",
-        "대전 세븐나이트 유천동 당디로 112"
-      ],
+      "queries": ["대전세븐나이트", "대전 세븐나이트 위치 유천동", "대전 세븐나이트 영업시간", "대전 세븐나이트 예약 문의", "대전 중구 나이트클럽"],
       "fields": [
-        {
-          "item": "주소",
-          "value": "대전 중구 당디로 112 (유천동 332-28) 2~3층",
-          "sources": 4,
-          "sourceNames": [
-            "당근 지역업체 정보 2건",
-            "로컬맵 중구 업소정보",
-            "업소 측 인스타그램 게시물"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "층 구성",
-          "value": "2~3층 사용",
-          "sources": 3,
-          "sourceNames": [
-            "로컬맵",
-            "당근",
-            "업소 측 게시물"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "둔산동 표기",
-          "value": "일부 소개 글이 둔산동으로 표기",
-          "sources": 1,
-          "adopted": false,
-          "reason": "행정 성격 공개정보와 불일치 — 유천동 채택"
-        },
-        {
-          "item": "영업시간 / 출입 연령 / 좌석 구성 / 가장 가까운 역",
-          "value": null,
-          "sources": 0,
-          "adopted": false,
-          "reason": "확인 불가"
-        }
+        { "item": "주소", "value": "대전 중구 당디로 112 (지번 유천동 332-28)", "sources": 3, "sourceNote": "daangn.com / localmap.co.kr / instagram 게시물", "adopted": true },
+        { "item": "층 구성", "value": "2~3층 사용", "sources": 2, "sourceNote": "daangn.com 나이트클럽세븐 / localmap.co.kr", "adopted": true },
+        { "item": "둔산동 표기", "value": "일부 소개 글이 둔산동으로 표기", "sources": 1, "adopted": false, "reason": "행정구역 자료와 불일치" },
+        { "item": "영업시간 / 출입 연령 / 좌석 구성 / 가장 가까운 역", "value": null, "sources": 0, "adopted": false, "reason": "확인 불가" }
       ]
     },
     {
       "slug": "ilsan-shampoo-night",
       "name": "일산샴푸나이트",
-      "queries": [
-        "일산샴푸나이트",
-        "일산 샴푸나이트 위치 마두동",
-        "일산 샴푸나이트 영업시간",
-        "일산 샴푸나이트 예약 룸 부스",
-        "고양시 일산 나이트클럽 마두역",
-        "일산 샴푸나이트 마두역 중앙로 1160 8층"
-      ],
+      "queries": ["일산샴푸나이트", "일산 샴푸나이트 위치 마두역", "일산 샴푸나이트 영업시간", "일산 샴푸나이트 예약 룸 부스", "고양시 일산 나이트클럽 마두동"],
       "fields": [
-        {
-          "item": "주소",
-          "value": "경기 고양시 일산동구 중앙로 1160 (마두동 805-1) 8층",
-          "sources": 4,
-          "sourceNames": [
-            "당근 지역업체 정보",
-            "로컬맵 일산동구 업소정보",
-            "업소 안내 사이트",
-            "업소 측 페이스북 게시물"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "가장 가까운 역",
-          "value": "3호선 마두역 앞",
-          "sources": 3,
-          "sourceNames": [
-            "업소 안내 사이트 2곳",
-            "업소 측 게시물"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "영업 안내",
-          "value": "18:00~04:00",
-          "sources": 2,
-          "sourceNames": [
-            "전국 나이트 정보 사이트",
-            "업소 안내 사이트"
-          ],
-          "adopted": true,
-          "note": "업소 공식 고지가 아니므로 안내 표현으로 게재"
-        },
-        {
-          "item": "좌석 구성",
-          "value": "룸 · 부스 · 테이블",
-          "sources": 3,
-          "sourceNames": [
-            "업소 안내 사이트 2곳",
-            "전국 나이트 정보 사이트"
-          ],
-          "adopted": true
-        },
-        {
-          "item": "좌석 수",
-          "value": "룸 50~60·부스 20·테이블 80 / 룸 70·부스 30 표기 혼재",
-          "sources": 2,
-          "adopted": false,
-          "reason": "출처 간 값 불일치"
-        },
-        {
-          "item": "출입 연령 / 주차",
-          "value": "20~50대 표기, 무료주차 표기",
-          "sources": 1,
-          "adopted": false,
-          "reason": "단일 출처"
-        }
+        { "item": "주소", "value": "경기 고양시 일산동구 중앙로 1160 (지번 마두동 805-1) 8층", "sources": 3, "sourceNote": "dudals88.creatorlink.net / ufall34.wixsite.com / ilsanshampoo.com", "adopted": true },
+        { "item": "가장 가까운 역", "value": "3호선 마두역", "sources": 3, "sourceNote": "ufall34.wixsite.com / daangn.com / ilsanshampoo.com", "adopted": true },
+        { "item": "영업 안내", "value": "18:00~04:00", "sources": 2, "sourceNote": "ufall34.wixsite.com / xn--3e0b33dj0ipkrrua160b8zd.com", "adopted": true },
+        { "item": "좌석 구성", "value": "룸 · 부스 · 테이블", "sources": 2, "sourceNote": "ilsanshampoo.com / ufall34.wixsite.com", "adopted": true },
+        { "item": "좌석 수", "value": "룸 50~60·부스 20·테이블 80 / 룸 70·부스 30 표기 혼재", "sources": 2, "adopted": false, "reason": "값 불일치" },
+        { "item": "출입 연령 / 주차", "value": "20~50대 표기, 무료주차 표기", "sources": 1, "adopted": false, "reason": "단일 출처" }
       ]
     }
   ],
   "cultureQueries": [
-    "나이트클럽 부킹 웨이터 역할 테이블 부스 차이",
-    "나이트클럽 몇시부터 사람 많나 입장 시간대"
+    "나이트클럽 부킹 웨이터 역할",
+    "나이트클럽 좌석 테이블 부스 룸 차이",
+    "나이트클럽 몇 시에 가야 자리 좋은가"
   ],
-  "verificationPass": {
-    "at": "2026-08-15",
-    "note": "각도 개정 전 13개 업소 재검색 1회씩 수행. 채택값 변동 없음. 신규 단일출처(불광 9번출구·수유 4번출구·일산 8번출구·상봉 주차대수·요금)는 기존 판정대로 미채택 유지."
-  }
+  "verificationPass": "2026-08-15 재실사. 업소당 5회 × 13곳 = 65회. 채택 기준을 지키지 못한 항목은 페이지에서 항목째 제거했다."
 }
