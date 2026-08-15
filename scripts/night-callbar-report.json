@@ -8,7 +8,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2461,
+      "adBottom": 2293,
       "barTop": 784,
       "pass": true
     },
@@ -30,7 +30,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2472,
+      "adBottom": 2456,
       "barTop": 784,
       "pass": true
     },
@@ -52,7 +52,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2344,
+      "adBottom": 2275,
       "barTop": 784,
       "pass": true
     },
@@ -63,7 +63,7 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 1875,
+      "adBottom": 1791,
       "barTop": 1016,
       "pass": true
     },
@@ -74,7 +74,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2241,
+      "adBottom": 2264,
       "barTop": 784,
       "pass": true
     },
@@ -85,7 +85,7 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 1868,
+      "adBottom": 1895,
       "barTop": 1016,
       "pass": true
     },
@@ -96,7 +96,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2356,
+      "adBottom": 2292,
       "barTop": 784,
       "pass": true
     },
@@ -107,7 +107,7 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 1819,
+      "adBottom": 1847,
       "barTop": 1016,
       "pass": true
     },
@@ -118,7 +118,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2291,
+      "adBottom": 2304,
       "barTop": 784,
       "pass": true
     },
@@ -129,7 +129,7 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 1868,
+      "adBottom": 1826,
       "barTop": 1016,
       "pass": true
     },
@@ -140,7 +140,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 3249,
+      "adBottom": 3157,
       "barTop": 784,
       "pass": true
     },
@@ -151,7 +151,7 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2742,
+      "adBottom": 2517,
       "barTop": 1016,
       "pass": true
     },
@@ -162,7 +162,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2540,
+      "adBottom": 2263,
       "barTop": 784,
       "pass": true
     },
@@ -173,7 +173,7 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2114,
+      "adBottom": 1915,
       "barTop": 1016,
       "pass": true
     },
@@ -184,7 +184,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2426,
+      "adBottom": 2288,
       "barTop": 784,
       "pass": true
     },
@@ -195,7 +195,7 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 1923,
+      "adBottom": 1895,
       "barTop": 1016,
       "pass": true
     },
@@ -206,7 +206,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2380,
+      "adBottom": 2316,
       "barTop": 784,
       "pass": true
     },
@@ -217,7 +217,7 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2252,
+      "adBottom": 2198,
       "barTop": 1016,
       "pass": true
     },
@@ -228,7 +228,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2130,
+      "adBottom": 2269,
       "barTop": 784,
       "pass": true
     },
@@ -239,7 +239,7 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 1771,
+      "adBottom": 1840,
       "barTop": 1016,
       "pass": true
     },
@@ -272,7 +272,7 @@
       "top1": 784,
       "diff": 0,
       "overlap": false,
-      "adBottom": 2336,
+      "adBottom": 2247,
       "barTop": 784,
       "pass": true
     },
@@ -283,7 +283,7 @@
       "top1": 1016,
       "diff": 0,
       "overlap": false,
-      "adBottom": 1983,
+      "adBottom": 1887,
       "barTop": 1016,
       "pass": true
     }
