@@ -1,0 +1,401 @@
+{
+  "base": "http://127.0.0.1:8099",
+  "rows": [
+    {
+      "slug": "bulgwang-hobak-night",
+      "view": "mobile",
+      "top0": 784,
+      "top1": 784,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 2100,
+      "barTop": 784,
+      "pass": true
+    },
+    {
+      "slug": "bulgwang-hobak-night",
+      "view": "desktop",
+      "top0": 1016,
+      "top1": 1016,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 1702,
+      "barTop": 1016,
+      "pass": true
+    },
+    {
+      "slug": "changwon-lululala-night",
+      "view": "mobile",
+      "top0": 784,
+      "top1": 784,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 2372,
+      "barTop": 784,
+      "pass": true
+    },
+    {
+      "slug": "changwon-lululala-night",
+      "view": "desktop",
+      "top0": 1016,
+      "top1": 1016,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 1968,
+      "barTop": 1016,
+      "pass": true
+    },
+    {
+      "slug": "ulsan-champion-night",
+      "view": "mobile",
+      "top0": 784,
+      "top1": 784,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 2223,
+      "barTop": 784,
+      "pass": true
+    },
+    {
+      "slug": "ulsan-champion-night",
+      "view": "desktop",
+      "top0": 1016,
+      "top1": 1016,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 1874,
+      "barTop": 1016,
+      "pass": true
+    },
+    {
+      "slug": "cheongdam-night",
+      "view": "mobile",
+      "top0": 784,
+      "top1": 784,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 2131,
+      "barTop": 784,
+      "pass": true
+    },
+    {
+      "slug": "cheongdam-night",
+      "view": "desktop",
+      "top0": 1016,
+      "top1": 1016,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 1866,
+      "barTop": 1016,
+      "pass": true
+    },
+    {
+      "slug": "daejeon-one-night",
+      "view": "mobile",
+      "top0": 784,
+      "top1": 784,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 2198,
+      "barTop": 784,
+      "pass": true
+    },
+    {
+      "slug": "daejeon-one-night",
+      "view": "desktop",
+      "top0": 1016,
+      "top1": 1016,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 1859,
+      "barTop": 1016,
+      "pass": true
+    },
+    {
+      "slug": "sillim-grandprix-night",
+      "view": "mobile",
+      "top0": 784,
+      "top1": 784,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 2215,
+      "barTop": 784,
+      "pass": true
+    },
+    {
+      "slug": "sillim-grandprix-night",
+      "view": "desktop",
+      "top0": 1016,
+      "top1": 1016,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 1859,
+      "barTop": 1016,
+      "pass": true
+    },
+    {
+      "slug": "sangbong-hangukgwan-night",
+      "view": "mobile",
+      "top0": 784,
+      "top1": 784,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 2300,
+      "barTop": 784,
+      "pass": true
+    },
+    {
+      "slug": "sangbong-hangukgwan-night",
+      "view": "desktop",
+      "top0": 1016,
+      "top1": 1016,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 1969,
+      "barTop": 1016,
+      "pass": true
+    },
+    {
+      "slug": "suyu-shampoo-night",
+      "view": "mobile",
+      "top0": 784,
+      "top1": 784,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 2133,
+      "barTop": 784,
+      "pass": true
+    },
+    {
+      "slug": "suyu-shampoo-night",
+      "view": "desktop",
+      "top0": 1016,
+      "top1": 1016,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 1859,
+      "barTop": 1016,
+      "pass": true
+    },
+    {
+      "slug": "busan-asiad-night",
+      "view": "mobile",
+      "top0": 784,
+      "top1": 784,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 2267,
+      "barTop": 784,
+      "pass": true
+    },
+    {
+      "slug": "busan-asiad-night",
+      "view": "desktop",
+      "top0": 1016,
+      "top1": 1016,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 1859,
+      "barTop": 1016,
+      "pass": true
+    },
+    {
+      "slug": "suwon-chance-dome-night",
+      "view": "mobile",
+      "top0": 784,
+      "top1": 784,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 2168,
+      "barTop": 784,
+      "pass": true
+    },
+    {
+      "slug": "suwon-chance-dome-night",
+      "view": "desktop",
+      "top0": 1016,
+      "top1": 1016,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 1839,
+      "barTop": 1016,
+      "pass": true
+    },
+    {
+      "slug": "ansan-hit-night",
+      "view": "mobile",
+      "top0": 784,
+      "top1": 784,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 2145,
+      "barTop": 784,
+      "pass": true
+    },
+    {
+      "slug": "ansan-hit-night",
+      "view": "desktop",
+      "top0": 1016,
+      "top1": 1016,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 1886,
+      "barTop": 1016,
+      "pass": true
+    },
+    {
+      "slug": "daejeon-seven-night",
+      "view": "mobile",
+      "top0": 784,
+      "top1": 784,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 2150,
+      "barTop": 784,
+      "pass": true
+    },
+    {
+      "slug": "daejeon-seven-night",
+      "view": "desktop",
+      "top0": 1016,
+      "top1": 1016,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 1811,
+      "barTop": 1016,
+      "pass": true
+    },
+    {
+      "slug": "ilsan-shampoo-night",
+      "view": "mobile",
+      "top0": 784,
+      "top1": 784,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 2180,
+      "barTop": 784,
+      "pass": true
+    },
+    {
+      "slug": "ilsan-shampoo-night",
+      "view": "desktop",
+      "top0": 1016,
+      "top1": 1016,
+      "diff": 0,
+      "overlap": false,
+      "adBottom": 1859,
+      "barTop": 1016,
+      "pass": true
+    }
+  ],
+  "ancestorFindings": [
+    {
+      "slug": "bulgwang-hobak-night",
+      "parent": "body",
+      "chain": "body>html",
+      "risky": []
+    },
+    {
+      "slug": "changwon-lululala-night",
+      "parent": "body",
+      "chain": "body>html",
+      "risky": []
+    },
+    {
+      "slug": "ulsan-champion-night",
+      "parent": "body",
+      "chain": "body>html",
+      "risky": []
+    },
+    {
+      "slug": "cheongdam-night",
+      "parent": "body",
+      "chain": "body>html",
+      "risky": []
+    },
+    {
+      "slug": "daejeon-one-night",
+      "parent": "body",
+      "chain": "body>html",
+      "risky": []
+    },
+    {
+      "slug": "sillim-grandprix-night",
+      "parent": "body",
+      "chain": "body>html",
+      "risky": []
+    },
+    {
+      "slug": "sangbong-hangukgwan-night",
+      "parent": "body",
+      "chain": "body>html",
+      "risky": []
+    },
+    {
+      "slug": "suyu-shampoo-night",
+      "parent": "body",
+      "chain": "body>html",
+      "risky": []
+    },
+    {
+      "slug": "busan-asiad-night",
+      "parent": "body",
+      "chain": "body>html",
+      "risky": []
+    },
+    {
+      "slug": "suwon-chance-dome-night",
+      "parent": "body",
+      "chain": "body>html",
+      "risky": []
+    },
+    {
+      "slug": "ansan-hit-night",
+      "parent": "body",
+      "chain": "body>html",
+      "risky": []
+    },
+    {
+      "slug": "daejeon-seven-night",
+      "parent": "body",
+      "chain": "body>html",
+      "risky": []
+    },
+    {
+      "slug": "ilsan-shampoo-night",
+      "parent": "body",
+      "chain": "body>html",
+      "risky": []
+    }
+  ],
+  "barText": {
+    "bulgwang-hobak-night": "📞 손흥민 010-2221-1937",
+    "changwon-lululala-night": "📞 로또 010-7528-4936",
+    "ulsan-champion-night": "📞 춘자 010-5653-0069",
+    "cheongdam-night": "📞 펩시맨 010-5655-4866",
+    "daejeon-one-night": "광고·제휴 입점 문의 카톡 besta12",
+    "sillim-grandprix-night": "광고·제휴 입점 문의 카톡 besta12",
+    "sangbong-hangukgwan-night": "광고·제휴 입점 문의 카톡 besta12",
+    "suyu-shampoo-night": "광고·제휴 입점 문의 카톡 besta12",
+    "busan-asiad-night": "광고·제휴 입점 문의 카톡 besta12",
+    "suwon-chance-dome-night": "광고·제휴 입점 문의 카톡 besta12",
+    "ansan-hit-night": "광고·제휴 입점 문의 카톡 besta12",
+    "daejeon-seven-night": "광고·제휴 입점 문의 카톡 besta12",
+    "ilsan-shampoo-night": "광고·제휴 입점 문의 카톡 besta12"
+  },
+  "footerOk": {
+    "bulgwang-hobak-night": true,
+    "changwon-lululala-night": true,
+    "ulsan-champion-night": true,
+    "cheongdam-night": true,
+    "daejeon-one-night": true,
+    "sillim-grandprix-night": true,
+    "sangbong-hangukgwan-night": true,
+    "suyu-shampoo-night": true,
+    "busan-asiad-night": true,
+    "suwon-chance-dome-night": true,
+    "ansan-hit-night": true,
+    "daejeon-seven-night": true,
+    "ilsan-shampoo-night": true
+  }
+}

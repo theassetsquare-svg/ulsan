@@ -101,3 +101,21 @@
 
 ## 최종 업데이트
 2026-05-21
+
+## 지역별 나이트 위치 안내 (13곳, 2026-08-15 추가)
+목록 페이지: https://ulsand.pages.dev/night/
+각 페이지는 교차 확인된 주소·가장 가까운 역만 싣고, 확인되지 않은 영업시간·요금·연령은 "확인 불가"로 명시합니다.
+
+- https://ulsand.pages.dev/night/bulgwang-hobak-night/ — 불광동호박나이트 — 서울 은평구 불광동 — 서울 은평구 통일로 730 지하. 가장 가까운 역 지하철 3·6호선 불광역. 영업시간 등 미확인 항목은 페이지에 확인 불가로 표기.
+- https://ulsand.pages.dev/night/changwon-lululala-night/ — 창원룰루랄라나이트 — 경남 창원시 성산구 상남동 — 경남 창원시 성산구 마디미로43번길 10 지하 3층. 출입 만 27세 이상. 영업시간 등 미확인 항목은 페이지에 확인 불가로 표기.
+- https://ulsand.pages.dev/night/ulsan-champion-night/ — 울산챔피언나이트 — 울산 남구 삼산동 — 울산 남구 정동로 75. 영업시간 등 미확인 항목은 페이지에 확인 불가로 표기.
+- https://ulsand.pages.dev/night/cheongdam-night/ — 청담나이트 — 서울 강남구 청담동 — 서울 강남구 영동대로 737 지하 1층. 가장 가까운 역 지하철 7호선 청담역. 영업시간 등 미확인 항목은 페이지에 확인 불가로 표기.
+- https://ulsand.pages.dev/night/daejeon-one-night/ — 대전원나이트 — 대전 동구 용전동 — 대전복합터미널 인근. 출입 만 38세 이상. 영업시간 등 미확인 항목은 페이지에 확인 불가로 표기.
+- https://ulsand.pages.dev/night/sillim-grandprix-night/ — 신림그랑프리나이트 — 서울 관악구 신림동 — 서울 관악구 신림로 340. 가장 가까운 역 지하철 2호선 신림역. 영업시간 등 미확인 항목은 페이지에 확인 불가로 표기.
+- https://ulsand.pages.dev/night/sangbong-hangukgwan-night/ — 상봉동한국관나이트 — 서울 중랑구 상봉동 — 서울 중랑구 망우로 326 2층. 가장 가까운 역 상봉역 (7호선·경의중앙선·경춘선). 영업시간 등 미확인 항목은 페이지에 확인 불가로 표기.
+- https://ulsand.pages.dev/night/suyu-shampoo-night/ — 수유샴푸나이트 — 서울 강북구 번동 — 서울 강북구 도봉로 308 지하층. 가장 가까운 역 지하철 4호선 수유역. 영업시간 등 미확인 항목은 페이지에 확인 불가로 표기.
+- https://ulsand.pages.dev/night/busan-asiad-night/ — 부산아시아드나이트 — 부산 동래구 온천동 — 부산 동래구 온천장로107번길 32 지하 1~2층. 가장 가까운 역 부산 도시철도 1호선 온천장역. 영업시간 등 미확인 항목은 페이지에 확인 불가로 표기.
+- https://ulsand.pages.dev/night/suwon-chance-dome-night/ — 수원찬스돔나이트 — 경기 수원시 권선구 — 경기 수원시 권선구 권선로 673. 영업시간 등 미확인 항목은 페이지에 확인 불가로 표기.
+- https://ulsand.pages.dev/night/ansan-hit-night/ — 안산히트나이트 — 경기 안산시 상록구 본오동 — 경기 안산시 상록구 상록수로 34 지층. 가장 가까운 역 수도권 전철 4호선 상록수역. 영업시간 등 미확인 항목은 페이지에 확인 불가로 표기.
+- https://ulsand.pages.dev/night/daejeon-seven-night/ — 대전세븐나이트 — 대전 중구 유천동 — 대전 중구 당디로 112 2~3층. 영업시간 등 미확인 항목은 페이지에 확인 불가로 표기.
+- https://ulsand.pages.dev/night/ilsan-shampoo-night/ — 일산샴푸나이트 — 경기 고양시 일산동구 마두동 — 경기 고양시 일산동구 중앙로 1160 8층. 가장 가까운 역 지하철 3호선 마두역. 영업시간 등 미확인 항목은 페이지에 확인 불가로 표기.
