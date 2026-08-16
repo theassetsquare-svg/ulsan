@@ -117,7 +117,7 @@
     {
       "slug": "gangnam-night",
       "kw": "강남나이트",
-      "group": "A",
+      "group": "B",
       "bg": "#4e5714",
       "nameLines": [
         "강남",
@@ -127,29 +127,27 @@
       "nameInkWidth": 400,
       "nameInkHeight": 313,
       "ageBadge": null,
-      "bandContrast": 21,
-      "nickname": "펩시맨",
-      "tel": "010-5655-4866",
-      "telFontSize": 134,
-      "telInkHeight": 104,
-      "telInkWidth": 990,
-      "telLeft": 105,
-      "telRight": 1094,
-      "telClipped": false,
+      "bandContrast": null,
+      "nickname": null,
+      "tel": null,
+      "telFontSize": null,
+      "telInkHeight": null,
+      "telInkWidth": null,
+      "telLeft": null,
+      "telRight": null,
+      "telClipped": null,
       "nameContrast": 7.81,
       "regionContrast": 6.48,
       "texts": [
         "강남",
         "나이트",
         "서울 강남구 청담동",
-        "펩시맨",
-        "010-5655-4866"
+        "전국 나이트 지역 안내"
       ],
-      "nickInkHeight": 94,
       "file": "og/gangnam-night-og.png",
       "width": 1200,
       "height": 1200,
-      "kb": 31
+      "kb": 28
     },
     {
       "slug": "daejeon-night",

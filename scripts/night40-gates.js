@@ -127,8 +127,18 @@ const add = (id, pass, metric) => results.push({ id, pass, metric });
     if (!p.src.includes('86086f8f927252a5021544b971d07b18a5e03a22')) miss.push('naver인증');
     if (!p.src.includes('rel="canonical"')) miss.push('canonical');
     if (!p.src.includes('application/ld+json')) miss.push('JSON-LD');
-    if (!(p.src.includes('tel:01056530069') || p.src.includes('tel:010-5653-0069'))) miss.push('전화바tel');
-    if (!p.src.includes('울산챔피언나이트 춘자 010-5653-0069')) miss.push('전화바문구');
+    /* 고정 하단바: 광고주 3곳은 각자 번호 tel: / 그 외 업소·허브는 광고문의 카톡 besta12 / 홈은 춘자 번호 */
+    const adv = p.kind === 'venue' && p.venue.contact ? p.venue.contact : null;
+    if (p.kind === 'home') {
+      if (!(p.src.includes('tel:010-5653-0069') || p.src.includes('tel:01056530069'))) miss.push('전화바tel');
+      if (!p.src.includes('울산챔피언나이트 춘자 010-5653-0069')) miss.push('전화바문구');
+    } else if (adv) {
+      if (!p.src.includes('class="callbar" href="tel:' + adv.raw + '"')) miss.push('전화바tel');
+      if (!p.src.includes('📞 ' + p.venue.name + ' ' + adv.person + ' ' + adv.tel)) miss.push('전화바문구');
+    } else {
+      if (!p.src.includes('class="callbar" href="https://open.kakao.com/o/sBesta12"')) miss.push('광고바링크');
+      if (!p.src.includes('💬 광고문의 카톡: besta12')) miss.push('광고바문구');
+    }
     if (!p.src.includes('besta12')) miss.push('푸터besta12');
     if (!p.src.includes('공개된 웹 정보를 정리했으며 실제와 다를 수 있습니다')) miss.push('푸터고지');
     if (!p.src.includes(TODAY)) miss.push('오늘날짜');
@@ -182,10 +192,11 @@ function extraChecks() {
     const bad = [];
     const phoneRe = /0\d{1,2}[-.\s]?\d{3,4}[-.\s]?\d{4}/g;
     Object.entries(pages).forEach(([k, p]) => {
-      const allowed = new Set(['010-5653-0069', '01056530069']);
+      /* 춘자 번호는 울산챔피언나이트 페이지와 홈에만 허용 — 그 외 페이지는 어떤 번호도 불가 */
+      const allowed = new Set();
+      if (k === 'night/ulsan-champion-night' || k === 'home') { allowed.add('010-5653-0069'); allowed.add('01056530069'); allowed.add('+82-10-5653-0069'); }
       if (k === 'night/changwon-lululala-night') { allowed.add('010-7528-4936'); allowed.add('01075284936'); allowed.add('+82-10-7528-4936'); }
       if (k === 'night/bulgwang-hobak-night') { allowed.add('010-2221-1937'); allowed.add('01022211937'); allowed.add('+82-10-2221-1937'); }
-      if (k === 'night/ulsan-champion-night' || k === 'home') allowed.add('+82-10-5653-0069');
       const found = [...new Set((p.src.match(phoneRe) || []))];
       found.forEach((f) => {
         const norm = f.replace(/[\s.]/g, '');

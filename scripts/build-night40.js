@@ -24,6 +24,8 @@ const BRAND = '놀쿨';
 
 const CALLBAR_TEL = '01056530069';
 const CALLBAR_TEXT = '📞 울산챔피언나이트 춘자 010-5653-0069';
+const KAKAO_URL = 'https://open.kakao.com/o/sBesta12';
+const AD_BAR_TEXT = '💬 광고문의 카톡: besta12';
 
 const ORDER = [
   'sillim-grandprix-night', 'sangbong-hangukgwan-night', 'suyu-shampoo-night', 'busan-asiad-night',
@@ -100,8 +102,16 @@ function factRows(v) {
   return rows;
 }
 
-const callbar = () =>
-  '<a class="callbar" href="tel:' + CALLBAR_TEL + '" aria-label="울산챔피언나이트 춘자에게 전화 연결">' + CALLBAR_TEXT + '</a>';
+/* 고정 하단바 — 광고주 3곳은 각자 번호(tel:), 그 외 37곳·허브는 광고문의 카톡 besta12
+   ⓐ 오인 전화(광고주 피해) 방지: 광고주가 아닌 페이지에는 어떤 전화번호도 넣지 않는다. */
+const callbar = (v) => {
+  if (v && v.contact) {
+    return '<a class="callbar" href="tel:' + v.contact.raw + '" aria-label="' + esc(v.name) + ' ' + esc(v.contact.person) + '에게 전화 연결">' +
+      '📞 ' + esc(v.name) + ' ' + esc(v.contact.person) + ' ' + esc(v.contact.tel) + '</a>';
+  }
+  return '<a class="callbar" href="' + KAKAO_URL + '" target="_blank" rel="noopener noreferrer" aria-label="광고문의 카카오톡 besta12로 이동">' +
+    AD_BAR_TEXT + '</a>';
+};
 
 const footer = () => `<footer class="site-footer">
   <div class="ad-inquiry">광고문의 카톡: <strong>besta12</strong></div>
@@ -353,7 +363,7 @@ ${links}
 
 ${footer()}
 
-${callbar()}
+${callbar(v)}
 
 </body>
 </html>
