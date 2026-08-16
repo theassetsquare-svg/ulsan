@@ -1,0 +1,76 @@
+{
+  "checkedAt": "2026-08-16",
+  "pages": 42,
+  "results": [
+    {
+      "id": "G1",
+      "pass": true,
+      "metric": "금지단어 위반 0건"
+    },
+    {
+      "id": "G2",
+      "pass": true,
+      "metric": "평점·별점 위반 0건"
+    },
+    {
+      "id": "G3",
+      "pass": true,
+      "metric": "창작수치 패턴 0건"
+    },
+    {
+      "id": "G4",
+      "pass": true,
+      "metric": "title 중복 0 · 길이위반  · desc 중복 0 · desc 길이위반 "
+    },
+    {
+      "id": "G5",
+      "pass": true,
+      "metric": "문장 공유 쌍 0건"
+    },
+    {
+      "id": "G6",
+      "pass": true,
+      "metric": "1800자 미만 0건"
+    },
+    {
+      "id": "G7",
+      "pass": true,
+      "metric": "깨진 내부링크 0건"
+    },
+    {
+      "id": "G8",
+      "pass": true,
+      "metric": "필수 요소 누락 0건"
+    },
+    {
+      "id": "G9",
+      "pass": true,
+      "metric": "og:image 위반 0건"
+    },
+    {
+      "id": "R5",
+      "pass": true,
+      "metric": "업소명 3~5회 위반 0건"
+    },
+    {
+      "id": "RTEL",
+      "pass": true,
+      "metric": "전화번호 규칙 위반 0건"
+    },
+    {
+      "id": "RJSONTEL",
+      "pass": true,
+      "metric": "JSON-LD 전화 규칙 위반 0건"
+    },
+    {
+      "id": "RH1",
+      "pass": true,
+      "metric": "title=og:title=h1 위반 0건"
+    },
+    {
+      "id": "REXT",
+      "pass": true,
+      "metric": "외부 링크 위반 0건"
+    }
+  ]
+}

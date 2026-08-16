@@ -1,372 +1,387 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ulsand.pages.dev/</loc>
     <lastmod>2026-08-16</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/thumb-home.png</image:loc>
-      <image:caption>울산챔피언나이트</image:caption>
-      <image:title>울산챔피언나이트 — 삼산동 대형 합법 나이트클럽</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/story</loc>
     <lastmod>2026-08-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/thumb-story.png</image:loc>
-      <image:caption>울산챔피언나이트 이야기</image:caption>
-    </image:image>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/atmosphere</loc>
     <lastmod>2026-08-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/thumb-atmosphere.png</image:loc>
-      <image:caption>울산챔피언나이트 분위기</image:caption>
-    </image:image>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/first-visit</loc>
     <lastmod>2026-08-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/thumb-first-visit.png</image:loc>
-      <image:caption>울산챔피언나이트 첫 방문 가이드</image:caption>
-    </image:image>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/access</loc>
     <lastmod>2026-08-16</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/thumb-access.png</image:loc>
-      <image:caption>울산챔피언나이트 오시는길</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/review</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/thumb-review.png</image:loc>
-      <image:caption>울산챔피언나이트 후기</image:caption>
-    </image:image>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/faq</loc>
     <lastmod>2026-08-16</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/thumb-faq.png</image:loc>
-      <image:caption>울산챔피언나이트 자주 묻는 질문</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/contact</loc>
     <lastmod>2026-08-16</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/thumb-contact.png</image:loc>
-      <image:caption>울산챔피언나이트 예약·문의</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/legal/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/thumb-legal.png</image:loc>
-      <image:caption>울산챔피언나이트 19세 이상 합법 운영</image:caption>
-    </image:image>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/bulgwang</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/thumb-bulgwang.png</image:loc>
-      <image:caption>불광동호박나이트</image:caption>
-      <image:title>불광동호박나이트 — 은평구 불광동 나이트 예약 안내</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://ulsand.pages.dev/night/bulgwang-hobak-night/</loc>
-    <lastmod>2026-08-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/bulgwang-hobak-night-og.png</image:loc>
-      <image:caption>불광동호박나이트</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://ulsand.pages.dev/night/changwon-lululala-night/</loc>
-    <lastmod>2026-08-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/changwon-lululala-night-og.png</image:loc>
-      <image:caption>창원룰루랄라나이트</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://ulsand.pages.dev/night/ulsan-champion-night/</loc>
-    <lastmod>2026-08-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/ulsan-champion-night-og.png</image:loc>
-      <image:caption>울산챔피언나이트</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://ulsand.pages.dev/night/cheongdam-night/</loc>
-    <lastmod>2026-08-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/cheongdam-night-og.png</image:loc>
-      <image:caption>청담나이트</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://ulsand.pages.dev/night/daejeon-one-night/</loc>
-    <lastmod>2026-08-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/daejeon-one-night-og.png</image:loc>
-      <image:caption>대전원나이트</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/night/sillim-grandprix-night/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/sillim-grandprix-night-og.png</image:loc>
-      <image:caption>신림그랑프리나이트</image:caption>
-    </image:image>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/night/sangbong-hangukgwan-night/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/sangbong-hangukgwan-night-og.png</image:loc>
-      <image:caption>상봉동한국관나이트</image:caption>
-    </image:image>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/night/suyu-shampoo-night/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/suyu-shampoo-night-og.png</image:loc>
-      <image:caption>수유샴푸나이트</image:caption>
-    </image:image>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/night/busan-asiad-night/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/busan-asiad-night-og.png</image:loc>
-      <image:caption>부산아시아드나이트</image:caption>
-    </image:image>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/night/suwon-chance-dome-night/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/suwon-chance-dome-night-og.png</image:loc>
-      <image:caption>수원찬스돔나이트</image:caption>
-    </image:image>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/night/ansan-hit-night/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/ansan-hit-night-og.png</image:loc>
-      <image:caption>안산히트나이트</image:caption>
-    </image:image>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/night/daejeon-seven-night/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/daejeon-seven-night-og.png</image:loc>
-      <image:caption>대전세븐나이트</image:caption>
-    </image:image>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/night/ilsan-shampoo-night/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/ilsan-shampoo-night-og.png</image:loc>
-      <image:caption>일산샴푸나이트</image:caption>
-    </image:image>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ulsand.pages.dev/night/</loc>
+    <loc>https://ulsand.pages.dev/night/cheongdam-night/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/daejeon-one-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/changwon-lululala-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/bulgwang-hobak-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/ulsan-champion-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/doksan-gukbingwan-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/dapsimni-miracle-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/gangseo-hobak-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/yeongdeungpo-terminal-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/nowon-hobak-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/gildong-chance-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/paju-yadang-skydome-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/guri-hobak-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/uijeongbu-hangukgwan-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/uijeongbu-baekakgwan-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/suwon-korea-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/osan-hobak-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/indeogwon-gukbingwan-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/seongnam-shampoo-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/incheon-arabian-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/bucheon-gorae-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/pyeongtaek-hobak-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/cheonan-stardome-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/cheonan-korea-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/cheongju-hobak-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/ulsan-newworld-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/seosan-hobak-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/daegu-hobak-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/gumi-hobak-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/gwangju-sangmu-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/gwangju-cheomdan-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulsand.pages.dev/night/jejudo-night/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/night/eunpyeong-night/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/eunpyeong-night-og.png</image:loc>
-      <image:caption>은평나이트</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/night/changwon-night/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/changwon-night-og.png</image:loc>
-      <image:caption>창원나이트</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/night/ulsan-night/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/ulsan-night-og.png</image:loc>
-      <image:caption>울산나이트</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/night/gangnam-night/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/gangnam-night-og.png</image:loc>
-      <image:caption>강남나이트</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/night/daejeon-night/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/daejeon-night-og.png</image:loc>
-      <image:caption>대전나이트</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/night/sillim-night/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/sillim-night-og.png</image:loc>
-      <image:caption>신림나이트</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/night/sangbong-night/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/sangbong-night-og.png</image:loc>
-      <image:caption>상봉동나이트</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/night/suyu-night/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/suyu-night-og.png</image:loc>
-      <image:caption>수유나이트</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/night/busan-night/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/busan-night-og.png</image:loc>
-      <image:caption>부산나이트</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/night/suwon-night/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/suwon-night-og.png</image:loc>
-      <image:caption>수원나이트</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/night/ansan-night/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/ansan-night-og.png</image:loc>
-      <image:caption>안산나이트</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/night/yucheon-night/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/yucheon-night-og.png</image:loc>
-      <image:caption>유천동나이트</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://ulsand.pages.dev/night/ilsan-night/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ulsand.pages.dev/og/ilsan-night-og.png</image:loc>
-      <image:caption>일산나이트</image:caption>
-    </image:image>
   </url>
 </urlset>
