@@ -71,6 +71,16 @@
       "id": "REXT",
       "pass": true,
       "metric": "외부 링크 위반 0건"
+    },
+    {
+      "id": "G10",
+      "pass": true,
+      "metric": "전화번호 위치 위반 0건 (스캔 77파일)"
+    },
+    {
+      "id": "G11",
+      "pass": true,
+      "metric": "키워드 배치 위반 0건"
     }
   ]
 }

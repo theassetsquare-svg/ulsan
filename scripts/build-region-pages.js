@@ -102,15 +102,12 @@ const palette = (r) => ({
 });
 
 function callbar(r) {
-  if (r.group === 'A') {
-    return '<div class="callbar" role="complementary" aria-label="전화 연결">\n' +
-      '  <a href="tel:' + r.contact.raw + '">📞 ' + esc(r.contact.person) + ' ' + esc(r.contact.tel) + '</a>\n' +
-      '</div>';
-  }
-  return '<div class="callbar" role="complementary" aria-label="광고 제휴 문의">\n' +
-    '  <span>광고·제휴 입점 문의 카톡 <b>besta12</b></span>\n' +
+  /* 정답표: 지역 키워드 페이지는 전 페이지 광고문의 바 (전화번호 삽입 금지) */
+  return '<div class="callbar" role="complementary" aria-label="광고 문의">\n' +
+    '  <a href="https://open.kakao.com/o/sBesta12" target="_blank" rel="noopener noreferrer">\ud83d\udcac 광고문의 카카오톡 besta12</a>\n' +
     '</div>';
 }
+
 
 /* JSON-LD 3종 — 업소가 아니라 지역 안내이므로 NightClub 대신 Article */
 function jsonld(r) {
@@ -205,7 +202,7 @@ body{background:#fff;color:#15161a;padding-bottom:calc(84px + env(safe-area-inse
   box-shadow:0 -2px 14px rgba(0,0,0,.35);
   transform:translateZ(0); backface-visibility:hidden;
 }
-.callbar a{color:#fff; text-decoration:none; display:flex; align-items:center; height:100%;}
+.callbar a{color:#fff; text-decoration:none; display:flex; align-items:center; justify-content:center; width:100%; height:100%;}
 @media(max-width:480px){
   .callbar{height:60px; font-size:16px;}
   body{ padding-bottom:calc(80px + env(safe-area-inset-bottom,0px)); }

@@ -25,7 +25,7 @@ const BRAND = '놀쿨';
 const CALLBAR_TEL = '01056530069';
 const CALLBAR_TEXT = '📞 울산챔피언나이트 춘자 010-5653-0069';
 const KAKAO_URL = 'https://open.kakao.com/o/sBesta12';
-const AD_BAR_TEXT = '💬 광고문의 카톡: besta12';
+const AD_BAR_TEXT = '💬 광고문의 카카오톡 besta12';
 
 const ORDER = [
   'sillim-grandprix-night', 'sangbong-hangukgwan-night', 'suyu-shampoo-night', 'busan-asiad-night',
@@ -106,10 +106,10 @@ function factRows(v) {
    ⓐ 오인 전화(광고주 피해) 방지: 광고주가 아닌 페이지에는 어떤 전화번호도 넣지 않는다. */
 const callbar = (v) => {
   if (v && v.contact) {
-    return '<a class="callbar" href="tel:' + v.contact.raw + '" aria-label="' + esc(v.name) + ' ' + esc(v.contact.person) + '에게 전화 연결">' +
+    return '<a class="callbar" href="tel:' + v.contact.tel + '" aria-label="' + esc(v.name) + ' ' + esc(v.contact.person) + '에게 전화 연결">' +
       '📞 ' + esc(v.name) + ' ' + esc(v.contact.person) + ' ' + esc(v.contact.tel) + '</a>';
   }
-  return '<a class="callbar" href="' + KAKAO_URL + '" target="_blank" rel="noopener noreferrer" aria-label="광고문의 카카오톡 besta12로 이동">' +
+  return '<a class="callbar" href="' + KAKAO_URL + '" target="_blank" rel="noopener noreferrer" aria-label="광고문의 카카오톡 besta12">' +
     AD_BAR_TEXT + '</a>';
 };
 
@@ -206,7 +206,7 @@ body{background:#fff;color:#15161a;padding-bottom:calc(84px + env(safe-area-inse
 .site-footer{background:#f4f4f5;padding:8px 16px 26px;}
 .ad-inquiry{background:#ffd400;color:#111;font-weight:900;font-size:19px;padding:18px;text-align:center;border-radius:10px;margin:24px auto;max-width:720px;}
 .footer-note{max-width:720px;margin:0 auto 6px;color:#3f3f46;font-size:.88rem;line-height:1.7;text-align:center;}
-a.callbar{
+.callbar{
   position:fixed; bottom:0; left:0; width:100%; z-index:9999;
   display:flex; align-items:center; justify-content:center; gap:10px;
   min-height:64px; box-sizing:border-box;
@@ -217,7 +217,7 @@ a.callbar{
   transform:translateZ(0); backface-visibility:hidden;
 }
 @media(max-width:480px){
-  a.callbar{font-size:15px;}
+  .callbar{font-size:15px;}
   body{ padding-bottom:calc(80px + env(safe-area-inset-bottom,0px)); }
 }
 @media (prefers-color-scheme: dark){

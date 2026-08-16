@@ -133,11 +133,11 @@ const add = (id, pass, metric) => results.push({ id, pass, metric });
       if (!(p.src.includes('tel:010-5653-0069') || p.src.includes('tel:01056530069'))) miss.push('전화바tel');
       if (!p.src.includes('울산챔피언나이트 춘자 010-5653-0069')) miss.push('전화바문구');
     } else if (adv) {
-      if (!p.src.includes('class="callbar" href="tel:' + adv.raw + '"')) miss.push('전화바tel');
+      if (!p.src.includes('class="callbar" href="tel:' + adv.tel + '"')) miss.push('전화바tel');
       if (!p.src.includes('📞 ' + p.venue.name + ' ' + adv.person + ' ' + adv.tel)) miss.push('전화바문구');
     } else {
-      if (!p.src.includes('class="callbar" href="https://open.kakao.com/o/sBesta12"')) miss.push('광고바링크');
-      if (!p.src.includes('💬 광고문의 카톡: besta12')) miss.push('광고바문구');
+      if (!p.src.includes('<a class="callbar" href="https://open.kakao.com/o/sBesta12"')) miss.push('광고바링크');
+      if (!p.src.includes('💬 광고문의 카카오톡 besta12')) miss.push('광고바문구');
     }
     if (!p.src.includes('besta12')) miss.push('푸터besta12');
     if (!p.src.includes('공개된 웹 정보를 정리했으며 실제와 다를 수 있습니다')) miss.push('푸터고지');
@@ -242,6 +242,74 @@ function extraChecks() {
       if (ext.length) bad.push(k + ':' + ext.join(','));
     });
     add('REXT', bad.length === 0, '외부 링크 위반 ' + bad.length + '건' + (bad.length ? ' — ' + bad.join(' / ') : ''));
+  }
+
+  /* G10 전화번호 위치 — 배포되는 모든 파일 스캔 (html·txt·xml·서빙 js) */
+  {
+    /* 광고주 소유 자산 화이트리스트.
+       루트 사이트(index/story/atmosphere/first-visit/access/review/faq/contact/legal/webmanifest)는
+       울산챔피언나이트 본 랜딩 사이트이므로 춘자 번호 허용.
+       bulgwang.html·rss.xml의 불광동호박 항목은 해당 광고주 자산이므로 손흥민 번호 허용. */
+    const ULSAN_OWN = ['index.html', 'story.html', 'atmosphere.html', 'first-visit.html', 'access.html',
+      'review.html', 'faq.html', 'contact.html', 'legal/index.html', 'site.webmanifest',
+      'night/ulsan-champion-night/index.html'];
+    const OWNER = {
+      '010-5653-0069': ULSAN_OWN,
+      '010-7528-4936': ['night/changwon-lululala-night/index.html'],
+      '010-2221-1937': ['night/bulgwang-hobak-night/index.html', 'bulgwang.html', 'rss.xml']
+    };
+    const SKIP_DIR = new Set(['node_modules', '.git', 'scripts', 'docs', 'skills', 'tools', 'og']);
+    const files = [];
+    (function walk(dir, rel) {
+      for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+        if (e.name.startsWith('.') || SKIP_DIR.has(e.name)) continue;
+        const abs = path.join(dir, e.name), r = rel ? rel + '/' + e.name : e.name;
+        if (e.isDirectory()) walk(abs, r);
+        else if (/\.(html|txt|xml|js|json|webmanifest)$/.test(e.name)) files.push([r, abs]);
+      }
+    })(ROOT, '');
+
+    const bad = [];
+    const re = /01[016789][-.\s]?\d{3,4}[-.\s]?\d{4}/g;
+    files.forEach(([rel, abs]) => {
+      const txt = fs.readFileSync(abs, 'utf8');
+      const found = [...new Set(txt.match(re) || [])].map((x) => x.replace(/[\s.]/g, ''));
+      found.forEach((raw) => {
+        const dashed = raw.includes('-') ? raw : raw.replace(/^(\d{3})(\d{4})(\d{4})$/, '$1-$2-$3');
+        const owners = OWNER[dashed];
+        if (!owners) { bad.push(rel + ':미등록번호 ' + dashed); return; }
+        if (!owners.includes(rel)) bad.push(rel + ':' + dashed + ' 위치위반');
+      });
+    });
+    add('G10', bad.length === 0, '전화번호 위치 위반 ' + bad.length + '건' + (bad.length ? ' — ' + bad.join(' / ') : '') + ' (스캔 ' + files.length + '파일)');
+  }
+
+  /* G11 키워드 배치 — title 맨앞·첫문단·H2 1개·본문 3~5회·description 1회 */
+  {
+    const bad = [], region = [];
+    venues.forEach((v) => {
+      const src = pages['night/' + v.slug].src;
+      const main = pages['night/' + v.slug].main;
+      const title = titleOf(src) || '';
+      const desc = metaOf(src, 'description') || '';
+      const h2s = [...src.matchAll(/<h2[^>]*>([^<]*)<\/h2>/g)].map((m) => m[1]);
+      const miss = [];
+      if (!title.startsWith(v.name)) miss.push('title맨앞');
+      if (!v.lead.includes(v.name)) miss.push('첫문단');
+      if (!h2s.some((h) => h.includes(v.name))) miss.push('H2');
+      const n = count(main, v.name);
+      if (n < 3 || n > 5) miss.push('본문' + n + '회');
+      const d = count(desc, v.name);
+      if (d !== 1) miss.push('desc' + d + '회');
+      if (miss.length) bad.push(v.slug + ':' + miss.join('+'));
+      /* 참고 지표: 지역+나이트 조합 1~2회 */
+      const area = (v.addr && v.addr.locality ? v.addr.locality.split(' ')[0] : '').replace(/특별자치도|특별시|광역시|도$/, '');
+      if (area) {
+        const combo = count(main, area + ' 나이트') + count(main, area + '나이트');
+        region.push(v.slug + ':' + combo);
+      }
+    });
+    add('G11', bad.length === 0, '키워드 배치 위반 ' + bad.length + '건' + (bad.length ? ' — ' + bad.join(' / ') : ''));
   }
 }
 
