@@ -45,7 +45,7 @@ lines.push('## 주요 페이지');
 lines.push('');
 [['/', '홈'], ['/story', '이야기'], ['/atmosphere', '분위기'], ['/first-visit', '첫 방문'],
  ['/access', '오시는 길'], ['/review', '방문 기록'], ['/faq', '자주 묻는 질문'],
- ['/contact', '문의'], ['/policy/', '이용 안내']].forEach(([u, t]) => {
+ ['/contact', '문의'], ['/policy/', '이용 안내'], ['/bulgwang-guide', '불광동 밤 놀거리 가이드']].forEach(([u, t]) => {
   lines.push('- [' + t + '](' + SITE + u + ')');
 });
 lines.push('');
