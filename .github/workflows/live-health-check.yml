@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Check 9 pages + /legal/ + critical assets
+      - name: Check 9 pages + /policy/ + critical assets
         run: |
           set -e
           URLS=(
@@ -27,8 +27,8 @@ jobs:
             "https://ulsand.pages.dev/review"
             "https://ulsand.pages.dev/faq"
             "https://ulsand.pages.dev/contact"
-            "https://ulsand.pages.dev/legal/"
-            "https://ulsand.pages.dev/bulgwang"
+            "https://ulsand.pages.dev/policy/"
+            "https://ulsand.pages.dev/bulgwang-guide"
             "https://ulsand.pages.dev/sitemap.xml"
             "https://ulsand.pages.dev/robots.txt"
             "https://ulsand.pages.dev/llms.txt"
@@ -61,7 +61,7 @@ jobs:
                    "https://ulsand.pages.dev/review" \
                    "https://ulsand.pages.dev/faq" \
                    "https://ulsand.pages.dev/contact" \
-                   "https://ulsand.pages.dev/bulgwang"; do
+                   "https://ulsand.pages.dev/bulgwang-guide"; do
             BODY=$(curl -sL "$U")
             for W in "${BANNED[@]}"; do
               COUNT=$(echo "$BODY" | grep -c "$W" || true)
