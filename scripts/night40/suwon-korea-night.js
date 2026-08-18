@@ -73,5 +73,5 @@ module.exports = {
     { q: '이 페이지 정보의 정정 요청은 어디로 하나요?', a: '정정 제보와 광고 관련 문의 모두 카카오톡 besta12에서 받고 있습니다.' }
   ],
   oneLine: '인계동의 간판은 자주 바뀌지만, 나라 이름을 건 좌표 하나는 그 거리의 기준점으로 남아 있습니다.',
-  links: ['suwon-chance-dome-night', 'seongnam-shampoo-night']
+  links: ['suwon-chance-dome', 'seongnam-shampoo-night']
 };

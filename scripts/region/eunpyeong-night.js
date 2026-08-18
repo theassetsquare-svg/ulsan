@@ -16,7 +16,7 @@ module.exports = {
   angleName: '시간 흐름형',
   suffix: '입장부터 끝까지',
   contact: null,
-  venue: { slug: 'bulgwang-hobak-night', name: '불광동호박나이트', where: '통일로 730 지하' },
+  venue: { slug: 'bulgwang-hobak', name: '불광동호박나이트', where: '통일로 730 지하' },
   title: '은평나이트 입장부터 끝까지 여덟 시 홀의 변화',
   description: '은평나이트는 여덟 시와 새벽 한 시의 홀이 전혀 다릅니다. 언제 들어가야 자리가 남는지, 어느 구간에서 사람이 빠르게 몰리는지 다섯 단계로 끊어 적었습니다.',
   keywords: '은평나이트, 은평 나이트, 은평 나이트클럽, 은평구 나이트, 불광동 나이트',

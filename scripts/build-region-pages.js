@@ -22,7 +22,7 @@ const PAGE_ROUND = 2;
 const ORDER = [
   'eunpyeong-night', 'changwon-night', 'ulsan-night', 'gangnam-night',
   'daejeon-night', 'sillim-night', 'sangbong-night', 'suyu-night',
-  'busan-night', 'suwon-night', 'ansan-night', 'yucheon-night',
+  'busan-night', 'suwon-nightclub', 'ansan-night', 'yucheon-night',
   'ilsan-night'
 ];
 

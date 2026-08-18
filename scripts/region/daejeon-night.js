@@ -99,5 +99,5 @@ module.exports = {
     '열 시 이전 도착과 인원 고지만으로 자리 문제는 크게 줄어듭니다.',
     '연결된 대전원나이트는 만 38세 이상만 입장할 수 있습니다.'
   ],
-  links: ['yucheon-night', 'ulsan-night', 'suwon-night']
+  links: ['yucheon-night', 'ulsan-night', 'suwon-nightclub']
 };

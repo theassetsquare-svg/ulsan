@@ -73,5 +73,5 @@ module.exports = {
     { q: '차를 가져가도 되나요?', a: '주차 관련 공개 정보가 확인되지 않았습니다. 전철 이용이 가장 확실한 동선이며, 역 앞이라 걷는 부담이 없습니다.' }
   ],
   oneLine: '전철이 서고 백팔십 초가 지나면, 야당동의 밤이 먼저 마중을 나옵니다.',
-  links: ['ilsan-shampoo-night', 'bulgwang-hobak-night']
+  links: ['ilsan-shampoo', 'bulgwang-hobak']
 };

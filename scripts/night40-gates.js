@@ -215,7 +215,7 @@ function extraChecks() {
     const bad = [];
     venues.forEach((v) => {
       const has = /"telephone"/.test(pages['night/' + v.slug].src);
-      const shouldHave = ['ulsan-champion-night', 'changwon-lululala-night', 'bulgwang-hobak-night'].includes(v.slug);
+      const shouldHave = ['ulsan-champion-night', 'changwon-lululala-night', 'bulgwang-hobak'].includes(v.slug);
       if (has !== shouldHave) bad.push(v.slug + (has ? ':불허 telephone' : ':누락 telephone'));
     });
     add('RJSONTEL', bad.length === 0, 'JSON-LD 전화 규칙 위반 ' + bad.length + '건' + (bad.length ? ' — ' + bad.join(',') : ''));
@@ -247,7 +247,7 @@ function extraChecks() {
   /* G10 전화번호 위치 — 배포되는 모든 파일 스캔 (html·txt·xml·서빙 js) */
   {
     /* 광고주 소유 자산 화이트리스트.
-       루트 사이트(index/story/atmosphere/first-visit/access/review/faq/contact/legal/webmanifest)는
+       루트 사이트(index/story/atmosphere/first-visit/access/review/faq/contact/policy/webmanifest)는
        울산챔피언나이트 본 랜딩 사이트이므로 춘자 번호 허용.
        bulgwang.html·rss.xml의 불광동호박 항목은 해당 광고주 자산이므로 손흥민 번호 허용. */
     const ULSAN_OWN = ['index.html', 'story.html', 'atmosphere.html', 'first-visit.html', 'access.html',

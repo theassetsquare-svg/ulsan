@@ -14,8 +14,8 @@ const urls = [
   ['/review', '0.8', 'weekly'],
   ['/faq', '0.8', 'weekly'],
   ['/contact', '0.8', 'weekly'],
-  ['/legal/', '0.3', 'monthly'],
-  ['/bulgwang', '0.8', 'weekly'],
+  ['/policy/', '0.3', 'monthly'],
+  ['/bulgwang-guide', '0.8', 'weekly'],
   ['/night/', '0.9', 'daily'],
   ...ORDER.map((s) => ['/night/' + s + '/', '0.9', 'weekly']),
   ...REGION_ORDER.map((s) => ['/night/' + s + '/', '0.8', 'weekly'])

@@ -2,7 +2,7 @@
 /* B그룹 · 각도: '돔'이라는 이름 풀이 — 큰 지붕 아래의 몰입(실측 수치 창작 없음)
    확인 사실: 권선로 673 · 권선동 1019-9 · 권선로 대로변 / 미확인: 층·건물명·역 도보·연령·영업시간 */
 module.exports = {
-  slug: 'suwon-chance-dome-night',
+  slug: 'suwon-chance-dome',
   name: '수원찬스돔나이트',
   group: 'B',
   hue: 260,

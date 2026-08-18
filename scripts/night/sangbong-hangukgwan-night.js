@@ -168,9 +168,9 @@ module.exports = {
     '좌석은 룸·부스·테이블로 나뉘어 목적에 따라 고를 수 있습니다.'
   ],
   links: [
-    { slug: 'suyu-shampoo-night', text: '수유샴푸나이트 살펴보기' },
-    { slug: 'bulgwang-hobak-night', text: '불광동호박나이트 살펴보기' },
-    { slug: 'ilsan-shampoo-night', text: '일산샴푸나이트 살펴보기' },
+    { slug: 'suyu-shampoo', text: '수유샴푸나이트 살펴보기' },
+    { slug: 'bulgwang-hobak', text: '불광동호박나이트 살펴보기' },
+    { slug: 'ilsan-shampoo', text: '일산샴푸나이트 살펴보기' },
     { slug: 'cheongdam-night', text: '청담나이트 살펴보기' }
   ]
 };

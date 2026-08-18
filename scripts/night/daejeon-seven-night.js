@@ -104,7 +104,7 @@ module.exports = {
   ],
   links: [
     { slug: 'daejeon-one-night', text: '대전원나이트 살펴보기' },
-    { slug: 'suwon-chance-dome-night', text: '수원찬스돔나이트 살펴보기' },
+    { slug: 'suwon-chance-dome', text: '수원찬스돔나이트 살펴보기' },
     { slug: 'ulsan-champion-night', text: '울산챔피언나이트 살펴보기' }
   ]
 };

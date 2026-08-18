@@ -2,7 +2,7 @@
 /* 업소번호 13 · SITE_INDEX 1 → 각도 13 단골 관점형 / 접미어 풀[13] "다녀본 사람 기준"
    H2 순서: 단골이 아는 것 → 자리 → 시간 → 웨이터 활용 → 위치 → 문의 · 중점 소재: 웨이터 소통·자리 확보 */
 module.exports = {
-  slug: 'ilsan-shampoo-night',
+  slug: 'ilsan-shampoo',
   name: '일산샴푸나이트',
   nameB: '일산 샴푸나이트',
   nameC: '일산 나이트클럽',
@@ -103,7 +103,7 @@ module.exports = {
     '인원과 시각, 자리 성격 세 가지만 전하면 배정이 빨라집니다.'
   ],
   links: [
-    { slug: 'suyu-shampoo-night', text: '수유샴푸나이트 살펴보기' },
+    { slug: 'suyu-shampoo', text: '수유샴푸나이트 살펴보기' },
     { slug: 'sangbong-hangukgwan-night', text: '상봉동한국관나이트 살펴보기' },
     { slug: 'ansan-hit-night', text: '안산히트나이트 살펴보기' }
   ]

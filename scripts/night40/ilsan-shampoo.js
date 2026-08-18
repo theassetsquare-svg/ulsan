@@ -3,7 +3,7 @@
    확인 사실: 중앙로 1160 · 마두동 805-1 · 8층 · 3호선 마두역 · 18:00~04:00(2곳) · 룸/부스/테이블 구성(2곳)
    미확인: 좌석 수(값 불일치), 출입 연령, 주차(단일 출처) */
 module.exports = {
-  slug: 'ilsan-shampoo-night',
+  slug: 'ilsan-shampoo',
   name: '일산샴푸나이트',
   group: 'B',
   hue: 340,
@@ -76,5 +76,5 @@ module.exports = {
     { q: '출입 연령은 확인되나요?', a: '공개 자료의 표기가 한 곳뿐이라 확정하지 않았습니다. 정확한 기준은 현장 확인이 빠릅니다.' }
   ],
   oneLine: '평평한 도시에서 높이는 곧 경계 — 마두역 앞의 저녁은 엘리베이터 문이 열리는 순간부터입니다.',
-  links: ['paju-yadang-skydome-night', 'bulgwang-hobak-night']
+  links: ['paju-yadang-skydome-night', 'bulgwang-hobak']
 };

@@ -3,7 +3,7 @@
    H2 순서: 도착 → 자리 잡기 → 분위기 오름 → 절정 → 마무리 → 문의 · 중점 소재: 시간대별 밀집도
    ※ 세부 번지는 자료마다 갈려 채택하지 않았다. 권역 표기만 쓴다. */
 module.exports = {
-  slug: 'suyu-shampoo-night',
+  slug: 'suyu-shampoo',
   name: '수유샴푸나이트',
   nameB: '수유 샴푸나이트',
   nameC: '강북구 나이트클럽',
@@ -105,7 +105,7 @@ module.exports = {
   ],
   links: [
     { slug: 'sangbong-hangukgwan-night', text: '상봉동한국관나이트 살펴보기' },
-    { slug: 'bulgwang-hobak-night', text: '불광동호박나이트 살펴보기' },
-    { slug: 'ilsan-shampoo-night', text: '일산샴푸나이트 살펴보기' }
+    { slug: 'bulgwang-hobak', text: '불광동호박나이트 살펴보기' },
+    { slug: 'ilsan-shampoo', text: '일산샴푸나이트 살펴보기' }
   ]
 };

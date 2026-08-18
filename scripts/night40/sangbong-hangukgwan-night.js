@@ -77,5 +77,5 @@ module.exports = {
     { q: '광고나 정보 수정 문의는 어디로 하나요?', a: '카카오톡 besta12로 받고 있습니다. 잘못된 정보 제보도 같은 창구로 보내 주시면 확인 후 반영합니다.' }
   ],
   oneLine: '초저녁의 파도를 놓쳤어도 낙심할 것 없습니다 — 망우로 326의 밤은 한 번 더 시작됩니다.',
-  links: ['dapsimni-miracle-night', 'suyu-shampoo-night']
+  links: ['dapsimni-miracle-night', 'suyu-shampoo']
 };

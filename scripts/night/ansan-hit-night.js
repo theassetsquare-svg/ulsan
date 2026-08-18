@@ -103,8 +103,8 @@ module.exports = {
     '상록수역이 가깝고 주차 공간이 별도로 안내됩니다.'
   ],
   links: [
-    { slug: 'suwon-chance-dome-night', text: '수원찬스돔나이트 살펴보기' },
-    { slug: 'ilsan-shampoo-night', text: '일산샴푸나이트 살펴보기' },
+    { slug: 'suwon-chance-dome', text: '수원찬스돔나이트 살펴보기' },
+    { slug: 'ilsan-shampoo', text: '일산샴푸나이트 살펴보기' },
     { slug: 'sillim-grandprix-night', text: '신림그랑프리나이트 살펴보기' }
   ]
 };

@@ -75,5 +75,5 @@ module.exports = {
     { q: '지하철역에서 걸어갈 수 있나요?', a: '역과의 도보 관계는 확인된 정보가 없습니다. 유천동 큰길을 기준 삼아 한 겹 안쪽 골목에서 간판을 찾는 편이 확실합니다.' }
   ],
   oneLine: '여섯 밤을 미룬 사람에게만 오는 밤이 있습니다 — 유천동 2~3층의 불은 그 밤을 위해 켜져 있습니다.',
-  links: ['daejeon-one-night', 'cheongju-hobak-night']
+  links: ['daejeon-one-night', 'cheongju-hobak']
 };

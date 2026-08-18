@@ -19,10 +19,10 @@ const SITE_INDEX = 1;
 const BRAND = '놀쿨';
 
 const ORDER = [
-  'bulgwang-hobak-night', 'changwon-lululala-night', 'ulsan-champion-night', 'cheongdam-night',
-  'daejeon-one-night', 'sillim-grandprix-night', 'sangbong-hangukgwan-night', 'suyu-shampoo-night',
-  'busan-asiad-night', 'suwon-chance-dome-night', 'ansan-hit-night', 'daejeon-seven-night',
-  'ilsan-shampoo-night'
+  'bulgwang-hobak', 'changwon-lululala-night', 'ulsan-champion-night', 'cheongdam-night',
+  'daejeon-one-night', 'sillim-grandprix-night', 'sangbong-hangukgwan-night', 'suyu-shampoo',
+  'busan-asiad-night', 'suwon-chance-dome', 'ansan-hit-night', 'daejeon-seven-night',
+  'ilsan-shampoo'
 ];
 
 const VERIFY = [
@@ -346,7 +346,7 @@ ${callbar(v)}
 const REGION_ORDER = [
   'eunpyeong-night', 'changwon-night', 'ulsan-night', 'gangnam-night',
   'daejeon-night', 'sillim-night', 'sangbong-night', 'suyu-night',
-  'busan-night', 'suwon-night', 'ansan-night', 'yucheon-night', 'ilsan-night'
+  'busan-night', 'suwon-nightclub', 'ansan-night', 'yucheon-night', 'ilsan-night'
 ];
 const regionPages = REGION_ORDER.map((s) => require(path.join(__dirname, 'region', s + '.js')));
 

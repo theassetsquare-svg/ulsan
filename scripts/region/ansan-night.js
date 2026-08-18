@@ -94,5 +94,5 @@ module.exports = {
     '단체 비중이 높아 붙은 자리는 미리 말해 두어야 합니다.',
     '연령 폭이 넓고 주차 조건이 선택 기준이 되는 구역입니다.'
   ],
-  links: ['suwon-night', 'ilsan-night', 'changwon-night']
+  links: ['suwon-nightclub', 'ilsan-night', 'changwon-night']
 };

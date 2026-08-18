@@ -3,7 +3,7 @@
    접미어 = 각도4 풀 10번째 "초보가 놓치는 것" · 중점 소재: 첫 방문 실수 */
 module.exports = {
   no: 10,
-  slug: 'suwon-night',
+  slug: 'suwon-nightclub',
   kw: '수원나이트',
   kwB: '수원 나이트',
   kwC: '수원 나이트클럽',
@@ -16,7 +16,7 @@ module.exports = {
   angleName: '처음 가는 사람 시점',
   suffix: '초보가 놓치는 것',
   contact: null,
-  venue: { slug: 'suwon-chance-dome-night', name: '수원찬스돔나이트', where: '권선구 권선로 673' },
+  venue: { slug: 'suwon-chance-dome', name: '수원찬스돔나이트', where: '권선구 권선로 673' },
   title: '수원나이트 초보가 놓치는 것 입구에서 할 첫 말',
   description: '수원나이트가 처음이면 입구에서 무엇을 말해야 할지부터 막힙니다. 도착 후 순서와 자리 고르는 법, 부킹에서 초보가 자주 놓치는 지점까지 차례로 적었습니다.',
   keywords: '수원나이트, 수원 나이트, 수원 나이트클럽, 권선동 나이트, 권선구 나이트',

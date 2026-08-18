@@ -3,7 +3,7 @@
    확인 사실: 충북 청주시 청원구 향군로15번길 9 · 우암동 · 청주 도시철도 없음
    미확인: 지번, 건물/층, 출입 연령 */
 module.exports = {
-  slug: 'cheongju-hobak-night',
+  slug: 'cheongju-hobak',
   name: '청주호박나이트',
   group: 'B',
   hue: 60,

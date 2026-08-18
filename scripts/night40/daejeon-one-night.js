@@ -76,5 +76,5 @@ module.exports = {
     { q: '영업시간은 어디서 확인하나요?', a: '공개된 값이 출처마다 위치까지 다르게 적고 있어 이 페이지에는 옮기지 않았습니다. 현장이나 공식 안내가 가장 정확합니다.' }
   ],
   oneLine: '언제든 떠날 수 있는 자리라서 오히려 오래 머무는 밤 — 용전동의 저녁은 그런 식으로 길어집니다.',
-  links: ['daejeon-seven-night', 'cheongju-hobak-night']
+  links: ['daejeon-seven-night', 'cheongju-hobak']
 };

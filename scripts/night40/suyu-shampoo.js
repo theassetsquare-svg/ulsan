@@ -3,7 +3,7 @@
    확인 사실: 도로명·지번 미확인(수유역 인근 도봉로변) · 4호선 수유역 · 서울 강북구
    미확인: 정확한 주소 · 출입 연령 · 영업시간 */
 module.exports = {
-  slug: 'suyu-shampoo-night',
+  slug: 'suyu-shampoo',
   name: '수유샴푸나이트',
   group: 'B',
   hue: 200,

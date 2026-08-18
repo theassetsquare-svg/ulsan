@@ -3,7 +3,7 @@
    H2 순서: 한눈에 → 좌석 → 시간 → 인원 → 위치 → 문의 · 중점 소재: 방문 전 체크리스트
    문단은 짧게, 목록 중심으로 쓴다. 첫 문장은 12자 이내로 끊는다. */
 module.exports = {
-  slug: 'suwon-chance-dome-night',
+  slug: 'suwon-chance-dome',
   name: '수원찬스돔나이트',
   nameB: '수원 찬스돔나이트',
   nameC: '수원 나이트클럽',
@@ -117,7 +117,7 @@ module.exports = {
   ],
   links: [
     { slug: 'ansan-hit-night', text: '안산히트나이트 살펴보기' },
-    { slug: 'ilsan-shampoo-night', text: '일산샴푸나이트 살펴보기' },
+    { slug: 'ilsan-shampoo', text: '일산샴푸나이트 살펴보기' },
     { slug: 'sillim-grandprix-night', text: '신림그랑프리나이트 살펴보기' }
   ]
 };

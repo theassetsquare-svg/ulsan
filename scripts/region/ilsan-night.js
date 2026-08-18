@@ -17,7 +17,7 @@ module.exports = {
   angleName: '문답형',
   suffix: '문답 정리',
   contact: null,
-  venue: { slug: 'ilsan-shampoo-night', name: '일산샴푸나이트', where: '일산동구 중앙로 1160' },
+  venue: { slug: 'ilsan-shampoo', name: '일산샴푸나이트', where: '일산동구 중앙로 1160' },
   title: '일산나이트 문답 정리 예약부터 자리까지 열네 개',
   description: '일산나이트로 가장 많이 들어오는 질문 열네 개를 예약 절차 순서대로 묶었습니다. 언제 연락하고 무엇을 말하는지, 답은 짧게 붙여 필요한 것만 읽게 했습니다.',
   keywords: '일산나이트, 일산 나이트, 일산 나이트클럽, 마두동 나이트, 고양시 나이트',
@@ -163,5 +163,5 @@ module.exports = {
     '문의할 때는 인원·도착 시각·자리 성격 세 가지를 전하면 됩니다.',
     '여섯 명이 넘는 단체는 붙은 자리가 필요하다고 미리 말하십시오.'
   ],
-  links: ['suwon-night', 'ansan-night', 'sangbong-night']
+  links: ['suwon-nightclub', 'ansan-night', 'sangbong-night']
 };

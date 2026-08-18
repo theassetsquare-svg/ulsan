@@ -16,7 +16,7 @@ module.exports = {
   angleName: '질문 던지기형',
   suffix: '첫 방문 괜찮을까',
   contact: null,
-  venue: { slug: 'suyu-shampoo-night', name: '수유샴푸나이트', where: '수유역 인근 도봉로변' },
+  venue: { slug: 'suyu-shampoo', name: '수유샴푸나이트', where: '수유역 인근 도봉로변' },
   title: '수유나이트 첫 방문 괜찮을까 사람 몰리는 이유부터',
   description: '수유나이트에 왜 사람이 계속 모이는지, 아무것도 모르고 처음 가도 무리가 없는지 먼저 답합니다. 좌석과 도착 시각까지 이어서 확인하면 첫 밤이 어렵지 않습니다.',
   keywords: '수유나이트, 수유 나이트, 수유 나이트클럽, 강북구 나이트, 수유역 나이트',

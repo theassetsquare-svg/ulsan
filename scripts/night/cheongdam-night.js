@@ -103,8 +103,8 @@ module.exports = {
     '예약과 문의는 펩시맨 010-5655-4866으로 하면 됩니다.'
   ],
   links: [
-    { slug: 'bulgwang-hobak-night', text: '불광동호박나이트 살펴보기' },
+    { slug: 'bulgwang-hobak', text: '불광동호박나이트 살펴보기' },
     { slug: 'sangbong-hangukgwan-night', text: '상봉동한국관나이트 살펴보기' },
-    { slug: 'ilsan-shampoo-night', text: '일산샴푸나이트 살펴보기' }
+    { slug: 'ilsan-shampoo', text: '일산샴푸나이트 살펴보기' }
   ]
 };

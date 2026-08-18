@@ -28,22 +28,22 @@ const KAKAO_URL = 'https://open.kakao.com/o/sBesta12';
 const AD_BAR_TEXT = '💬 광고문의 카카오톡 besta12';
 
 const ORDER = [
-  'sillim-grandprix-night', 'sangbong-hangukgwan-night', 'suyu-shampoo-night', 'busan-asiad-night',
-  'suwon-chance-dome-night', 'ansan-hit-night', 'daejeon-seven-night', 'ilsan-shampoo-night',
-  'cheongdam-night', 'daejeon-one-night', 'changwon-lululala-night', 'bulgwang-hobak-night',
+  'sillim-grandprix-night', 'sangbong-hangukgwan-night', 'suyu-shampoo', 'busan-asiad-night',
+  'suwon-chance-dome', 'ansan-hit-night', 'daejeon-seven-night', 'ilsan-shampoo',
+  'cheongdam-night', 'daejeon-one-night', 'changwon-lululala-night', 'bulgwang-hobak',
   'ulsan-champion-night', 'doksan-gukbingwan-night', 'dapsimni-miracle-night', 'gangseo-hobak-night',
   'yeongdeungpo-terminal-night', 'nowon-hobak-night', 'gildong-chance-night', 'paju-yadang-skydome-night',
   'guri-hobak-night', 'uijeongbu-hangukgwan-night', 'uijeongbu-baekakgwan-night', 'suwon-korea-night',
   'osan-hobak-night', 'indeogwon-gukbingwan-night', 'seongnam-shampoo-night', 'incheon-arabian-night',
   'bucheon-gorae-night', 'pyeongtaek-hobak-night', 'cheonan-stardome-night', 'cheonan-korea-night',
-  'cheongju-hobak-night', 'ulsan-newworld-night', 'seosan-hobak-night', 'daegu-hobak-night',
+  'cheongju-hobak', 'ulsan-newworld-night', 'seosan-hobak-night', 'daegu-hobak-night',
   'gumi-hobak-night', 'gwangju-sangmu-night', 'gwangju-cheomdan-night', 'jejudo-night'
 ];
 
 const REGION_ORDER = [
   'eunpyeong-night', 'changwon-night', 'ulsan-night', 'gangnam-night',
   'daejeon-night', 'sillim-night', 'sangbong-night', 'suyu-night',
-  'busan-night', 'suwon-night', 'ansan-night', 'yucheon-night', 'ilsan-night'
+  'busan-night', 'suwon-nightclub', 'ansan-night', 'yucheon-night', 'ilsan-night'
 ];
 
 const VERIFY = [

@@ -2,7 +2,7 @@
 /* 광고주 A그룹 3/3 · 각도: 역 앞 지하의 온도, 오래가는 이름론
    확인 사실: 통일로 730 · 불광동 281-92 · 건물 지하 · 3·6호선 불광역 같은 블록 · 담당 손흥민 */
 module.exports = {
-  slug: 'bulgwang-hobak-night',
+  slug: 'bulgwang-hobak',
   name: '불광동호박나이트',
   group: 'A',
   hue: 25,
@@ -76,5 +76,5 @@ module.exports = {
     { q: '자리는 어디에 물어보나요?', a: '담당 손흥민 010-2221-1937입니다. 인원, 도착 시각, 원하는 좌석 분위기를 말하면 배정이 빨라집니다.' }
   ],
   oneLine: '불광역의 밤은 계단 아래에서 천천히 익습니다 — 자리 상담은 손흥민 010-2221-1937.',
-  links: ['paju-yadang-skydome-night', 'ilsan-shampoo-night']
+  links: ['paju-yadang-skydome-night', 'ilsan-shampoo']
 };

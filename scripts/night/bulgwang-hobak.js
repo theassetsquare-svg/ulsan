@@ -2,7 +2,7 @@
 /* 업소번호 1 · SITE_INDEX 1 → 각도 1 정면 소개형 / 접미어 풀[1] "소문의 진짜 정체"
    H2 순서: 정체 → 좌석 → 시간대 → 부킹 → 위치 → 문의 · 중점 소재: 홀의 성격과 규모 */
 module.exports = {
-  slug: 'bulgwang-hobak-night',
+  slug: 'bulgwang-hobak',
   name: '불광동호박나이트',
   nameB: '불광동 호박나이트',
   nameC: '불광동 나이트클럽',
@@ -104,7 +104,7 @@ module.exports = {
   ],
   links: [
     { slug: 'sillim-grandprix-night', text: '신림그랑프리나이트 살펴보기' },
-    { slug: 'suyu-shampoo-night', text: '수유샴푸나이트 살펴보기' },
+    { slug: 'suyu-shampoo', text: '수유샴푸나이트 살펴보기' },
     { slug: 'sangbong-hangukgwan-night', text: '상봉동한국관나이트 살펴보기' }
   ]
 };

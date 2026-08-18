@@ -12,7 +12,7 @@ const PHONE_PAGES = {
   '/': '01056530069',
   '/night/ulsan-champion-night/': '01056530069',
   '/night/changwon-lululala-night/': '01075284936',
-  '/night/bulgwang-hobak-night/': '01022211937',
+  '/night/bulgwang-hobak/': '01022211937',
   '/night/ulsan-night/': '01056530069',
   '/night/changwon-night/': '01075284936',
   '/night/eunpyeong-night/': '01022211937'

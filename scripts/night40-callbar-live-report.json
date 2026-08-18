@@ -40,7 +40,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/suyu-shampoo-night/",
+    "pathname": "/night/suyu-shampoo/",
     "label": "suyu-shampoo-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -58,7 +58,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/suwon-chance-dome-night/",
+    "pathname": "/night/suwon-chance-dome/",
     "label": "suwon-chance-dome-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -85,7 +85,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/ilsan-shampoo-night/",
+    "pathname": "/night/ilsan-shampoo/",
     "label": "ilsan-shampoo-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -125,7 +125,7 @@
     "verdict": "OK 번호바 로또 01075284936"
   },
   {
-    "pathname": "/night/bulgwang-hobak-night/",
+    "pathname": "/night/bulgwang-hobak/",
     "label": "bulgwang-hobak-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"tel:01022211937\" aria-label=\"불광동호박나이트 손흥민에게 전화 연결\">📞 불광동호박나이트 손흥민 010-2221-1937</a>",
@@ -322,7 +322,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/cheongju-hobak-night/",
+    "pathname": "/night/cheongju-hobak/",
     "label": "cheongju-hobak-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -487,7 +487,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/suwon-night/",
+    "pathname": "/night/suwon-nightclub/",
     "label": "suwon-night (지역)",
     "http": 200,
     "bar": "<div class=\"callbar\" role=\"complementary\" aria-label=\"광고 제휴 문의\"> <span>광고·제휴 입점 문의 카톡 <b>besta12</b></span> </",

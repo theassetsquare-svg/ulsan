@@ -103,8 +103,8 @@ module.exports = {
     '평일 18시~04시, 주말 06시까지 영업으로 안내됩니다.'
   ],
   links: [
-    { slug: 'bulgwang-hobak-night', text: '불광동호박나이트 살펴보기' },
-    { slug: 'suyu-shampoo-night', text: '수유샴푸나이트 살펴보기' },
-    { slug: 'suwon-chance-dome-night', text: '수원찬스돔나이트 살펴보기' }
+    { slug: 'bulgwang-hobak', text: '불광동호박나이트 살펴보기' },
+    { slug: 'suyu-shampoo', text: '수유샴푸나이트 살펴보기' },
+    { slug: 'suwon-chance-dome', text: '수원찬스돔나이트 살펴보기' }
   ]
 };

@@ -73,5 +73,5 @@ module.exports = {
     { q: '출입 연령과 영업시간 정보는 없나요?', a: '두 항목 모두 공개 정보에서 확인하지 못해 적지 않았습니다. 확인되면 날짜와 함께 갱신하며, 광고 문의는 카카오톡 besta12입니다.' }
   ],
   oneLine: '지상의 하루가 끝나면 상계동의 밤은 두 층 아래에서 이어집니다 — 내려가는 계단이 그 입구입니다.',
-  links: ['suyu-shampoo-night', 'uijeongbu-hangukgwan-night']
+  links: ['suyu-shampoo', 'uijeongbu-hangukgwan-night']
 };

@@ -95,5 +95,5 @@ module.exports = {
     '준비물은 신분 확인용 하나면 되고 짐은 적을수록 편합니다.',
     '분위기는 늦게 오르지만 자리는 열 시 전에 정해집니다.'
   ],
-  links: ['daejeon-night', 'ulsan-night', 'suwon-night']
+  links: ['daejeon-night', 'ulsan-night', 'suwon-nightclub']
 };

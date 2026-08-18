@@ -76,5 +76,5 @@ module.exports = {
     { q: '역에서 걸어갈 수 있나요?', a: '역과의 도보 관계는 출처마다 표기가 달라 이 글에서는 단정하지 않습니다. 도로명 주소를 지도 앱에 넣어 확인하는 방법을 권합니다.' }
   ],
   oneLine: '흰 빛이 지고 주황 빛이 남는 시각, 성호대로 130의 밤은 그때부터 익습니다.',
-  links: ['suwon-chance-dome-night', 'pyeongtaek-hobak-night']
+  links: ['suwon-chance-dome', 'pyeongtaek-hobak-night']
 };
