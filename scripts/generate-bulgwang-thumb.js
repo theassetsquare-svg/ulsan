@@ -43,7 +43,7 @@ process.env.FONTCONFIG_FILE = FC_CONF;
 const sharp = require('sharp');
 
 const SIZE = 1200;
-const DOMAIN = 'ulsand.pages.dev';
+const DOMAIN = 'ulsane.pages.dev';
 const VENUE = '불광동호박나이트';
 const NICK = '손흥민';
 const ROLE = '예약 담당';

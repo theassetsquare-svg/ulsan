@@ -46,20 +46,20 @@ jobs:
           fi
           BODY=$(cat <<JSON
           {
-            "host": "ulsand.pages.dev",
+            "host": "ulsane.pages.dev",
             "key": "${INDEXNOW_KEY}",
-            "keyLocation": "https://ulsand.pages.dev/${INDEXNOW_KEY}.txt",
+            "keyLocation": "https://ulsane.pages.dev/${INDEXNOW_KEY}.txt",
             "urlList": [
-              "https://ulsand.pages.dev/",
-              "https://ulsand.pages.dev/story",
-              "https://ulsand.pages.dev/atmosphere",
-              "https://ulsand.pages.dev/first-visit",
-              "https://ulsand.pages.dev/access",
-              "https://ulsand.pages.dev/review",
-              "https://ulsand.pages.dev/faq",
-              "https://ulsand.pages.dev/contact",
-              "https://ulsand.pages.dev/policy/",
-              "https://ulsand.pages.dev/bulgwang-guide"
+              "https://ulsane.pages.dev/",
+              "https://ulsane.pages.dev/story",
+              "https://ulsane.pages.dev/atmosphere",
+              "https://ulsane.pages.dev/first-visit",
+              "https://ulsane.pages.dev/access",
+              "https://ulsane.pages.dev/review",
+              "https://ulsane.pages.dev/faq",
+              "https://ulsane.pages.dev/contact",
+              "https://ulsane.pages.dev/policy/",
+              "https://ulsane.pages.dev/bulgwang-guide"
             ]
           }
           JSON
@@ -73,4 +73,4 @@ jobs:
 
       - name: Google sitemap ping
         run: |
-          curl -sS -o /dev/null -w "Google ping: %{http_code}\n" "https://www.google.com/ping?sitemap=https://ulsand.pages.dev/sitemap.xml" || true
+          curl -sS -o /dev/null -w "Google ping: %{http_code}\n" "https://www.google.com/ping?sitemap=https://ulsane.pages.dev/sitemap.xml" || true

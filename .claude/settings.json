@@ -1,8 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(curl -s https://ulsand.pages.dev/*)",
-      "Bash(curl -sI https://ulsand.pages.dev/*)",
+      "Bash(curl -s https://ulsane.pages.dev/*)",
+      "Bash(curl -sI https://ulsane.pages.dev/*)",
       "Bash(node scripts/night-gates.js)",
       "Bash(node scripts/region-gates.js)",
       "Bash(node scripts/night-callbar-check.js *)",

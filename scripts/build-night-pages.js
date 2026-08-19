@@ -12,7 +12,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const SITE = 'https://ulsand.pages.dev';
+const SITE = 'https://ulsane.pages.dev';
 const TODAY = '2026-08-15';
 const TODAY_KO = '2026년 8월 15일';
 const SITE_INDEX = 1;

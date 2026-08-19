@@ -1,5 +1,5 @@
 /**
- * 1:1 (1200x1200) 검색 썸네일 생성기 — ulsand.pages.dev 전용
+ * 1:1 (1200x1200) 검색 썸네일 생성기 — ulsane.pages.dev 전용
  *
  * 네이버/구글 이미지 검색 썸네일용. 페이지마다 고유 이미지를 만든다.
  *
@@ -57,7 +57,7 @@ const sharp = require('sharp');
 
 // ── 고정 정보 ────────────────────────────────────────────────────────────
 const SIZE = 1200;
-const DOMAIN = 'ulsand.pages.dev';
+const DOMAIN = 'ulsane.pages.dev';
 const VENUE = '울산챔피언나이트';
 const NICK = '춘자';
 const ROLE = '예약 담당 실장';

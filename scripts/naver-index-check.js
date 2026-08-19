@@ -22,7 +22,7 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
-const SITE = 'https://ulsand.pages.dev';
+const SITE = 'https://ulsane.pages.dev';
 const UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36';
 const DELAY_MS = 15000;
@@ -118,7 +118,7 @@ async function checkNaver(url) {
           ...new Set(
             [...res.body.matchAll(/data-url="(https:\/\/[^"]+)"/g)]
               .map((m) => m[1])
-              .filter((u) => /ulsand\.pages\.dev/.test(u))
+              .filter((u) => /ulsane\.pages\.dev/.test(u))
           )
         ];
         return { indexed: hits.some((h) => norm(h) === norm(url)), hits, error: null };
