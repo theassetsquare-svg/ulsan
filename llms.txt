@@ -4,7 +4,7 @@
 
 - 사이트: https://ulsane.pages.dev/
 - 업소 목록 허브: https://ulsane.pages.dev/night/ — 전국 나이트 40곳, 밤의 지도를 한 장에
-- 최종 갱신: 2026년 8월 16일 (2026-08-16)
+- 최종 갱신: 2026년 8월 19일 (2026-08-19)
 - 광고·정정 문의: 카카오톡 besta12
 
 ## 편집 원칙
@@ -74,7 +74,7 @@
 
 ## 주요 페이지
 
-- [홈](https://ulsane.pages.dev/)
+- [홈 — 성공스토리 단독 페이지](https://ulsane.pages.dev/): 마흔셋에 일자리를 잃은 사람이 7년에 걸쳐 다시 서기까지의 기록. 업소 안내가 아닌 독립 읽을거리입니다.
 - [이야기](https://ulsane.pages.dev/story)
 - [분위기](https://ulsane.pages.dev/atmosphere)
 - [첫 방문](https://ulsane.pages.dev/first-visit)
