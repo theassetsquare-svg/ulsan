@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Allow: /og/
 
 User-agent: Googlebot
 Allow: /
