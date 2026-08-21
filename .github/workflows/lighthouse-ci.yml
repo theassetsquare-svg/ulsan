@@ -24,14 +24,14 @@ jobs:
       fail-fast: false
       matrix:
         page:
-          - { name: home,         url: 'https://ulsane.pages.dev/' }
-          - { name: story,        url: 'https://ulsane.pages.dev/story' }
-          - { name: atmosphere,   url: 'https://ulsane.pages.dev/atmosphere' }
-          - { name: first-visit,  url: 'https://ulsane.pages.dev/first-visit' }
-          - { name: access,       url: 'https://ulsane.pages.dev/access' }
-          - { name: review,       url: 'https://ulsane.pages.dev/review' }
-          - { name: faq,          url: 'https://ulsane.pages.dev/faq' }
-          - { name: contact,      url: 'https://ulsane.pages.dev/contact' }
+          - { name: home,         url: 'https://love-8r5.pages.dev/' }
+          - { name: story,        url: 'https://love-8r5.pages.dev/story' }
+          - { name: atmosphere,   url: 'https://love-8r5.pages.dev/atmosphere' }
+          - { name: first-visit,  url: 'https://love-8r5.pages.dev/first-visit' }
+          - { name: access,       url: 'https://love-8r5.pages.dev/access' }
+          - { name: review,       url: 'https://love-8r5.pages.dev/review' }
+          - { name: faq,          url: 'https://love-8r5.pages.dev/faq' }
+          - { name: contact,      url: 'https://love-8r5.pages.dev/contact' }
         form:
           - mobile
           - desktop
