@@ -3,7 +3,7 @@
  * .callbar 고정 검증 (G05·G06·G07·G08·G12) + 조상 체인 속성 검사.
  * 사용: node scripts/night-callbar-check.js <baseUrl>
  *   예) node scripts/night-callbar-check.js http://127.0.0.1:8099
- *       node scripts/night-callbar-check.js https://ulsane.pages.dev
+ *       node scripts/night-callbar-check.js https://love-8r5.pages.dev
  */
 const path = require('path');
 const fs = require('fs');

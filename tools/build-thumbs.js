@@ -2,7 +2,7 @@ const fs=require('fs'),path=require('path');
 const {build,writePng}=require('./render-thumbs.js');
 const ROOT=path.resolve(__dirname,'..');
 process.chdir(ROOT);
-const BASE='https://ulsane.pages.dev';
+const BASE='https://love-8r5.pages.dev';
 function walk(d,out=[]){for(const e of fs.readdirSync(d,{withFileTypes:true})){if(e.name==='node_modules'||e.name.startsWith('.'))continue;const p=path.join(d,e.name);if(e.isDirectory())walk(p,out);else if(e.name.endsWith('.html'))out.push(path.relative(ROOT,p));}return out;}
 
 // ★ 광고주 정답표 (2026-08-20 확정, 총 4명)

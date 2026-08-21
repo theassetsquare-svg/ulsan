@@ -2,7 +2,7 @@
 const fs=require('fs'),path=require('path');
 const sharp=require('sharp');
 const ROOT=path.resolve(__dirname,'..');process.chdir(ROOT);
-const BASE='https://ulsane.pages.dev';
+const BASE='https://love-8r5.pages.dev';
 function walk(d,out=[]){for(const e of fs.readdirSync(d,{withFileTypes:true})){if(e.name==='node_modules'||e.name.startsWith('.'))continue;const p=path.join(d,e.name);if(e.isDirectory())walk(p,out);else if(e.name.endsWith('.html'))out.push(path.relative(ROOT,p));}return out;}
 const man=JSON.parse(fs.readFileSync('og/manifest.json','utf8'));
 const byFile=Object.fromEntries(man.이미지.map(i=>[i.파일명,i]));
@@ -120,7 +120,7 @@ const rb=fs.readFileSync('robots.txt','utf8');
 if(/Disallow:\s*\S/.test(rb))fail.push(['G10-robots','robots.txt','Disallow 존재']);
 if(/noimageindex/i.test(rb))fail.push(['G10-robots','robots.txt','noimageindex 존재']);
 const sm=fs.readFileSync('sitemap.xml','utf8');
-if(!sm.includes('<loc>https://ulsane.pages.dev/</loc>'))fail.push(['sitemap','sitemap.xml','홈 누락']);
+if(!sm.includes('<loc>https://love-8r5.pages.dev/</loc>'))fail.push(['sitemap','sitemap.xml','홈 누락']);
 console.log(fail.length?'❌ 실패 '+fail.length+'건':'✅ 전 게이트 통과');
 const grp={};fail.forEach(f=>{(grp[f[0]]=grp[f[0]]||[]).push(f[1]+' :: '+f[2])});
 for(const k in grp){console.log('\n['+k+'] '+grp[k].length+'건');grp[k].slice(0,25).forEach(x=>console.log('   '+x));}

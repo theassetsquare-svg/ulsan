@@ -2,8 +2,8 @@
 
 > 전국 나이트클럽 40곳을 장면과 이야기로 정리한 소개 사이트입니다. 공개된 웹 정보만 사용하며, 확인되지 않은 항목은 "공개 정보로 확인 불가"로 표기합니다.
 
-- 사이트: https://ulsane.pages.dev/
-- 업소 목록 허브: https://ulsane.pages.dev/night/ — 전국 나이트 40곳, 밤의 지도를 한 장에
+- 사이트: https://love-8r5.pages.dev/
+- 업소 목록 허브: https://love-8r5.pages.dev/night/ — 전국 나이트 40곳, 밤의 지도를 한 장에
 - 최종 갱신: 2026년 8월 19일 (2026-08-19)
 - 광고·정정 문의: 카카오톡 besta12
 
@@ -15,78 +15,78 @@
 
 ## 업소 페이지 40곳
 
-- [신림그랑프리나이트, 간판 불이 먼저 아는 밤](https://ulsane.pages.dev/night/sillim-grandprix-night/): 신림그랑프리나이트 · 서울 관악구 신림로 340
-- [상봉동한국관나이트, 밤이 두 번 시작되는 집](https://ulsane.pages.dev/night/sangbong-hangukgwan-night/): 상봉동한국관나이트 · 서울 중랑구 망우로 326
-- [수유샴푸나이트, 첫 방문에 이것부터 하면 꼬인다](https://ulsane.pages.dev/night/suyu-shampoo/): 수유샴푸나이트 · 서울특별시 강북구 권역 (주소 확인 불가)
-- [부산아시아드나이트, 온천장 지하로 내려가는 밤](https://ulsane.pages.dev/night/busan-asiad-night/): 부산아시아드나이트 · 부산 동래구 온천장로107번길 32
-- [수원찬스돔나이트, 지붕 아래에서 길을 잃는 순간](https://ulsane.pages.dev/night/suwon-chance-dome/): 수원찬스돔나이트 · 경기 수원시 권선구 권선로 673
-- [안산히트나이트, 퇴근길이 무대 앞에서 끝나는 밤](https://ulsane.pages.dev/night/ansan-hit-night/): 안산히트나이트 · 경기 안산시 상록구 상록수로 34
-- [대전세븐나이트, 일곱 번째 밤이 특별한 이유](https://ulsane.pages.dev/night/daejeon-seven-night/): 대전세븐나이트 · 대전 중구 당디로 112
-- [일산샴푸나이트, 8층에서 시작되는 저녁](https://ulsane.pages.dev/night/ilsan-shampoo/): 일산샴푸나이트 · 경기 고양시 일산동구 중앙로 1160
-- [청담나이트, 강남 밤의 마지막 자존심](https://ulsane.pages.dev/night/cheongdam-night/): 청담나이트 · 서울 강남구 영동대로 737
-- [대전원나이트, 터미널 불빛을 등지고 걷는 길](https://ulsane.pages.dev/night/daejeon-one-night/): 대전원나이트 · 대전 동구 권역 (주소 확인 불가)
-- [창원룰루랄라나이트, 지하 3층에서 만나는 딴 세상](https://ulsane.pages.dev/night/changwon-lululala-night/): 창원룰루랄라나이트 · 경남 창원시 성산구 마디미로43번길 10
-- [불광동호박나이트, 은평의 밤이 익는 지하 한 층](https://ulsane.pages.dev/night/bulgwang-hobak/): 불광동호박나이트 · 서울 은평구 통일로 730
-- [울산챔피언나이트, 터미널 옆에서 열리는 본진](https://ulsane.pages.dev/night/ulsan-champion-night/): 울산챔피언나이트 · 울산 남구 정동로 75
-- [독산동국빈관나이트, 손님을 귀빈으로 만드는 밤](https://ulsane.pages.dev/night/doksan-gukbingwan-night/): 독산동국빈관나이트 · 서울 금천구 범안로 1209
-- [답십리미라클나이트, 소문으로만 남은 밤을 찾아서](https://ulsane.pages.dev/night/dapsimni-miracle-night/): 답십리미라클나이트 · 서울특별시 동대문구 권역 (주소 확인 불가)
-- [강서호박나이트, 호텔 지하에서 익어가는 밤](https://ulsane.pages.dev/night/gangseo-hobak-night/): 강서호박나이트 · 서울 강서구 화곡로 354-10
-- [영등포터미널나이트, 막차를 보내고 남는 사람들](https://ulsane.pages.dev/night/yeongdeungpo-terminal-night/): 영등포터미널나이트 · 서울 영등포구 영중로8길 6
-- [노원호박나이트, 상계동 밤이 내려가는 지하 두 층](https://ulsane.pages.dev/night/nowon-hobak-night/): 노원호박나이트 · 서울 노원구 노해로 456
-- [길동찬스나이트, 기회는 밤에만 온다는 말](https://ulsane.pages.dev/night/gildong-chance-night/): 길동찬스나이트 · 서울 강동구 천호대로 1135
-- [파주야당스카이돔나이트, 역에서 3분 밤이 열린다](https://ulsane.pages.dev/night/paju-yadang-skydome-night/): 파주야당스카이돔나이트 · 경기 파주시 소리천로 25
-- [구리호박나이트, 수택동 밤의 오래된 궁금증](https://ulsane.pages.dev/night/guri-hobak-night/): 구리호박나이트 · 경기 구리시 안골로 105
-- [의정부한국관나이트, 태평로 골목 2층의 밤](https://ulsane.pages.dev/night/uijeongbu-hangukgwan-night/): 의정부한국관나이트 · 경기 의정부시 태평로99번길 17
-- [의정부백악관나이트, 이름값을 하는 밤의 관저](https://ulsane.pages.dev/night/uijeongbu-baekakgwan-night/): 의정부백악관나이트 · 경기 의정부시 태평로 104
-- [수원코리아나이트, 인계동 밤을 지키는 이름](https://ulsane.pages.dev/night/suwon-korea-night/): 수원코리아나이트 · 경기 수원시 팔달구 경수대로 430
-- [오산호박나이트, 성호대로의 밤이 무르익을 때](https://ulsane.pages.dev/night/osan-hobak-night/): 오산호박나이트 · 경기 오산시 성호대로 130
-- [인덕원국빈관나이트, 사거리의 밤은 아직인가](https://ulsane.pages.dev/night/indeogwon-gukbingwan-night/): 인덕원국빈관나이트 · 경기 안양시 동안구 흥안대로 524
-- [성남샴푸나이트, 모란 사거리 2층의 긴 밤](https://ulsane.pages.dev/night/seongnam-shampoo-night/): 성남샴푸나이트 · 경기 성남시 중원구 광명로 21
-- [인천아라비안나이트, 계산동에 뜬 이름 하나](https://ulsane.pages.dev/night/incheon-arabian-night/): 인천아라비안나이트 · 인천 계양구 도두리로 14
-- [부천고래나이트, 중동 밤바다에 뜨는 큰 등](https://ulsane.pages.dev/night/bucheon-gorae-night/): 부천고래나이트 · 경기 부천시 원미구 중동로248번길 105
-- [평택호박나이트, 원정 온 밤이 모이는 2층](https://ulsane.pages.dev/night/pyeongtaek-hobak-night/): 평택호박나이트 · 경기 평택시 중앙로 16
-- [천안스타돔나이트, 성정동 밤을 여는 둥근 지붕](https://ulsane.pages.dev/night/cheonan-stardome-night/): 천안스타돔나이트 · 충남 천안시 서북구 성정공원1길 21
-- [천안코리아나이트, 쌍용동에서 밤이 늦는 까닭](https://ulsane.pages.dev/night/cheonan-korea-night/): 천안코리아나이트 · 충남 천안시 서북구 차돌들길 7
-- [청주호박나이트, 우암동 골목이 환해지는 시각](https://ulsane.pages.dev/night/cheongju-hobak/): 청주호박나이트 · 충북 청주시 청원구 향군로15번길 9
-- [울산뉴월드나이트, 삼산로에 새로 뜬 밤](https://ulsane.pages.dev/night/ulsan-newworld-night/): 울산뉴월드나이트 · 울산 남구 삼산로 375
-- [서산호박나이트, 읍내동 지하상가의 저녁](https://ulsane.pages.dev/night/seosan-hobak-night/): 서산호박나이트 · 충남 서산시 읍내1로 35
-- [대구호박나이트, 칠곡 밤의 마지막 정거장](https://ulsane.pages.dev/night/daegu-hobak-night/): 대구호박나이트 · 대구 북구 칠곡중앙대로 435
-- [구미호박나이트, 산업로 야근 뒤에 남는 시간](https://ulsane.pages.dev/night/gumi-hobak-night/): 구미호박나이트 · 경북 구미시 산업로 242
-- [광주상무나이트, 치평동 밤이 늦게 식는 이유](https://ulsane.pages.dev/night/gwangju-sangmu-night/): 광주상무나이트 · 치평동 1240-8 (지번만 확인)
-- [광주첨단나이트, 월계동 이름이 헷갈리는 밤](https://ulsane.pages.dev/night/gwangju-cheomdan-night/): 광주첨단나이트 · 광주 광산구 권역 (주소 확인 불가)
-- [제주도나이트, 여행 마지막 밤이 길어지는 이유](https://ulsane.pages.dev/night/jejudo-night/): 제주도나이트 · 제주특별자치도 제주시 권역 (주소 확인 불가)
+- [신림그랑프리나이트, 간판 불이 먼저 아는 밤](https://love-8r5.pages.dev/night/sillim-grandprix-night/): 신림그랑프리나이트 · 서울 관악구 신림로 340
+- [상봉동한국관나이트, 밤이 두 번 시작되는 집](https://love-8r5.pages.dev/night/sangbong-hangukgwan-night/): 상봉동한국관나이트 · 서울 중랑구 망우로 326
+- [수유샴푸나이트, 첫 방문에 이것부터 하면 꼬인다](https://love-8r5.pages.dev/night/suyu-shampoo/): 수유샴푸나이트 · 서울특별시 강북구 권역 (주소 확인 불가)
+- [부산아시아드나이트, 온천장 지하로 내려가는 밤](https://love-8r5.pages.dev/night/busan-asiad-night/): 부산아시아드나이트 · 부산 동래구 온천장로107번길 32
+- [수원찬스돔나이트, 지붕 아래에서 길을 잃는 순간](https://love-8r5.pages.dev/night/suwon-chance-dome/): 수원찬스돔나이트 · 경기 수원시 권선구 권선로 673
+- [안산히트나이트, 퇴근길이 무대 앞에서 끝나는 밤](https://love-8r5.pages.dev/night/ansan-hit-night/): 안산히트나이트 · 경기 안산시 상록구 상록수로 34
+- [대전세븐나이트, 일곱 번째 밤이 특별한 이유](https://love-8r5.pages.dev/night/daejeon-seven-night/): 대전세븐나이트 · 대전 중구 당디로 112
+- [일산샴푸나이트, 8층에서 시작되는 저녁](https://love-8r5.pages.dev/night/ilsan-shampoo/): 일산샴푸나이트 · 경기 고양시 일산동구 중앙로 1160
+- [청담나이트, 강남 밤의 마지막 자존심](https://love-8r5.pages.dev/night/cheongdam-night/): 청담나이트 · 서울 강남구 영동대로 737
+- [대전원나이트, 터미널 불빛을 등지고 걷는 길](https://love-8r5.pages.dev/night/daejeon-one-night/): 대전원나이트 · 대전 동구 권역 (주소 확인 불가)
+- [창원룰루랄라나이트, 지하 3층에서 만나는 딴 세상](https://love-8r5.pages.dev/night/changwon-lululala-night/): 창원룰루랄라나이트 · 경남 창원시 성산구 마디미로43번길 10
+- [불광동호박나이트, 은평의 밤이 익는 지하 한 층](https://love-8r5.pages.dev/night/bulgwang-hobak/): 불광동호박나이트 · 서울 은평구 통일로 730
+- [울산챔피언나이트, 터미널 옆에서 열리는 본진](https://love-8r5.pages.dev/night/ulsan-champion-night/): 울산챔피언나이트 · 울산 남구 정동로 75
+- [독산동국빈관나이트, 손님을 귀빈으로 만드는 밤](https://love-8r5.pages.dev/night/doksan-gukbingwan-night/): 독산동국빈관나이트 · 서울 금천구 범안로 1209
+- [답십리미라클나이트, 소문으로만 남은 밤을 찾아서](https://love-8r5.pages.dev/night/dapsimni-miracle-night/): 답십리미라클나이트 · 서울특별시 동대문구 권역 (주소 확인 불가)
+- [강서호박나이트, 호텔 지하에서 익어가는 밤](https://love-8r5.pages.dev/night/gangseo-hobak-night/): 강서호박나이트 · 서울 강서구 화곡로 354-10
+- [영등포터미널나이트, 막차를 보내고 남는 사람들](https://love-8r5.pages.dev/night/yeongdeungpo-terminal-night/): 영등포터미널나이트 · 서울 영등포구 영중로8길 6
+- [노원호박나이트, 상계동 밤이 내려가는 지하 두 층](https://love-8r5.pages.dev/night/nowon-hobak-night/): 노원호박나이트 · 서울 노원구 노해로 456
+- [길동찬스나이트, 기회는 밤에만 온다는 말](https://love-8r5.pages.dev/night/gildong-chance-night/): 길동찬스나이트 · 서울 강동구 천호대로 1135
+- [파주야당스카이돔나이트, 역에서 3분 밤이 열린다](https://love-8r5.pages.dev/night/paju-yadang-skydome-night/): 파주야당스카이돔나이트 · 경기 파주시 소리천로 25
+- [구리호박나이트, 수택동 밤의 오래된 궁금증](https://love-8r5.pages.dev/night/guri-hobak-night/): 구리호박나이트 · 경기 구리시 안골로 105
+- [의정부한국관나이트, 태평로 골목 2층의 밤](https://love-8r5.pages.dev/night/uijeongbu-hangukgwan-night/): 의정부한국관나이트 · 경기 의정부시 태평로99번길 17
+- [의정부백악관나이트, 이름값을 하는 밤의 관저](https://love-8r5.pages.dev/night/uijeongbu-baekakgwan-night/): 의정부백악관나이트 · 경기 의정부시 태평로 104
+- [수원코리아나이트, 인계동 밤을 지키는 이름](https://love-8r5.pages.dev/night/suwon-korea-night/): 수원코리아나이트 · 경기 수원시 팔달구 경수대로 430
+- [오산호박나이트, 성호대로의 밤이 무르익을 때](https://love-8r5.pages.dev/night/osan-hobak-night/): 오산호박나이트 · 경기 오산시 성호대로 130
+- [인덕원국빈관나이트, 사거리의 밤은 아직인가](https://love-8r5.pages.dev/night/indeogwon-gukbingwan-night/): 인덕원국빈관나이트 · 경기 안양시 동안구 흥안대로 524
+- [성남샴푸나이트, 모란 사거리 2층의 긴 밤](https://love-8r5.pages.dev/night/seongnam-shampoo-night/): 성남샴푸나이트 · 경기 성남시 중원구 광명로 21
+- [인천아라비안나이트, 계산동에 뜬 이름 하나](https://love-8r5.pages.dev/night/incheon-arabian-night/): 인천아라비안나이트 · 인천 계양구 도두리로 14
+- [부천고래나이트, 중동 밤바다에 뜨는 큰 등](https://love-8r5.pages.dev/night/bucheon-gorae-night/): 부천고래나이트 · 경기 부천시 원미구 중동로248번길 105
+- [평택호박나이트, 원정 온 밤이 모이는 2층](https://love-8r5.pages.dev/night/pyeongtaek-hobak-night/): 평택호박나이트 · 경기 평택시 중앙로 16
+- [천안스타돔나이트, 성정동 밤을 여는 둥근 지붕](https://love-8r5.pages.dev/night/cheonan-stardome-night/): 천안스타돔나이트 · 충남 천안시 서북구 성정공원1길 21
+- [천안코리아나이트, 쌍용동에서 밤이 늦는 까닭](https://love-8r5.pages.dev/night/cheonan-korea-night/): 천안코리아나이트 · 충남 천안시 서북구 차돌들길 7
+- [청주호박나이트, 우암동 골목이 환해지는 시각](https://love-8r5.pages.dev/night/cheongju-hobak/): 청주호박나이트 · 충북 청주시 청원구 향군로15번길 9
+- [울산뉴월드나이트, 삼산로에 새로 뜬 밤](https://love-8r5.pages.dev/night/ulsan-newworld-night/): 울산뉴월드나이트 · 울산 남구 삼산로 375
+- [서산호박나이트, 읍내동 지하상가의 저녁](https://love-8r5.pages.dev/night/seosan-hobak-night/): 서산호박나이트 · 충남 서산시 읍내1로 35
+- [대구호박나이트, 칠곡 밤의 마지막 정거장](https://love-8r5.pages.dev/night/daegu-hobak-night/): 대구호박나이트 · 대구 북구 칠곡중앙대로 435
+- [구미호박나이트, 산업로 야근 뒤에 남는 시간](https://love-8r5.pages.dev/night/gumi-hobak-night/): 구미호박나이트 · 경북 구미시 산업로 242
+- [광주상무나이트, 치평동 밤이 늦게 식는 이유](https://love-8r5.pages.dev/night/gwangju-sangmu-night/): 광주상무나이트 · 치평동 1240-8 (지번만 확인)
+- [광주첨단나이트, 월계동 이름이 헷갈리는 밤](https://love-8r5.pages.dev/night/gwangju-cheomdan-night/): 광주첨단나이트 · 광주 광산구 권역 (주소 확인 불가)
+- [제주도나이트, 여행 마지막 밤이 길어지는 이유](https://love-8r5.pages.dev/night/jejudo-night/): 제주도나이트 · 제주특별자치도 제주시 권역 (주소 확인 불가)
 
 ## 지역 안내 페이지 13곳
 
-- [은평나이트 입장부터 끝까지](https://ulsane.pages.dev/night/eunpyeong-night/): 서울 은평구
-- [창원나이트 차이점 정리](https://ulsane.pages.dev/night/changwon-night/): 경남 창원시
-- [울산나이트 요점 정리](https://ulsane.pages.dev/night/ulsan-night/): 울산광역시
-- [강남나이트 단체 방문 안내](https://ulsane.pages.dev/night/gangnam-night/): 서울 강남구
-- [대전나이트 후회하는 지점](https://ulsane.pages.dev/night/daejeon-night/): 대전광역시
-- [신림나이트 반복 방문 정리](https://ulsane.pages.dev/night/sillim-night/): 서울 관악구
-- [상봉동나이트 오래 남은 데는 이유가](https://ulsane.pages.dev/night/sangbong-night/): 서울 중랑구
-- [수유나이트 첫 방문 괜찮을까](https://ulsane.pages.dev/night/suyu-night/): 서울 강북구
-- [부산나이트 테이블이 다 차는 밤](https://ulsane.pages.dev/night/busan-night/): 부산광역시
-- [수원나이트 초보가 놓치는 것](https://ulsane.pages.dev/night/suwon-nightclub/): 경기 수원시
-- [안산나이트 붐비는 까닭](https://ulsane.pages.dev/night/ansan-night/): 경기 안산시
-- [유천동나이트 예상과 다른 점](https://ulsane.pages.dev/night/yucheon-night/): 대전 중구 유천동
-- [일산나이트 문답 정리](https://ulsane.pages.dev/night/ilsan-night/): 경기 고양시 일산
+- [은평나이트 입장부터 끝까지](https://love-8r5.pages.dev/night/eunpyeong-night/): 서울 은평구
+- [창원나이트 차이점 정리](https://love-8r5.pages.dev/night/changwon-night/): 경남 창원시
+- [울산나이트 요점 정리](https://love-8r5.pages.dev/night/ulsan-night/): 울산광역시
+- [강남나이트 단체 방문 안내](https://love-8r5.pages.dev/night/gangnam-night/): 서울 강남구
+- [대전나이트 후회하는 지점](https://love-8r5.pages.dev/night/daejeon-night/): 대전광역시
+- [신림나이트 반복 방문 정리](https://love-8r5.pages.dev/night/sillim-night/): 서울 관악구
+- [상봉동나이트 오래 남은 데는 이유가](https://love-8r5.pages.dev/night/sangbong-night/): 서울 중랑구
+- [수유나이트 첫 방문 괜찮을까](https://love-8r5.pages.dev/night/suyu-night/): 서울 강북구
+- [부산나이트 테이블이 다 차는 밤](https://love-8r5.pages.dev/night/busan-night/): 부산광역시
+- [수원나이트 초보가 놓치는 것](https://love-8r5.pages.dev/night/suwon-nightclub/): 경기 수원시
+- [안산나이트 붐비는 까닭](https://love-8r5.pages.dev/night/ansan-night/): 경기 안산시
+- [유천동나이트 예상과 다른 점](https://love-8r5.pages.dev/night/yucheon-night/): 대전 중구 유천동
+- [일산나이트 문답 정리](https://love-8r5.pages.dev/night/ilsan-night/): 경기 고양시 일산
 
 ## 주요 페이지
 
-- [홈 — 성공스토리 단독 페이지](https://ulsane.pages.dev/): 마흔셋에 일자리를 잃은 사람이 7년에 걸쳐 다시 서기까지의 기록. 업소 안내가 아닌 독립 읽을거리입니다.
-- [이야기](https://ulsane.pages.dev/story)
-- [분위기](https://ulsane.pages.dev/atmosphere)
-- [첫 방문](https://ulsane.pages.dev/first-visit)
-- [오시는 길](https://ulsane.pages.dev/access)
-- [방문 기록](https://ulsane.pages.dev/review)
-- [자주 묻는 질문](https://ulsane.pages.dev/faq)
-- [문의](https://ulsane.pages.dev/contact)
-- [이용 안내](https://ulsane.pages.dev/policy/)
-- [불광동 밤 놀거리 가이드](https://ulsane.pages.dev/bulgwang-guide)
+- [홈 — 성공스토리 단독 페이지](https://love-8r5.pages.dev/): 마흔셋에 일자리를 잃은 사람이 7년에 걸쳐 다시 서기까지의 기록. 업소 안내가 아닌 독립 읽을거리입니다.
+- [이야기](https://love-8r5.pages.dev/story)
+- [분위기](https://love-8r5.pages.dev/atmosphere)
+- [첫 방문](https://love-8r5.pages.dev/first-visit)
+- [오시는 길](https://love-8r5.pages.dev/access)
+- [방문 기록](https://love-8r5.pages.dev/review)
+- [자주 묻는 질문](https://love-8r5.pages.dev/faq)
+- [문의](https://love-8r5.pages.dev/contact)
+- [이용 안내](https://love-8r5.pages.dev/policy/)
+- [불광동 밤 놀거리 가이드](https://love-8r5.pages.dev/bulgwang-guide)
 
 ## 참고
 
-- 사이트맵: https://ulsane.pages.dev/sitemap.xml
-- robots.txt: https://ulsane.pages.dev/robots.txt (모든 봇 허용)
-- 각 페이지 썸네일: https://ulsane.pages.dev/og/{슬러그}.png (1200×1200 PNG)
+- 사이트맵: https://love-8r5.pages.dev/sitemap.xml
+- robots.txt: https://love-8r5.pages.dev/robots.txt (모든 봇 허용)
+- 각 페이지 썸네일: https://love-8r5.pages.dev/og/{슬러그}.png (1200×1200 PNG)

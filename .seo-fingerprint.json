@@ -1,13 +1,13 @@
 {
   "siteIndex": 1,
-  "site": "https://ulsane.pages.dev",
+  "site": "https://love-8r5.pages.dev",
   "angleRule": "각도번호 = ((SITE_INDEX-1) + (업소번호-1)) mod 13 + 1 · 접미어는 해당 각도 풀의 [업소번호]번째",
   "generatedAt": "2026-08-15",
   "pages": [
     {
       "venueNo": 1,
       "slug": "bulgwang-hobak-night",
-      "url": "https://ulsane.pages.dev/night/bulgwang-hobak/",
+      "url": "https://love-8r5.pages.dev/night/bulgwang-hobak/",
       "angleNo": 1,
       "angleName": "정면 소개형",
       "suffix": "소문의 진짜 정체",
@@ -26,7 +26,7 @@
     {
       "venueNo": 2,
       "slug": "changwon-lululala-night",
-      "url": "https://ulsane.pages.dev/night/changwon-lululala-night/",
+      "url": "https://love-8r5.pages.dev/night/changwon-lululala-night/",
       "angleNo": 2,
       "angleName": "질문 던지기형",
       "suffix": "뭐가 다르길래",
@@ -45,7 +45,7 @@
     {
       "venueNo": 3,
       "slug": "ulsan-champion-night",
-      "url": "https://ulsane.pages.dev/night/ulsan-champion-night/",
+      "url": "https://love-8r5.pages.dev/night/ulsan-champion-night/",
       "angleNo": 3,
       "angleName": "장면 묘사형",
       "suffix": "홀이 차오르는 순간",
@@ -64,7 +64,7 @@
     {
       "venueNo": 4,
       "slug": "cheongdam-night",
-      "url": "https://ulsane.pages.dev/night/cheongdam-night/",
+      "url": "https://love-8r5.pages.dev/night/cheongdam-night/",
       "angleNo": 4,
       "angleName": "처음 가는 사람 시점",
       "suffix": "처음 가는 사람 안내",
@@ -83,7 +83,7 @@
     {
       "venueNo": 5,
       "slug": "daejeon-one-night",
-      "url": "https://ulsane.pages.dev/night/daejeon-one-night/",
+      "url": "https://love-8r5.pages.dev/night/daejeon-one-night/",
       "angleNo": 5,
       "angleName": "이유 나열형",
       "suffix": "사람이 오는 이유",
@@ -102,7 +102,7 @@
     {
       "venueNo": 6,
       "slug": "sillim-grandprix-night",
-      "url": "https://ulsane.pages.dev/night/sillim-grandprix-night/",
+      "url": "https://love-8r5.pages.dev/night/sillim-grandprix-night/",
       "angleNo": 6,
       "angleName": "오해 깨기형",
       "suffix": "실제는 다르다",
@@ -121,7 +121,7 @@
     {
       "venueNo": 7,
       "slug": "sangbong-hangukgwan-night",
-      "url": "https://ulsane.pages.dev/night/sangbong-hangukgwan-night/",
+      "url": "https://love-8r5.pages.dev/night/sangbong-hangukgwan-night/",
       "angleNo": 7,
       "angleName": "문답형",
       "suffix": "궁금증 해결",
@@ -147,7 +147,7 @@
     {
       "venueNo": 8,
       "slug": "suyu-shampoo-night",
-      "url": "https://ulsane.pages.dev/night/suyu-shampoo/",
+      "url": "https://love-8r5.pages.dev/night/suyu-shampoo/",
       "angleNo": 8,
       "angleName": "시간 흐름형",
       "suffix": "한 밤의 순서",
@@ -166,7 +166,7 @@
     {
       "venueNo": 9,
       "slug": "busan-asiad-night",
-      "url": "https://ulsane.pages.dev/night/busan-asiad-night/",
+      "url": "https://love-8r5.pages.dev/night/busan-asiad-night/",
       "angleNo": 9,
       "angleName": "비교 설명형",
       "suffix": "다른 곳과 비교",
@@ -185,7 +185,7 @@
     {
       "venueNo": 10,
       "slug": "suwon-chance-dome-night",
-      "url": "https://ulsane.pages.dev/night/suwon-chance-dome/",
+      "url": "https://love-8r5.pages.dev/night/suwon-chance-dome/",
       "angleNo": 10,
       "angleName": "짧은 요약형",
       "suffix": "한 장 요약",
@@ -204,7 +204,7 @@
     {
       "venueNo": 11,
       "slug": "ansan-hit-night",
-      "url": "https://ulsane.pages.dev/night/ansan-hit-night/",
+      "url": "https://love-8r5.pages.dev/night/ansan-hit-night/",
       "angleNo": 11,
       "angleName": "인원별 공략형",
       "suffix": "다인원 안내",
@@ -223,7 +223,7 @@
     {
       "venueNo": 12,
       "slug": "daejeon-seven-night",
-      "url": "https://ulsane.pages.dev/night/daejeon-seven-night/",
+      "url": "https://love-8r5.pages.dev/night/daejeon-seven-night/",
       "angleNo": 12,
       "angleName": "실수 방지형",
       "suffix": "피해야 할 것",
@@ -242,7 +242,7 @@
     {
       "venueNo": 13,
       "slug": "ilsan-shampoo-night",
-      "url": "https://ulsane.pages.dev/night/ilsan-shampoo/",
+      "url": "https://love-8r5.pages.dev/night/ilsan-shampoo/",
       "angleNo": 13,
       "angleName": "단골 관점형",
       "suffix": "다녀본 사람 기준",

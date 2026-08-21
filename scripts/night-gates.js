@@ -252,7 +252,7 @@ const ratios = {};
   venues.forEach((v) => {
     const src = html[v.slug];
     if (/noindex/i.test(src)) noindex++;
-    if (!src.includes('<link rel="canonical" href="https://ulsane.pages.dev/night/' + v.slug + '/">')) canonBad++;
+    if (!src.includes('<link rel="canonical" href="https://love-8r5.pages.dev/night/' + v.slug + '/">')) canonBad++;
     [...src.matchAll(/<img\b[^>]*>/g)].forEach((m) => { if (!/\salt=/.test(m[0])) altBad++; });
   });
   add('G20a', 'noindex ' + noindex + '건 / canonical 자기지목 ' + (13 - canonBad) + '/13 / img alt 누락 ' + altBad + '건', noindex === 0 && canonBad === 0 && altBad === 0);

@@ -42,7 +42,7 @@ const sharp = require('sharp');
 
 const SIZE = 1200;
 const FONT = 'Noto Sans KR';
-const DOMAIN = 'ulsane.pages.dev';
+const DOMAIN = 'love-8r5.pages.dev';
 const A = '#E08B5A';          // 포인트 — 종이/잉크 톤과 대비
 const BG_TOP = '#171512';
 const BG_BOT = '#2A211A';

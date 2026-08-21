@@ -5,7 +5,7 @@ const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
 const TODAY = '2026-05-21T00:00:00+09:00';
-const BASE = 'https://ulsane.pages.dev';
+const BASE = 'https://love-8r5.pages.dev';
 
 // 페이지별 1:1 검색 썸네일 (scripts/generate-og-thumbs.js 가 생성)
 const THUMB_KEYS = ['home','access','atmosphere','contact','faq','first-visit','review','story','legal'];
