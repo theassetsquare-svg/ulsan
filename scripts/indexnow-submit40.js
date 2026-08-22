@@ -6,9 +6,9 @@ const { ORDER, REGION_ORDER, SITE } = require('./build-night40.js');
 const KEY = '584e7bc8bafe5edd3494299f6b582313';
 const urlList = [
   SITE + '/',
-  SITE + '/night/',
-  ...ORDER.map((s) => SITE + '/night/' + s + '/'),
-  ...REGION_ORDER.map((s) => SITE + '/night/' + s + '/')
+  SITE + '/night-1/',
+  ...ORDER.map((s) => SITE + '/night-1/' + s + '/'),
+  ...REGION_ORDER.map((s) => SITE + '/night-1/' + s + '/')
 ];
 
 const body = JSON.stringify({

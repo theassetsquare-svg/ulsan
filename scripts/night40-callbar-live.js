@@ -10,9 +10,9 @@ const { ORDER, REGION_ORDER, SITE } = require('./build-night40.js');
 const ADV = { '01056530069': '춘자', '01075284936': '로또', '01022211937': '손흥민' };
 const PHONE_PAGES = {
   '/': '01056530069',
-  '/night/ulsan-champion-night/': '01056530069',
-  '/night/changwon-lululala-night/': '01075284936',
-  '/night/bulgwang-hobak/': '01022211937',
+  '/night/ulsan-champion-1/': '01056530069',
+  '/night/changwon-lululala-1/': '01075284936',
+  '/night/bulgwang-hobak-1/': '01022211937',
   '/night/ulsan-night/': '01056530069',
   '/night/changwon-night/': '01075284936',
   '/night/eunpyeong-night/': '01022211937'
@@ -65,9 +65,9 @@ async function check(pathname, label) {
 async function main() {
   const targets = [
     ['/', '홈(울산챔피언 본사이트)'],
-    ['/night/', '허브'],
-    ...ORDER.map((s) => ['/night/' + s + '/', s]),
-    ...REGION_ORDER.map((s) => ['/night/' + s + '/', s + ' (지역)'])
+    ['/night-1/', '허브'],
+    ...ORDER.map((s) => ['/night-1/' + s + '/', s]),
+    ...REGION_ORDER.map((s) => ['/night-1/' + s + '/', s + ' (지역)'])
   ];
   const rows = [];
   for (const [p, l] of targets) { rows.push(await check(p, l)); process.stderr.write('.'); }

@@ -145,7 +145,7 @@ let simReport = null;
     hrefs.forEach((h) => {
       if (/^tel:/.test(h)) return;
       if (/^https?:\/\//.test(h)) external.push(r.slug + ' ' + h);
-      else if (h.startsWith('/night/')) {
+      else if (h.startsWith('/night-1/')) {
         const slug = h.replace(/^\/night\//, '').replace(/\/$/, '');
         if (slug && !fs.existsSync(path.join(ROOT, 'night', slug, 'index.html'))) broken.push(r.slug + '→' + h);
       } else if (h.startsWith('/') && !/\.(css|png|svg|xml|txt|ico)$/.test(h) && h !== '/') {
@@ -310,7 +310,7 @@ const h2kw = [];
 {
   let ok = true, det = [];
   regions.forEach((r) => {
-    const has = html[r.slug].includes('href="/night/' + r.venue.slug + '/"');
+    const has = html[r.slug].includes('href="/night-1/' + r.venue.slug + '/"');
     const exists = fs.existsSync(path.join(ROOT, 'night', r.venue.slug, 'index.html'));
     if (!has || !exists) { ok = false; det.push(r.slug); }
   });

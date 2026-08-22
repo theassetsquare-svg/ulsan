@@ -1,7 +1,7 @@
 /**
  * 공개 URL을 확장자 없는 형태로 통일한다.
  *
- * 왜: Cloudflare Pages가 /access.html 을 /access 로 308 리다이렉트한다.
+ * 왜: Cloudflare Pages가 /access.html 을 /access-1 로 308 리다이렉트한다.
  * canonical / og:url / sitemap 이 .html 을 가리키면 "정식 주소"로 신고한 URL이
  * 실제로는 리다이렉트되는 주소가 된다. 실제 서빙 주소로 맞춘다.
  *

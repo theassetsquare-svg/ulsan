@@ -12,11 +12,11 @@ const { regions, SITE, TODAY } = require('./build-region-pages.js');
 {
   const p = path.join(ROOT, 'sitemap.xml');
   let xml = fs.readFileSync(p, 'utf8');
-  const missing = regions.filter((r) => !xml.includes(SITE + '/night/' + r.slug + '/'));
+  const missing = regions.filter((r) => !xml.includes(SITE + '/night-1/' + r.slug + '/'));
   if (missing.length) {
     const block = missing.map((r) =>
       '  <url>\n' +
-      '    <loc>' + SITE + '/night/' + r.slug + '/</loc>\n' +
+      '    <loc>' + SITE + '/night-1/' + r.slug + '/</loc>\n' +
       '    <lastmod>' + TODAY + '</lastmod>\n' +
       '    <changefreq>weekly</changefreq>\n' +
       '    <priority>0.8</priority>\n' +
@@ -38,11 +38,11 @@ const { regions, SITE, TODAY } = require('./build-region-pages.js');
 {
   const p = path.join(ROOT, 'llms.txt');
   let txt = fs.readFileSync(p, 'utf8');
-  const missing = regions.filter((r) => !txt.includes('/night/' + r.slug + '/'));
+  const missing = regions.filter((r) => !txt.includes('/night-1/' + r.slug + '/'));
   if (missing.length) {
     const oneLiner = (r) => {
       const age = r.age ? ' (연결 업소 출입 ' + r.age + ')' : '';
-      return '- ' + SITE + '/night/' + r.slug + '/ — ' + r.kw + ' — ' + r.region + ' — ' +
+      return '- ' + SITE + '/night-1/' + r.slug + '/ — ' + r.kw + ' — ' + r.region + ' — ' +
         r.angleName + '으로 정리한 지역 밤 문화 안내, 연결 업소 ' + r.venue.name + age;
     };
     const block = '\n## 지역 키워드 안내 13곳 (2026-08-15 신설)\n' +

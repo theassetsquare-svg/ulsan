@@ -11,7 +11,7 @@
  *
  * 사용법:
  *   node scripts/naver-index-check.js                     # 기본 대상(TARGETS)만 점검
- *   node scripts/naver-index-check.js --only=/policy/,/faq # 지정한 주소만
+ *   node scripts/naver-index-check.js --only=/policy-1/,/faq-1 # 지정한 주소만
  *   node scripts/naver-index-check.js --all               # sitemap 전체 (꼭 필요할 때만)
  *
  * 판정 근거: 검색결과 HTML의 data-url="..." 속성 (결과 항목 1개당 1개).
@@ -30,14 +30,14 @@ const OUT = path.join(__dirname, 'naver-index-report.json');
 
 /* 2026-08-18 슬러그 개편으로 새로 만든 8개 — 네이버 등록을 기다리는 중 */
 const TARGETS = [
-  '/policy/',
-  '/bulgwang-guide',
-  '/night/suyu-shampoo/',
-  '/night/suwon-chance-dome/',
-  '/night/ilsan-shampoo/',
-  '/night/bulgwang-hobak/',
-  '/night/cheongju-hobak/',
-  '/night/suwon-nightclub/'
+  '/policy-1/',
+  '/bulgwang-1',
+  '/night-1/suyu-shampoo/',
+  '/night-1/suwon-chance-dome/',
+  '/night/ilsan-shampoo-1/',
+  '/night/bulgwang-hobak-1/',
+  '/night/cheongju-hobak-1/',
+  '/night-1/suwon-nightclub/'
 ];
 
 const argAll = process.argv.includes('--all');

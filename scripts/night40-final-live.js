@@ -32,7 +32,7 @@ const count = (h, n) => h.split(n).length - 1;
 async function main() {
   const rows = [];
   for (const v of venues) {
-    const url = SITE + '/night/' + v.slug + '/';
+    const url = SITE + '/night-1/' + v.slug + '/';
     const p = await get(url, false);
     const src = p.body;
     const img = await get(SITE + '/og/' + v.slug + '.png', true);
@@ -74,7 +74,7 @@ async function main() {
   }
   process.stderr.write('\n');
 
-  const hub = await get(SITE + '/night/', false);
+  const hub = await get(SITE + '/night-1/', false);
   const hubBar = (hub.body.match(/<a class="callbar"[^>]*>[\s\S]*?<\/a>/) || [''])[0];
   const home = await get(SITE + '/', false);
   const homeBar = (home.body.match(/<a href="tel:[^"]*" class="phone-bar"[\s\S]*?<\/a>/) || [''])[0].replace(/\s+/g, ' ');

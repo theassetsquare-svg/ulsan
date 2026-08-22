@@ -93,7 +93,7 @@ function callbar(v) {
 }
 
 function jsonld(v) {
-  const url = SITE + '/night/' + v.slug + '/';
+  const url = SITE + '/night-1/' + v.slug + '/';
   const img = SITE + '/og/' + v.slug + '-og.png';
   const address = { '@type': 'PostalAddress' };
   if (v.addr.street) address.streetAddress = v.addr.street;
@@ -133,7 +133,7 @@ function jsonld(v) {
     '@id': url + '#breadcrumb',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: '홈', item: SITE + '/' },
-      { '@type': 'ListItem', position: 2, name: '나이트', item: SITE + '/night/' },
+      { '@type': 'ListItem', position: 2, name: '나이트', item: SITE + '/night-1/' },
       { '@type': 'ListItem', position: 3, name: v.name, item: url }
     ]
   };
@@ -210,7 +210,7 @@ body{background:#fff;color:#15161a;padding-bottom:calc(84px + env(safe-area-inse
 
 function buildPage(v) {
   const p = palette(v);
-  const url = SITE + '/night/' + v.slug + '/';
+  const url = SITE + '/night-1/' + v.slug + '/';
   const img = SITE + '/og/' + v.slug + '-og.png';
   const rows = factRows(v);
 
@@ -233,7 +233,7 @@ function buildPage(v) {
   const links = v.links.map((l) => {
     const t = bySlug[l.slug];
     if (!t) throw new Error('링크 대상 없음: ' + l.slug);
-    return '      <a href="/night/' + t.slug + '/">' + esc(l.text) + '</a>';
+    return '      <a href="/night-1/' + t.slug + '/">' + esc(l.text) + '</a>';
   }).join('\n');
 
   return `<!DOCTYPE html>
@@ -278,10 +278,10 @@ ${jsonld(v)}
 
 <header class="header nt-header">
   <div class="wrap">
-    <a href="/night/" class="logo">전국 나이트 소개</a>
+    <a href="/night-1/" class="logo">전국 나이트 소개</a>
     <nav class="nt-nav" aria-label="주요 메뉴">
       <a href="/">홈</a>
-      <a href="/night/">목록</a>
+      <a href="/night-1/">목록</a>
     </nav>
   </div>
 </header>
@@ -353,12 +353,12 @@ const regionPages = REGION_ORDER.map((s) => require(path.join(__dirname, 'region
 function buildHub() {
   const p = { deep: '#1f2430', mid: '#39415a', soft: '#f3f4f8', line: '#d8dbe6', ink: '#232838' };
   const regionItems = regionPages.map((r) =>
-    '      <a href="/night/' + r.slug + '/">' + esc(r.kw) + ' ' + esc(r.suffix) + ' — ' + esc(r.region) + '</a>'
+    '      <a href="/night-1/' + r.slug + '/">' + esc(r.kw) + ' ' + esc(r.suffix) + ' — ' + esc(r.region) + '</a>'
   ).join('\n');
   const items = venues.map((v) => {
     const loc = v.addr.street ? v.addr.street : (v.landmark + ' · ' + v.addr.locality);
     const tag = v.age ? ' · ' + v.age : '';
-    return '      <a href="/night/' + v.slug + '/">' + esc(v.name) + ' — ' + esc(loc) + esc(tag) + '</a>';
+    return '      <a href="/night-1/' + v.slug + '/">' + esc(v.name) + ' — ' + esc(loc) + esc(tag) + '</a>';
   }).join('\n');
   return `<!DOCTYPE html>
 <html lang="ko">
@@ -384,7 +384,7 @@ ${VERIFY}
 <a href="#main" class="skip-to-main">본문 바로가기</a>
 <header class="header nt-header">
   <div class="wrap">
-    <a href="/night/" class="logo">전국 나이트 소개</a>
+    <a href="/night-1/" class="logo">전국 나이트 소개</a>
     <nav class="nt-nav" aria-label="주요 메뉴"><a href="/">홈</a></nav>
   </div>
 </header>
@@ -435,7 +435,7 @@ function fingerprint() {
     pages: venues.map((v, i) => ({
       venueNo: i + 1,
       slug: v.slug,
-      url: SITE + '/night/' + v.slug + '/',
+      url: SITE + '/night-1/' + v.slug + '/',
       angleNo: v.angleNo,
       angleName: v.angleName,
       suffix: v.suffix,

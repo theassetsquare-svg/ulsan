@@ -32,20 +32,20 @@ venues.forEach((v) => {
   const loc = v.addr && v.addr.street ? v.addr.street
     : (v.addr && v.addr.jibun ? v.addr.jibun + ' (지번만 확인)'
       : (v.addr && v.addr.locality ? v.addr.locality + ' 권역 (주소 확인 불가)' : '주소 확인 불가'));
-  lines.push('- [' + v.title + '](' + SITE + '/night/' + v.slug + '/): ' + v.name + ' · ' + loc);
+  lines.push('- [' + v.title + '](' + SITE + '/night-1/' + v.slug + '/): ' + v.name + ' · ' + loc);
 });
 lines.push('');
 lines.push('## 지역 안내 페이지 13곳');
 lines.push('');
 regions.forEach((r) => {
-  lines.push('- [' + r.kw + ' ' + r.suffix + '](' + SITE + '/night/' + r.slug + '/): ' + r.region);
+  lines.push('- [' + r.kw + ' ' + r.suffix + '](' + SITE + '/night-1/' + r.slug + '/): ' + r.region);
 });
 lines.push('');
 lines.push('## 주요 페이지');
 lines.push('');
-[['/', '홈'], ['/story', '이야기'], ['/atmosphere', '분위기'], ['/first-visit', '첫 방문'],
- ['/access', '오시는 길'], ['/review', '방문 기록'], ['/faq', '자주 묻는 질문'],
- ['/contact', '문의'], ['/policy/', '이용 안내'], ['/bulgwang-guide', '불광동 밤 놀거리 가이드']].forEach(([u, t]) => {
+[['/', '홈'], ['/story-1', '이야기'], ['/atmosphere-1', '분위기'], ['/first-1', '첫 방문'],
+ ['/access-1', '오시는 길'], ['/review-1', '방문 기록'], ['/faq-1', '자주 묻는 질문'],
+ ['/contact-1', '문의'], ['/policy-1/', '이용 안내'], ['/bulgwang-1', '불광동 밤 놀거리 가이드']].forEach(([u, t]) => {
   lines.push('- [' + t + '](' + SITE + u + ')');
 });
 lines.push('');

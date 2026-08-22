@@ -260,9 +260,9 @@ const ratios = {};
 
 /* G21 1단계 링크 도달 */
 (() => {
-  const fromIndex = venues.filter((v) => indexHtml.includes('/night/' + v.slug + '/')).length;
-  const fromHub = venues.filter((v) => hubHtml.includes('/night/' + v.slug + '/')).length;
-  const hubLinked = indexHtml.includes('href="/night/"');
+  const fromIndex = venues.filter((v) => indexHtml.includes('/night-1/' + v.slug + '/')).length;
+  const fromHub = venues.filter((v) => hubHtml.includes('/night-1/' + v.slug + '/')).length;
+  const hubLinked = indexHtml.includes('href="/night-1/"');
   add('G21', '메인 index.html → ' + fromIndex + '/13 직접 링크, 허브 → ' + fromHub + '/13, 메인→허브 링크 ' + (hubLinked ? '있음' : '없음'), fromIndex === 13 && fromHub === 13 && hubLinked);
 })();
 

@@ -1,19 +1,19 @@
 # 슬러그 개편 308 리다이렉트 (구주소 → 신주소)
-/legal                          /policy                     308
-/legal/                         /policy/                    308
-/bulgwang                       /bulgwang-guide             308
-/night/suyu-shampoo-night       /night/suyu-shampoo/        308
-/night/suyu-shampoo-night/      /night/suyu-shampoo/        308
-/night/suwon-chance-dome-night  /night/suwon-chance-dome/   308
-/night/suwon-chance-dome-night/ /night/suwon-chance-dome/   308
-/night/ilsan-shampoo-night      /night/ilsan-shampoo/       308
-/night/ilsan-shampoo-night/     /night/ilsan-shampoo/       308
-/night/bulgwang-hobak-night     /night/bulgwang-hobak/      308
-/night/bulgwang-hobak-night/    /night/bulgwang-hobak/      308
-/night/cheongju-hobak-night     /night/cheongju-hobak/      308
-/night/cheongju-hobak-night/    /night/cheongju-hobak/      308
-/night/suwon-night              /night/suwon-nightclub/     308
-/night/suwon-night/             /night/suwon-nightclub/     308
+/legal /policy-1 308
+/legal/ /policy-1/ 308
+/bulgwang /bulgwang-1 308
+/night/suyu-shampoo-night /night/suyu-shampoo-1/ 308
+/night/suyu-shampoo-night/ /night/suyu-shampoo-1/ 308
+/night/suwon-chance-dome-night /night/suwon-chancedome-1/ 308
+/night/suwon-chance-dome-night/ /night/suwon-chancedome-1/ 308
+/night/ilsan-shampoo-night /night/ilsan-shampoo-1/ 308
+/night/ilsan-shampoo-night/ /night/ilsan-shampoo-1/ 308
+/night/bulgwang-hobak-night /night/bulgwang-hobak-1/ 308
+/night/bulgwang-hobak-night/ /night/bulgwang-hobak-1/ 308
+/night/cheongju-hobak-night /night/cheongju-hobak-1/ 308
+/night/cheongju-hobak-night/ /night/cheongju-hobak-1/ 308
+/night/suwon-night /night/suwon-nightclub/ 308
+/night/suwon-night/ /night/suwon-nightclub/ 308
 
 # SPA 폴백 (반드시 마지막)
 /* /index.html 200

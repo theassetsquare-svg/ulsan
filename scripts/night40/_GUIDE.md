@@ -1,7 +1,7 @@
 # /night/ 40곳 원고 파일 작성 가이드 (PAGE_ROUND 3 · 2026-08-16)
 
 원고는 업소당 1파일: `scripts/night40/{slug}.js` (CommonJS `module.exports = {...}`).
-표준 예시: `ulsan-champion-night.js` (광고주형) · `jejudo-night.js` (위치 확인불가형).
+표준 예시: `ulsan-champion-1.js` (광고주형) · `jejudo-night-1.js` (위치 확인불가형).
 조립은 `scripts/build-night40.js`가 한다. 필드 누락·형식 이탈 시 빌드가 죽는다.
 
 ## 필드

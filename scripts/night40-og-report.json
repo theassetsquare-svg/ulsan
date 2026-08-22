@@ -3,7 +3,7 @@
   "font": "tools/fonts/Pretendard-Bold.ttf (opentype.js path 변환)",
   "images": [
     {
-      "file": "og/sillim-grandprix-night.png",
+      "file": "og/sillim-grandprix-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -14,7 +14,7 @@
       "adLargest": true
     },
     {
-      "file": "og/sangbong-hangukgwan-night.png",
+      "file": "og/sangbong-hangukgwan-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -25,7 +25,7 @@
       "adLargest": true
     },
     {
-      "file": "og/suyu-shampoo-night.png",
+      "file": "og/suyu-shampoo-1-night.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -36,7 +36,7 @@
       "adLargest": true
     },
     {
-      "file": "og/busan-asiad-night.png",
+      "file": "og/busan-asiad-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -47,7 +47,7 @@
       "adLargest": true
     },
     {
-      "file": "og/suwon-chance-dome-night.png",
+      "file": "og/suwon-chancedome-1-night.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -58,7 +58,7 @@
       "adLargest": true
     },
     {
-      "file": "og/ansan-hit-night.png",
+      "file": "og/ansan-hit-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -69,7 +69,7 @@
       "adLargest": true
     },
     {
-      "file": "og/daejeon-seven-night.png",
+      "file": "og/daejeon-seven-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -80,7 +80,7 @@
       "adLargest": true
     },
     {
-      "file": "og/ilsan-shampoo-night.png",
+      "file": "og/ilsan-shampoo-1-night.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -91,7 +91,7 @@
       "adLargest": true
     },
     {
-      "file": "og/cheongdam-night.png",
+      "file": "og/cheongdam-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -102,7 +102,7 @@
       "adLargest": true
     },
     {
-      "file": "og/daejeon-one-night.png",
+      "file": "og/daejeon-one-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -113,7 +113,7 @@
       "adLargest": true
     },
     {
-      "file": "og/changwon-lululala-night.png",
+      "file": "og/changwon-lululala-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -124,7 +124,7 @@
       "phoneLargest": true
     },
     {
-      "file": "og/bulgwang-hobak-night.png",
+      "file": "og/bulgwang-hobak-1-night.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -135,7 +135,7 @@
       "phoneLargest": true
     },
     {
-      "file": "og/ulsan-champion-night.png",
+      "file": "og/ulsan-champion-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -146,7 +146,7 @@
       "phoneLargest": true
     },
     {
-      "file": "og/doksan-gukbingwan-night.png",
+      "file": "og/doksan-gukbingwan-night-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -157,7 +157,7 @@
       "adLargest": true
     },
     {
-      "file": "og/dapsimni-miracle-night.png",
+      "file": "og/dapsimni-miracle-night-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -168,7 +168,7 @@
       "adLargest": true
     },
     {
-      "file": "og/gangseo-hobak-night.png",
+      "file": "og/gangseo-hobak-night-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -179,7 +179,7 @@
       "adLargest": true
     },
     {
-      "file": "og/yeongdeungpo-terminal-night.png",
+      "file": "og/yeongdeungpo-terminal-night-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -190,7 +190,7 @@
       "adLargest": true
     },
     {
-      "file": "og/nowon-hobak-night.png",
+      "file": "og/nowon-hobak-night-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -201,7 +201,7 @@
       "adLargest": true
     },
     {
-      "file": "og/gildong-chance-night.png",
+      "file": "og/gildong-chance-night-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -212,7 +212,7 @@
       "adLargest": true
     },
     {
-      "file": "og/paju-yadang-skydome-night.png",
+      "file": "og/paju-yadang-skydome-night-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -223,7 +223,7 @@
       "adLargest": true
     },
     {
-      "file": "og/guri-hobak-night.png",
+      "file": "og/guri-hobak-night-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -234,7 +234,7 @@
       "adLargest": true
     },
     {
-      "file": "og/uijeongbu-hangukgwan-night.png",
+      "file": "og/uijeongbu-hangukgwan-night-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -245,7 +245,7 @@
       "adLargest": true
     },
     {
-      "file": "og/uijeongbu-baekakgwan-night.png",
+      "file": "og/uijeongbu-baekakgwan-night-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -256,7 +256,7 @@
       "adLargest": true
     },
     {
-      "file": "og/suwon-korea-night.png",
+      "file": "og/suwon-korea-night-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -267,7 +267,7 @@
       "adLargest": true
     },
     {
-      "file": "og/osan-hobak-night.png",
+      "file": "og/osan-hobak-night-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -278,7 +278,7 @@
       "adLargest": true
     },
     {
-      "file": "og/indeogwon-gukbingwan-night.png",
+      "file": "og/indeogwon-gukbingwan-night-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -289,7 +289,7 @@
       "adLargest": true
     },
     {
-      "file": "og/seongnam-shampoo-night.png",
+      "file": "og/seongnam-shampoo-night-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -300,7 +300,7 @@
       "adLargest": true
     },
     {
-      "file": "og/incheon-arabian-night.png",
+      "file": "og/incheon-arabian-night-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -311,7 +311,7 @@
       "adLargest": true
     },
     {
-      "file": "og/bucheon-gorae-night.png",
+      "file": "og/bucheon-gorae-night-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -322,7 +322,7 @@
       "adLargest": true
     },
     {
-      "file": "og/pyeongtaek-hobak-night.png",
+      "file": "og/pyeongtaek-hobak-night-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -333,7 +333,7 @@
       "adLargest": true
     },
     {
-      "file": "og/cheonan-stardome-night.png",
+      "file": "og/cheonan-stardome-night-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -344,7 +344,7 @@
       "adLargest": true
     },
     {
-      "file": "og/cheonan-korea-night.png",
+      "file": "og/cheonan-korea-night-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -355,7 +355,7 @@
       "adLargest": true
     },
     {
-      "file": "og/cheongju-hobak-night.png",
+      "file": "og/cheongju-hobak-1-night.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -366,7 +366,7 @@
       "adLargest": true
     },
     {
-      "file": "og/ulsan-newworld-night.png",
+      "file": "og/ulsan-newworld-night-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -377,7 +377,7 @@
       "adLargest": true
     },
     {
-      "file": "og/seosan-hobak-night.png",
+      "file": "og/seosan-hobak-night-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -388,7 +388,7 @@
       "adLargest": true
     },
     {
-      "file": "og/daegu-hobak-night.png",
+      "file": "og/daegu-hobak-night-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -399,7 +399,7 @@
       "adLargest": true
     },
     {
-      "file": "og/gumi-hobak-night.png",
+      "file": "og/gumi-hobak-night-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -410,7 +410,7 @@
       "adLargest": true
     },
     {
-      "file": "og/gwangju-sangmu-night.png",
+      "file": "og/gwangju-sangmu-night-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -421,7 +421,7 @@
       "adLargest": true
     },
     {
-      "file": "og/gwangju-cheomdan-night.png",
+      "file": "og/gwangju-cheomdan-night-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,
@@ -432,7 +432,7 @@
       "adLargest": true
     },
     {
-      "file": "og/jejudo-night.png",
+      "file": "og/jejudo-night-1.png",
       "width": 1200,
       "height": 1200,
       "square": true,

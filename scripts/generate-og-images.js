@@ -100,13 +100,13 @@ const GOLD = [201, 169, 110];
 
 const pages = [
   { file: 'og-home.png', bg1: NAVY_DARK, bg2: NAVY_LIGHT },
-  { file: 'og-story.png', bg1: NAVY_DARK, bg2: NAVY },
-  { file: 'og-atmosphere.png', bg1: [26, 5, 51], bg2: NAVY },
-  { file: 'og-first-visit.png', bg1: NAVY, bg2: NAVY_LIGHT },
-  { file: 'og-access.png', bg1: NAVY_DARK, bg2: [42, 77, 122] },
-  { file: 'og-review.png', bg1: NAVY, bg2: NAVY_DARK },
-  { file: 'og-faq.png', bg1: NAVY_DARK, bg2: NAVY },
-  { file: 'og-contact.png', bg1: NAVY, bg2: [42, 77, 122] },
+  { file: 'og-story-1.png', bg1: NAVY_DARK, bg2: NAVY },
+  { file: 'og-atmosphere-1.png', bg1: [26, 5, 51], bg2: NAVY },
+  { file: 'og-first-1.png', bg1: NAVY, bg2: NAVY_LIGHT },
+  { file: 'og-access-1.png', bg1: NAVY_DARK, bg2: [42, 77, 122] },
+  { file: 'og-review-1.png', bg1: NAVY, bg2: NAVY_DARK },
+  { file: 'og-faq-1.png', bg1: NAVY_DARK, bg2: NAVY },
+  { file: 'og-contact-1.png', bg1: NAVY, bg2: [42, 77, 122] },
 ];
 
 const outDir = path.join(__dirname, '..', 'og');

@@ -33,7 +33,7 @@ const RISKY = ['transform', 'filter', 'perspective', 'backdropFilter', 'willChan
     for (const view of VIEWS) {
       const ctx = await browser.newContext({ viewport: { width: view.width, height: view.height }, deviceScaleFactor: 1 });
       const page = await ctx.newPage();
-      const url = BASE + '/night/' + v.slug + '/?cb=' + Date.now();
+      const url = BASE + '/night-1/' + v.slug + '/?cb=' + Date.now();
       await page.goto(url, { waitUntil: 'load', timeout: 45000 });
       await page.waitForTimeout(200);
 

@@ -15,7 +15,7 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const FONT_DIR = __dirname;
 const FONT_FILE = path.join(FONT_DIR, 'NotoSansKR-Black.ttf');
-const OUT = path.join(ROOT, 'og', 'success-story.png');
+const OUT = path.join(ROOT, 'og', 'success-story-1.png');
 
 if (!fs.existsSync(FONT_FILE)) {
   console.error('폰트가 없습니다:', FONT_FILE);

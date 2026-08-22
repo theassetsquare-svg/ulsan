@@ -79,7 +79,7 @@
      "fields":[
       {"item":"주소","value":"대전 중구 당디로 112 (지번 유천동 332-28) 2~3층","sources":3,"sourceNote":"namu.wiki / daangn.com / localmap.co.kr","adopted":true},
       {"item":"골목 위치","value":"큰길에서 한 겹 들어간 골목, 자차 접근 편함","sources":2,"sourceNote":"namu.wiki / dongnealba.com","adopted":true},
-      {"item":"영업시간","value":"20:00~05:00 표기","sources":2,"sourceNote":"daejeon-seven-night.com / bampick.uriweb.kr","adopted":false,"reason":"1차 페이지와 동일하게 미게재 유지"},
+      {"item":"영업시간","value":"20:00~05:00 표기","sources":2,"sourceNote":"daejeon-seven-1.com / bampick.uriweb.kr","adopted":false,"reason":"1차 페이지와 동일하게 미게재 유지"},
       {"item":"좌석 구성","value":"메인 홀 외 별실 구성","sources":2,"sourceNote":"namu.wiki / happyb.dothome.co.kr","adopted":true}]},
     {"slug":"ilsan-shampoo-night","regionPage":"ilsan-night","queries":["일산샴푸나이트","일산샴푸나이트 위치","일산샴푸나이트 영업시간","일산샴푸나이트 예약","일산 나이트클럽 마두동 고양시"],
      "fields":[

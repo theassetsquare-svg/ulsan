@@ -16,7 +16,7 @@ const write = (f, s) => fs.writeFileSync(path.join(ROOT, f), s);
 /* ① sitemap.xml — 정적 파일이므로 </urlset> 앞에 13개 url 삽입 */
 (function sitemap() {
   let x = read('sitemap.xml');
-  if (x.includes('/night/')) { console.log('skip sitemap (이미 반영)'); return; }
+  if (x.includes('/night-1/')) { console.log('skip sitemap (이미 반영)'); return; }
   const block = venues.map((v) => `  <url>
     <loc>${SITE}/night/${v.slug}/</loc>
     <lastmod>${TODAY}</lastmod>
@@ -83,7 +83,7 @@ ${lines}
     <p class="section-sub">확인된 주소와 가장 가까운 역만 정리한 안내 페이지입니다.</p>
     <ul style="margin-top:18px;">
 ${items}
-      <li style="padding:8px 0;"><a href="/night/" style="font-weight:800;">전체 목록 보기 →</a></li>
+      <li style="padding:8px 0;"><a href="/night-1/" style="font-weight:800;">전체 목록 보기 →</a></li>
     </ul>
   </div>
 </section>

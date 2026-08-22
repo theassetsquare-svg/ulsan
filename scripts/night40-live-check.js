@@ -50,11 +50,11 @@ async function one(url, expectTitle, imgUrl) {
 async function main() {
   const rows = [];
   for (const v of venues) {
-    const r = await one(SITE + '/night/' + v.slug + '/', v.title, SITE + '/og/' + v.slug + '.png');
+    const r = await one(SITE + '/night-1/' + v.slug + '/', v.title, SITE + '/og/' + v.slug + '.png');
     rows.push({ name: v.name, slug: v.slug, addr: addrState(v), ...r });
     process.stderr.write('.');
   }
-  const hub = await one(SITE + '/night/', HUB_TITLE, SITE + '/og/night-hub.png');
+  const hub = await one(SITE + '/night-1/', HUB_TITLE, SITE + '/og/night-hub.png');
   const homePage = await get(SITE + '/', false);
   const homeTitle = (homePage.body.match(/<title>([^<]*)<\/title>/) || [, ''])[1];
   const homeImg = await get(SITE + '/og/home.png', true);
