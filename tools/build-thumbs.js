@@ -3,7 +3,7 @@ const {build,writePng}=require('./render-thumbs.js');
 const ROOT=path.resolve(__dirname,'..');
 process.chdir(ROOT);
 const BASE='https://love-8r5.pages.dev';
-function walk(d,out=[]){for(const e of fs.readdirSync(d,{withFileTypes:true})){if(e.name==='node_modules'||e.name.startsWith('.'))continue;const p=path.join(d,e.name);if(e.isDirectory())walk(p,out);else if(e.name.endsWith('.html'))out.push(path.relative(ROOT,p));}return out;}
+function walk(d,out=[]){for(const e of fs.readdirSync(d,{withFileTypes:true})){if(e.name==='node_modules'||e.name.startsWith('.'))continue;const p=path.join(d,e.name);if(e.isDirectory())walk(p,out);else if(e.name.endsWith('.html'))out.push(path.relative(ROOT,p).split(path.sep).join("/"));/* ★ 윈도우는 경로 구분자가 역슬래시라 그대로 쓰면 AD_PAGES 대조가 전부 어긋난다 */}return out;}
 
 // ★ 광고주 정답표
 const AD={
@@ -15,20 +15,20 @@ const AD={
 };
 // 광고주 페이지 → 주제(뱃지)
 const AD_PAGES={
- 'night/ulsan-champion-night/index.html':['울산챔피언나이트','업소 소개'],
- 'night/changwon-lululala-night/index.html':['창원룰루랄라나이트','업소 소개'],
- 'night/bulgwang-hobak/index.html':['불광동호박나이트','업소 소개'],
- 'night/cheongdam-night/index.html':['청담나이트','업소 소개'],
+ 'access-1.html':['울산챔피언나이트','오시는 길'],
+ 'atmosphere-1.html':['울산챔피언나이트','매장 분위기'],
+ 'bulgwang-1.html':['불광동호박나이트','예약 전 가이드'],
+ 'contact-1.html':['울산챔피언나이트','예약 문의'],
+ 'faq-1.html':['울산챔피언나이트','자주 묻는 질문'],
+ 'first-1.html':['울산챔피언나이트','첫 방문 가이드'],
+ 'night/bulgwang-hobak-1/index.html':['불광동호박나이트','업소 소개'],
+ 'night/changwon-lululala-1/index.html':['창원룰루랄라나이트','업소 소개'],
+ 'night/cheongdam-1/index.html':['청담나이트','업소 소개'],
  'night/dapsimni-miracle-night-1/index.html':['답십리미라클나이트','업소 소개'],
- 'bulgwang-guide.html':['불광동호박나이트','예약 전 가이드'],
- 'access.html':['울산챔피언나이트','오시는 길'],
- 'atmosphere.html':['울산챔피언나이트','매장 분위기'],
- 'contact.html':['울산챔피언나이트','예약 문의'],
- 'faq.html':['울산챔피언나이트','자주 묻는 질문'],
- 'first-visit.html':['울산챔피언나이트','첫 방문 가이드'],
- 'review.html':['울산챔피언나이트','단골 후기'],
- 'story.html':['울산챔피언나이트','밤의 기록'],
- 'policy/index.html':['울산챔피언나이트','19세 이상 운영 정책'],
+ 'night/ulsan-champion-1/index.html':['울산챔피언나이트','업소 소개'],
+ 'policy-1/index.html':['울산챔피언나이트','19세 이상 운영 정책'],
+ 'review-1.html':['울산챔피언나이트','단골 후기'],
+ 'story-1.html':['울산챔피언나이트','밤의 기록'],
 };
 const HUB='night/index.html';
 const SKIP=new Set(['index.html']); // 홈: 썸네일 파일 그대로 유지(H2)
