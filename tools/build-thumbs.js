@@ -5,12 +5,13 @@ process.chdir(ROOT);
 const BASE='https://love-8r5.pages.dev';
 function walk(d,out=[]){for(const e of fs.readdirSync(d,{withFileTypes:true})){if(e.name==='node_modules'||e.name.startsWith('.'))continue;const p=path.join(d,e.name);if(e.isDirectory())walk(p,out);else if(e.name.endsWith('.html'))out.push(path.relative(ROOT,p));}return out;}
 
-// ★ 광고주 정답표 (2026-08-20 확정, 총 4명)
+// ★ 광고주 정답표
 const AD={
  '울산챔피언나이트':{nick:'춘자',phone:'010-5653-0069'},
  '창원룰루랄라나이트':{nick:'로또',phone:'010-7528-4936'},
  '불광동호박나이트':{nick:'손흥민',phone:'010-2221-1937'},
  '청담나이트':{nick:'펩시맨',phone:'010-5655-4866'},
+ '답십리미라클나이트':{nick:'유재석',phone:'010-8156-6558'},
 };
 // 광고주 페이지 → 주제(뱃지)
 const AD_PAGES={
@@ -18,6 +19,7 @@ const AD_PAGES={
  'night/changwon-lululala-night/index.html':['창원룰루랄라나이트','업소 소개'],
  'night/bulgwang-hobak/index.html':['불광동호박나이트','업소 소개'],
  'night/cheongdam-night/index.html':['청담나이트','업소 소개'],
+ 'night/dapsimni-miracle-night-1/index.html':['답십리미라클나이트','업소 소개'],
  'bulgwang-guide.html':['불광동호박나이트','예약 전 가이드'],
  'access.html':['울산챔피언나이트','오시는 길'],
  'atmosphere.html':['울산챔피언나이트','매장 분위기'],

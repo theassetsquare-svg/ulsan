@@ -6,12 +6,13 @@ const BASE='https://love-8r5.pages.dev';
 function walk(d,out=[]){for(const e of fs.readdirSync(d,{withFileTypes:true})){if(e.name==='node_modules'||e.name.startsWith('.'))continue;const p=path.join(d,e.name);if(e.isDirectory())walk(p,out);else if(e.name.endsWith('.html'))out.push(path.relative(ROOT,p));}return out;}
 const man=JSON.parse(fs.readFileSync('og/manifest.json','utf8'));
 const byFile=Object.fromEntries(man.이미지.map(i=>[i.파일명,i]));
-const PHONES={'010-5653-0069':'울산챔피언나이트','010-7528-4936':'창원룰루랄라나이트','010-2221-1937':'불광동호박나이트','010-5655-4866':'청담나이트'};
+const PHONES={'010-5653-0069':'울산챔피언나이트','010-7528-4936':'창원룰루랄라나이트','010-2221-1937':'불광동호박나이트','010-5655-4866':'청담나이트','010-8156-6558':'답십리미라클나이트'};
 const OWNER={ // 각 번호가 허용되는 페이지
  '010-5653-0069':['night/ulsan-champion-night/index.html','access.html','atmosphere.html','contact.html','faq.html','first-visit.html','review.html','story.html','policy/index.html'],
  '010-7528-4936':['night/changwon-lululala-night/index.html'],
  '010-2221-1937':['night/bulgwang-hobak/index.html','bulgwang-guide.html'],
  '010-5655-4866':['night/cheongdam-night/index.html'],
+ '010-8156-6558':['night/dapsimni-miracle-night-1/index.html'],
 };
 const VENUES=man.이미지.map(i=>i.가게이름).filter(n=>n!=='(허브·중립)');
 // 지역 키워드(업소명 아님) — 오염 판정에서 제외
@@ -88,7 +89,7 @@ for(const rel of pages){
   for(const v of VENUE_NAMES){ if(v===mine||(mine&&(v.includes(mine)||mine.includes(v))))continue;
     if(drawn.includes(v))fail.push(['G14 썸네일 가게이름 오염',rel,v]); }
   for(const p of Object.keys(PHONES)) if(drawn.includes(p)&&!OWNER[p].includes(rel))fail.push(['G14 썸네일 타 번호',rel,p]);
-  for(const [p,st2] of Object.entries(PHONES)){const nick={'010-5653-0069':'춘자','010-7528-4936':'로또','010-2221-1937':'손흥민','010-5655-4866':'펩시맨'}[p];
+  for(const [p,st2] of Object.entries(PHONES)){const nick={'010-5653-0069':'춘자','010-7528-4936':'로또','010-2221-1937':'손흥민','010-5655-4866':'펩시맨','010-8156-6558':'유재석'}[p];
     if(drawn.includes(nick)&&!OWNER[p].includes(rel))fail.push(['G14 썸네일 타 닉네임',rel,nick]);}
   // ---- G15 크기 ----
   const heights=info.그려진텍스트.map(t=>t.실측높이px);
