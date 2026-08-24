@@ -17,7 +17,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const SITE = 'https://love-8r5.pages.dev';
+const SITE = 'https://a.nolcool.com';
 const SKIP = ['node_modules', '.git', 'scripts', 'docs'];
 
 function walk(dir, out = []) {

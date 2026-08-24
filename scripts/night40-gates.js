@@ -155,7 +155,7 @@ const add = (id, pass, metric) => results.push({ id, pass, metric });
   Object.entries(pages).forEach(([k, p]) => {
     const img = propOf(p.src, 'og:image');
     const miss = [];
-    if (!img || !img.startsWith('https://love-8r5.pages.dev/og/')) miss.push('og:image절대URL');
+    if (!img || !img.startsWith('https://a.nolcool.com/og/')) miss.push('og:image절대URL');
     if (propOf(p.src, 'og:image:width') !== '1200') miss.push('width');
     if (propOf(p.src, 'og:image:height') !== '1200') miss.push('height');
     if (propOf(p.src, 'og:image:type') !== 'image/png') miss.push('type');
@@ -163,7 +163,7 @@ const add = (id, pass, metric) => results.push({ id, pass, metric });
     if (metaOf(p.src, 'twitter:card') !== 'summary') miss.push('twitter:card');
     if (!p.src.includes('name="twitter:image"')) miss.push('twitter:image');
     if (!metaOf(p.src, 'thumbnail')) miss.push('thumbnail');
-    const local = img ? path.join(ROOT, img.replace('https://love-8r5.pages.dev/', '')) : null;
+    const local = img ? path.join(ROOT, img.replace('https://a.nolcool.com/', '')) : null;
     if (!local || !fs.existsSync(local)) miss.push('파일없음');
     else checks.push([k, local]);
     if (miss.length) bad.push(k + ':' + miss.join('+'));
@@ -238,7 +238,7 @@ function extraChecks() {
     Object.entries(pages).forEach(([k, p]) => {
       if (k === 'home') return; // 홈은 기존 ilsanroom 링크 유지 허용
       const ext = [...p.src.matchAll(/href="(https?:\/\/[^"]*)"/g)].map((m) => m[1])
-        .filter((u) => !u.startsWith('https://love-8r5.pages.dev') && !u.startsWith('https://open.kakao.com/o/sBesta12') && !u.startsWith('http://schema.org') && !u.startsWith('https://schema.org'));
+        .filter((u) => !u.startsWith('https://a.nolcool.com') && !u.startsWith('https://open.kakao.com/o/sBesta12') && !u.startsWith('http://schema.org') && !u.startsWith('https://schema.org'));
       if (ext.length) bad.push(k + ':' + ext.join(','));
     });
     add('REXT', bad.length === 0, '외부 링크 위반 ' + bad.length + '건' + (bad.length ? ' — ' + bad.join(' / ') : ''));

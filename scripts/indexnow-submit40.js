@@ -12,7 +12,7 @@ const urlList = [
 ];
 
 const body = JSON.stringify({
-  host: 'love-8r5.pages.dev',
+  host: 'a.nolcool.com',
   key: KEY,
   keyLocation: SITE + '/' + KEY + '.txt',
   urlList

@@ -2,7 +2,7 @@ const fs=require('fs'),path=require('path');
 const {build,writePng}=require('./render-thumbs.js');
 const ROOT=path.resolve(__dirname,'..');
 process.chdir(ROOT);
-const BASE='https://love-8r5.pages.dev';
+const BASE='https://a.nolcool.com';
 function walk(d,out=[]){for(const e of fs.readdirSync(d,{withFileTypes:true})){if(e.name==='node_modules'||e.name.startsWith('.'))continue;const p=path.join(d,e.name);if(e.isDirectory())walk(p,out);else if(e.name.endsWith('.html'))out.push(path.relative(ROOT,p).split(path.sep).join("/"));/* ★ 윈도우는 경로 구분자가 역슬래시라 그대로 쓰면 AD_PAGES 대조가 전부 어긋난다 */}return out;}
 
 // ★ 광고주 정답표

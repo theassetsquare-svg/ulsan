@@ -2,7 +2,7 @@
 'use strict';
 const https=require('https'),fs=require('fs'),path=require('path');
 const ROOT=path.join(__dirname,'..');
-const SITE='https://love-8r5.pages.dev';
+const SITE='https://a.nolcool.com';
 const man=JSON.parse(fs.readFileSync(path.join(ROOT,'og/manifest.json'),'utf8'));
 const files=[...man.이미지.map(i=>i.파일명),'/og/success-story-1.png'];
 function head(url){return new Promise(r=>{https.request(url,{method:'GET'},res=>{let len=0;res.on('data',c=>len+=c.length);res.on('end',()=>r({status:res.statusCode,ct:res.headers['content-type'],len}));}).on('error',e=>r({status:0,ct:e.message,len:0})).end();});}

@@ -13,7 +13,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const SITE = 'https://love-8r5.pages.dev';
+const SITE = 'https://a.nolcool.com';
 const TODAY = '2026-08-15';
 const TODAY_KO = '2026년 8월 15일';
 const SITE_INDEX = 1;

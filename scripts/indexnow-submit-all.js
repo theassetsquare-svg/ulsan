@@ -11,8 +11,8 @@ const path = require('path');
 const https = require('https');
 
 const ROOT = path.join(__dirname, '..');
-const SITE = 'https://love-8r5.pages.dev';
-const HOST = 'love-8r5.pages.dev';
+const SITE = 'https://a.nolcool.com';
+const HOST = 'a.nolcool.com';
 const KEY = '584e7bc8bafe5edd3494299f6b582313';
 
 const xml = fs.readFileSync(path.join(ROOT, 'sitemap.xml'), 'utf8');

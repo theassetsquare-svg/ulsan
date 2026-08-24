@@ -19,7 +19,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const ORIGIN = 'https://love-8r5.pages.dev';
+const ORIGIN = 'https://a.nolcool.com';
 const SLUGS = ['story', 'atmosphere', 'first-visit', 'access', 'review', 'faq', 'contact'];
 
 const HTML_FILES = [

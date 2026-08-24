@@ -41,7 +41,7 @@ Allow: /
 User-agent: Kakaotalk-scrap
 Allow: /
 
-Sitemap: https://love-8r5.pages.dev/sitemap.xml
+Sitemap: https://a.nolcool.com/sitemap.xml
 
 # night pages
 User-agent: Yeti
@@ -50,4 +50,4 @@ Allow: /
 User-agent: Googlebot
 Allow: /
 
-Sitemap: https://love-8r5.pages.dev/sitemap.xml
+Sitemap: https://a.nolcool.com/sitemap.xml

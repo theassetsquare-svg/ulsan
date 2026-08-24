@@ -3,7 +3,7 @@
   "round": 2,
   "siteIndex": 1,
   "searchCount": 65,
-  "rule": "1곳으로 채택 가능: 가장 가까운 역·대략 거리·행정구역·업종 / 2곳 이상 일치 필수: 영업시간·출입 연령·주차·좌석 구성·예약 방법. 구체 금액·별점·후기 문구·방문자수·이벤트는 옮기지 않는다. 자사 운영 사이트(love-8r5.pages.dev, ulsan.pages.dev, nolcool.com, informationa.pages.dev, seven-97b.pages.dev)는 출처 수에 세지 않는다.",
+  "rule": "1곳으로 채택 가능: 가장 가까운 역·대략 거리·행정구역·업종 / 2곳 이상 일치 필수: 영업시간·출입 연령·주차·좌석 구성·예약 방법. 구체 금액·별점·후기 문구·방문자수·이벤트는 옮기지 않는다. 자사 운영 사이트(a.nolcool.com, ulsan.pages.dev, nolcool.com, informationa.pages.dev, seven-97b.pages.dev)는 출처 수에 세지 않는다.",
   "note": "업소당 5개 질의: {업소명} / {업소명} 위치 / {업소명} 영업시간 / {업소명} 예약 / {지역} 나이트클럽. 창원·대전원의 연령 기준은 광고주 확정 정보로 웹 확인 여부와 무관하게 게재한다.",
   "venues": [
     {"slug":"bulgwang-hobak-night","regionPage":"eunpyeong-night","queries":["불광동호박나이트","불광동호박나이트 위치","불광동호박나이트 영업시간","불광동호박나이트 예약","은평구 나이트클럽"],

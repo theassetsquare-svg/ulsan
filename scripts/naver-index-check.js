@@ -22,7 +22,7 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
-const SITE = 'https://love-8r5.pages.dev';
+const SITE = 'https://a.nolcool.com';
 const UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36';
 const DELAY_MS = 15000;
