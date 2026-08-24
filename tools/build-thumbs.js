@@ -12,6 +12,8 @@ const AD={
  '불광동호박나이트':{nick:'손흥민',phone:'010-2221-1937'},
  '청담나이트':{nick:'펩시맨',phone:'010-5655-4866'},
  '답십리미라클나이트':{nick:'유재석',phone:'010-8156-6558'},
+ '부산아시아드나이트':{nick:'새우깡',phone:'010-3614-1056'},
+ '대전세븐나이트':{nick:'영탁',phone:'010-7770-0869'},
 };
 // 광고주 페이지 → 주제(뱃지)
 const AD_PAGES={
@@ -21,6 +23,8 @@ const AD_PAGES={
  'contact-1.html':['울산챔피언나이트','예약 문의'],
  'faq-1.html':['울산챔피언나이트','자주 묻는 질문'],
  'first-1.html':['울산챔피언나이트','첫 방문 가이드'],
+  'night/busan-asiad-1/index.html':['부산아시아드나이트','업소 소개'],
+ 'night/daejeon-seven-1/index.html':['대전세븐나이트','업소 소개'],
  'night/bulgwang-hobak-1/index.html':['불광동호박나이트','업소 소개'],
  'night/changwon-lululala-1/index.html':['창원룰루랄라나이트','업소 소개'],
  'night/cheongdam-1/index.html':['청담나이트','업소 소개'],

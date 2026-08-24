@@ -3,17 +3,36 @@ const fs=require('fs'),path=require('path');
 const sharp=require('sharp');
 const ROOT=path.resolve(__dirname,'..');process.chdir(ROOT);
 const BASE='https://a.nolcool.com';
-function walk(d,out=[]){for(const e of fs.readdirSync(d,{withFileTypes:true})){if(e.name==='node_modules'||e.name.startsWith('.'))continue;const p=path.join(d,e.name);if(e.isDirectory())walk(p,out);else if(e.name.endsWith('.html'))out.push(path.relative(ROOT,p));}return out;}
+function walk(d,out=[]){for(const e of fs.readdirSync(d,{withFileTypes:true})){if(e.name==='node_modules'||e.name.startsWith('.'))continue;const p=path.join(d,e.name);if(e.isDirectory())walk(p,out);else if(e.name.endsWith('.html'))out.push(path.relative(ROOT,p).split(path.sep).join("/"));/* ★ 윈도우는 경로 구분자가 역슬래시라 그대로 쓰면 OWNER 대조가 전부 어긋나 정상 광고주 페이지가 "타 광고주 번호"로 잡힌다. build-thumbs.js 는 이미 고쳐져 있었고 여기만 남아 있었다(2026-08-24) */}return out;}
 const man=JSON.parse(fs.readFileSync('og/manifest.json','utf8'));
 const byFile=Object.fromEntries(man.이미지.map(i=>[i.파일명,i]));
-const PHONES={'010-5653-0069':'울산챔피언나이트','010-7528-4936':'창원룰루랄라나이트','010-2221-1937':'불광동호박나이트','010-5655-4866':'청담나이트','010-8156-6558':'답십리미라클나이트'};
-const OWNER={ // 각 번호가 허용되는 페이지
- '010-5653-0069':['night/ulsan-champion-night/index.html','access.html','atmosphere.html','contact.html','faq.html','first-visit.html','review.html','story.html','policy/index.html'],
- '010-7528-4936':['night/changwon-lululala-night/index.html'],
- '010-2221-1937':['night/bulgwang-hobak/index.html','bulgwang-guide.html'],
- '010-5655-4866':['night/cheongdam-night/index.html'],
- '010-8156-6558':['night/dapsimni-miracle-night-1/index.html'],
-};
+/* 번호표·소유표 — tools/build-thumbs.js 의 AD 와 AD_PAGES 에서 직접 읽는다.
+ *
+ * ★ 2026-08-24 수정 — 예전에는 이 두 표를 손으로 적어 뒀다. 그래서
+ *   ① 광고주를 새로 넣으면 표에 없어 "미등록 010 패턴"으로 막히고
+ *   ② 주소교체로 페이지 이름이 바뀌면(access.html → access-1.html,
+ *      night/ulsan-champion-night → night/ulsan-champion-1) 소유표가 어긋나
+ *      정상 광고주 페이지 13건이 "타 광고주 번호"로 잡혀 있었다.
+ *   생성기와 같은 데이터를 보므로 이제 주소가 바뀌어도 따라간다.
+ */
+const _bt = fs.readFileSync('tools/build-thumbs.js', 'utf8');
+const _AD = {};   // 가게이름 → {nick, phone}
+for (const m of _bt.matchAll(/'([^']+)':\{nick:'([^']+)',phone:'([^']+)'\}/g)) {
+  _AD[m[1]] = { nick: m[2], phone: m[3] };
+}
+const _AD_PAGES = {};   // 페이지 → 가게이름
+for (const m of _bt.matchAll(/'([^']+\.html)':\['([^']+)','[^']*'\]/g)) {
+  _AD_PAGES[m[1]] = m[2];
+}
+const PHONES = Object.fromEntries(Object.entries(_AD).map(([name, a]) => [a.phone, name]));
+const NICKS = Object.fromEntries(Object.entries(_AD).map(([, a]) => [a.phone, a.nick]));
+const OWNER = {};   // 각 번호가 허용되는 페이지
+for (const [page, name] of Object.entries(_AD_PAGES)) {
+  const a = _AD[name];
+  if (!a) continue;
+  (OWNER[a.phone] ||= []).push(page);
+}
+for (const p of Object.keys(PHONES)) OWNER[p] ||= [];
 const VENUES=man.이미지.map(i=>i.가게이름).filter(n=>n!=='(허브·중립)');
 // 지역 키워드(업소명 아님) — 오염 판정에서 제외
 const REGION=new Set(['울산나이트','부산나이트','강남나이트','일산나이트','신림나이트','상봉동나이트','수유나이트','수원나이트','안산나이트','창원나이트','대전나이트','유천동나이트','은평나이트']);
@@ -89,7 +108,7 @@ for(const rel of pages){
   for(const v of VENUE_NAMES){ if(v===mine||(mine&&(v.includes(mine)||mine.includes(v))))continue;
     if(drawn.includes(v))fail.push(['G14 썸네일 가게이름 오염',rel,v]); }
   for(const p of Object.keys(PHONES)) if(drawn.includes(p)&&!OWNER[p].includes(rel))fail.push(['G14 썸네일 타 번호',rel,p]);
-  for(const [p,st2] of Object.entries(PHONES)){const nick={'010-5653-0069':'춘자','010-7528-4936':'로또','010-2221-1937':'손흥민','010-5655-4866':'펩시맨','010-8156-6558':'유재석'}[p];
+  for(const [p,st2] of Object.entries(PHONES)){const nick=NICKS[p];   /* ★ 데이터에서 읽는다 — 손으로 적으면 광고주를 넣을 때마다 어긋난다 */
     if(drawn.includes(nick)&&!OWNER[p].includes(rel))fail.push(['G14 썸네일 타 닉네임',rel,nick]);}
   // ---- G15 크기 ----
   const heights=info.그려진텍스트.map(t=>t.실측높이px);
