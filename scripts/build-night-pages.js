@@ -1,4 +1,19 @@
 'use strict';
+/* ============================================================
+ * ★ 2026-08-25 — 지금 이 생성기를 그냥 돌리면 안 됩니다.
+ *
+ * 주소 문제(허브 /night-1/, 가게 /night/<슬러그>/)와
+ * 버린 주소를 되살리던 문제는 아래에서 전부 고쳐 두었습니다.
+ * 하지만 **글 내용이 배포본과 어긋나 있습니다.**
+ *   · 배포본에는 나중에 손으로 넣은 광고주 고정전화바가 들어 있는데
+ *     scripts/night/*.js 원고에는 그 광고주 정보가 없습니다.
+ *   · 그대로 돌리면 13개 페이지에서 광고주 이름과 전화번호가 지워집니다
+ *     (2026-08-25 실측 — 카카오 전화바 7개가 사라짐).
+ *
+ * 돌리기 전에 반드시 scripts/night/*.js 의 group·contact 를
+ * 배포본과 맞춰 놓으십시오. 맞추기 전에는 돌리지 마십시오.
+ * ============================================================ */
+
 /**
  * /night/{slug}/ 13개 페이지 + /night/ 허브 생성기
  *
@@ -34,6 +49,54 @@ const VERIFY = [
 
 const venues = ORDER.map((s) => require(path.join(__dirname, 'night', s + '.js')));
 const bySlug = Object.fromEntries(venues.map((v) => [v.slug, v]));
+
+/* ★ 2026-08-25 — 배포된 페이지에서 폴더·주소·썸네일을 그대로 이어받는다.
+ *
+ * 왜 필요한가
+ *  · 주소교체(슬러그 회전)로 폴더가 바뀐다. bulgwang-hobak -> bulgwang-hobak-1
+ *    원고의 slug 는 옛 이름이라 그대로 쓰면 **버린 주소가 되살아난다**.
+ *  · 썸네일 이름도 다르다. 배포본은 /og/bulgwang-hobak-1-night.png 인데
+ *    예전 규칙(slug + "-og.png")으로 쓰면 없는 파일을 가리켜 썸네일이 깨진다.
+ * 그래서 가게이름으로 배포된 폴더를 찾고, canonical 과 og:image 를 배포본에서 그대로 읽는다.
+ * 못 찾으면 만들지 않고 멈춘다(추측해서 새 주소를 만들지 않는다). */
+/* 빵부스러기(BreadcrumbList) 마지막 항목의 가게이름을 꺼낸다.
+ * NightClub 표시가 빠진 페이지도 있어서 빵부스러기를 기준으로 삼는다.
+ * 정규식을 쓰지 않는다(따옴표·역슬래시 사고 방지). */
+function venueName(html) {
+  const a = html.indexOf('BreadcrumbList');
+  if (a < 0) return null;
+  const b = html.indexOf('</script>', a);
+  const block = html.slice(a, b < 0 ? html.length : b);
+  const j = block.lastIndexOf('"name":');
+  if (j < 0) return null;
+  const k = block.indexOf('"', j + 7);
+  if (k < 0) return null;
+  const q = block.indexOf('"', k + 1);
+  if (q < 0) return null;
+  return block.slice(k + 1, q);
+}
+
+function deployedInfo() {
+  const base = path.join(ROOT, 'night');
+  const map = new Map();
+  for (const folder of fs.readdirSync(base)) {
+    const f = path.join(base, folder, 'index.html');
+    if (!fs.existsSync(f)) continue;
+    const h = fs.readFileSync(f, 'utf8');
+    const nm = venueName(h);
+    if (!nm || map.has(nm)) continue;
+    const can = h.match(/<link rel="canonical" href="([^"]+)"/);
+    const og  = h.match(/<meta property="og:image" content="([^"]+)"/);
+    map.set(nm, {
+      folder,
+      url: can ? can[1] : SITE + '/night/' + folder + '/',
+      img: og ? og[1] : SITE + '/og/' + folder + '-og.png'
+    });
+  }
+  return map;
+}
+const DEPLOY = deployedInfo();
+const ctxOf = (v) => DEPLOY.get(v.name) || null;
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const j = (o) => JSON.stringify(o, null, 2);
@@ -93,8 +156,9 @@ function callbar(v) {
 }
 
 function jsonld(v) {
-  const url = SITE + '/night-1/' + v.slug + '/';
-  const img = SITE + '/og/' + v.slug + '-og.png';
+  const c = ctxOf(v);
+  const url = c.url;
+  const img = c.img;
   const address = { '@type': 'PostalAddress' };
   if (v.addr.street) address.streetAddress = v.addr.street;
   address.addressLocality = v.addr.locality;
@@ -210,8 +274,9 @@ body{background:#fff;color:#15161a;padding-bottom:calc(84px + env(safe-area-inse
 
 function buildPage(v) {
   const p = palette(v);
-  const url = SITE + '/night-1/' + v.slug + '/';
-  const img = SITE + '/og/' + v.slug + '-og.png';
+  const c = ctxOf(v);
+  const url = c.url;
+  const img = c.img;
   const rows = factRows(v);
 
   const sections = v.sections.map((s) => {
@@ -369,11 +434,11 @@ ${VERIFY}
 <title>전국 나이트 13곳 어떤 곳인지 한눈에</title>
 <meta name="description" content="지역별 나이트 13곳이 각각 어떤 홀인지, 몇 시가 좋은지, 좌석은 어떻게 나뉘는지 한 줄로 모았습니다. 이름을 누르면 업소별 소개로 이어집니다.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="${SITE}/night/">
+<link rel="canonical" href="${SITE}/night-1/">
 <meta property="og:title" content="전국 나이트 13곳 어떤 곳인지 한눈에">
 <meta property="og:description" content="지역별 나이트 13곳이 각각 어떤 홀인지 한 줄로 모았습니다.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="${SITE}/night/">
+<meta property="og:url" content="${SITE}/night-1/">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -435,7 +500,7 @@ function fingerprint() {
     pages: venues.map((v, i) => ({
       venueNo: i + 1,
       slug: v.slug,
-      url: SITE + '/night-1/' + v.slug + '/',
+      url: ctxOf(v).url,
       angleNo: v.angleNo,
       angleName: v.angleName,
       suffix: v.suffix,
@@ -447,15 +512,42 @@ function fingerprint() {
   };
 }
 
+/* ★ 2026-08-25 — 배포된 폴더를 찾아서 그 자리에만 덮어쓴다.
+ *
+ * 주소교체(슬러그 회전)로 가게 폴더 이름이 바뀐다. 예: bulgwang-hobak -> bulgwang-hobak-1
+ * 원고 파일의 slug 는 옛 이름 그대로라, 예전처럼 mkdir 로 만들어 버리면
+ * **버린 주소가 되살아나고** 실제 배포된 페이지는 낡은 채로 남는다(2026-08-25 실측 13곳).
+ * 그래서 가게이름으로 배포된 폴더를 찾고, 못 찾으면 만들지 않고 멈춘다. */
+function deployedDirs() {
+  const base = path.join(ROOT, 'night');
+  const map = new Map();
+  for (const name of fs.readdirSync(base)) {
+    const f = path.join(base, name, 'index.html');
+    if (!fs.existsSync(f)) continue;
+    const h = fs.readFileSync(f, 'utf8');
+    const m = h.match(/"@type": "NightClub"[sS]{0,400}?"name": "([^"]+)"/);
+    if (m && !map.has(m[1])) map.set(m[1], name);
+  }
+  return map;
+}
+
 function main() {
+  const missing = venues.filter((v) => !ctxOf(v)).map((v) => v.name + ' (' + v.slug + ')');
+  if (missing.length) {
+    console.error('중단 — 배포된 폴더를 못 찾은 업소가 있습니다. 아무것도 쓰지 않았습니다:');
+    missing.forEach((m) => console.error('  · ' + m));
+    console.error('night/ 아래 폴더와 원고의 name 이 맞는지 확인하세요.');
+    process.exit(1);
+  }
   venues.forEach((v) => {
-    const dir = path.join(ROOT, 'night', v.slug);
-    fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(path.join(dir, 'index.html'), buildPage(v));
+    fs.writeFileSync(path.join(ROOT, 'night', ctxOf(v).folder, 'index.html'), buildPage(v));
   });
-  fs.writeFileSync(path.join(ROOT, 'night', 'index.html'), buildHub());
-  fs.writeFileSync(path.join(ROOT, '.seo-fingerprint.json'), JSON.stringify(fingerprint(), null, 2) + '\n');
-  console.log('OK  night/ 페이지 ' + venues.length + '개 + 허브 1개 + .seo-fingerprint.json 생성');
+  /* 목록(허브)은 /night-1/ 하나뿐이고 그 주인은 scripts/build-night40.js 다.
+   * 그 허브가 40곳 + 지역 13곳 = 53개를 전부 걸고 있다(2026-08-25 실측).
+   * 예전에는 이 파일도 night/index.html 을 썼는데 그 주소는 버려져 지금 404 다.
+   * 다시 쓰면 버린 주소를 되살리고 허브를 13곳짜리로 덮어써 버린다. 그래서 쓰지 않는다. */
+  fs.writeFileSync(path.join(ROOT, '.seo-fingerprint.json'), JSON.stringify(fingerprint(), null, 2) + String.fromCharCode(10));
+  console.log('OK  night/ 페이지 ' + venues.length + '개 갱신 (허브는 build-night40.js 담당)');
 }
 main();
 

@@ -320,7 +320,7 @@ const h2kw = [];
 /* ---------- 부가: alt 누락 / noindex / canonical ---------- */
 {
   const noindex = regions.filter((r) => /noindex/.test(html[r.slug])).length;
-  const canon = regions.filter((r) => html[r.slug].includes('<link rel="canonical" href="https://a.nolcool.com/night/' + r.slug + '/">')).length;
+  const canon = regions.filter((r) => html[r.slug].includes('<link rel="canonical" href="https://a.nolcool.com/night-1/' + r.slug + '/">')).length;
   const altMissing = regions.filter((r) => !/og:image:alt" content="[^"]{5,}"/.test(html[r.slug])).length;
   add('G20a', 'noindex 0 / canonical 자기참조 13-13 / og alt 13-13', noindex === 0 && canon === 13 && altMissing === 0,
     'noindex ' + noindex + '건 / canonical ' + canon + '/13 / og:image:alt 누락 ' + altMissing + '건');
