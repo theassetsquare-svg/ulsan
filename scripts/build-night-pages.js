@@ -1,17 +1,23 @@
 'use strict';
 /* ============================================================
- * ★ 2026-08-25 — 지금 이 생성기를 그냥 돌리면 안 됩니다.
+ * ★ 2026-08-25 — 돌리기 전에 반드시 읽으십시오.
  *
- * 주소 문제(허브 /night-1/, 가게 /night/<슬러그>/)와
- * 버린 주소를 되살리던 문제는 아래에서 전부 고쳐 두었습니다.
- * 하지만 **글 내용이 배포본과 어긋나 있습니다.**
- *   · 배포본에는 나중에 손으로 넣은 광고주 고정전화바가 들어 있는데
- *     scripts/night/*.js 원고에는 그 광고주 정보가 없습니다.
- *   · 그대로 돌리면 13개 페이지에서 광고주 이름과 전화번호가 지워집니다
- *     (2026-08-25 실측 — 카카오 전화바 7개가 사라짐).
+ * [고쳐 둔 것 — 이제 안전합니다]
+ *  · 허브는 /night-1/, 가게는 /night/<슬러그>/ 로 바로잡았습니다.
+ *  · 원고의 옛 슬러그로 폴더를 새로 만들어 **버린 주소를 되살리던 문제**를 막았습니다.
+ *    배포된 폴더를 가게이름으로 찾아 그 자리에만 덮어쓰고, 못 찾으면 멈춥니다.
+ *  · 주소와 썸네일 이름을 배포본에서 그대로 이어받습니다(썸네일 깨짐 방지).
+ *  · 광고주(닉네임·전화번호)를 원고에 채워 넣었습니다.
+ *    이제 돌려도 광고주 전화바가 지워지지 않습니다.
+ *    배포본이 바뀌면 `node scripts/sync-advertisers.js --apply` 로 다시 맞추십시오.
+ *  · 고정 하단바를 배포본과 같은 <a> 링크 모양으로 맞췄습니다.
  *
- * 돌리기 전에 반드시 scripts/night/*.js 의 group·contact 를
- * 배포본과 맞춰 놓으십시오. 맞추기 전에는 돌리지 마십시오.
+ * [그래도 주의할 것]
+ *  이 생성기의 **본문 구성·CSS 가 배포본과 많이 달라졌습니다.**
+ *  돌리면 13개 페이지가 3천 줄 규모로 다시 쓰입니다(2026-08-25 실측).
+ *  광고주가 사라지지는 않지만 글과 겉모습이 바뀌므로,
+ *  돌린 뒤 반드시 `git diff` 를 읽고 의도한 변경인지 확인하십시오.
+ *  단순히 광고주만 바꾸려는 것이라면 페이지 HTML 을 직접 고치는 편이 안전합니다.
  * ============================================================ */
 
 /**
@@ -144,15 +150,20 @@ function factRows(v) {
   return rows;
 }
 
+/* ★ 2026-08-25 — 배포본에 맞춘 고정 하단바.
+ *
+ * 예전 생성기는 두 경우 다 <div><span> 이라 **눌러도 아무 일이 없었다.**
+ * 배포본은 둘 다 <a> 로 되어 있어 바로 전화가 걸리고 카카오톡이 열린다.
+ * 생성기를 돌리면 그 링크가 글자로 되돌아가 손님을 놓친다(46개 페이지 해당).
+ * 그래서 배포본과 같은 모양으로 맞춘다. 전화번호는 하이픈 있는 그대로 쓴다. */
 function callbar(v) {
-  if (v.group === 'A') {
-    return '<div class="callbar" role="complementary" aria-label="전화 연결">\n' +
-      '  <a href="tel:' + v.contact.raw + '">📞 ' + esc(v.contact.person) + ' ' + esc(v.contact.tel) + '</a>\n' +
-      '</div>';
+  if (v.group === 'A' && v.contact) {
+    const label = v.name + ' ' + v.contact.person + '에게 전화 연결';
+    return '<a class="callbar" href="tel:' + esc(v.contact.tel) + '" aria-label="' + esc(label) + '">'
+      + '📞 ' + esc(v.name) + ' ' + esc(v.contact.person) + ' ' + esc(v.contact.tel) + '</a>';
   }
-  return '<div class="callbar" role="complementary" aria-label="광고 제휴 문의">\n' +
-    '  <span>광고·제휴 입점 문의 카톡 <b>besta12</b></span>\n' +
-    '</div>';
+  return '<a class="callbar" href="https://open.kakao.com/o/sBesta12" target="_blank" rel="noopener noreferrer"'
+    + ' aria-label="광고문의 카카오톡 besta12">💬 광고문의 카카오톡 besta12</a>';
 }
 
 function jsonld(v) {

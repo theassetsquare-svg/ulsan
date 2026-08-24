@@ -6,7 +6,9 @@ module.exports = {
   name: '대전세븐나이트',
   nameB: '대전 세븐나이트',
   nameC: '유천동 나이트클럽',
-  group: 'B',
+  group: 'A',
+  contact: { person: '영탁', tel: '010-7770-0869', raw: '01077700869', intl: '+82-10-7770-0869' },
+
   hue: 40,
   angleNo: 12,
   angleName: '실수 방지형',
@@ -20,7 +22,6 @@ module.exports = {
   parking: null,
   age: null,
   ageRange: null,
-  contact: null,
   title: '대전세븐나이트 피해야 할 것 유천동 첫 방문 정리',
   description: '대전세븐나이트에서 첫 방문자가 자주 놓치는 세 가지를 짚었습니다. 도착 시각과 인원 통보, 옷차림에서 결과가 어떻게 갈리는지와 대안까지 함께 정리했습니다.',
   keywords: '대전세븐나이트, 대전 세븐나이트, 유천동 나이트클럽, 중구 나이트, 당디로 나이트',

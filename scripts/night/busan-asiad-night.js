@@ -7,7 +7,9 @@ module.exports = {
   name: '부산아시아드나이트',
   nameB: '부산 아시아드나이트',
   nameC: '동래구 나이트클럽',
-  group: 'B',
+  group: 'A',
+  contact: { person: '새우깡', tel: '010-3614-1056', raw: '01036141056', intl: '+82-10-3614-1056' },
+
   hue: 228,
   angleNo: 9,
   angleName: '비교 설명형',
@@ -21,7 +23,6 @@ module.exports = {
   parking: '주차 공간 안내 있음',
   age: null,
   ageRange: null,
-  contact: null,
   title: '부산아시아드나이트 다른 곳과 비교 온천장 대형 홀',
   description: '부산아시아드나이트가 일반적인 나이트클럽과 무엇이 다른지 층 구조와 좌석, 손님층 순으로 견줘 봤습니다. 온천장 지하 두 개 층이 만드는 차이입니다.',
   keywords: '부산아시아드나이트, 부산 아시아드나이트, 동래구 나이트클럽, 온천장 나이트, 온천동 나이트',
