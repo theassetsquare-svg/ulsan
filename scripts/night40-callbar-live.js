@@ -13,9 +13,9 @@ const PHONE_PAGES = {
   '/night/ulsan-champion-1/': '01056530069',
   '/night/changwon-lululala-1/': '01075284936',
   '/night/bulgwang-hobak-1/': '01022211937',
-  '/night/ulsan-night/': '01056530069',
-  '/night/changwon-night/': '01075284936',
-  '/night/eunpyeong-night/': '01022211937'
+  '/ulsan-night/': '01056530069',
+  '/changwon-night/': '01075284936',
+  '/eunpyeong-night/': '01022211937'
 };
 
 function get(url) {

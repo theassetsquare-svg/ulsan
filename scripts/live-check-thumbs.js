@@ -21,7 +21,7 @@ function get(url){return new Promise(r=>{https.get(url,res=>{let d='';res.on('da
   ['/night/ulsan-champion-1/',['010-5653-0069','춘자']],
   ['/night/changwon-lululala-1/',['010-7528-4936','로또']],
   ['/night/bulgwang-hobak-1/',['010-2221-1937','손흥민']],
-  ['/night/ulsan-night/',['삼산동 터미널 구역']],
+  ['/ulsan-night/',['삼산동 터미널 구역']],
   ['/faq-1',['울산챔피언나이트']],
   ['/night-1/',['전국 나이트']],
  ];

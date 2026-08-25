@@ -151,7 +151,7 @@
     "verdict": "OK 번호바 춘자 01056530069"
   },
   {
-    "pathname": "/night/doksan-gukbingwan-night-1/",
+    "pathname": "/doksan-gukbingwan-night-1/",
     "label": "doksan-gukbingwan-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -160,7 +160,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/dapsimni-miracle-night-1/",
+    "pathname": "/dapsimni-miracle-night-1/",
     "label": "dapsimni-miracle-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -169,7 +169,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/gangseo-hobak-night-1/",
+    "pathname": "/gangseo-hobak-night-1/",
     "label": "gangseo-hobak-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -178,7 +178,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/yeongdeungpo-terminal-night-1/",
+    "pathname": "/yeongdeungpo-terminal-night-1/",
     "label": "yeongdeungpo-terminal-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -187,7 +187,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/nowon-hobak-night-1/",
+    "pathname": "/nowon-hobak-night-1/",
     "label": "nowon-hobak-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -196,7 +196,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/gildong-chance-night-1/",
+    "pathname": "/gildong-chance-night-1/",
     "label": "gildong-chance-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -205,7 +205,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/paju-yadang-skydome-night-1/",
+    "pathname": "/paju-yadang-skydome-night-1/",
     "label": "paju-yadang-skydome-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -214,7 +214,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/guri-hobak-night-1/",
+    "pathname": "/guri-hobak-night-1/",
     "label": "guri-hobak-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -223,7 +223,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/uijeongbu-hangukgwan-night-1/",
+    "pathname": "/uijeongbu-hangukgwan-night-1/",
     "label": "uijeongbu-hangukgwan-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -232,7 +232,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/uijeongbu-baekakgwan-night-1/",
+    "pathname": "/uijeongbu-baekakgwan-night-1/",
     "label": "uijeongbu-baekakgwan-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -250,7 +250,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/osan-hobak-night-1/",
+    "pathname": "/osan-hobak-night-1/",
     "label": "osan-hobak-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -259,7 +259,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/indeogwon-gukbingwan-night-1/",
+    "pathname": "/indeogwon-gukbingwan-night-1/",
     "label": "indeogwon-gukbingwan-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -277,7 +277,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/incheon-arabian-night-1/",
+    "pathname": "/incheon-arabian-night-1/",
     "label": "incheon-arabian-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -286,7 +286,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/bucheon-gorae-night-1/",
+    "pathname": "/bucheon-gorae-night-1/",
     "label": "bucheon-gorae-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -295,7 +295,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/pyeongtaek-hobak-night-1/",
+    "pathname": "/pyeongtaek-hobak-night-1/",
     "label": "pyeongtaek-hobak-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -304,7 +304,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/cheonan-stardome-night-1/",
+    "pathname": "/cheonan-stardome-night-1/",
     "label": "cheonan-stardome-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -313,7 +313,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/cheonan-korea-night-1/",
+    "pathname": "/cheonan-korea-night-1/",
     "label": "cheonan-korea-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -331,7 +331,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/ulsan-newworld-night-1/",
+    "pathname": "/ulsan-newworld-night-1/",
     "label": "ulsan-newworld-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -349,7 +349,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/daegu-hobak-night-1/",
+    "pathname": "/daegu-hobak-night-1/",
     "label": "daegu-hobak-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -358,7 +358,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/gumi-hobak-night-1/",
+    "pathname": "/gumi-hobak-night-1/",
     "label": "gumi-hobak-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -367,7 +367,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/gwangju-sangmu-night-1/",
+    "pathname": "/gwangju-sangmu-night-1/",
     "label": "gwangju-sangmu-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -376,7 +376,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/gwangju-cheomdan-night-1/",
+    "pathname": "/gwangju-cheomdan-night-1/",
     "label": "gwangju-cheomdan-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -385,7 +385,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/jejudo-night-1/",
+    "pathname": "/jejudo-night-1/",
     "label": "jejudo-night",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -394,7 +394,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/eunpyeong-night/",
+    "pathname": "/eunpyeong-night/",
     "label": "eunpyeong-night (지역)",
     "http": 200,
     "bar": "<div class=\"callbar\" role=\"complementary\" aria-label=\"전화 연결\"> <a href=\"tel:01022211937\">📞 손흥민 010-2221-1937</",
@@ -407,7 +407,7 @@
     "verdict": "OK 번호바 손흥민 01022211937"
   },
   {
-    "pathname": "/night/changwon-night/",
+    "pathname": "/changwon-night/",
     "label": "changwon-night (지역)",
     "http": 200,
     "bar": "<div class=\"callbar\" role=\"complementary\" aria-label=\"전화 연결\"> <a href=\"tel:01075284936\">📞 로또 010-7528-4936</a",
@@ -420,7 +420,7 @@
     "verdict": "OK 번호바 로또 01075284936"
   },
   {
-    "pathname": "/night/ulsan-night/",
+    "pathname": "/ulsan-night/",
     "label": "ulsan-night (지역)",
     "http": 200,
     "bar": "<div class=\"callbar\" role=\"complementary\" aria-label=\"전화 연결\"> <a href=\"tel:01056530069\">📞 춘자 010-5653-0069</a",
@@ -433,7 +433,7 @@
     "verdict": "OK 번호바 춘자 01056530069"
   },
   {
-    "pathname": "/night/gangnam-night/",
+    "pathname": "/gangnam-night/",
     "label": "gangnam-night (지역)",
     "http": 200,
     "bar": "<div class=\"callbar\" role=\"complementary\" aria-label=\"광고 제휴 문의\"> <span>광고·제휴 입점 문의 카톡 <b>besta12</b></span> </",
@@ -442,7 +442,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/daejeon-night/",
+    "pathname": "/daejeon-night/",
     "label": "daejeon-night (지역)",
     "http": 200,
     "bar": "<div class=\"callbar\" role=\"complementary\" aria-label=\"광고 제휴 문의\"> <span>광고·제휴 입점 문의 카톡 <b>besta12</b></span> </",
@@ -478,7 +478,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/busan-night/",
+    "pathname": "/busan-night/",
     "label": "busan-night (지역)",
     "http": 200,
     "bar": "<div class=\"callbar\" role=\"complementary\" aria-label=\"광고 제휴 문의\"> <span>광고·제휴 입점 문의 카톡 <b>besta12</b></span> </",
@@ -496,7 +496,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/ansan-night/",
+    "pathname": "/ansan-night/",
     "label": "ansan-night (지역)",
     "http": 200,
     "bar": "<div class=\"callbar\" role=\"complementary\" aria-label=\"광고 제휴 문의\"> <span>광고·제휴 입점 문의 카톡 <b>besta12</b></span> </",
@@ -505,7 +505,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/yucheon-night/",
+    "pathname": "/yucheon-night/",
     "label": "yucheon-night (지역)",
     "http": 200,
     "bar": "<div class=\"callbar\" role=\"complementary\" aria-label=\"광고 제휴 문의\"> <span>광고·제휴 입점 문의 카톡 <b>besta12</b></span> </",
@@ -514,7 +514,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/night/ilsan-night/",
+    "pathname": "/ilsan-night/",
     "label": "ilsan-night (지역)",
     "http": 200,
     "bar": "<div class=\"callbar\" role=\"complementary\" aria-label=\"광고 제휴 문의\"> <span>광고·제휴 입점 문의 카톡 <b>besta12</b></span> </",
