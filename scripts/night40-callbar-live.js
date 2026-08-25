@@ -10,9 +10,9 @@ const { ORDER, REGION_ORDER, SITE } = require('./build-night40.js');
 const ADV = { '01056530069': '춘자', '01075284936': '로또', '01022211937': '손흥민' };
 const PHONE_PAGES = {
   '/': '01056530069',
-  '/ulsan-champion-1/': '01056530069',
-  '/changwon-lululala-1/': '01075284936',
-  '/bulgwang-hobak-1/': '01022211937',
+  '/ulsan-champion-night-1/': '01056530069',
+  '/changwon-lululala-night-1/': '01075284936',
+  '/bulgwang-hobak-night-1/': '01022211937',
   '/ulsan-night/': '01056530069',
   '/changwon-night/': '01075284936',
   '/eunpyeong-night/': '01022211937'

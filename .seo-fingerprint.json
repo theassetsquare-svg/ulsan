@@ -7,7 +7,7 @@
     {
       "venueNo": 1,
       "slug": "bulgwang-hobak-night",
-      "url": "https://a.nolcool.com/bulgwang-hobak-1/",
+      "url": "https://a.nolcool.com/bulgwang-hobak-night-1/",
       "angleNo": 1,
       "angleName": "정면 소개형",
       "suffix": "소문의 진짜 정체",
@@ -26,7 +26,7 @@
     {
       "venueNo": 2,
       "slug": "changwon-lululala-night",
-      "url": "https://a.nolcool.com/changwon-lululala-1/",
+      "url": "https://a.nolcool.com/changwon-lululala-night-1/",
       "angleNo": 2,
       "angleName": "질문 던지기형",
       "suffix": "뭐가 다르길래",
@@ -45,7 +45,7 @@
     {
       "venueNo": 3,
       "slug": "ulsan-champion-night",
-      "url": "https://a.nolcool.com/ulsan-champion-1/",
+      "url": "https://a.nolcool.com/ulsan-champion-night-1/",
       "angleNo": 3,
       "angleName": "장면 묘사형",
       "suffix": "홀이 차오르는 순간",
@@ -64,7 +64,7 @@
     {
       "venueNo": 4,
       "slug": "cheongdam-night",
-      "url": "https://a.nolcool.com/cheongdam-1/",
+      "url": "https://a.nolcool.com/cheongdam-night-1/",
       "angleNo": 4,
       "angleName": "처음 가는 사람 시점",
       "suffix": "처음 가는 사람 안내",
@@ -83,7 +83,7 @@
     {
       "venueNo": 5,
       "slug": "daejeon-one-night",
-      "url": "https://a.nolcool.com/daejeon-one-1/",
+      "url": "https://a.nolcool.com/daejeon-one-night-1/",
       "angleNo": 5,
       "angleName": "이유 나열형",
       "suffix": "사람이 오는 이유",
@@ -102,7 +102,7 @@
     {
       "venueNo": 6,
       "slug": "sillim-grandprix-night",
-      "url": "https://a.nolcool.com/sillim-grandprix-1/",
+      "url": "https://a.nolcool.com/sillim-grandprix-night-1/",
       "angleNo": 6,
       "angleName": "오해 깨기형",
       "suffix": "실제는 다르다",
@@ -121,7 +121,7 @@
     {
       "venueNo": 7,
       "slug": "sangbong-hangukgwan-night",
-      "url": "https://a.nolcool.com/sangbong-hangukgwan-1/",
+      "url": "https://a.nolcool.com/sangbong-hangukgwan-night-1/",
       "angleNo": 7,
       "angleName": "문답형",
       "suffix": "궁금증 해결",
@@ -147,7 +147,7 @@
     {
       "venueNo": 8,
       "slug": "suyu-shampoo-night",
-      "url": "https://a.nolcool.com/suyu-shampoo-1/",
+      "url": "https://a.nolcool.com/suyu-shampoo-night-1/",
       "angleNo": 8,
       "angleName": "시간 흐름형",
       "suffix": "한 밤의 순서",
@@ -166,7 +166,7 @@
     {
       "venueNo": 9,
       "slug": "busan-asiad-night",
-      "url": "https://a.nolcool.com/busan-asiad-1/",
+      "url": "https://a.nolcool.com/busan-asiad-night-1/",
       "angleNo": 9,
       "angleName": "비교 설명형",
       "suffix": "다른 곳과 비교",
@@ -185,7 +185,7 @@
     {
       "venueNo": 10,
       "slug": "suwon-chance-dome-night",
-      "url": "https://a.nolcool.com/suwon-chancedome-1/",
+      "url": "https://a.nolcool.com/suwon-chancedome-night-1/",
       "angleNo": 10,
       "angleName": "짧은 요약형",
       "suffix": "한 장 요약",
@@ -204,7 +204,7 @@
     {
       "venueNo": 11,
       "slug": "ansan-hit-night",
-      "url": "https://a.nolcool.com/ansan-hit-1/",
+      "url": "https://a.nolcool.com/ansan-hit-night-1/",
       "angleNo": 11,
       "angleName": "인원별 공략형",
       "suffix": "다인원 안내",
@@ -223,7 +223,7 @@
     {
       "venueNo": 12,
       "slug": "daejeon-seven-night",
-      "url": "https://a.nolcool.com/daejeon-seven-1/",
+      "url": "https://a.nolcool.com/daejeon-seven-night-1/",
       "angleNo": 12,
       "angleName": "실수 방지형",
       "suffix": "피해야 할 것",
@@ -242,7 +242,7 @@
     {
       "venueNo": 13,
       "slug": "ilsan-shampoo-night",
-      "url": "https://a.nolcool.com/ilsan-shampoo-1/",
+      "url": "https://a.nolcool.com/ilsan-shampoo-night-1/",
       "angleNo": 13,
       "angleName": "단골 관점형",
       "suffix": "다녀본 사람 기준",
