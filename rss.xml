@@ -454,5 +454,11 @@
     <description>일산나이트로 가장 많이 들어오는 질문 열네 개를 예약 절차 순서대로 묶었습니다. 언제 연락하고 무엇을 말하는지, 답은 짧게 붙여 필요한 것만 읽게 했습니다.</description>
     <pubDate>Wed, 26 Aug 2026 00:00:00 GMT</pubDate>
   </item>
+  <item>
+    <title>전국 지역 교통 안내 — 역과 터미널 기준</title>
+    <link>https://a.nolcool.com/area-guide/</link>
+    <guid isPermaLink="true">https://a.nolcool.com/area-guide/</guid>
+    <description>전국 주요 지역을 대중교통 기준으로 정리했습니다. 지하철 노선과 터미널, 출구 방향에 따라 갈리는 동선을 지역별로 적었습니다.</description>
+  </item>
 </channel>
 </rss>
