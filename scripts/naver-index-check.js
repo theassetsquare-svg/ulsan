@@ -34,9 +34,9 @@ const TARGETS = [
   '/bulgwang-1',
   '/night-1/suyu-shampoo/',
   '/night-1/suwon-chance-dome/',
-  '/ilsan-shampoo-night/',
-  '/bulgwang-hobak-night/',
-  '/cheongju-hobak-night/',
+  '/club/ilsan-shampoo-night/',
+  '/club/bulgwang-hobak-night/',
+  '/club/cheongju-hobak-night/',
   '/night-1/suwon-nightclub/'
 ];
 
