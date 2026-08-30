@@ -2,18 +2,18 @@
 /legal /policy-1 308
 /legal/ /policy-1/ 308
 /bulgwang /bulgwang-1 308
-/night/suyu-shampoo-night /night/suyu-shampoo-1/ 308
-/night/suyu-shampoo-night/ /night/suyu-shampoo-1/ 308
-/night/suwon-chance-dome-night /night/suwon-chancedome-1/ 308
-/night/suwon-chance-dome-night/ /night/suwon-chancedome-1/ 308
-/night/ilsan-shampoo-night /night/ilsan-shampoo-1/ 308
-/night/ilsan-shampoo-night/ /night/ilsan-shampoo-1/ 308
-/night/bulgwang-hobak-night /night/bulgwang-hobak-1/ 308
-/night/bulgwang-hobak-night/ /night/bulgwang-hobak-1/ 308
-/night/cheongju-hobak-night /night/cheongju-hobak-1/ 308
-/night/cheongju-hobak-night/ /night/cheongju-hobak-1/ 308
-/night/suwon-night /night/suwon-nightclub/ 308
-/night/suwon-night/ /night/suwon-nightclub/ 308
+/night/suyu-shampoo-night  /club/suyu-shampoo-night/  308
+/night/suyu-shampoo-night/  /club/suyu-shampoo-night/  308
+/night/suwon-chance-dome-night  /club/suwon-chancedome-night/  308
+/night/suwon-chance-dome-night/  /club/suwon-chancedome-night/  308
+/night/ilsan-shampoo-night  /club/ilsan-shampoo-night/  308
+/night/ilsan-shampoo-night/  /club/ilsan-shampoo-night/  308
+/night/bulgwang-hobak-night  /club/bulgwang-hobak-night/  308
+/night/bulgwang-hobak-night/  /club/bulgwang-hobak-night/  308
+/night/cheongju-hobak-night  /club/cheongju-hobak-night/  308
+/night/cheongju-hobak-night/  /club/cheongju-hobak-night/  308
+/night/suwon-night  /area/suwon-nightclub/  308
+/night/suwon-night/  /area/suwon-nightclub/  308
 
 # SPA 폴백 (반드시 마지막)
 /* /index.html 200
