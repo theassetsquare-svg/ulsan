@@ -31,7 +31,7 @@ const OUT = path.join(__dirname, 'naver-index-report.json');
 /* 2026-08-18 슬러그 개편으로 새로 만든 8개 — 네이버 등록을 기다리는 중 */
 const TARGETS = [
   '/policy-1/',
-  '/bulgwang-1',
+  '/bulgwang-1/',
   '/night-1/suyu-shampoo/',
   '/night-1/suwon-chance-dome/',
   '/club/ilsan-shampoo-night/',

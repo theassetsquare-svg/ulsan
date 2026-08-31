@@ -43,9 +43,9 @@ regions.forEach((r) => {
 lines.push('');
 lines.push('## 주요 페이지');
 lines.push('');
-[['/', '홈'], ['/story-1', '이야기'], ['/atmosphere-1', '분위기'], ['/first-1', '첫 방문'],
- ['/access-1', '오시는 길'], ['/review-1', '방문 기록'], ['/faq-1', '자주 묻는 질문'],
- ['/contact-1', '문의'], ['/policy-1/', '이용 안내'], ['/bulgwang-1', '불광동 밤 놀거리 가이드']].forEach(([u, t]) => {
+[['/', '홈'], ['/story-1/', '이야기'], ['/atmosphere-1/', '분위기'], ['/first-1/', '첫 방문'],
+ ['/access-1/', '오시는 길'], ['/review-1/', '방문 기록'], ['/faq-1/', '자주 묻는 질문'],
+ ['/contact-1/', '문의'], ['/policy-1/', '이용 안내'], ['/bulgwang-1/', '불광동 밤 놀거리 가이드']].forEach(([u, t]) => {
   lines.push('- [' + t + '](' + SITE + u + ')');
 });
 lines.push('');

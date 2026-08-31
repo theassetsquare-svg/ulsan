@@ -22,7 +22,7 @@ function get(url){return new Promise(r=>{https.get(url,res=>{let d='';res.on('da
   ['/club/changwon-lululala-night/',['010-7528-4936','로또']],
   ['/club/bulgwang-hobak-night/',['010-2221-1937','손흥민']],
   ['/area/ulsan-night/',['삼산동 터미널 구역']],
-  ['/faq-1',['울산챔피언나이트']],
+  ['/faq-1/',['울산챔피언나이트']],
   ['/night-1/',['전국 나이트']],
  ];
  for(const [p,needles] of checks){
