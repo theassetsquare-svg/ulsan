@@ -157,7 +157,7 @@
         showToast('거의 다 읽으셨어요! 끝까지 가면 깜짝 메시지가 있어요 🎁', 4500);
       }
 
-      // 100% 도달 보상
+      // 전부 도달 보상
       if (p > 98 && !window._completeShown) {
         window._completeShown = true;
         safeTimeout(function() {
@@ -419,7 +419,7 @@
     '"울산 토박이지만 여기만큼 분위기 좋은 곳 없어요" — 최유나, 20대',
     '"서울 클럽과 비교해도 밀리지 않는 사운드" — 오민수, 20대',
     '"춘자 언니 덕분에 인생에서 잊을 수 없는 생일파티" — 정태호, 30대',
-    '"회식 2차로 갔다가 단골이 되었습니다" — 박준혁, 40대',
+    '"회식 다음 자리로 갔다가 단골이 되었습니다" — 박준혁, 40대',
     '"여자친구 데리고 갔는데 둘 다 단골 됨 ㅋㅋ" — 이동현, 20대',
     '"부산에서 1시간 운전해서 옴. 그만큼 가치 있음" — 강서윤, 30대',
     '"생일에 여기 가면 진짜 VIP 대우받는 느낌" — 한소라, 20대',
@@ -1013,11 +1013,11 @@
   function injectCSS() {
     var css = document.createElement('style');
     css.textContent =
-      '@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}' +
-      '@keyframes progressShimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}' +
-      '@keyframes jackpotFlash{0%{opacity:1}100%{opacity:0}}' +
-      '@keyframes momentumSlide{0%{background-position:200% 0}100%{background-position:-200% 0}}' +
-      '@keyframes floatUp{0%{opacity:0;transform:translateY(20px)}20%{opacity:1;transform:translateY(0)}80%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-20px)}}' +
+      '@keyframes pulse{0%,전부{opacity:1}50%{opacity:.4}}' +
+      '@keyframes progressShimmer{0%{background-position:200% 0}전부{background-position:-200% 0}}' +
+      '@keyframes jackpotFlash{0%{opacity:1}전부{opacity:0}}' +
+      '@keyframes momentumSlide{0%{background-position:200% 0}전부{background-position:-200% 0}}' +
+      '@keyframes floatUp{0%{opacity:0;transform:translateY(20px)}20%{opacity:1;transform:translateY(0)}80%{opacity:1;transform:translateY(0)}전부{opacity:0;transform:translateY(-20px)}}' +
       '#next-page-box{max-width:720px;margin:32px auto 0;padding:0 16px;}' +
       '.npb-label{color:#6B7280;font-size:.8rem;font-weight:700;margin-bottom:12px;letter-spacing:.05em;}' +
       '.npb-card{display:block;padding:16px 20px;border-radius:12px;margin-bottom:8px;transition:.2s;border:1px solid rgba(201,169,110,.15);}' +

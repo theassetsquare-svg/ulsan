@@ -1,8 +1,8 @@
 'use strict';
 /**
- * 2차 지역 페이지 13개용 1:1(1200x1200) OG 이미지 생성기.
+ * 다음 자리 지역 페이지 13개용 1:1(1200x1200) OG 이미지 생성기.
  *  · A그룹 4장(은평·창원·울산·강남) — 상단 0~55% 주 키워드 대형 / 55~60% 지역명 /
- *    60~100% 검은 띠(#000) 위 흰 글씨 2줄(닉네임, 전화번호).
+ *    60~전부 검은 띠(#000) 위 흰 글씨 2줄(닉네임, 전화번호).
  *    전화번호는 이미지에서 두 번째로 큰 글자이며 잘리면 안 된다.
  *  · B그룹 9장 — 주 키워드 + 지역명 + 사이트 브랜드명. 전화번호·besta12 금지.
  *  · 연령 배지는 창원·대전 2장만, "만 27세 이상"/"만 38세 이상" 완전문.
@@ -204,7 +204,7 @@ async function main() {
   const reports = [];
   for (const r of regions) {
     const bgHex = hex(hsl2rgb(r.hue, 62, 21));
-    if (seen.has(bgHex)) throw new Error('2차 배경색 중복: ' + bgHex + ' (' + seen.get(bgHex) + ' / ' + r.slug + ')');
+    if (seen.has(bgHex)) throw new Error('다음 자리 배경색 중복: ' + bgHex + ' (' + seen.get(bgHex) + ' / ' + r.slug + ')');
     if (prior.has(bgHex)) throw new Error('1차 배경색과 충돌: ' + bgHex + ' (' + prior.get(bgHex) + ' / ' + r.slug + ')');
     seen.set(bgHex, r.slug);
     const { svg, report } = await buildSvg(r);
@@ -231,6 +231,6 @@ async function main() {
         : '  [B]') + (r.age ? '  배지 "' + r.age + '"' : ''));
   }
   fs.writeFileSync(path.join(__dirname, 'region-og-report.json'), JSON.stringify({ generatedAt: '2026-08-15', size: SIZE, reports }, null, 2) + '\n');
-  console.log('\n2차 배경색 13개 상이: ' + (seen.size === regions.length ? 'PASS' : 'FAIL') + ' / 1차 13색과 충돌: 0건');
+  console.log('\n다음 자리 배경색 13개 상이: ' + (seen.size === regions.length ? 'PASS' : 'FAIL') + ' / 1차 13색과 충돌: 0건');
 }
 main().catch((e) => { console.error(e); process.exit(1); });

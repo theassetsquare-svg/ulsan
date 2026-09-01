@@ -1,6 +1,6 @@
 'use strict';
 /**
- * 2차 지역 13페이지 .callbar 고정 검증 (G05·G06·G07·G08·G12) + 조상 체인 위험 속성 검사.
+ * 다음 자리 지역 13페이지 .callbar 고정 검증 (G05·G06·G07·G08·G12) + 조상 체인 위험 속성 검사.
  * 사용: node scripts/region-callbar-check.js <baseUrl>
  */
 const path = require('path');

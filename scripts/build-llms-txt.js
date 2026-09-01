@@ -11,7 +11,7 @@ const venues = ORDER.map((s) => require(path.join(__dirname, 'night40', s + '.js
 const regions = REGION_ORDER.map((s) => require(path.join(__dirname, 'region', s + '.js')));
 
 const lines = [];
-lines.push('# 놀쿨 나이트 이야기');
+lines.push('# 놀쿨 이야기');
 lines.push('');
 lines.push('> 전국 나이트클럽 40곳을 장면과 이야기로 정리한 소개 사이트입니다. 공개된 웹 정보만 사용하며, 확인되지 않은 항목은 "공개 정보로 확인 불가"로 표기합니다.');
 lines.push('');

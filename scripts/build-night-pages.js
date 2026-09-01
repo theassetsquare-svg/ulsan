@@ -418,7 +418,7 @@ ${callbar(v)}
 `;
 }
 
-/* 2차 지역 키워드 페이지 목록 — 메인/목록에서 1단계 직접 링크 (지시서 [12]) */
+/* 다음 자리 지역 키워드 페이지 목록 — 메인/목록에서 1단계 직접 링크 (지시서 [12]) */
 const REGION_ORDER = [
   'eunpyeong-night', 'changwon-night', 'ulsan-night', 'gangnam-night',
   'daejeon-night', 'sillim-night', 'sangbong-night', 'suyu-night',

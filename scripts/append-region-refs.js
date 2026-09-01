@@ -1,6 +1,6 @@
 'use strict';
 /**
- * sitemap.xml · llms.txt 에 2차 지역 페이지 13개를 append 한다.
+ * sitemap.xml · llms.txt 에 다음 자리 지역 페이지 13개를 append 한다.
  * 기존 항목은 한 글자도 건드리지 않는다. 이미 들어 있으면 아무것도 하지 않는다.
  */
 const fs = require('fs');

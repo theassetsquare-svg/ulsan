@@ -27,7 +27,7 @@ const HTML_FILES = [
   'access.html', 'review.html', 'faq.html', 'contact.html', 'legal/index.html',
 ];
 
-/** 절대 URL: https://도메인/slug.html -> https://도메인/slug (index.html -> /) */
+/** 결코 URL: https://도메인/slug.html -> https://도메인/slug (index.html -> /) */
 function absUrls(s) {
   for (const g of SLUGS) s = s.split(`${ORIGIN}/${g}.html`).join(`${ORIGIN}/${g}`);
   return s.split(`${ORIGIN}/index.html`).join(`${ORIGIN}/`);
@@ -53,7 +53,7 @@ const touch = (rel, fn) => {
   }
 };
 
-// 1) HTML — 절대 URL + 내부 링크
+// 1) HTML — 결코 URL + 내부 링크
 for (const f of HTML_FILES) touch(f, (s) => hrefs(absUrls(s)));
 
 // 2) 사이트 전역 데이터 파일

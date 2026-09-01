@@ -1,6 +1,6 @@
 'use strict';
 /**
- * 2차(지역 키워드) 13페이지 게이트 검사. 라이브 검증(G05/G07/G08/G12/G20 일부)은
+ * 다음 자리(지역 키워드) 13페이지 게이트 검사. 라이브 검증(G05/G07/G08/G12/G20 일부)은
  * scripts/region-callbar-check.js 와 scripts/live-check.js 가 따로 맡는다.
  * 사용: node scripts/region-gates.js
  */
@@ -328,7 +328,7 @@ const h2kw = [];
 
 /* ---------- 출력 ---------- */
 const pad = (s, n) => (s + ' '.repeat(n)).slice(0, n);
-console.log('=== 2차 지역 페이지 게이트 ===');
+console.log('=== 다음 자리 지역 페이지 게이트 ===');
 results.forEach((r) => console.log((r.pass ? 'PASS' : 'FAIL') + '  ' + pad(r.id, 6) + pad(r.name, 42) + r.detail));
 const failed = results.filter((r) => !r.pass);
 console.log('\n' + (failed.length ? 'FAIL ' + failed.length + '건: ' + failed.map((f) => f.id).join(',') : '전부 PASS'));

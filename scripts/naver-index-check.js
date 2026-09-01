@@ -7,7 +7,7 @@
  *    이미 등록된 페이지까지 불이익을 받을 수 있다. 그래서:
  *      - 기본 대상은 확인이 필요한 소수 URL뿐 (전체 스캔은 --all 을 명시해야 함)
  *      - 검색 간격 15초 (사람이 검색하는 속도)
- *      - cron / GitHub Actions 에 절대 연결하지 않는다
+ *      - cron / GitHub Actions 에 결코 연결하지 않는다
  *
  * 사용법:
  *   node scripts/naver-index-check.js                     # 기본 대상(TARGETS)만 점검
