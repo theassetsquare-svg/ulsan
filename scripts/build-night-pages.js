@@ -37,6 +37,9 @@ const SITE = 'https://a.nolcool.com';
 const TODAY = '2026-08-15';
 const TODAY_KO = '2026년 8월 15일';
 const SITE_INDEX = 1;
+/* ★ 2026-09-02 — og:site_name 에 「놀쿨 나이트」라고 쓰면 안 된다.
+   놀쿨은 회사·브랜드 이름이지 나이트클럽이 아니다. 그런 업소는 없으므로
+   네이버가 말하는 허위·기만 표시가 된다. 브랜드 이름만 쓴다. */
 const BRAND = '놀쿨';
 
 const ORDER = [
@@ -331,7 +334,7 @@ ${VERIFY}
 <meta property="og:type" content="article">
 <meta property="og:url" content="${url}">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:site_name" content="${BRAND} 나이트 소개">
+<meta property="og:site_name" content="${BRAND}">
 <meta property="og:image" content="${img}">
 <meta property="og:image:secure_url" content="${img}">
 <meta property="og:image:width" content="1200">
