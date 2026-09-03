@@ -300,9 +300,9 @@ function buildPage(v) {
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 ${VERIFY}
 ${metaBlock({ title: v.title, description: v.description, url, img, ogAlt: v.ogAlt, type: 'article', keywords: v.keywords, geo: v.addr.geo, place: v.addr.locality, themeColor: p.deep })}
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="icon" type="image/png" href="/favicon-192.png">
-<link rel="apple-touch-icon" href="/favicon-192.png">
+<link rel="icon" type="image/svg+xml" href="https://a.nolcool.com/favicon.svg">
+<link rel="icon" type="image/png" href="https://a.nolcool.com/favicon-192.png">
+<link rel="apple-touch-icon" href="https://a.nolcool.com/favicon-192.png">
 <link rel="stylesheet" href="/style.css">
 <style>${pageCss(p)}</style>
 ${jsonld(v)}
@@ -393,9 +393,9 @@ function buildHub() {
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 ${VERIFY}
 ${metaBlock({ title: HUB_TITLE, description: HUB_DESC, url, img, ogAlt: '전국 나이트 이야기 — 광고문의 카카오톡 besta12', type: 'website', keywords: null, geo: null, place: null, themeColor: p.deep })}
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="icon" type="image/png" href="/favicon-192.png">
-<link rel="apple-touch-icon" href="/favicon-192.png">
+<link rel="icon" type="image/svg+xml" href="https://a.nolcool.com/favicon.svg">
+<link rel="icon" type="image/png" href="https://a.nolcool.com/favicon-192.png">
+<link rel="apple-touch-icon" href="https://a.nolcool.com/favicon-192.png">
 <link rel="stylesheet" href="/style.css">
 <style>${pageCss(p)}</style>
 <script type="application/ld+json">

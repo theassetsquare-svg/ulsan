@@ -299,9 +299,9 @@ ${VERIFY}
 <meta name="twitter:title" content="${esc(r.title)}">
 <meta name="twitter:description" content="${esc(r.description)}">
 <meta name="twitter:image" content="${img}">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="icon" type="image/png" href="/favicon-192.png">
-<link rel="apple-touch-icon" href="/favicon-192.png">
+<link rel="icon" type="image/svg+xml" href="https://a.nolcool.com/favicon.svg">
+<link rel="icon" type="image/png" href="https://a.nolcool.com/favicon-192.png">
+<link rel="apple-touch-icon" href="https://a.nolcool.com/favicon-192.png">
 <link rel="stylesheet" href="/style.css">
 <style>${pageCss(p)}</style>
 ${jsonld(r)}

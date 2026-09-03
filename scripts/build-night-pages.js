@@ -345,9 +345,9 @@ ${VERIFY}
 <meta name="twitter:title" content="${esc(v.title)}">
 <meta name="twitter:description" content="${esc(v.description)}">
 <meta name="twitter:image" content="${img}">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="icon" type="image/png" href="/favicon-192.png">
-<link rel="apple-touch-icon" href="/favicon-192.png">
+<link rel="icon" type="image/svg+xml" href="https://a.nolcool.com/favicon.svg">
+<link rel="icon" type="image/png" href="https://a.nolcool.com/favicon-192.png">
+<link rel="apple-touch-icon" href="https://a.nolcool.com/favicon-192.png">
 <link rel="stylesheet" href="/style.css">
 <style>${pageCss(p)}</style>
 ${jsonld(v)}
@@ -455,7 +455,7 @@ ${VERIFY}
 <meta property="og:url" content="${SITE}/night-1/">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/svg+xml" href="https://a.nolcool.com/favicon.svg">
 <link rel="stylesheet" href="/style.css">
 <style>${pageCss(p)}</style>
 </head>
