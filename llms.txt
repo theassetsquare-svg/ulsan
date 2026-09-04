@@ -5,10 +5,10 @@
 
 - 사이트: https://a.nolcool.com/
 - 사이트맵: https://a.nolcool.com/sitemap.xml
-- 최종 갱신: 2026-09-01
+- 최종 갱신: 2026-09-05
 - 광고·정정 문의: 카카오톡 besta12
 
-## 전체 페이지 (80쪽)
+## 전체 페이지 (78쪽)
 
 - [성공스토리 — 마흔셋에 밀려난 사람이 다시 선 7년](https://a.nolcool.com/)
 - [울산챔피언나이트 위치 — 삼산동 가는길·울산나이트 동선 한방](https://a.nolcool.com/access-1/)
@@ -29,12 +29,11 @@
 - [울산나이트 요점 정리 가기 전 여섯 가지 확인](https://a.nolcool.com/area/ulsan-night/)
 - [유천동나이트 예상과 다른 점 옷차림 오해가 먼저](https://a.nolcool.com/area/yucheon-night/)
 - [울산챔피언나이트 분위기 — 갈비뼈 떨리는 울산나이트 명물](https://a.nolcool.com/atmosphere-1/)
-- [불광동호박나이트 — 은평구 밤 놀거리 예약 전 필독](https://a.nolcool.com/bulgwang-1/)
 - [안산히트나이트 질문 열다섯 경기 안산시 정리](https://a.nolcool.com/club/ansan-hit-night/)
 - [부천고래나이트 질문 열다섯 경기 부천시 정리](https://a.nolcool.com/club/bucheon-gorae-night/)
 - [불광동호박나이트 좌석·시간·복장 한눈에](https://a.nolcool.com/club/bulgwang-hobak-night-2/)
-- [서울특별시 은평구 불광동호박나이트 방문 안내](https://a.nolcool.com/club/bulgwang-hobak-night-3/)
-- [서울 은평구 불광동호박나이트 방문 안내](https://a.nolcool.com/club/bulgwang-hobak-night/)
+- [불광동호박나이트 방문 안내 서울특별시 은평구](https://a.nolcool.com/club/bulgwang-hobak-night-3/)
+- [불광동호박나이트 방문 안내 서울 은평구](https://a.nolcool.com/club/bulgwang-hobak-night/)
 - [부산아시아드나이트 예약부터 입장까지 순서](https://a.nolcool.com/club/busan-asiad-night-2/)
 - [부산아시아드나이트 시간대별 분위기와 준비물](https://a.nolcool.com/club/busan-asiad-night-3/)
 - [부산아시아드나이트 시간대별 분위기와 준비물](https://a.nolcool.com/club/busan-asiad-night/)
@@ -43,7 +42,7 @@
 - [창원룰루랄라나이트 처음 가는 분을 위한 안내](https://a.nolcool.com/club/changwon-lululala-night/)
 - [천안코리아나이트 질문 열다섯 충남 천안시 정리](https://a.nolcool.com/club/cheonan-korea-night/)
 - [천안스타돔나이트 질문 열다섯 충남 천안시 정리](https://a.nolcool.com/club/cheonan-stardome-night/)
-- [청담나이트 안내 — 위치부터 문의까지](https://a.nolcool.com/club/cheongdam-night-2/)
+- [청담나이트 안내 위치부터 문의까지](https://a.nolcool.com/club/cheongdam-night-2/)
 - [청담나이트 예약 전에 알아둘 것 서울특별시 강남구](https://a.nolcool.com/club/cheongdam-night-3/)
 - [청담나이트 예약 전에 알아둘 것 서울 강남구](https://a.nolcool.com/club/cheongdam-night/)
 - [청주호박나이트 질문 열다섯 충북 청주시 정리](https://a.nolcool.com/club/cheongju-hobak-night/)
@@ -53,8 +52,8 @@
 - [대전세븐나이트 방문 준비와 좌석 안내](https://a.nolcool.com/club/daejeon-seven-night-3/)
 - [대전세븐나이트 방문 준비와 좌석 안내](https://a.nolcool.com/club/daejeon-seven-night/)
 - [답십리미라클나이트 좌석 잡는 법과 연락 방법](https://a.nolcool.com/club/dapsimni-miracle-night-2/)
-- [서울특별시 동대문구 답십리미라클나이트 이용 안내 정리](https://a.nolcool.com/club/dapsimni-miracle-night-3/)
-- [서울 동대문구 답십리미라클나이트 이용 안내 정리](https://a.nolcool.com/club/dapsimni-miracle-night/)
+- [답십리미라클나이트 이용 안내 정리 서울특별시 동대문구](https://a.nolcool.com/club/dapsimni-miracle-night-3/)
+- [답십리미라클나이트 이용 안내 정리 서울 동대문구](https://a.nolcool.com/club/dapsimni-miracle-night/)
 - [독산동국빈관나이트 질문 열다섯 서울 금천구 정리](https://a.nolcool.com/club/doksan-gukbingwan-night/)
 - [강서호박나이트 질문 열다섯 서울 강서구 정리](https://a.nolcool.com/club/gangseo-hobak-night/)
 - [길동찬스나이트 질문 열다섯 서울 강동구 정리](https://a.nolcool.com/club/gildong-chance-night/)
@@ -69,6 +68,7 @@
 - [오산호박나이트 질문 열다섯 경기 오산시 정리](https://a.nolcool.com/club/osan-hobak-night/)
 - [평택호박나이트 질문 열다섯 경기 평택시 정리](https://a.nolcool.com/club/pyeongtaek-hobak-night/)
 - [상봉동한국관나이트 질문 열다섯 서울 중랑구 정리](https://a.nolcool.com/club/sangbong-hangukgwan-night/)
+- [성남시 중원구 성남샴푸나이트 찾아가는 길과 문의](https://a.nolcool.com/club/seongnam-shampoo-night-1/)
 - [성남샴푸나이트 질문 열다섯 경기 성남시 정리](https://a.nolcool.com/club/seongnam-shampoo-night/)
 - [서산호박나이트 질문 열다섯 충남 서산시 정리](https://a.nolcool.com/club/seosan-hobak-night/)
 - [신림그랑프리나이트 질문 열다섯 서울 관악구 정리](https://a.nolcool.com/club/sillim-grandprix-night/)
@@ -86,7 +86,5 @@
 - [울산챔피언나이트 FAQ — 울산나이트 13가지 궁금증 한방](https://a.nolcool.com/faq-1/)
 - [울산챔피언나이트 첫방문 — 울산나이트 입문 5분 가이드](https://a.nolcool.com/first-1/)
 - [전국 나이트 40곳, 밤의 지도를 한 장에](https://a.nolcool.com/night-1/)
-- [울산챔피언나이트 합법 운영 정책 — 19+ 성인 대상 합법 영업장](https://a.nolcool.com/policy-1/)
-- [운영 정책 안내 — a.nolcool.com](https://a.nolcool.com/policy/)
 - [울산챔피언나이트 후기 — 무엇을 보고 판단할까](https://a.nolcool.com/review-1/)
 - [울산챔피언나이트 이야기 — 수년 삼산동 밤을 지킨 진짜 기록](https://a.nolcool.com/story-1/)
