@@ -13,8 +13,12 @@
  */
 const NEW_HOST = 'a.nolcool.com';
 
+/* [폐기 404 — 시작] state/indexnow-removed.json 에서 도구가 채움. 손으로 고치지 않음 */
+const REMOVED_PATHS = new Set(["/bulgwang-1","/policy-1"]);
+/* [폐기 404 — 끝] */
 export async function onRequest(context) {
   const url = new URL(context.request.url);
+  if (REMOVED_PATHS.has(url.pathname.replace(/\/+$/, '') || '/')) { const nf = await context.env.ASSETS.fetch(new URL('/404.html', url.origin)); return new Response(nf.ok ? nf.body : 'Not Found', { status: 404, headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' } }); } // 폐기 쪽 404(엣지 잔상 차단)
 
   if (url.hostname.endsWith('.pages.dev')) {
     url.protocol = 'https:';
