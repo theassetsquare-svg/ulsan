@@ -115,14 +115,14 @@
     "pathname": "/club/changwon-lululala-night/",
     "label": "changwon-lululala-night",
     "http": 200,
-    "bar": "<a class=\"callbar\" href=\"tel:카카오톡 besta12\" aria-label=\"창원룰루랄라나이트 카카오톡 besta12 로 전화 연결\">📞 창원룰루랄라나이트 카카오톡 besta12</a>",
+    "bar": "<a class=\"callbar\" href=\"tel:연락처 삭제(미제휴)\" aria-label=\"창원룰루랄라나이트 미제휴에게 전화 연결\">📞 창원룰루랄라나이트 미제휴 연락처 삭제(미제휴)</a>",
     "barNums": [
-      "카카오톡 besta12"
+      "연락처 삭제(미제휴)"
     ],
     "pageNums": [
-      "카카오톡 besta12"
+      "연락처 삭제(미제휴)"
     ],
-    "verdict": "OK 번호바 담당자 카카오톡 besta12"
+    "verdict": "OK 번호바 로또 연락처 삭제(미제휴)"
   },
   {
     "pathname": "/club/bulgwang-hobak-night/",
@@ -410,14 +410,14 @@
     "pathname": "/area/changwon-night/",
     "label": "changwon-night (지역)",
     "http": 200,
-    "bar": "<div class=\"callbar\" role=\"complementary\" aria-label=\"전화 연결\"> <a href=\"tel:카카오톡 besta12\">📞 카카오톡 besta12</a",
+    "bar": "<div class=\"callbar\" role=\"complementary\" aria-label=\"전화 연결\"> <a href=\"tel:연락처 삭제(미제휴)\">📞 로또 연락처 삭제(미제휴)</a",
     "barNums": [
-      "카카오톡 besta12"
+      "연락처 삭제(미제휴)"
     ],
     "pageNums": [
-      "카카오톡 besta12"
+      "연락처 삭제(미제휴)"
     ],
-    "verdict": "OK 번호바 담당자 카카오톡 besta12"
+    "verdict": "OK 번호바 로또 연락처 삭제(미제휴)"
   },
   {
     "pathname": "/area/ulsan-night/",

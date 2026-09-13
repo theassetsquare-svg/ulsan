@@ -6,7 +6,7 @@
  *  · 시스템 폰트 의존 금지 — tools/fonts/Pretendard-Bold.ttf(공식 배포 zip에서 추출)를
  *    opentype.js로 파싱해 글자를 <path>로 변환한 뒤 sharp로 래스터라이즈한다.
  *  · ⓐ 울산챔피언나이트 페이지·홈: 상단 업소명 + 중앙 최대 "춘자 010-5653-0069"
- *  · ⓑ 창원룰루랄라나이트: "카카오톡 besta12" ⓒ 불광동호박나이트: "손흥민 010-2221-1937"
+ *  · ⓑ 창원룰루랄라나이트: "미제휴 연락처 삭제(미제휴)" ⓒ 불광동호박나이트: "손흥민 010-2221-1937"
  *  · ⓓ 그 외 37곳 + 허브: 상단 업소명 + 중앙 최대 "광고문의" + 아래 "카카오톡 besta12"
  *    — ⓐⓑⓒ 외에는 전화번호 결코 금지(오인 전화 방지)
  *  · 생성 후 전 이미지 실측(1200x1200·글자 캔버스 안 수납) → scripts/night40-og-report.json
@@ -141,7 +141,7 @@ async function main() {
   }
 
   fs.writeFileSync(path.join(__dirname, 'night40-og-report.json'), JSON.stringify({ generatedAt: '2026-08-16', font: 'tools/fonts/Pretendard-Bold.ttf (opentype.js path 변환)', images: report }, null, 2));
-  const bad = report.filter((r) => !r.square | !r.inkInside | (r.kind === 'A' && !r.phoneLargest) | (r.kind === 'B' && !r.adLargest));
+  const bad = report.filter((r) => !r.square || !r.inkInside || (r.kind === 'A' && !r.phoneLargest) || (r.kind === 'B' && !r.adLargest));
   console.log('generated', report.length, 'images; problems:', bad.length);
   if (bad.length) { console.log(JSON.stringify(bad, null, 2)); process.exit(1); }
 }
