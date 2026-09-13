@@ -12,28 +12,27 @@ function get(url){return new Promise(r=>{https.get(url,res=>{let d='';res.on('da
  for(const f of files){
    const r=await head(SITE+f);
    const kb=r.len/1024; if(kb>maxKB)maxKB=kb;
-   const ok=r.status===200&&/image\/png/.test(r.ct||'')&&r.len<=300*1024;
+   const ok=r.status===200&&/image\/png/.test(r.ct|'')&&r.len<=300*1024;
    if(!ok){console.log('❌',f,r.status,r.ct,kb.toFixed(1)+'KB');bad++;}
  }
  console.log(`썸네일 ${files.length}개 · 실패 ${bad}건 · 최대 ${maxKB.toFixed(1)}KB`);
  const checks=[
   ['/club/cheongdam-night/',['010-5655-4866','펩시맨','/og/cheongdam-1.png']],
   ['/club/ulsan-champion-night/',['010-5653-0069','춘자']],
-  ['/club/changwon-lululala-night/',['010-7528-4936','로또']],
+  ['/club/changwon-lululala-night/',['카카오톡 besta12','담당자']],
   ['/club/bulgwang-hobak-night/',['010-2221-1937','손흥민']],
   ['/area/ulsan-night/',['삼산동 터미널 구역']],
   ['/faq-1/',['울산챔피언나이트']],
-  ['/night-1/',['전국 나이트']],
- ];
+  ['/night-1/',['전국 나이트']]];
  for(const [p,needles] of checks){
    const r=await get(SITE+p);
    const miss=needles.filter(n=>!r.body.includes(n));
-   const homeLink=(r.body.match(/<a\b[^>]*href="(\/|\.\/|index\.html|\/index\.html|https:\/\/ulsane\.pages\.dev\/)"/g)||[]).length;
+   const homeLink=(r.body.match(/<a\b[^>]*href="(\/|\.\/|index\.html|\/index\.html|https:\/\/ulsane\.pages\.dev\/)"/g)|[]).length;
    console.log(`${r.status} ${p.padEnd(36)} 누락:${miss.length?miss.join(','):'없음'} · 홈링크:${homeLink}`);
-   if(miss.length||homeLink)bad++;
+   if(miss.length|homeLink)bad++;
  }
  const home=await get(SITE+'/');
- const himg=(home.body.match(/<img\b/g)||[]).length;
+ const himg=(home.body.match(/<img\b/g)|[]).length;
  console.log(`${home.status} /                                    홈 <img>:${himg} · og:image:${/og:image" content="[^"]+"/.test(home.body)?'있음':'없음'}`);
  if(himg)bad++;
  console.log(bad?`❌ 라이브 실패 ${bad}건`:'✅ 라이브 전 항목 통과');

@@ -7,14 +7,14 @@ const fs = require('fs');
 const path = require('path');
 const { ORDER, REGION_ORDER, SITE } = require('./build-night40.js');
 
-const ADV = { '01056530069': '춘자', '01075284936': '로또', '01022211937': '손흥민' };
+const ADV = { '01056530069': '춘자', '카카오톡 besta12': '담당자', '01022211937': '손흥민' };
 const PHONE_PAGES = {
   '/': '01056530069',
   '/club/ulsan-champion-night/': '01056530069',
-  '/club/changwon-lululala-night/': '01075284936',
+  '/club/changwon-lululala-night/': '카카오톡 besta12',
   '/club/bulgwang-hobak-night/': '01022211937',
   '/area/ulsan-night/': '01056530069',
-  '/area/changwon-night/': '01075284936',
+  '/area/changwon-night/': '카카오톡 besta12',
   '/area/eunpyeong-night/': '01022211937'
 };
 
@@ -39,17 +39,17 @@ const PHONE_RE = /01[016789][-.\s]?\d{3,4}[-.\s]?\d{4}/g;
 async function check(pathname, label) {
   const r = await get(SITE + pathname);
   const src = r.body;
-  const expectTel = PHONE_PAGES[pathname] || null;
+  const expectTel = PHONE_PAGES[pathname] | null;
 
   /* 고정바 추출 — a.callbar(업소·허브) 또는 div.callbar(지역) 또는 a.phone-bar(홈) */
   let bar = '';
   const m1 = src.match(/<a class="callbar"[^>]*>[\s\S]*?<\/a>/);
   const m2 = src.match(/<div class="callbar"[\s\S]*?<\/div>/);
   const m3 = src.match(/<a href="tel:[^"]*" class="phone-bar"[\s\S]*?<\/a>/);
-  bar = (m1 || m2 || m3 || [''])[0].replace(/\s+/g, ' ').trim();
+  bar = (m1 | m2 | m3 | [''])[0].replace(/\s+/g, ' ').trim();
 
-  const barNums = [...new Set((bar.match(PHONE_RE) || []).map((s) => s.replace(/[-.\s]/g, '')))];
-  const pageNums = [...new Set((src.match(PHONE_RE) || []).map((s) => s.replace(/[-.\s]/g, '')))];
+  const barNums = [...new Set((bar.match(PHONE_RE) | []).map((s) => s.replace(/[-.\s]/g, '')))];
+  const pageNums = [...new Set((src.match(PHONE_RE) | []).map((s) => s.replace(/[-.\s]/g, '')))];
   const hasKakao = /besta12/.test(bar);
 
   let verdict;
@@ -80,7 +80,7 @@ async function main() {
     (r.barNums.length ? '📞 ' + r.barNums.join(',') : (/besta12/.test(r.bar) ? '💬 광고문의 카톡: besta12' : '(없음)')) +
     ' | ' + (r.pageNums.length ? r.pageNums.join(', ') : '없음') + ' | ' + r.verdict + ' |'));
 
-  const bad = rows.filter((r) => r.verdict === 'FAIL' || r.http !== 200);
+  const bad = rows.filter((r) => r.verdict === 'FAIL' | r.http !== 200);
   console.log('\n총 ' + rows.length + '페이지 · 실패 ' + bad.length + '건' + (bad.length ? '\n' + JSON.stringify(bad, null, 2) : ''));
 }
 main();

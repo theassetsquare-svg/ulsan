@@ -115,14 +115,14 @@
     "pathname": "/club/changwon-lululala-night/",
     "label": "changwon-lululala-night",
     "http": 200,
-    "bar": "<a class=\"callbar\" href=\"tel:01075284936\" aria-label=\"창원룰루랄라나이트 로또에게 전화 연결\">📞 창원룰루랄라나이트 로또 010-7528-4936</a>",
+    "bar": "<a class=\"callbar\" href=\"tel:카카오톡 besta12\" aria-label=\"창원룰루랄라나이트 카카오톡 besta12 로 전화 연결\">📞 창원룰루랄라나이트 카카오톡 besta12</a>",
     "barNums": [
-      "01075284936"
+      "카카오톡 besta12"
     ],
     "pageNums": [
-      "01075284936"
+      "카카오톡 besta12"
     ],
-    "verdict": "OK 번호바 로또 01075284936"
+    "verdict": "OK 번호바 담당자 카카오톡 besta12"
   },
   {
     "pathname": "/club/bulgwang-hobak-night/",
@@ -410,14 +410,14 @@
     "pathname": "/area/changwon-night/",
     "label": "changwon-night (지역)",
     "http": 200,
-    "bar": "<div class=\"callbar\" role=\"complementary\" aria-label=\"전화 연결\"> <a href=\"tel:01075284936\">📞 로또 010-7528-4936</a",
+    "bar": "<div class=\"callbar\" role=\"complementary\" aria-label=\"전화 연결\"> <a href=\"tel:카카오톡 besta12\">📞 카카오톡 besta12</a",
     "barNums": [
-      "01075284936"
+      "카카오톡 besta12"
     ],
     "pageNums": [
-      "01075284936"
+      "카카오톡 besta12"
     ],
-    "verdict": "OK 번호바 로또 01075284936"
+    "verdict": "OK 번호바 담당자 카카오톡 besta12"
   },
   {
     "pathname": "/area/ulsan-night/",

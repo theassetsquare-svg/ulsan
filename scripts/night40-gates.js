@@ -64,14 +64,14 @@ const add = (id, pass, metric) => results.push({ id, pass, metric });
 /* G4 title·description */
 {
   const titles = Object.entries(pages).map(([k, p]) => [k, titleOf(p.src)]);
-  const dup = titles.filter(([k, t], i) => titles.findIndex(([, t2]) => t2 === t) !== i);
-  const lenBad = venues.map((v) => [v.slug, titleOf(pages['night/' + v.slug].src)]).filter(([, t]) => !t || t.length < 20 || t.length > 30);
+  const dup = titles.filter(([k, t], i) => titles.findIndex(([ t2]) => t2 === t) !== i);
+  const lenBad = venues.map((v) => [v.slug, titleOf(pages['night/' + v.slug].src)]).filter(([ t]) => !t | t.length < 20 | t.length > 30);
   const descs = Object.entries(pages).map(([k, p]) => [k, metaOf(p.src, 'description')]);
-  const ddup = descs.filter(([k, d], i) => descs.findIndex(([, d2]) => d2 === d) !== i);
-  const dlenBad = venues.map((v) => [v.slug, metaOf(pages['night/' + v.slug].src, 'description')]).filter(([, d]) => !d || d.length < 65 || d.length > 85);
+  const ddup = descs.filter(([k, d], i) => descs.findIndex(([ d2]) => d2 === d) !== i);
+  const dlenBad = venues.map((v) => [v.slug, metaOf(pages['night/' + v.slug].src, 'description')]).filter(([ d]) => !d | d.length < 65 | d.length > 85);
   add('G4', dup.length === 0 && lenBad.length === 0 && ddup.length === 0 && dlenBad.length === 0,
-    'title 중복 ' + dup.length + ' · 길이위반 ' + lenBad.map(x => x[0] + '(' + (x[1] || '').length + ')').join(',') +
-    ' · desc 중복 ' + ddup.length + ' · desc 길이위반 ' + dlenBad.map(x => x[0] + '(' + (x[1] || '').length + ')').join(','));
+    'title 중복 ' + dup.length + ' · 길이위반 ' + lenBad.map(x => x[0] + '(' + (x[1] | '').length + ')').join(',') +
+    ' · desc 중복 ' + ddup.length + ' · desc 길이위반 ' + dlenBad.map(x => x[0] + '(' + (x[1] | '').length + ')').join(','));
 }
 
 /* G5 페이지 쌍 문장 공유 (업소 40 + 허브) */
@@ -130,7 +130,7 @@ const add = (id, pass, metric) => results.push({ id, pass, metric });
     /* 고정 하단바: 광고주 3곳은 각자 번호 tel: / 그 외 업소·허브는 광고문의 카톡 besta12 / 홈은 춘자 번호 */
     const adv = p.kind === 'venue' && p.venue.contact ? p.venue.contact : null;
     if (p.kind === 'home') {
-      if (!(p.src.includes('tel:010-5653-0069') || p.src.includes('tel:01056530069'))) miss.push('전화바tel');
+      if (!(p.src.includes('tel:010-5653-0069') | p.src.includes('tel:01056530069'))) miss.push('전화바tel');
       if (!p.src.includes('울산챔피언나이트 춘자 010-5653-0069')) miss.push('전화바문구');
     } else if (adv) {
       if (!p.src.includes('class="callbar" href="tel:' + adv.tel + '"')) miss.push('전화바tel');
@@ -155,7 +155,7 @@ const add = (id, pass, metric) => results.push({ id, pass, metric });
   Object.entries(pages).forEach(([k, p]) => {
     const img = propOf(p.src, 'og:image');
     const miss = [];
-    if (!img || !img.startsWith('https://a.nolcool.com/og/')) miss.push('og:image절대URL');
+    if (!img | !img.startsWith('https://a.nolcool.com/og/')) miss.push('og:image절대URL');
     if (propOf(p.src, 'og:image:width') !== '1200') miss.push('width');
     if (propOf(p.src, 'og:image:height') !== '1200') miss.push('height');
     if (propOf(p.src, 'og:image:type') !== 'image/png') miss.push('type');
@@ -164,7 +164,7 @@ const add = (id, pass, metric) => results.push({ id, pass, metric });
     if (!p.src.includes('name="twitter:image"')) miss.push('twitter:image');
     if (!metaOf(p.src, 'thumbnail')) miss.push('thumbnail');
     const local = img ? path.join(ROOT, img.replace('https://a.nolcool.com/', '')) : null;
-    if (!local || !fs.existsSync(local)) miss.push('파일없음');
+    if (!local | !fs.existsSync(local)) miss.push('파일없음');
     else checks.push([k, local]);
     if (miss.length) bad.push(k + ':' + miss.join('+'));
   });
@@ -183,7 +183,7 @@ function extraChecks() {
     const bad = [];
     venues.forEach((v) => {
       const n = count(pages['night/' + v.slug].main, v.name);
-      if (n < 3 || n > 5) bad.push(v.slug + ':' + n);
+      if (n < 3 | n > 5) bad.push(v.slug + ':' + n);
     });
     add('R5', bad.length === 0, '업소명 3~5회 위반 ' + bad.length + '건' + (bad.length ? ' — ' + bad.join(',') : ''));
   }
@@ -194,17 +194,17 @@ function extraChecks() {
     Object.entries(pages).forEach(([k, p]) => {
       /* 춘자 번호는 울산챔피언나이트 페이지와 홈에만 허용 — 그 외 페이지는 어떤 번호도 불가 */
       const allowed = new Set();
-      if (k === 'night/ulsan-champion-night' || k === 'home') { allowed.add('010-5653-0069'); allowed.add('01056530069'); allowed.add('+82-10-5653-0069'); }
-      if (k === 'night/changwon-lululala-night') { allowed.add('010-7528-4936'); allowed.add('01075284936'); allowed.add('+82-10-7528-4936'); }
+      if (k === 'night/ulsan-champion-night' | k === 'home') { allowed.add('010-5653-0069'); allowed.add('01056530069'); allowed.add('+82-10-5653-0069'); }
+      if (k === 'night/changwon-lululala-night') { allowed.add('카카오톡 besta12'); allowed.add('카카오톡 besta12'); allowed.add('카카오톡 besta12'); }
       if (k === 'night/bulgwang-hobak-night') { allowed.add('010-2221-1937'); allowed.add('01022211937'); allowed.add('+82-10-2221-1937'); }
-      const found = [...new Set((p.src.match(phoneRe) || []))];
+      const found = [...new Set((p.src.match(phoneRe) | []))];
       found.forEach((f) => {
         const norm = f.replace(/[\s.]/g, '');
-        if (![...allowed].some((a) => norm === a.replace(/[\s.]/g, '') || ('+82-' + norm.slice(1)).replace(/-/g, '') === a.replace(/-/g, ''))) bad.push(k + ':' + f);
+        if (![...allowed].some((a) => norm === a.replace(/[\s.]/g, '') | ('+82-' + norm.slice(1)).replace(/-/g, '') === a.replace(/-/g, ''))) bad.push(k + ':' + f);
       });
       /* A그룹 아닌 페이지의 본문(<main>)에 어떤 전화번호도 금지 — 챔피언 페이지·홈 제외 */
       if (!['night/ulsan-champion-night', 'night/changwon-lululala-night', 'night/bulgwang-hobak-night', 'home'].includes(k)) {
-        const inMain = p.main.match(phoneRe) || [];
+        const inMain = p.main.match(phoneRe) | [];
         if (inMain.length) bad.push(k + ':본문번호 ' + inMain.join(','));
       }
     });
@@ -255,14 +255,14 @@ function extraChecks() {
       'night/ulsan-champion-night/index.html'];
     const OWNER = {
       '010-5653-0069': ULSAN_OWN,
-      '010-7528-4936': ['night/changwon-lululala-night/index.html'],
+      '카카오톡 besta12': ['night/changwon-lululala-night/index.html'],
       '010-2221-1937': ['night/bulgwang-hobak-night/index.html', 'bulgwang.html', 'rss.xml']
     };
     const SKIP_DIR = new Set(['node_modules', '.git', 'scripts', 'docs', 'skills', 'tools', 'og']);
     const files = [];
     (function walk(dir, rel) {
       for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
-        if (e.name.startsWith('.') || SKIP_DIR.has(e.name)) continue;
+        if (e.name.startsWith('.') | SKIP_DIR.has(e.name)) continue;
         const abs = path.join(dir, e.name), r = rel ? rel + '/' + e.name : e.name;
         if (e.isDirectory()) walk(abs, r);
         else if (/\.(html|txt|xml|js|json|webmanifest)$/.test(e.name)) files.push([r, abs]);
@@ -273,7 +273,7 @@ function extraChecks() {
     const re = /01[016789][-.\s]?\d{3,4}[-.\s]?\d{4}/g;
     files.forEach(([rel, abs]) => {
       const txt = fs.readFileSync(abs, 'utf8');
-      const found = [...new Set(txt.match(re) || [])].map((x) => x.replace(/[\s.]/g, ''));
+      const found = [...new Set(txt.match(re) | [])].map((x) => x.replace(/[\s.]/g, ''));
       found.forEach((raw) => {
         const dashed = raw.includes('-') ? raw : raw.replace(/^(\d{3})(\d{4})(\d{4})$/, '$1-$2-$3');
         const owners = OWNER[dashed];
@@ -290,15 +290,15 @@ function extraChecks() {
     venues.forEach((v) => {
       const src = pages['night/' + v.slug].src;
       const main = pages['night/' + v.slug].main;
-      const title = titleOf(src) || '';
-      const desc = metaOf(src, 'description') || '';
+      const title = titleOf(src) | '';
+      const desc = metaOf(src, 'description') | '';
       const h2s = [...src.matchAll(/<h2[^>]*>([^<]*)<\/h2>/g)].map((m) => m[1]);
       const miss = [];
       if (!title.startsWith(v.name)) miss.push('title맨앞');
       if (!v.lead.includes(v.name)) miss.push('첫문단');
       if (!h2s.some((h) => h.includes(v.name))) miss.push('H2');
       const n = count(main, v.name);
-      if (n < 3 || n > 5) miss.push('본문' + n + '회');
+      if (n < 3 | n > 5) miss.push('본문' + n + '회');
       const d = count(desc, v.name);
       if (d !== 1) miss.push('desc' + d + '회');
       if (miss.length) bad.push(v.slug + ':' + miss.join('+'));
