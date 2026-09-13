@@ -122,7 +122,7 @@
     "pageNums": [
       "연락처 삭제(미제휴)"
     ],
-    "verdict": "OK 번호바 로또 연락처 삭제(미제휴)"
+    "verdict": "OK 번호바 미제휴 연락처 삭제(미제휴)"
   },
   {
     "pathname": "/club/bulgwang-hobak-night/",
@@ -410,14 +410,14 @@
     "pathname": "/area/changwon-night/",
     "label": "changwon-night (지역)",
     "http": 200,
-    "bar": "<div class=\"callbar\" role=\"complementary\" aria-label=\"전화 연결\"> <a href=\"tel:연락처 삭제(미제휴)\">📞 로또 연락처 삭제(미제휴)</a",
+    "bar": "<div class=\"callbar\" role=\"complementary\" aria-label=\"전화 연결\"> <a href=\"tel:연락처 삭제(미제휴)\">📞 미제휴 연락처 삭제(미제휴)</a",
     "barNums": [
       "연락처 삭제(미제휴)"
     ],
     "pageNums": [
       "연락처 삭제(미제휴)"
     ],
-    "verdict": "OK 번호바 로또 연락처 삭제(미제휴)"
+    "verdict": "OK 번호바 미제휴 연락처 삭제(미제휴)"
   },
   {
     "pathname": "/area/ulsan-night/",

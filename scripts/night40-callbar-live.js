@@ -7,7 +7,7 @@ const fs = require('fs');
 const path = require('path');
 const { ORDER, REGION_ORDER, SITE } = require('./build-night40.js');
 
-const ADV = { '01056530069': '춘자', '연락처 삭제(미제휴)': '로또', '01022211937': '손흥민' };
+const ADV = { '01056530069': '춘자', '연락처 삭제(미제휴)': '미제휴', '01022211937': '손흥민' };
 const PHONE_PAGES = {
   '/': '01056530069',
   '/club/ulsan-champion-night/': '01056530069',
