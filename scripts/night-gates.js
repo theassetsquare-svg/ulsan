@@ -252,7 +252,7 @@ const ratios = {};
   venues.forEach((v) => {
     const src = html[v.slug];
     if (/noindex/i.test(src)) noindex++;
-    if (!src.includes('<link rel="canonical" href="https://a.nolcool.com/night-1/' + v.slug + '/">')) canonBad++;
+    if (!src.includes('<link rel="canonical" href="https://a.nolcool.com/night-11/' + v.slug + '/">')) canonBad++;
     [...src.matchAll(/<img\b[^>]*>/g)].forEach((m) => { if (!/\salt=/.test(m[0])) altBad++; });
   });
   add('G20a', 'noindex ' + noindex + '건 / canonical 자기지목 ' + (13 - canonBad) + '/13 / img alt 누락 ' + altBad + '건', noindex === 0 && canonBad === 0 && altBad === 0);
@@ -260,9 +260,9 @@ const ratios = {};
 
 /* G21 1단계 링크 도달 */
 (() => {
-  const fromIndex = venues.filter((v) => indexHtml.includes('/night-1/' + v.slug + '/')).length;
-  const fromHub = venues.filter((v) => hubHtml.includes('/night-1/' + v.slug + '/')).length;
-  const hubLinked = indexHtml.includes('href="/night-1/"');
+  const fromIndex = venues.filter((v) => indexHtml.includes('/night-11/' + v.slug + '/')).length;
+  const fromHub = venues.filter((v) => hubHtml.includes('/night-11/' + v.slug + '/')).length;
+  const hubLinked = indexHtml.includes('href="/night-11/"');
   add('G21', '메인 index.html → ' + fromIndex + '/13 직접 링크, 허브 → ' + fromHub + '/13, 메인→허브 링크 ' + (hubLinked ? '있음' : '없음'), fromIndex === 13 && fromHub === 13 && hubLinked);
 })();
 

@@ -120,7 +120,7 @@ const footer = () => `<footer class="site-footer">
 </footer>`;
 
 function jsonld(v) {
-  const url = SITE + '/night-1/' + v.slug + '/';
+  const url = SITE + '/night-11/' + v.slug + '/';
   const img = SITE + '/og/' + v.slug + '.png';
   const blocks = [];
 
@@ -165,7 +165,7 @@ function jsonld(v) {
     '@id': url + '#breadcrumb',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: '홈', item: SITE + '/' },
-      { '@type': 'ListItem', position: 2, name: '나이트', item: SITE + '/night-1/' },
+      { '@type': 'ListItem', position: 2, name: '나이트', item: SITE + '/night-11/' },
       { '@type': 'ListItem', position: 3, name: v.name, item: url }
     ]
   });
@@ -265,7 +265,7 @@ ${o.geo ? '<meta name="geo.region" content="' + o.geo + '">\n<meta name="geo.pla
 
 function buildPage(v) {
   const p = palette(v);
-  const url = SITE + '/night-1/' + v.slug + '/';
+  const url = SITE + '/night-11/' + v.slug + '/';
   const img = SITE + '/og/' + v.slug + '.png';
   const rows = factRows(v);
 
@@ -312,10 +312,10 @@ ${jsonld(v)}
 
 <header class="header nt-header">
   <div class="wrap">
-    <a href="/night-1/" class="logo">전국 나이트 이야기</a>
+    <a href="/night-11/" class="logo">전국 나이트 이야기</a>
     <nav class="nt-nav" aria-label="주요 메뉴">
       <a href="/">홈</a>
-      <a href="/night-1/">목록</a>
+      <a href="/night-11/">목록</a>
     </nav>
   </div>
 </header>
@@ -354,7 +354,7 @@ ${faqHtml}
   <aside class="nt-aside" aria-labelledby="aside-title">
     <div class="wrap">
       <h2 id="aside-title">이어서 읽기</h2>
-      <a href="/night-1/">전국 나이트 이야기 전체 목록</a>
+      <a href="/night-11/">전국 나이트 이야기 전체 목록</a>
 ${links}
     </div>
   </aside>
@@ -375,7 +375,7 @@ const HUB_DESC = '서울부터 제주까지 나이트 40곳의 밤을 이야기�
 
 function buildHub() {
   const p = { deep: '#1f2430', mid: '#39415a', soft: '#f3f4f8', line: '#d8dbe6', ink: '#232838' };
-  const url = SITE + '/night-1/';
+  const url = SITE + '/night-11/';
   const img = SITE + '/og/night-hub.png';
   const items = venues.map((v) => {
     const loc = v.addr.street ? v.addr.street : (v.addr.locality + (v.landmark ? ' ' + v.landmark : ''));
@@ -406,7 +406,7 @@ ${j({
   name: HUB_TITLE,
   url: url,
   inLanguage: 'ko-KR',
-  hasPart: venues.map((v) => ({ '@type': 'WebPage', name: v.name, url: SITE + '/night-1/' + v.slug + '/' }))
+  hasPart: venues.map((v) => ({ '@type': 'WebPage', name: v.name, url: SITE + '/night-11/' + v.slug + '/' }))
 })}
 </script>
 </head>
@@ -414,7 +414,7 @@ ${j({
 <a href="#main" class="skip-to-main">본문 바로가기</a>
 <header class="header nt-header">
   <div class="wrap">
-    <a href="/night-1/" class="logo">전국 나이트 이야기</a>
+    <a href="/night-11/" class="logo">전국 나이트 이야기</a>
     <nav class="nt-nav" aria-label="주요 메뉴"><a href="/">홈</a></nav>
   </div>
 </header>

@@ -111,9 +111,9 @@ function callbar(r) {
 
 /* JSON-LD 3종 — 업소가 아니라 지역 안내이므로 NightClub 대신 Article */
 function jsonld(r) {
-  const url = SITE + '/night-1/' + r.slug + '/';
+  const url = SITE + '/night-11/' + r.slug + '/';
   const img = SITE + '/og/' + r.slug + '-og.png';
-  const venueUrl = SITE + '/night-1/' + r.venue.slug + '/';
+  const venueUrl = SITE + '/night-11/' + r.venue.slug + '/';
 
   const article = {
     '@context': 'https://schema.org',
@@ -148,7 +148,7 @@ function jsonld(r) {
     '@id': url + '#breadcrumb',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: '홈', item: SITE + '/' },
-      { '@type': 'ListItem', position: 2, name: '나이트', item: SITE + '/night-1/' },
+      { '@type': 'ListItem', position: 2, name: '나이트', item: SITE + '/night-11/' },
       { '@type': 'ListItem', position: 3, name: r.kw, item: url }
     ]
   };
@@ -237,7 +237,7 @@ function factRows(r) {
 
 function buildPage(r) {
   const p = palette(r);
-  const url = SITE + '/night-1/' + r.slug + '/';
+  const url = SITE + '/night-11/' + r.slug + '/';
   const img = SITE + '/og/' + r.slug + '-og.png';
 
   const sections = r.sections.map((s) => {
@@ -311,10 +311,10 @@ ${jsonld(r)}
 
 <header class="header rg-header">
   <div class="wrap">
-    <a href="/night-1/" class="logo">전국 나이트 지역 안내</a>
+    <a href="/night-11/" class="logo">전국 나이트 지역 안내</a>
     <nav class="rg-nav" aria-label="주요 메뉴">
       <a href="/">홈</a>
-      <a href="/night-1/">목록</a>
+      <a href="/night-11/">목록</a>
     </nav>
   </div>
 </header>
@@ -388,7 +388,7 @@ function fingerprint() {
       no: r.no,
       kw: r.kw,
       slug: r.slug,
-      url: SITE + '/night-1/' + r.slug + '/',
+      url: SITE + '/night-11/' + r.slug + '/',
       angleNo: r.angleNo,
       angleName: r.angleName,
       suffix: r.suffix,

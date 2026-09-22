@@ -211,7 +211,7 @@ function jsonld(v) {
     '@id': url + '#breadcrumb',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: '홈', item: SITE + '/' },
-      { '@type': 'ListItem', position: 2, name: '나이트', item: SITE + '/night-1/' },
+      { '@type': 'ListItem', position: 2, name: '나이트', item: SITE + '/night-11/' },
       { '@type': 'ListItem', position: 3, name: v.name, item: url }
     ]
   };
@@ -357,10 +357,10 @@ ${jsonld(v)}
 
 <header class="header nt-header">
   <div class="wrap">
-    <a href="/night-1/" class="logo">전국 나이트 소개</a>
+    <a href="/night-11/" class="logo">전국 나이트 소개</a>
     <nav class="nt-nav" aria-label="주요 메뉴">
       <a href="/">홈</a>
-      <a href="/night-1/">목록</a>
+      <a href="/night-11/">목록</a>
     </nav>
   </div>
 </header>
@@ -463,7 +463,7 @@ ${VERIFY}
 <a href="#main" class="skip-to-main">본문 바로가기</a>
 <header class="header nt-header">
   <div class="wrap">
-    <a href="/night-1/" class="logo">전국 나이트 소개</a>
+    <a href="/night-11/" class="logo">전국 나이트 소개</a>
     <nav class="nt-nav" aria-label="주요 메뉴"><a href="/">홈</a></nav>
   </div>
 </header>

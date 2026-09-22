@@ -10,12 +10,12 @@ const { ORDER, REGION_ORDER, SITE } = require('./build-night40.js');
 const ADV = { '01056530069': '춘자', '연락처 삭제(미제휴)': '미제휴', '01022211937': '손흥민' };
 const PHONE_PAGES = {
   '/': '01056530069',
-  '/club/ulsan-champion-night/': '01056530069',
-  '/club/changwon-lululala-night/': '연락처 삭제(미제휴)',
-  '/club/bulgwang-hobak-night/': '01022211937',
-  '/area/ulsan-night/': '01056530069',
+  '/club/ulsan-champion-night-29/': '01056530069',
+  '/club/changwon-lululala-night-29/': '연락처 삭제(미제휴)',
+  '/club/bulgwang-hobak-night-29/': '01022211937',
+  '/area/ulsan-night-8/': '01056530069',
   '/area/changwon-night/': '연락처 삭제(미제휴)',
-  '/area/eunpyeong-night/': '01022211937'
+  '/area/eunpyeong-night-8/': '01022211937'
 };
 
 function get(url) {
@@ -65,9 +65,9 @@ async function check(pathname, label) {
 async function main() {
   const targets = [
     ['/', '홈(울산챔피언 본사이트)'],
-    ['/night-1/', '허브'],
-    ...ORDER.map((s) => ['/night-1/' + s + '/', s]),
-    ...REGION_ORDER.map((s) => ['/night-1/' + s + '/', s + ' (지역)'])
+    ['/night-11/', '허브'],
+    ...ORDER.map((s) => ['/night-11/' + s + '/', s]),
+    ...REGION_ORDER.map((s) => ['/night-11/' + s + '/', s + ' (지역)'])
   ];
   const rows = [];
   for (const [p, l] of targets) { rows.push(await check(p, l)); process.stderr.write('.'); }
