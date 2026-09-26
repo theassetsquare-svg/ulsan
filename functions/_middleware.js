@@ -14,7 +14,7 @@
 const NEW_HOST = 'a.nolcool.com';
 
 /* [폐기 404 — 시작] state/indexnow-removed.json 에서 도구가 채움. 손으로 고치지 않음 */
-const REMOVED_PATHS = new Set(["/bulgwang-1","/club/bupyeong-kiss-night-3","/policy-1"]);
+const REMOVED_PATHS = new Set(["/bulgwang-1","/club/bupyeong-kiss-night-1","/policy-1"]);
 /* [폐기 404 — 끝] */
 
 /* NW-HIDE-INTERNAL-v1 — 집안 문서는 밖으로 내보내지 않는다(2026-09-07).
