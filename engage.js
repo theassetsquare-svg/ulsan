@@ -262,7 +262,7 @@
   var pageOrder = [
     { url: '/', label: '홈', hook: '울산에서 가장 뜨거운 밤이 시작되는 곳', emoji: '🏠' },
     { url: '/story-11/', label: '이야기', hook: '전설이 된 울산의 밤, 그 비밀은?', emoji: '📖' },
-    { url: '/atmosphere-1/', label: '분위기', hook: '오감을 깨우는 현장의 열기를 느껴보세요', emoji: '🎵' },
+    { url: '/atmosphere-10/', label: '분위기', hook: '오감을 깨우는 현장의 열기를 느껴보세요', emoji: '🎵' },
     { url: '/first-11/', label: '첫방문', hook: '처음이라도 걱정 없는 7단계 가이드', emoji: '🗺️' },
     { url: '/access-11/', label: '오시는길', hook: '삼산동까지 가장 빠른 루트는?', emoji: '📍' },
     { url: '/review-11/', label: '후기', hook: '실제 방문자들의 솔직한 한마디', emoji: '💬' },
