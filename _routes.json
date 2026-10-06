@@ -1,0 +1,25 @@
+{
+ "version": 1,
+ "include": [
+  "/*"
+ ],
+ "exclude": [
+  "/og/*",
+  "/favicon-192.png",
+  "/favicon.ico",
+  "/favicon.svg",
+  "/llms.txt",
+  "/robots.txt",
+  "/rss.xml",
+  "/site.webmanifest",
+  "/sitemap.xml",
+  "/584e7bc8bafe5edd3494299f6b582313.txt",
+  "/engage.js",
+  "/icon-192.png",
+  "/icon-512.png",
+  "/IndexNowKey.txt",
+  "/script.js",
+  "/style.css",
+  "/sw.js"
+ ]
+}
