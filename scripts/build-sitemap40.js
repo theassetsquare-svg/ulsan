@@ -10,7 +10,7 @@ const urls = [
   ['/story-11/', '0.8', 'weekly'],
   ['/atmosphere-10/', '0.8', 'weekly'],
   ['/first-11/', '0.8', 'weekly'],
-  ['/access-11/', '0.8', 'weekly'],
+  ['/access-12/', '0.8', 'weekly'],
   ['/review-11/', '0.8', 'weekly'],
   ['/faq-11/', '0.8', 'weekly'],
   ['/contact-11/', '0.8', 'weekly'],
