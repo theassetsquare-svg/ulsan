@@ -15,7 +15,7 @@ const PHONE_PAGES = {
   '/club/bulgwang-hobak-night-29/': '01022211937',
   '/area/ulsan-night-8/': '01056530069',
   '/area/changwon-night/': '연락처 삭제(미제휴)',
-  '/area/eunpyeong-night-8/': '01022211937'
+  '/area/eunpyeong-night-9/': '01022211937'
 };
 
 function get(url) {
