@@ -148,7 +148,7 @@
       "name": "울산챔피언나이트",
       "url": "https://a.nolcool.com/club/ulsan-champion-night-29/",
       "http": 200,
-      "barLabel": "춘자 010-5653-0069",
+      "barLabel": "카카오톡 besta12",
       "barOk": true,
       "imgW": 1200,
       "imgH": 1200,
@@ -482,7 +482,7 @@
     }
   ],
   "hubOk": true,
-  "homeBar": "<a href=\"tel:010-5653-0069\" class=\"phone-bar\" target=\"_blank\" rel=\"noopener noreferrer\"> <span class=\"phone-icon\">📞</span> 울산챔피언나이트 춘자 010-5653-0069 </a>",
+  "homeBar": "<a href=\"tel:카카오톡 besta12\" class=\"phone-bar\" target=\"_blank\" rel=\"noopener noreferrer\"> <span class=\"phone-icon\">📞</span> 울산챔피언나이트 카카오톡 besta12 </a>",
   "llmsStatus": 200,
   "llmsBytes": 6477
 }

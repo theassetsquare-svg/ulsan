@@ -18,7 +18,7 @@ function get(url){return new Promise(r=>{https.get(url,res=>{let d='';res.on('da
  console.log(`썸네일 ${files.length}개 · 실패 ${bad}건 · 최대 ${maxKB.toFixed(1)}KB`);
  const checks=[
   ['/club/cheongdam-night-29/',['010-5655-4866','펩시맨','/og/cheongdam-1.png']],
-  ['/club/ulsan-champion-night-29/',['010-5653-0069','춘자']],
+  ['/club/ulsan-champion-night-29/',['카카오톡 besta12','담당자']],
   ['/club/changwon-lululala-night-29/',['연락처 삭제(미제휴)','미제휴']],
   ['/club/bulgwang-hobak-night-29/',['010-2221-1937','손흥민']],
   ['/area/ulsan-night-8/',['삼산동 터미널 구역']],

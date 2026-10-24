@@ -90,7 +90,7 @@ async function main() {
 
   const bad = rows.filter((r) => r.http !== 200 || !r.barOk || !r.imgOk || !r.g11ok);
   console.log('\n허브 바: ' + (hubBar.includes('광고문의 카카오톡 besta12') ? 'OK 광고문의 besta12' : 'FAIL'));
-  console.log('홈 바: ' + (homeBar.includes('010-5653-0069') ? 'OK 춘자 010-5653-0069' : 'FAIL'));
+  console.log('홈 바: ' + (homeBar.includes('카카오톡 besta12') ? 'OK 카카오톡 besta12' : 'FAIL'));
   console.log('llms.txt: HTTP ' + llms.status + ' · ' + llms.body.length + ' bytes · 전화번호 ' + (/01[016789]-/.test(llms.body) ? '포함(위반)' : '0건'));
   console.log('실패 항목: ' + bad.length + (bad.length ? ' — ' + bad.map((b) => b.name).join(', ') : ''));
 }

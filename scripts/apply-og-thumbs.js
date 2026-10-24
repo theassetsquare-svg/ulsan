@@ -18,23 +18,23 @@ const OLD = `${ORIGIN}/og/og-thumb.png`;
 // og:image:alt — 페이지마다 전부 다르게. 타 랜딩의 "업소명 닉네임 번호" 패턴과도 다르게 쓴다.
 const PAGES = [
   { key: 'home',        file: 'index.html',
-    alt: '울산챔피언나이트 예약 담당 실장 춘자 · 삼산동 울산나이트 종합 안내 · 010-5653-0069' },
+    alt: '울산챔피언나이트 예약 담당 실장 담당자· 삼산동 울산나이트 종합 안내 · 카카오톡 besta12' },
   { key: 'access',      file: 'access.html',
-    alt: '삼산동 울산챔피언나이트 오시는 길 안내판 · 실장 춘자 직통 010-5653-0069' },
+    alt: '삼산동 울산챔피언나이트 오시는 길 안내판 · 실장 담당자 직통 카카오톡 besta12' },
   { key: 'atmosphere',  file: 'atmosphere.html',
-    alt: '울산챔피언나이트 매장 분위기 미리보기 카드 · 예약 담당 실장 춘자 010-5653-0069' },
+    alt: '울산챔피언나이트 매장 분위기 미리보기 카드 · 예약 담당 실장 카카오톡 besta12' },
   { key: 'contact',     file: 'contact.html',
-    alt: '울산챔피언나이트 예약 문의 직통 연결 · 실장 춘자 상담 010-5653-0069' },
+    alt: '울산챔피언나이트 예약 문의 직통 연결 · 실장 담당자 상담 카카오톡 besta12' },
   { key: 'faq',         file: 'faq.html',
-    alt: '울산챔피언나이트 자주 묻는 질문 정리 · 예약 담당 실장 춘자 010-5653-0069' },
+    alt: '울산챔피언나이트 자주 묻는 질문 정리 · 예약 담당 실장 카카오톡 besta12' },
   { key: 'first-visit', file: 'first-visit.html',
-    alt: '울산챔피언나이트 첫 방문 입문 가이드 · 실장 춘자 안내 010-5653-0069' },
+    alt: '울산챔피언나이트 첫 방문 입문 가이드 · 실장 담당자 안내 카카오톡 besta12' },
   { key: 'review',      file: 'review.html',
-    alt: '울산챔피언나이트 단골 실명 후기 모음 · 예약 담당 실장 춘자 010-5653-0069' },
+    alt: '울산챔피언나이트 단골 실명 후기 모음 · 예약 담당 실장 카카오톡 besta12' },
   { key: 'story',       file: 'story.html',
-    alt: '삼산동 울산챔피언나이트 밤 기록 이야기 · 실장 춘자 010-5653-0069' },
+    alt: '삼산동 울산챔피언나이트 밤 기록 이야기 · 실장 카카오톡 besta12' },
   { key: 'legal',       file: 'legal/index.html',
-    alt: '울산챔피언나이트 19세 이상 합법 운영 안내 · 실장 춘자 010-5653-0069' },
+    alt: '울산챔피언나이트 19세 이상 합법 운영 안내 · 실장 카카오톡 besta12' },
 ];
 
 const urlFor = (key) => `${ORIGIN}/og/thumb-${key}.png`;

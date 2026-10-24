@@ -5,7 +5,7 @@
  * 지시서(2026-08-16) 규칙:
  *  · 시스템 폰트 의존 금지 — tools/fonts/Pretendard-Bold.ttf(공식 배포 zip에서 추출)를
  *    opentype.js로 파싱해 글자를 <path>로 변환한 뒤 sharp로 래스터라이즈한다.
- *  · ⓐ 울산챔피언나이트 페이지·홈: 상단 업소명 + 중앙 최대 "춘자 010-5653-0069"
+ *  · ⓐ 울산챔피언나이트 페이지·홈: 상단 업소명 + 중앙 최대 "카카오톡 besta12"
  *  · ⓑ 창원룰루랄라나이트: "미제휴 연락처 삭제(미제휴)" ⓒ 불광동호박나이트: "손흥민 010-2221-1937"
  *  · ⓓ 그 외 37곳 + 허브: 상단 업소명 + 중앙 최대 "광고문의" + 아래 "카카오톡 besta12"
  *    — ⓐⓑⓒ 외에는 전화번호 결코 금지(오인 전화 방지)
@@ -118,13 +118,13 @@ async function main() {
     }
   }
 
-  /* 홈 — ⓐ 규칙: 상단 울산챔피언나이트 + 중앙 최대 춘자 전화 */
+  /* 홈 — ⓐ 규칙: 상단 울산챔피언나이트 + 중앙 최대 담당자 전화 */
   {
     const bg = hsl2hex(55, 62, 15);
-    const phonePx = fitSize('010-5653-0069', MAXW, 190);
+    const phonePx = fitSize('카카오톡 besta12', MAXW, 190);
     const nb = nameBlock(['울산', '챔피언나이트'], Math.floor(phonePx * 0.78));
-    const nick = line('춘자', 660, Math.floor(phonePx * 0.52), '#ffffff');
-    const phone = line('010-5653-0069', 880, phonePx, '#ffd400');
+    const nick = line('담당자', 660, Math.floor(phonePx * 0.52), '#ffffff');
+    const phone = line('카카오톡 besta12', 880, phonePx, '#ffd400');
     await render('home.png', bg, [...nb.lines, nick, phone], {
       kind: 'A', phonePx, namePx: nb.px, phoneLargest: phonePx > nb.px
     }, report);

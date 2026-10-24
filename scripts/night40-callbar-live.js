@@ -7,13 +7,13 @@ const fs = require('fs');
 const path = require('path');
 const { ORDER, REGION_ORDER, SITE } = require('./build-night40.js');
 
-const ADV = { '01056530069': '춘자', '연락처 삭제(미제휴)': '미제휴', '01022211937': '손흥민' };
+const ADV = { '카카오톡 besta12': '담당자', '연락처 삭제(미제휴)': '미제휴', '01022211937': '손흥민' };
 const PHONE_PAGES = {
-  '/': '01056530069',
-  '/club/ulsan-champion-night-29/': '01056530069',
+  '/': '카카오톡 besta12',
+  '/club/ulsan-champion-night-29/': '카카오톡 besta12',
   '/club/changwon-lululala-night-29/': '연락처 삭제(미제휴)',
   '/club/bulgwang-hobak-night-29/': '01022211937',
-  '/area/ulsan-night-8/': '01056530069',
+  '/area/ulsan-night-8/': '카카오톡 besta12',
   '/area/changwon-night/': '연락처 삭제(미제휴)',
   '/area/eunpyeong-night-9/': '01022211937'
 };

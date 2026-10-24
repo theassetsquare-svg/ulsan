@@ -7,7 +7,7 @@ function walk(d,out=[]){for(const e of fs.readdirSync(d,{withFileTypes:true})){i
 
 // ★ 광고주 정답표
 const AD={
- '울산챔피언나이트':{nick:'춘자',phone:'010-5653-0069'},
+ '울산챔피언나이트':{nick: null,phone: null},
  '창원룰루랄라나이트':{nick:'미제휴',phone:'연락처 삭제(미제휴)'},
  '불광동호박나이트':{nick:'손흥민',phone:'010-2221-1937'},
  '청담나이트':{nick:'펩시맨',phone:'010-5655-4866'},

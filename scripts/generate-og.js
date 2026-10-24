@@ -50,7 +50,7 @@ function generateOG(page) {
   ctx.letterSpacing = '4px';
   ctx.fillText('ULSAN NO.1 NIGHTLIFE', W / 2, 236);
 
-  // === 춘자 — HUGE ===
+  // === 광고문의 — HUGE ===
   ctx.shadowColor = 'rgba(0,0,0,0.5)';
   ctx.shadowBlur = 20;
   ctx.shadowOffsetY = 6;
@@ -63,7 +63,7 @@ function generateOG(page) {
   ctx.fillStyle = goldGrad;
   ctx.font = '900 300px NotoKR';
   ctx.textAlign = 'center';
-  ctx.fillText('춘자', W / 2, 560);
+  ctx.fillText('담당자', W / 2, 560);
 
   // Reset shadow
   ctx.shadowColor = 'transparent';
@@ -99,7 +99,7 @@ function generateOG(page) {
 
   ctx.fillStyle = '#C9A96E';
   ctx.font = '900 38px NotoKR';
-  ctx.fillText('📞 010-5653-0069', W / 2, 960);
+  ctx.fillText('📞 카카오톡 besta12', W / 2, 960);
 
   // === Bottom gold bar ===
   const bottomGrad = ctx.createLinearGradient(0, 0, W, 0);

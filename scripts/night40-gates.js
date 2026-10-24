@@ -127,11 +127,11 @@ const add = (id, pass, metric) => results.push({ id, pass, metric });
     if (!p.src.includes('86086f8f927252a5021544b971d07b18a5e03a22')) miss.push('naver인증');
     if (!p.src.includes('rel="canonical"')) miss.push('canonical');
     if (!p.src.includes('application/ld+json')) miss.push('JSON-LD');
-    /* 고정 하단바: 광고주 3곳은 각자 번호 tel: / 그 외 업소·허브는 광고문의 카톡 besta12 / 홈은 춘자 번호 */
+    /* 고정 하단바: 광고주 3곳은 각자 번호 tel: / 그 외 업소·허브는 광고문의 카톡 besta12 / 홈은 담당자 번호 */
     const adv = p.kind === 'venue' && p.venue.contact ? p.venue.contact : null;
     if (p.kind === 'home') {
-      if (!(p.src.includes('tel:010-5653-0069') || p.src.includes('tel:01056530069'))) miss.push('전화바tel');
-      if (!p.src.includes('울산챔피언나이트 춘자 010-5653-0069')) miss.push('전화바문구');
+      if (!(p.src.includes('tel:카카오톡 besta12') | p.src.includes('tel:카카오톡 besta12'))) miss.push('전화바tel');
+      if (!p.src.includes('울산챔피언나이트 카카오톡 besta12')) miss.push('전화바문구');
     } else if (adv) {
       if (!p.src.includes('class="callbar" href="tel:' + adv.tel + '"')) miss.push('전화바tel');
       if (!p.src.includes('📞 ' + p.venue.name + ' ' + adv.person + ' ' + adv.tel)) miss.push('전화바문구');
@@ -192,9 +192,9 @@ function extraChecks() {
     const bad = [];
     const phoneRe = /0\d{1,2}[-.\s]?\d{3,4}[-.\s]?\d{4}/g;
     Object.entries(pages).forEach(([k, p]) => {
-      /* 춘자 번호는 울산챔피언나이트 페이지와 홈에만 허용 — 그 외 페이지는 어떤 번호도 불가 */
+      /* 담당자 번호는 울산챔피언나이트 페이지와 홈에만 허용 — 그 외 페이지는 어떤 번호도 불가 */
       const allowed = new Set();
-      if (k === 'night/ulsan-champion-night' || k === 'home') { allowed.add('010-5653-0069'); allowed.add('01056530069'); allowed.add('+82-10-5653-0069'); }
+      if (k === 'night/ulsan-champion-night' | k === 'home') { allowed.add('카카오톡 besta12'); allowed.add('카카오톡 besta12'); allowed.add('카카오톡 besta12'); }
       if (k === 'night/changwon-lululala-night') { allowed.add('연락처 삭제(미제휴)'); allowed.add('연락처 삭제(미제휴)'); allowed.add('연락처 삭제(미제휴)'); }
       if (k === 'night/bulgwang-hobak-night') { allowed.add('010-2221-1937'); allowed.add('01022211937'); allowed.add('+82-10-2221-1937'); }
       const found = [...new Set((p.src.match(phoneRe) || []))];
@@ -248,13 +248,13 @@ function extraChecks() {
   {
     /* 광고주 소유 자산 화이트리스트.
        루트 사이트(index/story-1/atmosphere-1/first-1/access-1/review-1/faq-1/contact-1/policy-1/webmanifest)는
-       울산챔피언나이트 본 랜딩 사이트이므로 춘자 번호 허용.
+       울산챔피언나이트 본 랜딩 사이트이므로 담당자 번호 허용.
        bulgwang.html·rss.xml의 불광동호박 항목은 해당 광고주 자산이므로 손흥민 번호 허용. */
     const ULSAN_OWN = ['index.html', 'story.html', 'atmosphere.html', 'first-visit.html', 'access.html',
       'review.html', 'faq.html', 'contact.html', 'legal/index.html', 'site.webmanifest',
       'night/ulsan-champion-night/index.html'];
     const OWNER = {
-      '010-5653-0069': ULSAN_OWN,
+      '카카오톡 besta12': ULSAN_OWN,
       '연락처 삭제(미제휴)': ['night/changwon-lululala-night/index.html'],
       '010-2221-1937': ['night/bulgwang-hobak-night/index.html', 'bulgwang.html', 'rss.xml']
     };

@@ -20,7 +20,7 @@ const pages = [
   { file: 'access.html',      slug: 'access',       name: '오시는길',  title: '울산챔피언나이트 오시는길 — 삼산동 위치·주차·교통편' },
   { file: 'review.html',      slug: 'review',       name: '후기',      title: '울산챔피언나이트 후기 — 단골들이 직접 말하는 솔직한 이야기' },
   { file: 'faq.html',         slug: 'faq',          name: 'FAQ',       title: '울산챔피언나이트 자주 묻는 질문 — 13가지 답변' },
-  { file: 'contact.html',     slug: 'contact',      name: '연락처',    title: '울산챔피언나이트 예약·문의 — 춘자 010-5653-0069' }
+  { file: 'contact.html',     slug: 'contact',      name: '연락처',    title: '울산챔피언나이트 예약·문의 — 카카오톡 besta12' }
 ];
 
 function buildGraph(p) {
@@ -50,7 +50,7 @@ function buildGraph(p) {
         '@id': `${BASE}/#org`,
         name: '울산챔피언나이트',
         url: `${BASE}/`,
-        telephone: '+82-10-5653-0069',
+        telephone: '카카오톡 besta12',
         logo: self
       },
       {
@@ -58,7 +58,7 @@ function buildGraph(p) {
         '@id': `${BASE}/#nightclub`,
         name: '울산챔피언나이트',
         url: `${BASE}/`,
-        telephone: '+82-10-5653-0069',
+        telephone: '카카오톡 besta12',
         image: entityImages,
         description: '삼산동 대형 합법 나이트클럽. 풀스케일 사운드·조명·댄스플로어·VIP 라운지.',
         address: {
@@ -83,7 +83,7 @@ function buildGraph(p) {
         '@type': 'LocalBusiness',
         '@id': `${BASE}/#localbusiness`,
         name: '울산챔피언나이트',
-        telephone: '+82-10-5653-0069',
+        telephone: '카카오톡 besta12',
         url: `${BASE}/`,
         image: entityImages,
         address: {
@@ -102,7 +102,6 @@ function buildGraph(p) {
         headline: p.title,
         datePublished: TODAY,
         dateModified: TODAY,
-        author: { '@type': 'Person', name: '춘자' },
         publisher: { '@id': `${BASE}/#org` },
         image: [self],
         inLanguage: 'ko-KR'

@@ -3,14 +3,14 @@
     "pathname": "/",
     "label": "홈(울산챔피언 본사이트)",
     "http": 200,
-    "bar": "<a href=\"tel:010-5653-0069\" class=\"phone-bar\" target=\"_blank\" rel=\"noopener noreferrer\"> <span class=\"phone-ic",
+    "bar": "<a href=\"tel:카카오톡 besta12\" class=\"phone-bar\" target=\"_blank\" rel=\"noopener noreferrer\"> <span class=\"phone-ic",
     "barNums": [
-      "01056530069"
+      "카카오톡 besta12"
     ],
     "pageNums": [
-      "01056530069"
+      "카카오톡 besta12"
     ],
-    "verdict": "OK 번호바 춘자 01056530069"
+    "verdict": "OK 번호바 담당자 카카오톡 besta12"
   },
   {
     "pathname": "/night-11/",
@@ -141,14 +141,14 @@
     "pathname": "/club/ulsan-champion-night-29/",
     "label": "ulsan-champion-night",
     "http": 200,
-    "bar": "<a class=\"callbar\" href=\"tel:01056530069\" aria-label=\"울산챔피언나이트 춘자에게 전화 연결\">📞 울산챔피언나이트 춘자 010-5653-0069</a>",
+    "bar": "<a class=\"callbar\" href=\"tel:카카오톡 besta12\" aria-label=\"울산챔피언나이트 카카오톡 besta12 로 전화 연결\">📞 울산챔피언나이트 카카오톡 besta12</a>",
     "barNums": [
-      "01056530069"
+      "카카오톡 besta12"
     ],
     "pageNums": [
-      "01056530069"
+      "카카오톡 besta12"
     ],
-    "verdict": "OK 번호바 춘자 01056530069"
+    "verdict": "OK 번호바 담당자 카카오톡 besta12"
   },
   {
     "pathname": "/club/doksan-gukbingwan-night-10/",
@@ -423,14 +423,14 @@
     "pathname": "/area/ulsan-night-8/",
     "label": "ulsan-night (지역)",
     "http": 200,
-    "bar": "<div class=\"callbar\" role=\"complementary\" aria-label=\"전화 연결\"> <a href=\"tel:01056530069\">📞 춘자 010-5653-0069</a",
+    "bar": "<div class=\"callbar\" role=\"complementary\" aria-label=\"전화 연결\"> <a href=\"tel:카카오톡 besta12\">📞 카카오톡 besta12</a",
     "barNums": [
-      "01056530069"
+      "카카오톡 besta12"
     ],
     "pageNums": [
-      "01056530069"
+      "카카오톡 besta12"
     ],
-    "verdict": "OK 번호바 춘자 01056530069"
+    "verdict": "OK 번호바 담당자 카카오톡 besta12"
   },
   {
     "pathname": "/area/gangnam-night/",

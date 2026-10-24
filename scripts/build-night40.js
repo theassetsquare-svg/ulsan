@@ -6,7 +6,7 @@
  *  ① 도입 3~4문장(제목의 답은 글 끝에 예고) ② 핵심 3줄 직답 박스 ③ 사실 표(주소/역/연령/확인일)
  *  ④ 장면 소제목 4~6개(질문형 H2 2개 이상) ⑤ 맨 끝 제목의 답 ⑥ FAQ 3문항 ⑦ 한 줄 정리 박스
  *  · <title> = og:title = h1, 20~30자, 업소명 맨 앞
- *  · 고정 전화바 전 페이지: 📞 울산챔피언나이트 춘자 010-5653-0069 (바 전체 tel:)
+ *  · 고정 전화바 전 페이지: 📞 울산챔피언나이트 카카오톡 besta12 (바 전체 tel:)
  *  · 푸터 전 페이지: 광고문의 카톡 besta12 강조 박스 + 정직 고지 + 오늘 날짜
  *  · JSON-LD 전화: 광고주 3업소만 각자 번호
  *  · 내부링크: /night/ 허브 1 + 인접 지역 업소 2
@@ -22,8 +22,8 @@ const TODAY = '2026-08-16';
 const TODAY_KO = '2026년 8월 16일';
 const BRAND = '놀쿨';
 
-const CALLBAR_TEL = '01056530069';
-const CALLBAR_TEXT = '📞 울산챔피언나이트 춘자 010-5653-0069';
+const CALLBAR_TEL = '카카오톡 besta12';
+const CALLBAR_TEXT = '📞 울산챔피언나이트 카카오톡 besta12';
 const KAKAO_URL = 'https://open.kakao.com/o/sBesta12';
 const AD_BAR_TEXT = '💬 광고문의 카카오톡 besta12';
 

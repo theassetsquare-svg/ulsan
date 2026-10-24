@@ -59,9 +59,9 @@ const sharp = require('sharp');
 const SIZE = 1200;
 const DOMAIN = 'a.nolcool.com';
 const VENUE = '울산챔피언나이트';
-const NICK = '춘자';
+const NICK = '담당자';
 const ROLE = '예약 담당 실장';
-const PHONE = '010-5653-0069';
+const PHONE = '카카오톡 besta12';
 const FONT = 'Noto Sans KR';
 
 // 배경: 짙은 페트롤 그린. (기존/타 랜딩의 네이비+퍼플과 완전히 다른 계열)

@@ -4,9 +4,9 @@ const path = require('path');
 const WIDTH = 1200;
 const HEIGHT = 1200;
 
-const MAIN_TEXT = '춘자';
+const MAIN_TEXT = '담당자';
 const SUB_TEXT = '울산챔피언';
-const PHONE = '010-5653-0069';
+const PHONE = '카카오톡 besta12';
 
 async function generate() {
   const outPath = path.join(__dirname, '..', 'og', 'og-thumb.png');

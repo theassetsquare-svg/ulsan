@@ -25,7 +25,7 @@ pages.forEach(p => {
 
 // Also check sub-keywords
 console.log('\n--- 서브 키워드 ---');
-const subKeywords = ['울산', '챔피언', '나이트', '춘자', '전화'];
+const subKeywords = ['울산', '챔피언', '나이트', '담당자', '전화'];
 pages.forEach(p => {
   const text = texts[p];
   const total = text.length;
