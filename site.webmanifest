@@ -1,7 +1,6 @@
 {
   "name": "울산챔피언나이트",
   "short_name": "챔피언나이트",
-  "description": "울산 No.1 나이트라이프 — 삼산동 대형 합법 나이트클럽",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -15,10 +14,5 @@
     {"src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
     {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
     {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
-  ],
-  "shortcuts": [
-    {"name": "카카오톡 문의", "short_name": "카톡", "url": "https://open.kakao.com/o/sBesta12", "icons": [{"src": "/icon-192.png", "sizes": "192x192"}]},
-    {"name": "첫 방문 가이드", "short_name": "첫방문", "url": "/first-visit.html", "icons": [{"src": "/icon-192.png", "sizes": "192x192"}]},
-    {"name": "오시는길", "short_name": "오시는길", "url": "/access.html", "icons": [{"src": "/icon-192.png", "sizes": "192x192"}]}
   ]
 }
