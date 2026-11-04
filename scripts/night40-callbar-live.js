@@ -15,7 +15,7 @@ const PHONE_PAGES = {
   '/club/bulgwang-hobak-night-29/': '01022211937',
   '/area/ulsan-night-8/': '카카오톡 besta12',
   '/area/changwon-night/': '연락처 삭제(미제휴)',
-  '/area/eunpyeong-night-9/': '01022211937'
+  '/area/eunpyeong-night-10/': '01022211937'
 };
 
 function get(url) {
@@ -65,9 +65,9 @@ async function check(pathname, label) {
 async function main() {
   const targets = [
     ['/', '홈(울산챔피언 본사이트)'],
-    ['/night-11/', '허브'],
-    ...ORDER.map((s) => ['/night-11/' + s + '/', s]),
-    ...REGION_ORDER.map((s) => ['/night-11/' + s + '/', s + ' (지역)'])
+    ['/night-12/', '허브'],
+    ...ORDER.map((s) => ['/night-12/' + s + '/', s]),
+    ...REGION_ORDER.map((s) => ['/night-12/' + s + '/', s + ' (지역)'])
   ];
   const rows = [];
   for (const [p, l] of targets) { rows.push(await check(p, l)); process.stderr.write('.'); }

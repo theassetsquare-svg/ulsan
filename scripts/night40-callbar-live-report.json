@@ -13,7 +13,7 @@
     "verdict": "OK 번호바 담당자 카카오톡 besta12"
   },
   {
-    "pathname": "/night-11/",
+    "pathname": "/night-12/",
     "label": "허브",
     "http": 200,
     "bar": "<a class=\"callbar\" href=\"https://open.kakao.com/o/sBesta12\" target=\"_blank\" rel=\"noopener noreferrer\" aria-lab",
@@ -394,7 +394,7 @@
     "verdict": "OK besta12바"
   },
   {
-    "pathname": "/area/eunpyeong-night-9/",
+    "pathname": "/area/eunpyeong-night-10/",
     "label": "eunpyeong-night (지역)",
     "http": 200,
     "bar": "<div class=\"callbar\" role=\"complementary\" aria-label=\"전화 연결\"> <a href=\"tel:01022211937\">📞 손흥민 010-2221-1937</",

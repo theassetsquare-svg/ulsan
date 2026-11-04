@@ -22,8 +22,8 @@ function get(url){return new Promise(r=>{https.get(url,res=>{let d='';res.on('da
   ['/club/changwon-lululala-night-29/',['연락처 삭제(미제휴)','미제휴']],
   ['/club/bulgwang-hobak-night-29/',['010-2221-1937','손흥민']],
   ['/area/ulsan-night-8/',['삼산동 터미널 구역']],
-  ['/faq-11/',['울산챔피언나이트']],
-  ['/night-11/',['전국 나이트']],
+  ['/faq-12/',['울산챔피언나이트']],
+  ['/night-12/',['전국 나이트']],
  ];
  for(const [p,needles] of checks){
    const r=await get(SITE+p);
