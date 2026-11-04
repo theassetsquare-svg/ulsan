@@ -13,7 +13,7 @@ const urls = [
   ['/access-12/', '0.8', 'weekly'],
   ['/review-11/', '0.8', 'weekly'],
   ['/faq-11/', '0.8', 'weekly'],
-  ['/contact-11/', '0.8', 'weekly'],
+  ['/contact-12/', '0.8', 'weekly'],
   ['/policy-1/', '0.3', 'monthly'],
   ['/bulgwang-1/', '0.8', 'weekly'],
   ['/night-11/', '0.9', 'daily'],
