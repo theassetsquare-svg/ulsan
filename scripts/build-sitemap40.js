@@ -8,9 +8,9 @@ const ROOT = path.join(__dirname, '..');
 const urls = [
   ['/', '1.0', 'daily'],
   ['/story-12/', '0.8', 'weekly'],
-  ['/atmosphere-11/', '0.8', 'weekly'],
+  ['/atmosphere-12/', '0.8', 'weekly'],
   ['/first-12/', '0.8', 'weekly'],
-  ['/access-13/', '0.8', 'weekly'],
+  ['/access-14/', '0.8', 'weekly'],
   ['/review-12/', '0.8', 'weekly'],
   ['/faq-12/', '0.8', 'weekly'],
   ['/contact-12/', '0.8', 'weekly'],

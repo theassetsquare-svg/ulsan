@@ -15,7 +15,7 @@ const PHONE_PAGES = {
   '/club/bulgwang-hobak-night-29/': '01022211937',
   '/area/ulsan-night-8/': '카카오톡 besta12',
   '/area/changwon-night/': '연락처 삭제(미제휴)',
-  '/area/eunpyeong-night-10/': '01022211937'
+  '/area/eunpyeong-night-11/': '01022211937'
 };
 
 function get(url) {
