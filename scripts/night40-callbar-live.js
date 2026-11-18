@@ -65,9 +65,9 @@ async function check(pathname, label) {
 async function main() {
   const targets = [
     ['/', '홈(울산챔피언 본사이트)'],
-    ['/night-12/', '허브'],
-    ...ORDER.map((s) => ['/night-12/' + s + '/', s]),
-    ...REGION_ORDER.map((s) => ['/night-12/' + s + '/', s + ' (지역)'])
+    ['/night-13/', '허브'],
+    ...ORDER.map((s) => ['/night-13/' + s + '/', s]),
+    ...REGION_ORDER.map((s) => ['/night-13/' + s + '/', s + ' (지역)'])
   ];
   const rows = [];
   for (const [p, l] of targets) { rows.push(await check(p, l)); process.stderr.write('.'); }

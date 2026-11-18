@@ -23,7 +23,7 @@ function get(url){return new Promise(r=>{https.get(url,res=>{let d='';res.on('da
   ['/club/bulgwang-hobak-night-29/',['010-2221-1937','손흥민']],
   ['/area/ulsan-night-8/',['삼산동 터미널 구역']],
   ['/faq-13/',['울산챔피언나이트']],
-  ['/night-12/',['전국 나이트']],
+  ['/night-13/',['전국 나이트']],
  ];
  for(const [p,needles] of checks){
    const r=await get(SITE+p);
